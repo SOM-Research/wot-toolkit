@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<td:Thing xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:td="http://edu.uoc.som/wot/td/1.0"
+    xsi:schemaLocation="http://edu.uoc.som/wot/td/1.0 td.ecore"
+    name="MyLampThing"
+    id="urn:dev:wot:com:example:servient:lamp">
+  <security
+      xsi:type="td:BasicSecurityScheme"
+      scheme="basic"/>
+  <properties
+      label="status"
+      type="string">
+    <forms href="https://mylamp.example.com/status"/>
+  </properties>
+  <events label="overheating"
+      type="string">
+    <forms href="https://mylamp.example.com/oh"
+        subProtocol="LongPoll"/>
+  </events>
+  <actions label="toggle">
+    <forms href="https://mylamp.example.com/toggle"/>
+  </actions>
+</td:Thing>

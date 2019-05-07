@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated td -->
+      <package
+            uri="http://edu.uoc.som/wot/td/1.0"
+            class="edu.uoc.som.wot.td.TdPackage"
+            genModel="model/td.genmodel"/>
+   </extension>
+
+</plugin>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated td -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="edu.uoc.som.wot.td.presentation.TdModelWizardID"
+            name="%_UI_TdModelWizard_label"
+            class="edu.uoc.som.wot.td.presentation.TdModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/TdModelFile.gif">
+         <description>%_UI_TdModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated td -->
+      <editor
+            id="edu.uoc.som.wot.td.presentation.TdEditorID"
+            name="%_UI_TdEditor_label"
+            icon="icons/full/obj16/TdModelFile.gif"
+            extensions="td"
+            class="edu.uoc.som.wot.td.presentation.TdEditor"
+            contributorClass="edu.uoc.som.wot.td.presentation.TdActionBarContributor">
+      </editor>
+   </extension>
+
+</plugin>
