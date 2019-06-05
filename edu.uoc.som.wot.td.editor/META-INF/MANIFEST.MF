@@ -3,7 +3,7 @@ Bundle-ManifestVersion: 2
 Bundle-Name: %pluginName
 Bundle-SymbolicName: edu.uoc.som.wot.td.editor;singleton:=true
 Automatic-Module-Name: edu.uoc.som.wot.td.editor
-Bundle-Version: 1.0.0.qualifier
+Bundle-Version: 0.1.0.qualifier
 Bundle-ClassPath: .
 Bundle-Activator: edu.uoc.som.wot.td.presentation.TdEditorPlugin$Implementation
 Bundle-Vendor: %providerName
