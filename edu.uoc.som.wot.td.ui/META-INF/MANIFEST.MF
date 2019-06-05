@@ -4,7 +4,7 @@ Bundle-Name: WoT UI Plug-in
 Bundle-SymbolicName: edu.uoc.som.wot.td.ui;singleton:=true
 Bundle-Version: 0.1.0.qualifier
 Bundle-Activator: edu.uoc.som.wot.td.ui.WoTBuilderPlugin
-Bundle-Vendor: SOM Research Lab - UOC
+Bundle-Vendor: SOM Research Lab
 Require-Bundle: org.eclipse.core.runtime,
  com.google.guava,
  org.eclipse.xtext.xbase.lib,
