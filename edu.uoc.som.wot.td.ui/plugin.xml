@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         id="wotBuilder"
+         name="WoT Project Builder"
+         point="org.eclipse.core.resources.builders">
+      <builder
+            hasNature="true">
+         <run
+               class="edu.uoc.som.wot.td.ui.internal.WoTBuilder">
+         </run>
+      </builder>
+   </extension>
+   <extension
+         id="wotNature"
+         name="WoT Project Nature"
+         point="org.eclipse.core.resources.natures">
+      <runtime>
+         <run
+               class="edu.uoc.som.wot.td.ui.internal.WoTNature">
+         </run>
+      </runtime>
+      <builder
+            id="edu.uoc.som.wot.td.ui.wotBuilder">
+      </builder>
+   </extension>
+   <extension
+         point="org.eclipse.ui.commands">
+      <category
+            id="edu.uoc.som.wot.td.ui.wotNature.category"
+            name="WoT Project Nature commands">
+      </category>
+      <command
+            categoryId="edu.uoc.som.wot.td.ui.wotNature.category"
+            defaultHandler="edu.uoc.som.wot.td.ui.internal.AddRemoveWoTNatureHandler"
+            id="edu.uoc.som.wot.td.ui.addRemoveWoTNature"
+            name="Add/Remove WoT Project Nature">
+      </command>
+   </extension>
+   <extension
+         point="org.eclipse.ui.menus">
+      <menuContribution
+            locationURI="popup:org.eclipse.ui.projectConfigure?after=additions">
+         <command
+               commandId="edu.uoc.som.wot.td.ui.addRemoveWoTNature"
+               label="Disable WoT builder"
+               style="push">
+            <visibleWhen
+                  checkEnabled="false">
+               <with
+                     variable="selection">
+                  <count
+                        value="1">
+                  </count>
+                  <iterate>
+                     <adapt
+                           type="org.eclipse.core.resources.IProject">
+                        <test
+                              property="org.eclipse.core.resources.projectNature"
+                              value="edu.uoc.som.wot.td.ui.wotNature">
+                        </test>
+                     </adapt>
+                  </iterate>
+               </with>
+            </visibleWhen>
+         </command>
+         <command
+               commandId="edu.uoc.som.wot.td.ui.addRemoveWoTNature"
+               label="Enable WoT builder"
+               style="push">
+            <visibleWhen
+                  checkEnabled="false">
+               <with
+                     variable="selection">
+                  <count
+                        value="1">
+                  </count>
+                  <iterate>
+                     <adapt
+                           type="org.eclipse.core.resources.IProject">
+                        <not>
+                           <test
+                                 property="org.eclipse.core.resources.projectNature"
+                                 value="edu.uoc.som.wot.td.ui.wotNature">
+                           </test>
+                        </not>
+                     </adapt>
+                  </iterate>
+               </with>
+            </visibleWhen>
+         </command>
+      </menuContribution>
+   </extension>
+   <extension
+         id="wotProblem"
+         name="WoT Problem"
+         point="org.eclipse.core.resources.markers">
+      <super
+            type="org.eclipse.core.resources.problemmarker">
+      </super>
+      <persistent
+            value="true">
+      </persistent>
+   </extension>
+
+</plugin>
