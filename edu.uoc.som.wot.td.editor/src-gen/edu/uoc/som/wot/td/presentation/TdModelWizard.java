@@ -71,7 +71,6 @@ import org.eclipse.ui.part.ISetSelectionTarget;
 import edu.uoc.som.wot.td.TdFactory;
 import edu.uoc.som.wot.td.TdPackage;
 import edu.uoc.som.wot.td.provider.TdEditPlugin;
-
 import org.eclipse.core.runtime.Path;
 
 import org.eclipse.jface.viewers.ISelection;
@@ -386,7 +385,7 @@ public class TdModelWizard extends Wizard implements INewWizard {
 		/**
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @generated
+		 * @generated NOT
 		 */
 		@Override
 		public void createControl(Composite parent) {
@@ -428,6 +427,9 @@ public class TdModelWizard extends Wizard implements INewWizard {
 			if (initialObjectField.getItemCount() == 1) {
 				initialObjectField.select(0);
 			}
+			// BEGIN: Manually added
+			initialObjectField.select(initialObjectField.indexOf("Thing"));
+			// END: Manually added
 			initialObjectField.addModifyListener(validator);
 
 			Label encodingLabel = new Label(composite, SWT.LEFT);
