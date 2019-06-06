@@ -6,15 +6,15 @@ Prototypical implementation of the W3C Web of Things proposal using the EMF stac
 
 ### Core model
 
-![Core model](edu.uoc.som.wot.td/model/td-core.png)
+![Core model](plugins/edu.uoc.som.wot.td/model/td-core.png)
 
 ### Data Schema model
 
-![Data Schema model](edu.uoc.som.wot.td/model/td-data-schema.png)
+![Data Schema model](plugins/edu.uoc.som.wot.td/model/td-data-schema.png)
 
 ### Security model
 
-![Security model](edu.uoc.som.wot.td/model/td-security.png)
+![Security model](plugins/edu.uoc.som.wot.td/model/td-security.png)
 
 ## Example instance
 
