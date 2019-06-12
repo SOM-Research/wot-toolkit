@@ -304,13 +304,13 @@ public interface TdPackage extends EPackage {
 	int PROPERTY__DESCRIPTION = INTERACTION_PATTERN_FEATURE_COUNT + 1;
 
 	/**
-	 * The feature id for the '<em><b>Any Type</b></em>' attribute.
+	 * The feature id for the '<em><b>Const</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PROPERTY__ANY_TYPE = INTERACTION_PATTERN_FEATURE_COUNT + 2;
+	int PROPERTY__CONST = INTERACTION_PATTERN_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Enum</b></em>' attribute.
@@ -513,13 +513,13 @@ public interface TdPackage extends EPackage {
 	int EVENT__DESCRIPTION = INTERACTION_PATTERN_FEATURE_COUNT + 1;
 
 	/**
-	 * The feature id for the '<em><b>Any Type</b></em>' attribute.
+	 * The feature id for the '<em><b>Const</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int EVENT__ANY_TYPE = INTERACTION_PATTERN_FEATURE_COUNT + 2;
+	int EVENT__CONST = INTERACTION_PATTERN_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Enum</b></em>' attribute.
@@ -778,13 +778,13 @@ public interface TdPackage extends EPackage {
 	int DATA_SCHEMA__DESCRIPTION = 1;
 
 	/**
-	 * The feature id for the '<em><b>Any Type</b></em>' attribute.
+	 * The feature id for the '<em><b>Const</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DATA_SCHEMA__ANY_TYPE = 2;
+	int DATA_SCHEMA__CONST = 2;
 
 	/**
 	 * The feature id for the '<em><b>Enum</b></em>' attribute.
@@ -842,13 +842,13 @@ public interface TdPackage extends EPackage {
 	int ARRAY_SCHEMA__DESCRIPTION = DATA_SCHEMA__DESCRIPTION;
 
 	/**
-	 * The feature id for the '<em><b>Any Type</b></em>' attribute.
+	 * The feature id for the '<em><b>Const</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ARRAY_SCHEMA__ANY_TYPE = DATA_SCHEMA__ANY_TYPE;
+	int ARRAY_SCHEMA__CONST = DATA_SCHEMA__CONST;
 
 	/**
 	 * The feature id for the '<em><b>Enum</b></em>' attribute.
@@ -933,13 +933,13 @@ public interface TdPackage extends EPackage {
 	int NUMBER_SCHEMA__DESCRIPTION = DATA_SCHEMA__DESCRIPTION;
 
 	/**
-	 * The feature id for the '<em><b>Any Type</b></em>' attribute.
+	 * The feature id for the '<em><b>Const</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int NUMBER_SCHEMA__ANY_TYPE = DATA_SCHEMA__ANY_TYPE;
+	int NUMBER_SCHEMA__CONST = DATA_SCHEMA__CONST;
 
 	/**
 	 * The feature id for the '<em><b>Enum</b></em>' attribute.
@@ -951,13 +951,13 @@ public interface TdPackage extends EPackage {
 	int NUMBER_SCHEMA__ENUM = DATA_SCHEMA__ENUM;
 
 	/**
-	 * The feature id for the '<em><b>Minumum</b></em>' attribute.
+	 * The feature id for the '<em><b>Minimum</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int NUMBER_SCHEMA__MINUMUM = DATA_SCHEMA_FEATURE_COUNT + 0;
+	int NUMBER_SCHEMA__MINIMUM = DATA_SCHEMA_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Maximum</b></em>' attribute.
@@ -1015,13 +1015,13 @@ public interface TdPackage extends EPackage {
 	int STRING_SCHEMA__DESCRIPTION = DATA_SCHEMA__DESCRIPTION;
 
 	/**
-	 * The feature id for the '<em><b>Any Type</b></em>' attribute.
+	 * The feature id for the '<em><b>Const</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int STRING_SCHEMA__ANY_TYPE = DATA_SCHEMA__ANY_TYPE;
+	int STRING_SCHEMA__CONST = DATA_SCHEMA__CONST;
 
 	/**
 	 * The feature id for the '<em><b>Enum</b></em>' attribute.
@@ -1079,13 +1079,13 @@ public interface TdPackage extends EPackage {
 	int BOOLEAN_SCHEMA__DESCRIPTION = DATA_SCHEMA__DESCRIPTION;
 
 	/**
-	 * The feature id for the '<em><b>Any Type</b></em>' attribute.
+	 * The feature id for the '<em><b>Const</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int BOOLEAN_SCHEMA__ANY_TYPE = DATA_SCHEMA__ANY_TYPE;
+	int BOOLEAN_SCHEMA__CONST = DATA_SCHEMA__CONST;
 
 	/**
 	 * The feature id for the '<em><b>Enum</b></em>' attribute.
@@ -1143,13 +1143,13 @@ public interface TdPackage extends EPackage {
 	int OBJECT_SCHEMA__DESCRIPTION = DATA_SCHEMA__DESCRIPTION;
 
 	/**
-	 * The feature id for the '<em><b>Any Type</b></em>' attribute.
+	 * The feature id for the '<em><b>Const</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int OBJECT_SCHEMA__ANY_TYPE = DATA_SCHEMA__ANY_TYPE;
+	int OBJECT_SCHEMA__CONST = DATA_SCHEMA__CONST;
 
 	/**
 	 * The feature id for the '<em><b>Enum</b></em>' attribute.
@@ -1213,7 +1213,7 @@ public interface TdPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INTEGER_SCHEMA__TYPE = NUMBER_SCHEMA__TYPE;
+	int INTEGER_SCHEMA__TYPE = DATA_SCHEMA__TYPE;
 
 	/**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -1222,16 +1222,16 @@ public interface TdPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INTEGER_SCHEMA__DESCRIPTION = NUMBER_SCHEMA__DESCRIPTION;
+	int INTEGER_SCHEMA__DESCRIPTION = DATA_SCHEMA__DESCRIPTION;
 
 	/**
-	 * The feature id for the '<em><b>Any Type</b></em>' attribute.
+	 * The feature id for the '<em><b>Const</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int INTEGER_SCHEMA__ANY_TYPE = NUMBER_SCHEMA__ANY_TYPE;
+	int INTEGER_SCHEMA__CONST = DATA_SCHEMA__CONST;
 
 	/**
 	 * The feature id for the '<em><b>Enum</b></em>' attribute.
@@ -1240,16 +1240,16 @@ public interface TdPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INTEGER_SCHEMA__ENUM = NUMBER_SCHEMA__ENUM;
+	int INTEGER_SCHEMA__ENUM = DATA_SCHEMA__ENUM;
 
 	/**
-	 * The feature id for the '<em><b>Minumum</b></em>' attribute.
+	 * The feature id for the '<em><b>Minimum</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int INTEGER_SCHEMA__MINUMUM = NUMBER_SCHEMA__MINUMUM;
+	int INTEGER_SCHEMA__MINIMUM = DATA_SCHEMA_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Maximum</b></em>' attribute.
@@ -1258,7 +1258,7 @@ public interface TdPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INTEGER_SCHEMA__MAXIMUM = NUMBER_SCHEMA__MAXIMUM;
+	int INTEGER_SCHEMA__MAXIMUM = DATA_SCHEMA_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of structural features of the '<em>Integer Schema</em>' class.
@@ -1267,7 +1267,7 @@ public interface TdPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INTEGER_SCHEMA_FEATURE_COUNT = NUMBER_SCHEMA_FEATURE_COUNT + 0;
+	int INTEGER_SCHEMA_FEATURE_COUNT = DATA_SCHEMA_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of operations of the '<em>Integer Schema</em>' class.
@@ -1276,7 +1276,7 @@ public interface TdPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INTEGER_SCHEMA_OPERATION_COUNT = NUMBER_SCHEMA_OPERATION_COUNT + 0;
+	int INTEGER_SCHEMA_OPERATION_COUNT = DATA_SCHEMA_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link edu.uoc.som.wot.td.impl.NoSecurityChemeImpl <em>No Security Cheme</em>}' class.
@@ -2538,15 +2538,15 @@ public interface TdPackage extends EPackage {
 	EAttribute getDataSchema_Description();
 
 	/**
-	 * Returns the meta object for the attribute '{@link edu.uoc.som.wot.td.DataSchema#getAnyType <em>Any Type</em>}'.
+	 * Returns the meta object for the attribute '{@link edu.uoc.som.wot.td.DataSchema#getConst <em>Const</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Any Type</em>'.
-	 * @see edu.uoc.som.wot.td.DataSchema#getAnyType()
+	 * @return the meta object for the attribute '<em>Const</em>'.
+	 * @see edu.uoc.som.wot.td.DataSchema#getConst()
 	 * @see #getDataSchema()
 	 * @generated
 	 */
-	EAttribute getDataSchema_AnyType();
+	EAttribute getDataSchema_Const();
 
 	/**
 	 * Returns the meta object for the attribute '{@link edu.uoc.som.wot.td.DataSchema#getEnum <em>Enum</em>}'.
@@ -2613,15 +2613,15 @@ public interface TdPackage extends EPackage {
 	EClass getNumberSchema();
 
 	/**
-	 * Returns the meta object for the attribute '{@link edu.uoc.som.wot.td.NumberSchema#getMinumum <em>Minumum</em>}'.
+	 * Returns the meta object for the attribute '{@link edu.uoc.som.wot.td.NumberSchema#getMinimum <em>Minimum</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Minumum</em>'.
-	 * @see edu.uoc.som.wot.td.NumberSchema#getMinumum()
+	 * @return the meta object for the attribute '<em>Minimum</em>'.
+	 * @see edu.uoc.som.wot.td.NumberSchema#getMinimum()
 	 * @see #getNumberSchema()
 	 * @generated
 	 */
-	EAttribute getNumberSchema_Minumum();
+	EAttribute getNumberSchema_Minimum();
 
 	/**
 	 * Returns the meta object for the attribute '{@link edu.uoc.som.wot.td.NumberSchema#getMaximum <em>Maximum</em>}'.
@@ -2695,6 +2695,28 @@ public interface TdPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getIntegerSchema();
+
+	/**
+	 * Returns the meta object for the attribute '{@link edu.uoc.som.wot.td.IntegerSchema#getMinimum <em>Minimum</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Minimum</em>'.
+	 * @see edu.uoc.som.wot.td.IntegerSchema#getMinimum()
+	 * @see #getIntegerSchema()
+	 * @generated
+	 */
+	EAttribute getIntegerSchema_Minimum();
+
+	/**
+	 * Returns the meta object for the attribute '{@link edu.uoc.som.wot.td.IntegerSchema#getMaximum <em>Maximum</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Maximum</em>'.
+	 * @see edu.uoc.som.wot.td.IntegerSchema#getMaximum()
+	 * @see #getIntegerSchema()
+	 * @generated
+	 */
+	EAttribute getIntegerSchema_Maximum();
 
 	/**
 	 * Returns the meta object for class '{@link edu.uoc.som.wot.td.NoSecurityCheme <em>No Security Cheme</em>}'.
@@ -3479,12 +3501,12 @@ public interface TdPackage extends EPackage {
 		EAttribute DATA_SCHEMA__DESCRIPTION = eINSTANCE.getDataSchema_Description();
 
 		/**
-		 * The meta object literal for the '<em><b>Any Type</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Const</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute DATA_SCHEMA__ANY_TYPE = eINSTANCE.getDataSchema_AnyType();
+		EAttribute DATA_SCHEMA__CONST = eINSTANCE.getDataSchema_Const();
 
 		/**
 		 * The meta object literal for the '<em><b>Enum</b></em>' attribute feature.
@@ -3539,12 +3561,12 @@ public interface TdPackage extends EPackage {
 		EClass NUMBER_SCHEMA = eINSTANCE.getNumberSchema();
 
 		/**
-		 * The meta object literal for the '<em><b>Minumum</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Minimum</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute NUMBER_SCHEMA__MINUMUM = eINSTANCE.getNumberSchema_Minumum();
+		EAttribute NUMBER_SCHEMA__MINIMUM = eINSTANCE.getNumberSchema_Minimum();
 
 		/**
 		 * The meta object literal for the '<em><b>Maximum</b></em>' attribute feature.
@@ -3609,6 +3631,22 @@ public interface TdPackage extends EPackage {
 		 * @generated
 		 */
 		EClass INTEGER_SCHEMA = eINSTANCE.getIntegerSchema();
+
+		/**
+		 * The meta object literal for the '<em><b>Minimum</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute INTEGER_SCHEMA__MINIMUM = eINSTANCE.getIntegerSchema_Minimum();
+
+		/**
+		 * The meta object literal for the '<em><b>Maximum</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute INTEGER_SCHEMA__MAXIMUM = eINSTANCE.getIntegerSchema_Maximum();
 
 		/**
 		 * The meta object literal for the '{@link edu.uoc.som.wot.td.impl.NoSecurityChemeImpl <em>No Security Cheme</em>}' class.

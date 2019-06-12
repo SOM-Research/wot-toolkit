@@ -11,7 +11,7 @@ package edu.uoc.som.wot.td;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link edu.uoc.som.wot.td.NumberSchema#getMinumum <em>Minumum</em>}</li>
+ *   <li>{@link edu.uoc.som.wot.td.NumberSchema#getMinimum <em>Minimum</em>}</li>
  *   <li>{@link edu.uoc.som.wot.td.NumberSchema#getMaximum <em>Maximum</em>}</li>
  * </ul>
  *
@@ -21,26 +21,26 @@ package edu.uoc.som.wot.td;
  */
 public interface NumberSchema extends DataSchema {
 	/**
-	 * Returns the value of the '<em><b>Minumum</b></em>' attribute.
+	 * Returns the value of the '<em><b>Minimum</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Minumum</em>' attribute.
-	 * @see #setMinumum(double)
-	 * @see edu.uoc.som.wot.td.TdPackage#getNumberSchema_Minumum()
+	 * @return the value of the '<em>Minimum</em>' attribute.
+	 * @see #setMinimum(double)
+	 * @see edu.uoc.som.wot.td.TdPackage#getNumberSchema_Minimum()
 	 * @model
 	 * @generated
 	 */
-	double getMinumum();
+	double getMinimum();
 
 	/**
-	 * Sets the value of the '{@link edu.uoc.som.wot.td.NumberSchema#getMinumum <em>Minumum</em>}' attribute.
+	 * Sets the value of the '{@link edu.uoc.som.wot.td.NumberSchema#getMinimum <em>Minimum</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Minumum</em>' attribute.
-	 * @see #getMinumum()
+	 * @param value the new value of the '<em>Minimum</em>' attribute.
+	 * @see #getMinimum()
 	 * @generated
 	 */
-	void setMinumum(double value);
+	void setMinimum(double value);
 
 	/**
 	 * Returns the value of the '<em><b>Maximum</b></em>' attribute.

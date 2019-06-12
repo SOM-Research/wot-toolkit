@@ -46,7 +46,7 @@ public class EventItemProvider extends InteractionPatternItemProvider {
 
 			addTypePropertyDescriptor(object);
 			addDescriptionPropertyDescriptor(object);
-			addAnyTypePropertyDescriptor(object);
+			addConstPropertyDescriptor(object);
 			addEnumPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
@@ -85,18 +85,18 @@ public class EventItemProvider extends InteractionPatternItemProvider {
 	}
 
 	/**
-	 * This adds a property descriptor for the Any Type feature.
+	 * This adds a property descriptor for the Const feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addAnyTypePropertyDescriptor(Object object) {
+	protected void addConstPropertyDescriptor(Object object) {
 		itemPropertyDescriptors
 				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_DataSchema_anyType_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_DataSchema_anyType_feature",
+						getResourceLocator(), getString("_UI_DataSchema_const_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_DataSchema_const_feature",
 								"_UI_DataSchema_type"),
-						TdPackage.Literals.DATA_SCHEMA__ANY_TYPE, true, false, false,
+						TdPackage.Literals.DATA_SCHEMA__CONST, true, false, false,
 						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
 	}
 
@@ -164,7 +164,7 @@ public class EventItemProvider extends InteractionPatternItemProvider {
 		switch (notification.getFeatureID(Event.class)) {
 		case TdPackage.EVENT__TYPE:
 		case TdPackage.EVENT__DESCRIPTION:
-		case TdPackage.EVENT__ANY_TYPE:
+		case TdPackage.EVENT__CONST:
 		case TdPackage.EVENT__ENUM:
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 			return;

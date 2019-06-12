@@ -20,7 +20,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * <ul>
  *   <li>{@link edu.uoc.som.wot.td.impl.EventImpl#getType <em>Type</em>}</li>
  *   <li>{@link edu.uoc.som.wot.td.impl.EventImpl#getDescription <em>Description</em>}</li>
- *   <li>{@link edu.uoc.som.wot.td.impl.EventImpl#getAnyType <em>Any Type</em>}</li>
+ *   <li>{@link edu.uoc.som.wot.td.impl.EventImpl#getConst <em>Const</em>}</li>
  *   <li>{@link edu.uoc.som.wot.td.impl.EventImpl#getEnum <em>Enum</em>}</li>
  * </ul>
  *
@@ -68,24 +68,24 @@ public class EventImpl extends InteractionPatternImpl implements Event {
 	protected String description = DESCRIPTION_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #getAnyType() <em>Any Type</em>}' attribute.
+	 * The default value of the '{@link #getConst() <em>Const</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getAnyType()
+	 * @see #getConst()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final Object ANY_TYPE_EDEFAULT = null;
+	protected static final Object CONST_EDEFAULT = null;
 
 	/**
-	 * The cached value of the '{@link #getAnyType() <em>Any Type</em>}' attribute.
+	 * The cached value of the '{@link #getConst() <em>Const</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getAnyType()
+	 * @see #getConst()
 	 * @generated
 	 * @ordered
 	 */
-	protected Object anyType = ANY_TYPE_EDEFAULT;
+	protected Object const_ = CONST_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getEnum() <em>Enum</em>}' attribute.
@@ -179,8 +179,8 @@ public class EventImpl extends InteractionPatternImpl implements Event {
 	 * @generated
 	 */
 	@Override
-	public Object getAnyType() {
-		return anyType;
+	public Object getConst() {
+		return const_;
 	}
 
 	/**
@@ -189,11 +189,11 @@ public class EventImpl extends InteractionPatternImpl implements Event {
 	 * @generated
 	 */
 	@Override
-	public void setAnyType(Object newAnyType) {
-		Object oldAnyType = anyType;
-		anyType = newAnyType;
+	public void setConst(Object newConst) {
+		Object oldConst = const_;
+		const_ = newConst;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, TdPackage.EVENT__ANY_TYPE, oldAnyType, anyType));
+			eNotify(new ENotificationImpl(this, Notification.SET, TdPackage.EVENT__CONST, oldConst, const_));
 	}
 
 	/**
@@ -231,8 +231,8 @@ public class EventImpl extends InteractionPatternImpl implements Event {
 			return getType();
 		case TdPackage.EVENT__DESCRIPTION:
 			return getDescription();
-		case TdPackage.EVENT__ANY_TYPE:
-			return getAnyType();
+		case TdPackage.EVENT__CONST:
+			return getConst();
 		case TdPackage.EVENT__ENUM:
 			return getEnum();
 		}
@@ -254,8 +254,8 @@ public class EventImpl extends InteractionPatternImpl implements Event {
 		case TdPackage.EVENT__DESCRIPTION:
 			setDescription((String) newValue);
 			return;
-		case TdPackage.EVENT__ANY_TYPE:
-			setAnyType(newValue);
+		case TdPackage.EVENT__CONST:
+			setConst(newValue);
 			return;
 		case TdPackage.EVENT__ENUM:
 			setEnum(newValue);
@@ -278,8 +278,8 @@ public class EventImpl extends InteractionPatternImpl implements Event {
 		case TdPackage.EVENT__DESCRIPTION:
 			setDescription(DESCRIPTION_EDEFAULT);
 			return;
-		case TdPackage.EVENT__ANY_TYPE:
-			setAnyType(ANY_TYPE_EDEFAULT);
+		case TdPackage.EVENT__CONST:
+			setConst(CONST_EDEFAULT);
 			return;
 		case TdPackage.EVENT__ENUM:
 			setEnum(ENUM_EDEFAULT);
@@ -300,8 +300,8 @@ public class EventImpl extends InteractionPatternImpl implements Event {
 			return TYPE_EDEFAULT == null ? type != null : !TYPE_EDEFAULT.equals(type);
 		case TdPackage.EVENT__DESCRIPTION:
 			return DESCRIPTION_EDEFAULT == null ? description != null : !DESCRIPTION_EDEFAULT.equals(description);
-		case TdPackage.EVENT__ANY_TYPE:
-			return ANY_TYPE_EDEFAULT == null ? anyType != null : !ANY_TYPE_EDEFAULT.equals(anyType);
+		case TdPackage.EVENT__CONST:
+			return CONST_EDEFAULT == null ? const_ != null : !CONST_EDEFAULT.equals(const_);
 		case TdPackage.EVENT__ENUM:
 			return ENUM_EDEFAULT == null ? enum_ != null : !ENUM_EDEFAULT.equals(enum_);
 		}
@@ -321,8 +321,8 @@ public class EventImpl extends InteractionPatternImpl implements Event {
 				return TdPackage.DATA_SCHEMA__TYPE;
 			case TdPackage.EVENT__DESCRIPTION:
 				return TdPackage.DATA_SCHEMA__DESCRIPTION;
-			case TdPackage.EVENT__ANY_TYPE:
-				return TdPackage.DATA_SCHEMA__ANY_TYPE;
+			case TdPackage.EVENT__CONST:
+				return TdPackage.DATA_SCHEMA__CONST;
 			case TdPackage.EVENT__ENUM:
 				return TdPackage.DATA_SCHEMA__ENUM;
 			default:
@@ -345,8 +345,8 @@ public class EventImpl extends InteractionPatternImpl implements Event {
 				return TdPackage.EVENT__TYPE;
 			case TdPackage.DATA_SCHEMA__DESCRIPTION:
 				return TdPackage.EVENT__DESCRIPTION;
-			case TdPackage.DATA_SCHEMA__ANY_TYPE:
-				return TdPackage.EVENT__ANY_TYPE;
+			case TdPackage.DATA_SCHEMA__CONST:
+				return TdPackage.EVENT__CONST;
 			case TdPackage.DATA_SCHEMA__ENUM:
 				return TdPackage.EVENT__ENUM;
 			default:
@@ -371,8 +371,8 @@ public class EventImpl extends InteractionPatternImpl implements Event {
 		result.append(type);
 		result.append(", description: ");
 		result.append(description);
-		result.append(", anyType: ");
-		result.append(anyType);
+		result.append(", const: ");
+		result.append(const_);
 		result.append(", enum: ");
 		result.append(enum_);
 		result.append(')');

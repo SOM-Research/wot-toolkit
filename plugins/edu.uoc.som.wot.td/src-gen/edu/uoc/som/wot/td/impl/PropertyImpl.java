@@ -22,7 +22,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * <ul>
  *   <li>{@link edu.uoc.som.wot.td.impl.PropertyImpl#getType <em>Type</em>}</li>
  *   <li>{@link edu.uoc.som.wot.td.impl.PropertyImpl#getDescription <em>Description</em>}</li>
- *   <li>{@link edu.uoc.som.wot.td.impl.PropertyImpl#getAnyType <em>Any Type</em>}</li>
+ *   <li>{@link edu.uoc.som.wot.td.impl.PropertyImpl#getConst <em>Const</em>}</li>
  *   <li>{@link edu.uoc.som.wot.td.impl.PropertyImpl#getEnum <em>Enum</em>}</li>
  *   <li>{@link edu.uoc.som.wot.td.impl.PropertyImpl#isWritable <em>Writable</em>}</li>
  *   <li>{@link edu.uoc.som.wot.td.impl.PropertyImpl#isObservable <em>Observable</em>}</li>
@@ -72,24 +72,24 @@ public class PropertyImpl extends InteractionPatternImpl implements Property {
 	protected String description = DESCRIPTION_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #getAnyType() <em>Any Type</em>}' attribute.
+	 * The default value of the '{@link #getConst() <em>Const</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getAnyType()
+	 * @see #getConst()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final Object ANY_TYPE_EDEFAULT = null;
+	protected static final Object CONST_EDEFAULT = null;
 
 	/**
-	 * The cached value of the '{@link #getAnyType() <em>Any Type</em>}' attribute.
+	 * The cached value of the '{@link #getConst() <em>Const</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getAnyType()
+	 * @see #getConst()
 	 * @generated
 	 * @ordered
 	 */
-	protected Object anyType = ANY_TYPE_EDEFAULT;
+	protected Object const_ = CONST_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getEnum() <em>Enum</em>}' attribute.
@@ -223,8 +223,8 @@ public class PropertyImpl extends InteractionPatternImpl implements Property {
 	 * @generated
 	 */
 	@Override
-	public Object getAnyType() {
-		return anyType;
+	public Object getConst() {
+		return const_;
 	}
 
 	/**
@@ -233,11 +233,11 @@ public class PropertyImpl extends InteractionPatternImpl implements Property {
 	 * @generated
 	 */
 	@Override
-	public void setAnyType(Object newAnyType) {
-		Object oldAnyType = anyType;
-		anyType = newAnyType;
+	public void setConst(Object newConst) {
+		Object oldConst = const_;
+		const_ = newConst;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, TdPackage.PROPERTY__ANY_TYPE, oldAnyType, anyType));
+			eNotify(new ENotificationImpl(this, Notification.SET, TdPackage.PROPERTY__CONST, oldConst, const_));
 	}
 
 	/**
@@ -322,8 +322,8 @@ public class PropertyImpl extends InteractionPatternImpl implements Property {
 			return getType();
 		case TdPackage.PROPERTY__DESCRIPTION:
 			return getDescription();
-		case TdPackage.PROPERTY__ANY_TYPE:
-			return getAnyType();
+		case TdPackage.PROPERTY__CONST:
+			return getConst();
 		case TdPackage.PROPERTY__ENUM:
 			return getEnum();
 		case TdPackage.PROPERTY__WRITABLE:
@@ -348,8 +348,8 @@ public class PropertyImpl extends InteractionPatternImpl implements Property {
 		case TdPackage.PROPERTY__DESCRIPTION:
 			setDescription((String) newValue);
 			return;
-		case TdPackage.PROPERTY__ANY_TYPE:
-			setAnyType(newValue);
+		case TdPackage.PROPERTY__CONST:
+			setConst(newValue);
 			return;
 		case TdPackage.PROPERTY__ENUM:
 			setEnum(newValue);
@@ -378,8 +378,8 @@ public class PropertyImpl extends InteractionPatternImpl implements Property {
 		case TdPackage.PROPERTY__DESCRIPTION:
 			setDescription(DESCRIPTION_EDEFAULT);
 			return;
-		case TdPackage.PROPERTY__ANY_TYPE:
-			setAnyType(ANY_TYPE_EDEFAULT);
+		case TdPackage.PROPERTY__CONST:
+			setConst(CONST_EDEFAULT);
 			return;
 		case TdPackage.PROPERTY__ENUM:
 			setEnum(ENUM_EDEFAULT);
@@ -406,8 +406,8 @@ public class PropertyImpl extends InteractionPatternImpl implements Property {
 			return TYPE_EDEFAULT == null ? type != null : !TYPE_EDEFAULT.equals(type);
 		case TdPackage.PROPERTY__DESCRIPTION:
 			return DESCRIPTION_EDEFAULT == null ? description != null : !DESCRIPTION_EDEFAULT.equals(description);
-		case TdPackage.PROPERTY__ANY_TYPE:
-			return ANY_TYPE_EDEFAULT == null ? anyType != null : !ANY_TYPE_EDEFAULT.equals(anyType);
+		case TdPackage.PROPERTY__CONST:
+			return CONST_EDEFAULT == null ? const_ != null : !CONST_EDEFAULT.equals(const_);
 		case TdPackage.PROPERTY__ENUM:
 			return ENUM_EDEFAULT == null ? enum_ != null : !ENUM_EDEFAULT.equals(enum_);
 		case TdPackage.PROPERTY__WRITABLE:
@@ -431,8 +431,8 @@ public class PropertyImpl extends InteractionPatternImpl implements Property {
 				return TdPackage.DATA_SCHEMA__TYPE;
 			case TdPackage.PROPERTY__DESCRIPTION:
 				return TdPackage.DATA_SCHEMA__DESCRIPTION;
-			case TdPackage.PROPERTY__ANY_TYPE:
-				return TdPackage.DATA_SCHEMA__ANY_TYPE;
+			case TdPackage.PROPERTY__CONST:
+				return TdPackage.DATA_SCHEMA__CONST;
 			case TdPackage.PROPERTY__ENUM:
 				return TdPackage.DATA_SCHEMA__ENUM;
 			default:
@@ -455,8 +455,8 @@ public class PropertyImpl extends InteractionPatternImpl implements Property {
 				return TdPackage.PROPERTY__TYPE;
 			case TdPackage.DATA_SCHEMA__DESCRIPTION:
 				return TdPackage.PROPERTY__DESCRIPTION;
-			case TdPackage.DATA_SCHEMA__ANY_TYPE:
-				return TdPackage.PROPERTY__ANY_TYPE;
+			case TdPackage.DATA_SCHEMA__CONST:
+				return TdPackage.PROPERTY__CONST;
 			case TdPackage.DATA_SCHEMA__ENUM:
 				return TdPackage.PROPERTY__ENUM;
 			default:
@@ -481,8 +481,8 @@ public class PropertyImpl extends InteractionPatternImpl implements Property {
 		result.append(type);
 		result.append(", description: ");
 		result.append(description);
-		result.append(", anyType: ");
-		result.append(anyType);
+		result.append(", const: ");
+		result.append(const_);
 		result.append(", enum: ");
 		result.append(enum_);
 		result.append(", writable: ");

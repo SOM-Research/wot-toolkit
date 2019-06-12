@@ -28,7 +28,7 @@
             id="edu.uoc.som.wot.td.presentation.TdEditorID"
             name="%_UI_TdEditor_label"
             icon="icons/full/obj16/TdModelFile.gif"
-            extensions="wot"
+            extensions="td"
             class="edu.uoc.som.wot.td.presentation.TdEditor"
             contributorClass="edu.uoc.som.wot.td.presentation.TdActionBarContributor">
       </editor>

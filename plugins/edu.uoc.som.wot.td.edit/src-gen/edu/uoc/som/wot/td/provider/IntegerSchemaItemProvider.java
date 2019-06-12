@@ -4,13 +4,17 @@ package edu.uoc.som.wot.td.provider;
 
 import edu.uoc.som.wot.td.IntegerSchema;
 
+import edu.uoc.som.wot.td.TdPackage;
 import java.util.Collection;
 import java.util.List;
 
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 
+import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
+import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
+import org.eclipse.emf.edit.provider.ViewerNotification;
 
 /**
  * This is the item provider adapter for a {@link edu.uoc.som.wot.td.IntegerSchema} object.
@@ -18,7 +22,7 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
  * <!-- end-user-doc -->
  * @generated
  */
-public class IntegerSchemaItemProvider extends NumberSchemaItemProvider {
+public class IntegerSchemaItemProvider extends DataSchemaItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
@@ -40,8 +44,42 @@ public class IntegerSchemaItemProvider extends NumberSchemaItemProvider {
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
+			addMinimumPropertyDescriptor(object);
+			addMaximumPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
+	}
+
+	/**
+	 * This adds a property descriptor for the Minimum feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addMinimumPropertyDescriptor(Object object) {
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_IntegerSchema_minimum_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_IntegerSchema_minimum_feature",
+								"_UI_IntegerSchema_type"),
+						TdPackage.Literals.INTEGER_SCHEMA__MINIMUM, true, false, false,
+						ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE, null, null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Maximum feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addMaximumPropertyDescriptor(Object object) {
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_IntegerSchema_maximum_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_IntegerSchema_maximum_feature",
+								"_UI_IntegerSchema_type"),
+						TdPackage.Literals.INTEGER_SCHEMA__MAXIMUM, true, false, false,
+						ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE, null, null));
 	}
 
 	/**
@@ -88,6 +126,13 @@ public class IntegerSchemaItemProvider extends NumberSchemaItemProvider {
 	@Override
 	public void notifyChanged(Notification notification) {
 		updateChildren(notification);
+
+		switch (notification.getFeatureID(IntegerSchema.class)) {
+		case TdPackage.INTEGER_SCHEMA__MINIMUM:
+		case TdPackage.INTEGER_SCHEMA__MAXIMUM:
+			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
+			return;
+		}
 		super.notifyChanged(notification);
 	}
 

@@ -19,7 +19,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link edu.uoc.som.wot.td.impl.NumberSchemaImpl#getMinumum <em>Minumum</em>}</li>
+ *   <li>{@link edu.uoc.som.wot.td.impl.NumberSchemaImpl#getMinimum <em>Minimum</em>}</li>
  *   <li>{@link edu.uoc.som.wot.td.impl.NumberSchemaImpl#getMaximum <em>Maximum</em>}</li>
  * </ul>
  *
@@ -27,24 +27,24 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  */
 public class NumberSchemaImpl extends DataSchemaImpl implements NumberSchema {
 	/**
-	 * The default value of the '{@link #getMinumum() <em>Minumum</em>}' attribute.
+	 * The default value of the '{@link #getMinimum() <em>Minimum</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getMinumum()
+	 * @see #getMinimum()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final double MINUMUM_EDEFAULT = 0.0;
+	protected static final double MINIMUM_EDEFAULT = 0.0;
 
 	/**
-	 * The cached value of the '{@link #getMinumum() <em>Minumum</em>}' attribute.
+	 * The cached value of the '{@link #getMinimum() <em>Minimum</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getMinumum()
+	 * @see #getMinimum()
 	 * @generated
 	 * @ordered
 	 */
-	protected double minumum = MINUMUM_EDEFAULT;
+	protected double minimum = MINIMUM_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getMaximum() <em>Maximum</em>}' attribute.
@@ -91,8 +91,8 @@ public class NumberSchemaImpl extends DataSchemaImpl implements NumberSchema {
 	 * @generated
 	 */
 	@Override
-	public double getMinumum() {
-		return minumum;
+	public double getMinimum() {
+		return minimum;
 	}
 
 	/**
@@ -101,12 +101,12 @@ public class NumberSchemaImpl extends DataSchemaImpl implements NumberSchema {
 	 * @generated
 	 */
 	@Override
-	public void setMinumum(double newMinumum) {
-		double oldMinumum = minumum;
-		minumum = newMinumum;
+	public void setMinimum(double newMinimum) {
+		double oldMinimum = minimum;
+		minimum = newMinimum;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, TdPackage.NUMBER_SCHEMA__MINUMUM, oldMinumum,
-					minumum));
+			eNotify(new ENotificationImpl(this, Notification.SET, TdPackage.NUMBER_SCHEMA__MINIMUM, oldMinimum,
+					minimum));
 	}
 
 	/**
@@ -141,8 +141,8 @@ public class NumberSchemaImpl extends DataSchemaImpl implements NumberSchema {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-		case TdPackage.NUMBER_SCHEMA__MINUMUM:
-			return getMinumum();
+		case TdPackage.NUMBER_SCHEMA__MINIMUM:
+			return getMinimum();
 		case TdPackage.NUMBER_SCHEMA__MAXIMUM:
 			return getMaximum();
 		}
@@ -157,8 +157,8 @@ public class NumberSchemaImpl extends DataSchemaImpl implements NumberSchema {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-		case TdPackage.NUMBER_SCHEMA__MINUMUM:
-			setMinumum((Double) newValue);
+		case TdPackage.NUMBER_SCHEMA__MINIMUM:
+			setMinimum((Double) newValue);
 			return;
 		case TdPackage.NUMBER_SCHEMA__MAXIMUM:
 			setMaximum((Double) newValue);
@@ -175,8 +175,8 @@ public class NumberSchemaImpl extends DataSchemaImpl implements NumberSchema {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-		case TdPackage.NUMBER_SCHEMA__MINUMUM:
-			setMinumum(MINUMUM_EDEFAULT);
+		case TdPackage.NUMBER_SCHEMA__MINIMUM:
+			setMinimum(MINIMUM_EDEFAULT);
 			return;
 		case TdPackage.NUMBER_SCHEMA__MAXIMUM:
 			setMaximum(MAXIMUM_EDEFAULT);
@@ -193,8 +193,8 @@ public class NumberSchemaImpl extends DataSchemaImpl implements NumberSchema {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-		case TdPackage.NUMBER_SCHEMA__MINUMUM:
-			return minumum != MINUMUM_EDEFAULT;
+		case TdPackage.NUMBER_SCHEMA__MINIMUM:
+			return minimum != MINIMUM_EDEFAULT;
 		case TdPackage.NUMBER_SCHEMA__MAXIMUM:
 			return maximum != MAXIMUM_EDEFAULT;
 		}
@@ -212,8 +212,8 @@ public class NumberSchemaImpl extends DataSchemaImpl implements NumberSchema {
 			return super.toString();
 
 		StringBuilder result = new StringBuilder(super.toString());
-		result.append(" (minumum: ");
-		result.append(minumum);
+		result.append(" (minimum: ");
+		result.append(minimum);
 		result.append(", maximum: ");
 		result.append(maximum);
 		result.append(')');

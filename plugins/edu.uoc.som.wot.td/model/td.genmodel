@@ -62,7 +62,7 @@
     <genClasses ecoreClass="td.ecore#//DataSchema">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute td.ecore#//DataSchema/type"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute td.ecore#//DataSchema/description"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute td.ecore#//DataSchema/anyType"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute td.ecore#//DataSchema/const"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute td.ecore#//DataSchema/enum"/>
     </genClasses>
     <genClasses ecoreClass="td.ecore#//ArraySchema">
@@ -71,7 +71,7 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute td.ecore#//ArraySchema/maxItems"/>
     </genClasses>
     <genClasses ecoreClass="td.ecore#//NumberSchema">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute td.ecore#//NumberSchema/minumum"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute td.ecore#//NumberSchema/minimum"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute td.ecore#//NumberSchema/maximum"/>
     </genClasses>
     <genClasses ecoreClass="td.ecore#//StringSchema"/>
@@ -80,7 +80,10 @@
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference td.ecore#//ObjectSchema/properties"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute td.ecore#//ObjectSchema/required"/>
     </genClasses>
-    <genClasses ecoreClass="td.ecore#//IntegerSchema"/>
+    <genClasses ecoreClass="td.ecore#//IntegerSchema">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute td.ecore#//IntegerSchema/minimum"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute td.ecore#//IntegerSchema/maximum"/>
+    </genClasses>
     <genClasses ecoreClass="td.ecore#//NoSecurityCheme"/>
     <genClasses ecoreClass="td.ecore#//BasicSecurityScheme">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute td.ecore#//BasicSecurityScheme/in"/>

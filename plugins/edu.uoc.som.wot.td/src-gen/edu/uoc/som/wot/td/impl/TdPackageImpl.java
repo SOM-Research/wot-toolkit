@@ -735,7 +735,7 @@ public class TdPackageImpl extends EPackageImpl implements TdPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getDataSchema_AnyType() {
+	public EAttribute getDataSchema_Const() {
 		return (EAttribute) dataSchemaEClass.getEStructuralFeatures().get(2);
 	}
 
@@ -805,7 +805,7 @@ public class TdPackageImpl extends EPackageImpl implements TdPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getNumberSchema_Minumum() {
+	public EAttribute getNumberSchema_Minimum() {
 		return (EAttribute) numberSchemaEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -877,6 +877,26 @@ public class TdPackageImpl extends EPackageImpl implements TdPackage {
 	@Override
 	public EClass getIntegerSchema() {
 		return integerSchemaEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getIntegerSchema_Minimum() {
+		return (EAttribute) integerSchemaEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getIntegerSchema_Maximum() {
+		return (EAttribute) integerSchemaEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -1330,7 +1350,7 @@ public class TdPackageImpl extends EPackageImpl implements TdPackage {
 		dataSchemaEClass = createEClass(DATA_SCHEMA);
 		createEAttribute(dataSchemaEClass, DATA_SCHEMA__TYPE);
 		createEAttribute(dataSchemaEClass, DATA_SCHEMA__DESCRIPTION);
-		createEAttribute(dataSchemaEClass, DATA_SCHEMA__ANY_TYPE);
+		createEAttribute(dataSchemaEClass, DATA_SCHEMA__CONST);
 		createEAttribute(dataSchemaEClass, DATA_SCHEMA__ENUM);
 
 		arraySchemaEClass = createEClass(ARRAY_SCHEMA);
@@ -1339,7 +1359,7 @@ public class TdPackageImpl extends EPackageImpl implements TdPackage {
 		createEAttribute(arraySchemaEClass, ARRAY_SCHEMA__MAX_ITEMS);
 
 		numberSchemaEClass = createEClass(NUMBER_SCHEMA);
-		createEAttribute(numberSchemaEClass, NUMBER_SCHEMA__MINUMUM);
+		createEAttribute(numberSchemaEClass, NUMBER_SCHEMA__MINIMUM);
 		createEAttribute(numberSchemaEClass, NUMBER_SCHEMA__MAXIMUM);
 
 		stringSchemaEClass = createEClass(STRING_SCHEMA);
@@ -1351,6 +1371,8 @@ public class TdPackageImpl extends EPackageImpl implements TdPackage {
 		createEAttribute(objectSchemaEClass, OBJECT_SCHEMA__REQUIRED);
 
 		integerSchemaEClass = createEClass(INTEGER_SCHEMA);
+		createEAttribute(integerSchemaEClass, INTEGER_SCHEMA__MINIMUM);
+		createEAttribute(integerSchemaEClass, INTEGER_SCHEMA__MAXIMUM);
 
 		noSecurityChemeEClass = createEClass(NO_SECURITY_CHEME);
 
@@ -1441,7 +1463,7 @@ public class TdPackageImpl extends EPackageImpl implements TdPackage {
 		stringSchemaEClass.getESuperTypes().add(this.getDataSchema());
 		booleanSchemaEClass.getESuperTypes().add(this.getDataSchema());
 		objectSchemaEClass.getESuperTypes().add(this.getDataSchema());
-		integerSchemaEClass.getESuperTypes().add(this.getNumberSchema());
+		integerSchemaEClass.getESuperTypes().add(this.getDataSchema());
 		noSecurityChemeEClass.getESuperTypes().add(this.getSecurityScheme());
 		basicSecuritySchemeEClass.getESuperTypes().add(this.getSecurityScheme());
 		oAuth2SecuritySchemeEClass.getESuperTypes().add(this.getSecurityScheme());
@@ -1558,8 +1580,8 @@ public class TdPackageImpl extends EPackageImpl implements TdPackage {
 		initEAttribute(getDataSchema_Description(), ecorePackage.getEString(), "description", null, 0, 1,
 				DataSchema.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
 				!IS_DERIVED, IS_ORDERED);
-		initEAttribute(getDataSchema_AnyType(), this.getAnyType(), "anyType", null, 0, 1, DataSchema.class,
-				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getDataSchema_Const(), this.getAnyType(), "const", null, 0, 1, DataSchema.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getDataSchema_Enum(), this.getAnyType(), "enum", null, 0, 1, DataSchema.class, !IS_TRANSIENT,
 				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
@@ -1575,7 +1597,7 @@ public class TdPackageImpl extends EPackageImpl implements TdPackage {
 
 		initEClass(numberSchemaEClass, NumberSchema.class, "NumberSchema", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getNumberSchema_Minumum(), ecorePackage.getEDouble(), "minumum", null, 0, 1, NumberSchema.class,
+		initEAttribute(getNumberSchema_Minimum(), ecorePackage.getEDouble(), "minimum", null, 0, 1, NumberSchema.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getNumberSchema_Maximum(), ecorePackage.getEDouble(), "maximum", null, 0, 1, NumberSchema.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1597,6 +1619,10 @@ public class TdPackageImpl extends EPackageImpl implements TdPackage {
 
 		initEClass(integerSchemaEClass, IntegerSchema.class, "IntegerSchema", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getIntegerSchema_Minimum(), ecorePackage.getEInt(), "minimum", null, 0, 1, IntegerSchema.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getIntegerSchema_Maximum(), ecorePackage.getEInt(), "maximum", null, 0, 1, IntegerSchema.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(noSecurityChemeEClass, NoSecurityCheme.class, "NoSecurityCheme", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);

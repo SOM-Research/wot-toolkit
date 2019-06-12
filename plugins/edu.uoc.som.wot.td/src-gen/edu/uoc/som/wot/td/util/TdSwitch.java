@@ -188,8 +188,6 @@ public class TdSwitch<T> extends Switch<T> {
 			IntegerSchema integerSchema = (IntegerSchema) theEObject;
 			T result = caseIntegerSchema(integerSchema);
 			if (result == null)
-				result = caseNumberSchema(integerSchema);
-			if (result == null)
 				result = caseDataSchema(integerSchema);
 			if (result == null)
 				result = defaultCase(theEObject);

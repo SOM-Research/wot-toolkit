@@ -22,7 +22,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * <ul>
  *   <li>{@link edu.uoc.som.wot.td.impl.DataSchemaImpl#getType <em>Type</em>}</li>
  *   <li>{@link edu.uoc.som.wot.td.impl.DataSchemaImpl#getDescription <em>Description</em>}</li>
- *   <li>{@link edu.uoc.som.wot.td.impl.DataSchemaImpl#getAnyType <em>Any Type</em>}</li>
+ *   <li>{@link edu.uoc.som.wot.td.impl.DataSchemaImpl#getConst <em>Const</em>}</li>
  *   <li>{@link edu.uoc.som.wot.td.impl.DataSchemaImpl#getEnum <em>Enum</em>}</li>
  * </ul>
  *
@@ -70,24 +70,24 @@ public class DataSchemaImpl extends MinimalEObjectImpl.Container implements Data
 	protected String description = DESCRIPTION_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #getAnyType() <em>Any Type</em>}' attribute.
+	 * The default value of the '{@link #getConst() <em>Const</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getAnyType()
+	 * @see #getConst()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final Object ANY_TYPE_EDEFAULT = null;
+	protected static final Object CONST_EDEFAULT = null;
 
 	/**
-	 * The cached value of the '{@link #getAnyType() <em>Any Type</em>}' attribute.
+	 * The cached value of the '{@link #getConst() <em>Const</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getAnyType()
+	 * @see #getConst()
 	 * @generated
 	 * @ordered
 	 */
-	protected Object anyType = ANY_TYPE_EDEFAULT;
+	protected Object const_ = CONST_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getEnum() <em>Enum</em>}' attribute.
@@ -181,8 +181,8 @@ public class DataSchemaImpl extends MinimalEObjectImpl.Container implements Data
 	 * @generated
 	 */
 	@Override
-	public Object getAnyType() {
-		return anyType;
+	public Object getConst() {
+		return const_;
 	}
 
 	/**
@@ -191,12 +191,11 @@ public class DataSchemaImpl extends MinimalEObjectImpl.Container implements Data
 	 * @generated
 	 */
 	@Override
-	public void setAnyType(Object newAnyType) {
-		Object oldAnyType = anyType;
-		anyType = newAnyType;
+	public void setConst(Object newConst) {
+		Object oldConst = const_;
+		const_ = newConst;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, TdPackage.DATA_SCHEMA__ANY_TYPE, oldAnyType,
-					anyType));
+			eNotify(new ENotificationImpl(this, Notification.SET, TdPackage.DATA_SCHEMA__CONST, oldConst, const_));
 	}
 
 	/**
@@ -234,8 +233,8 @@ public class DataSchemaImpl extends MinimalEObjectImpl.Container implements Data
 			return getType();
 		case TdPackage.DATA_SCHEMA__DESCRIPTION:
 			return getDescription();
-		case TdPackage.DATA_SCHEMA__ANY_TYPE:
-			return getAnyType();
+		case TdPackage.DATA_SCHEMA__CONST:
+			return getConst();
 		case TdPackage.DATA_SCHEMA__ENUM:
 			return getEnum();
 		}
@@ -256,8 +255,8 @@ public class DataSchemaImpl extends MinimalEObjectImpl.Container implements Data
 		case TdPackage.DATA_SCHEMA__DESCRIPTION:
 			setDescription((String) newValue);
 			return;
-		case TdPackage.DATA_SCHEMA__ANY_TYPE:
-			setAnyType(newValue);
+		case TdPackage.DATA_SCHEMA__CONST:
+			setConst(newValue);
 			return;
 		case TdPackage.DATA_SCHEMA__ENUM:
 			setEnum(newValue);
@@ -280,8 +279,8 @@ public class DataSchemaImpl extends MinimalEObjectImpl.Container implements Data
 		case TdPackage.DATA_SCHEMA__DESCRIPTION:
 			setDescription(DESCRIPTION_EDEFAULT);
 			return;
-		case TdPackage.DATA_SCHEMA__ANY_TYPE:
-			setAnyType(ANY_TYPE_EDEFAULT);
+		case TdPackage.DATA_SCHEMA__CONST:
+			setConst(CONST_EDEFAULT);
 			return;
 		case TdPackage.DATA_SCHEMA__ENUM:
 			setEnum(ENUM_EDEFAULT);
@@ -302,8 +301,8 @@ public class DataSchemaImpl extends MinimalEObjectImpl.Container implements Data
 			return TYPE_EDEFAULT == null ? type != null : !TYPE_EDEFAULT.equals(type);
 		case TdPackage.DATA_SCHEMA__DESCRIPTION:
 			return DESCRIPTION_EDEFAULT == null ? description != null : !DESCRIPTION_EDEFAULT.equals(description);
-		case TdPackage.DATA_SCHEMA__ANY_TYPE:
-			return ANY_TYPE_EDEFAULT == null ? anyType != null : !ANY_TYPE_EDEFAULT.equals(anyType);
+		case TdPackage.DATA_SCHEMA__CONST:
+			return CONST_EDEFAULT == null ? const_ != null : !CONST_EDEFAULT.equals(const_);
 		case TdPackage.DATA_SCHEMA__ENUM:
 			return ENUM_EDEFAULT == null ? enum_ != null : !ENUM_EDEFAULT.equals(enum_);
 		}
@@ -325,8 +324,8 @@ public class DataSchemaImpl extends MinimalEObjectImpl.Container implements Data
 		result.append(type);
 		result.append(", description: ");
 		result.append(description);
-		result.append(", anyType: ");
-		result.append(anyType);
+		result.append(", const: ");
+		result.append(const_);
 		result.append(", enum: ");
 		result.append(enum_);
 		result.append(')');

@@ -63,7 +63,7 @@
   <eClassifiers xsi:type="ecore:EClass" name="DataSchema">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="anyType" eType="#//AnyType"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="const" eType="#//AnyType"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="enum" eType="#//AnyType"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EDataType" name="AnyType" instanceClassName="java.lang.Object"/>
@@ -73,7 +73,7 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="maxItems" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="NumberSchema" eSuperTypes="#//DataSchema">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="minumum" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="minimum" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="maximum" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="StringSchema" eSuperTypes="#//DataSchema"/>
@@ -83,7 +83,10 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="required" upperBound="-1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="IntegerSchema" eSuperTypes="#//NumberSchema"/>
+  <eClassifiers xsi:type="ecore:EClass" name="IntegerSchema" eSuperTypes="#//DataSchema">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="minimum" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="maximum" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="NoSecurityCheme" eSuperTypes="#//SecurityScheme"/>
   <eClassifiers xsi:type="ecore:EClass" name="BasicSecurityScheme" eSuperTypes="#//SecurityScheme">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="in" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>

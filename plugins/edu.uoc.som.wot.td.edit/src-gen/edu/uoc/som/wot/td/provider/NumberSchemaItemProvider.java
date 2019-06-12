@@ -44,25 +44,25 @@ public class NumberSchemaItemProvider extends DataSchemaItemProvider {
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addMinumumPropertyDescriptor(object);
+			addMinimumPropertyDescriptor(object);
 			addMaximumPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
 
 	/**
-	 * This adds a property descriptor for the Minumum feature.
+	 * This adds a property descriptor for the Minimum feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addMinumumPropertyDescriptor(Object object) {
+	protected void addMinimumPropertyDescriptor(Object object) {
 		itemPropertyDescriptors
 				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_NumberSchema_minumum_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_NumberSchema_minumum_feature",
+						getResourceLocator(), getString("_UI_NumberSchema_minimum_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_NumberSchema_minimum_feature",
 								"_UI_NumberSchema_type"),
-						TdPackage.Literals.NUMBER_SCHEMA__MINUMUM, true, false, false,
+						TdPackage.Literals.NUMBER_SCHEMA__MINIMUM, true, false, false,
 						ItemPropertyDescriptor.REAL_VALUE_IMAGE, null, null));
 	}
 
@@ -128,7 +128,7 @@ public class NumberSchemaItemProvider extends DataSchemaItemProvider {
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(NumberSchema.class)) {
-		case TdPackage.NUMBER_SCHEMA__MINUMUM:
+		case TdPackage.NUMBER_SCHEMA__MINIMUM:
 		case TdPackage.NUMBER_SCHEMA__MAXIMUM:
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 			return;

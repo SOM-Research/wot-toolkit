@@ -15,7 +15,7 @@ import org.eclipse.emf.ecore.EObject;
  * <ul>
  *   <li>{@link edu.uoc.som.wot.td.DataSchema#getType <em>Type</em>}</li>
  *   <li>{@link edu.uoc.som.wot.td.DataSchema#getDescription <em>Description</em>}</li>
- *   <li>{@link edu.uoc.som.wot.td.DataSchema#getAnyType <em>Any Type</em>}</li>
+ *   <li>{@link edu.uoc.som.wot.td.DataSchema#getConst <em>Const</em>}</li>
  *   <li>{@link edu.uoc.som.wot.td.DataSchema#getEnum <em>Enum</em>}</li>
  * </ul>
  *
@@ -69,26 +69,26 @@ public interface DataSchema extends EObject {
 	void setDescription(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Any Type</b></em>' attribute.
+	 * Returns the value of the '<em><b>Const</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Any Type</em>' attribute.
-	 * @see #setAnyType(Object)
-	 * @see edu.uoc.som.wot.td.TdPackage#getDataSchema_AnyType()
+	 * @return the value of the '<em>Const</em>' attribute.
+	 * @see #setConst(Object)
+	 * @see edu.uoc.som.wot.td.TdPackage#getDataSchema_Const()
 	 * @model dataType="edu.uoc.som.wot.td.AnyType"
 	 * @generated
 	 */
-	Object getAnyType();
+	Object getConst();
 
 	/**
-	 * Sets the value of the '{@link edu.uoc.som.wot.td.DataSchema#getAnyType <em>Any Type</em>}' attribute.
+	 * Sets the value of the '{@link edu.uoc.som.wot.td.DataSchema#getConst <em>Const</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Any Type</em>' attribute.
-	 * @see #getAnyType()
+	 * @param value the new value of the '<em>Const</em>' attribute.
+	 * @see #getConst()
 	 * @generated
 	 */
-	void setAnyType(Object value);
+	void setConst(Object value);
 
 	/**
 	 * Returns the value of the '<em><b>Enum</b></em>' attribute.
