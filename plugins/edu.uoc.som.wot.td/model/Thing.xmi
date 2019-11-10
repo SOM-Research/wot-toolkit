@@ -4,22 +4,25 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:td="http://edu.uoc.som/wot/td/1.0"
     xsi:schemaLocation="http://edu.uoc.som/wot/td/1.0 td.ecore"
-    name="MyLampThing"
-    id="urn:dev:wot:com:example:servient:lamp">
-  <security
-      xsi:type="td:BasicSecurityScheme"
-      scheme="basic"/>
+    id="urn:dev:ops:32473-WoTLamp-1234"
+    title="MyLampThing">
+  <security>basic_sc</security>
   <properties
-      label="status"
+      id="status"
       type="string">
-    <forms href="https://mylamp.example.com/status"/>
+    <forms _href="https://mylamp.example.com/status"/>
   </properties>
-  <events label="overheating"
-      type="string">
-    <forms href="https://mylamp.example.com/oh"
-        subProtocol="LongPoll"/>
-  </events>
-  <actions label="toggle">
-    <forms href="https://mylamp.example.com/toggle"/>
+  <actions id="toggle">
+    <forms _href="https://mylamp.example.com/toggle"/>
   </actions>
+  <events id="overheating">
+    <forms _href="https://mylamp.example.com/oh"
+        subProtocol="longpoll"/>
+    <data xsi:type="td:StringSchema"/>
+  </events>
+  <securityDefinitions
+      xsi:type="td:BasicSecurityScheme"
+      id="basic_sc"
+      scheme="basic"
+      in="header"/>
 </td:Thing>

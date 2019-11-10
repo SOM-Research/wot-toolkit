@@ -10,123 +10,227 @@
   <testsDirectory xsi:nil="true"/>
   <genPackages prefix="Td" basePackage="edu.uoc.som.wot" disposableProviderFactory="true"
       ecorePackage="td.ecore#/">
-    <genDataTypes ecoreDataType="td.ecore#//AnyURI"/>
     <genDataTypes ecoreDataType="td.ecore#//AnyType"/>
     <genClasses ecoreClass="td.ecore#//Thing">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute td.ecore#//Thing/name"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute td.ecore#//Thing/base"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute td.ecore#//Thing/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute td.ecore#//Thing/title"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute td.ecore#//Thing/description"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute td.ecore#//Thing/created"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute td.ecore#//Thing/modified"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute td.ecore#//Thing/support"/>
-      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference td.ecore#//Thing/security"/>
-      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference td.ecore#//Thing/properties"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute td.ecore#//Thing/base"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute td.ecore#//Thing/security"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference td.ecore#//Thing/forms"/>
       <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference td.ecore#//Thing/links"/>
-      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference td.ecore#//Thing/events"/>
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference td.ecore#//Thing/titles"/>
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference td.ecore#//Thing/descriptions"/>
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference td.ecore#//Thing/version"/>
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference td.ecore#//Thing/properties"/>
       <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference td.ecore#//Thing/actions"/>
-    </genClasses>
-    <genClasses ecoreClass="td.ecore#//Property">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute td.ecore#//Property/writable"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute td.ecore#//Property/observable"/>
-    </genClasses>
-    <genClasses ecoreClass="td.ecore#//InteractionPattern">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute td.ecore#//InteractionPattern/label"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute td.ecore#//InteractionPattern/scopes"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference td.ecore#//InteractionPattern/security"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference td.ecore#//InteractionPattern/forms"/>
-    </genClasses>
-    <genClasses ecoreClass="td.ecore#//Action">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference td.ecore#//Action/input"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference td.ecore#//Action/output"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute td.ecore#//Action/description"/>
-    </genClasses>
-    <genClasses ecoreClass="td.ecore#//Event"/>
-    <genClasses ecoreClass="td.ecore#//SecurityScheme">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute td.ecore#//SecurityScheme/scheme"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute td.ecore#//SecurityScheme/description"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute td.ecore#//SecurityScheme/proxyUrl"/>
-    </genClasses>
-    <genClasses ecoreClass="td.ecore#//Link">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute td.ecore#//Link/href"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute td.ecore#//Link/mediaType"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute td.ecore#//Link/rel"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute td.ecore#//Link/anchor"/>
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference td.ecore#//Thing/events"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference td.ecore#//Thing/securityDefinitions"/>
     </genClasses>
     <genClasses ecoreClass="td.ecore#//Form">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute td.ecore#//Form/href"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute td.ecore#//Form/mediaType"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute td.ecore#//Form/rel"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute td.ecore#//Form/op"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute td.ecore#//Form/_href"
+          suppressedGetVisibility="true" suppressedSetVisibility="true" suppressedIsSetVisibility="true"
+          suppressedUnsetVisibility="true"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute td.ecore#//Form/contentType"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute td.ecore#//Form/contentCoding"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute td.ecore#//Form/subProtocol"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute td.ecore#//Form/security"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute td.ecore#//Form/scopes"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference td.ecore#//Form/security"/>
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference td.ecore#//Form/response"/>
+      <genOperations ecoreOperation="td.ecore#//Form/getHref" body="return this._href;"/>
+      <genOperations ecoreOperation="td.ecore#//Form/setHref" body="this._href = href;">
+        <genParameters ecoreParameter="td.ecore#//Form/setHref/href"/>
+      </genOperations>
+    </genClasses>
+    <genClasses ecoreClass="td.ecore#//ExpectedResponse">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute td.ecore#//ExpectedResponse/contentType"/>
+    </genClasses>
+    <genClasses ecoreClass="td.ecore#//Link">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute td.ecore#//Link/_href"
+          suppressedGetVisibility="true" suppressedSetVisibility="true" suppressedIsSetVisibility="true"
+          suppressedUnsetVisibility="true"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute td.ecore#//Link/type"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute td.ecore#//Link/rel"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute td.ecore#//Link/anchor"/>
+      <genOperations ecoreOperation="td.ecore#//Link/getHref" body="return this._href;"/>
+      <genOperations ecoreOperation="td.ecore#//Link/setHref" body="this._href = href;">
+        <genParameters ecoreParameter="td.ecore#//Link/setHref/href"/>
+      </genOperations>
+    </genClasses>
+    <genClasses ecoreClass="td.ecore#//MultiLanguage">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference td.ecore#//MultiLanguage/translations"/>
+    </genClasses>
+    <genClasses ecoreClass="td.ecore#//LanguageToContentMap">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute td.ecore#//LanguageToContentMap/key"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute td.ecore#//LanguageToContentMap/value"/>
+    </genClasses>
+    <genClasses ecoreClass="td.ecore#//VersionInfo">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute td.ecore#//VersionInfo/instance"/>
+    </genClasses>
+    <genClasses ecoreClass="td.ecore#//InteractionAffordance">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute td.ecore#//InteractionAffordance/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute td.ecore#//InteractionAffordance/ititle"
+          suppressedGetVisibility="true" suppressedSetVisibility="true" suppressedIsSetVisibility="true"
+          suppressedUnsetVisibility="true"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute td.ecore#//InteractionAffordance/idescription"
+          suppressedGetVisibility="true" suppressedSetVisibility="true" suppressedIsSetVisibility="true"
+          suppressedUnsetVisibility="true"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference td.ecore#//InteractionAffordance/forms"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference td.ecore#//InteractionAffordance/uriVariable"/>
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference td.ecore#//InteractionAffordance/ititles"
+          suppressedGetVisibility="true" suppressedSetVisibility="true" suppressedIsSetVisibility="true"
+          suppressedUnsetVisibility="true"/>
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference td.ecore#//InteractionAffordance/idescriptions"
+          suppressedGetVisibility="true" suppressedSetVisibility="true" suppressedIsSetVisibility="true"
+          suppressedUnsetVisibility="true"/>
+      <genOperations ecoreOperation="td.ecore#//InteractionAffordance/getTitle" body="return this.ititle;"/>
+      <genOperations ecoreOperation="td.ecore#//InteractionAffordance/setTitle" body="this.ititle = title;">
+        <genParameters ecoreParameter="td.ecore#//InteractionAffordance/setTitle/title"/>
+      </genOperations>
+      <genOperations ecoreOperation="td.ecore#//InteractionAffordance/getDescription"
+          body="return this.idescription;"/>
+      <genOperations ecoreOperation="td.ecore#//InteractionAffordance/setDescription"
+          body="this.idescription = description;">
+        <genParameters ecoreParameter="td.ecore#//InteractionAffordance/setDescription/description"/>
+      </genOperations>
+      <genOperations ecoreOperation="td.ecore#//InteractionAffordance/getTitles" body="return this.ititles;"/>
+      <genOperations ecoreOperation="td.ecore#//InteractionAffordance/setTitles" body="this.ititles = titles;">
+        <genParameters ecoreParameter="td.ecore#//InteractionAffordance/setTitles/titles"/>
+      </genOperations>
+      <genOperations ecoreOperation="td.ecore#//InteractionAffordance/getDescriptions"
+          body="return this.idescriptions;"/>
+      <genOperations ecoreOperation="td.ecore#//InteractionAffordance/setDescriptions"
+          body="this.idescriptions = descriptions;">
+        <genParameters ecoreParameter="td.ecore#//InteractionAffordance/setDescriptions/descriptions"/>
+      </genOperations>
+    </genClasses>
+    <genClasses ecoreClass="td.ecore#//PropertyAffordance">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute td.ecore#//PropertyAffordance/observable"/>
+    </genClasses>
+    <genClasses ecoreClass="td.ecore#//ActionAffordance">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute td.ecore#//ActionAffordance/safe"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute td.ecore#//ActionAffordance/idempotent"/>
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference td.ecore#//ActionAffordance/input"/>
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference td.ecore#//ActionAffordance/output"/>
+    </genClasses>
+    <genClasses ecoreClass="td.ecore#//EventAffordance">
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference td.ecore#//EventAffordance/data"/>
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference td.ecore#//EventAffordance/subscription"/>
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference td.ecore#//EventAffordance/cancellation"/>
     </genClasses>
     <genClasses ecoreClass="td.ecore#//DataSchema">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute td.ecore#//DataSchema/dtitle"
+          suppressedGetVisibility="true" suppressedSetVisibility="true" suppressedIsSetVisibility="true"
+          suppressedUnsetVisibility="true"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute td.ecore#//DataSchema/ddescription"
+          suppressedGetVisibility="true" suppressedSetVisibility="true" suppressedIsSetVisibility="true"
+          suppressedUnsetVisibility="true"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute td.ecore#//DataSchema/type"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute td.ecore#//DataSchema/description"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute td.ecore#//DataSchema/const"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute td.ecore#//DataSchema/unit"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute td.ecore#//DataSchema/enum"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute td.ecore#//DataSchema/readOnly"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute td.ecore#//DataSchema/writeOnly"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute td.ecore#//DataSchema/format"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference td.ecore#//DataSchema/oneOf"/>
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference td.ecore#//DataSchema/dtitles"
+          suppressedGetVisibility="true" suppressedSetVisibility="true" suppressedIsSetVisibility="true"
+          suppressedUnsetVisibility="true"/>
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference td.ecore#//DataSchema/ddescriptions"
+          suppressedGetVisibility="true" suppressedSetVisibility="true" suppressedIsSetVisibility="true"
+          suppressedUnsetVisibility="true"/>
+      <genOperations ecoreOperation="td.ecore#//DataSchema/getTitle" suppressedVisibility="false"
+          body="return this.dtitle;"/>
+      <genOperations ecoreOperation="td.ecore#//DataSchema/setTitle" body="this.dtitle = title;">
+        <genParameters ecoreParameter="td.ecore#//DataSchema/setTitle/title"/>
+      </genOperations>
+      <genOperations ecoreOperation="td.ecore#//DataSchema/getDescription" body="return this.ddescription;"/>
+      <genOperations ecoreOperation="td.ecore#//DataSchema/setDescription" body="this.ddescription = description;">
+        <genParameters ecoreParameter="td.ecore#//DataSchema/setDescription/description"/>
+      </genOperations>
+      <genOperations ecoreOperation="td.ecore#//DataSchema/getTitles" body="return this.dtitles;"/>
+      <genOperations ecoreOperation="td.ecore#//DataSchema/setTitles" body="this.dtitles = titles;">
+        <genParameters ecoreParameter="td.ecore#//DataSchema/setTitles/titles"/>
+      </genOperations>
+      <genOperations ecoreOperation="td.ecore#//DataSchema/getDescriptions" body="return this.ddescriptions;"/>
+      <genOperations ecoreOperation="td.ecore#//DataSchema/setDescriptions" body="this.ddescriptions = descriptions;">
+        <genParameters ecoreParameter="td.ecore#//DataSchema/setDescriptions/descriptions"/>
+      </genOperations>
     </genClasses>
     <genClasses ecoreClass="td.ecore#//ArraySchema">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference td.ecore#//ArraySchema/items"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute td.ecore#//ArraySchema/minItems"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute td.ecore#//ArraySchema/maxItems"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference td.ecore#//ArraySchema/items"/>
+    </genClasses>
+    <genClasses ecoreClass="td.ecore#//ObjectSchema">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute td.ecore#//ObjectSchema/required"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference td.ecore#//ObjectSchema/properties"/>
     </genClasses>
     <genClasses ecoreClass="td.ecore#//NumberSchema">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute td.ecore#//NumberSchema/minimum"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute td.ecore#//NumberSchema/maximum"/>
     </genClasses>
-    <genClasses ecoreClass="td.ecore#//StringSchema"/>
-    <genClasses ecoreClass="td.ecore#//BooleanSchema"/>
-    <genClasses ecoreClass="td.ecore#//ObjectSchema">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference td.ecore#//ObjectSchema/properties"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute td.ecore#//ObjectSchema/required"/>
-    </genClasses>
     <genClasses ecoreClass="td.ecore#//IntegerSchema">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute td.ecore#//IntegerSchema/minimum"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute td.ecore#//IntegerSchema/maximum"/>
     </genClasses>
-    <genClasses ecoreClass="td.ecore#//NoSecurityCheme"/>
+    <genClasses ecoreClass="td.ecore#//StringSchema"/>
+    <genClasses ecoreClass="td.ecore#//BooleanSchema"/>
+    <genClasses ecoreClass="td.ecore#//NullSchema"/>
+    <genClasses ecoreClass="td.ecore#//SecurityScheme">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute td.ecore#//SecurityScheme/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute td.ecore#//SecurityScheme/scheme"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute td.ecore#//SecurityScheme/description"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute td.ecore#//SecurityScheme/proxy"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference td.ecore#//SecurityScheme/descriptions"/>
+    </genClasses>
+    <genClasses ecoreClass="td.ecore#//NoSecurityScheme"/>
     <genClasses ecoreClass="td.ecore#//BasicSecurityScheme">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute td.ecore#//BasicSecurityScheme/in"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute td.ecore#//BasicSecurityScheme/name"/>
     </genClasses>
-    <genClasses ecoreClass="td.ecore#//OAuth2SecurityScheme">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute td.ecore#//OAuth2SecurityScheme/flow"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute td.ecore#//OAuth2SecurityScheme/scopes"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute td.ecore#//OAuth2SecurityScheme/tokenUrl"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute td.ecore#//OAuth2SecurityScheme/authorizationUrl"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute td.ecore#//OAuth2SecurityScheme/refreshUrl"/>
-    </genClasses>
     <genClasses ecoreClass="td.ecore#//DigestSecurityScheme">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute td.ecore#//DigestSecurityScheme/qop"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute td.ecore#//DigestSecurityScheme/in"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute td.ecore#//DigestSecurityScheme/name"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute td.ecore#//DigestSecurityScheme/qop"/>
     </genClasses>
-    <genClasses ecoreClass="td.ecore#//ApikeySecurityScheme">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute td.ecore#//ApikeySecurityScheme/in"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute td.ecore#//ApikeySecurityScheme/name"/>
+    <genClasses ecoreClass="td.ecore#//APIKeySecurityScheme">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute td.ecore#//APIKeySecurityScheme/in"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute td.ecore#//APIKeySecurityScheme/name"/>
     </genClasses>
-    <genClasses ecoreClass="td.ecore#//PSKSecurityScheme">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute td.ecore#//PSKSecurityScheme/identity"/>
+    <genClasses ecoreClass="td.ecore#//BearerSecurityScheme">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute td.ecore#//BearerSecurityScheme/authorization"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute td.ecore#//BearerSecurityScheme/alg"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute td.ecore#//BearerSecurityScheme/format"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute td.ecore#//BearerSecurityScheme/in"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute td.ecore#//BearerSecurityScheme/name"/>
     </genClasses>
     <genClasses ecoreClass="td.ecore#//CertSecurityScheme">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute td.ecore#//CertSecurityScheme/identity"/>
     </genClasses>
+    <genClasses ecoreClass="td.ecore#//PSKSecurityScheme">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute td.ecore#//PSKSecurityScheme/identity"/>
+    </genClasses>
     <genClasses ecoreClass="td.ecore#//PublicSecurityScheme">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute td.ecore#//PublicSecurityScheme/identity"/>
     </genClasses>
-    <genClasses ecoreClass="td.ecore#//BearerSecurityScheme">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute td.ecore#//BearerSecurityScheme/format"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute td.ecore#//BearerSecurityScheme/alg"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute td.ecore#//BearerSecurityScheme/authorizationUrl"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute td.ecore#//BearerSecurityScheme/in"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute td.ecore#//BearerSecurityScheme/name"/>
+    <genClasses ecoreClass="td.ecore#//PoPSecurityScheme">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute td.ecore#//PoPSecurityScheme/authorization"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute td.ecore#//PoPSecurityScheme/alg"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute td.ecore#//PoPSecurityScheme/format"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute td.ecore#//PoPSecurityScheme/in"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute td.ecore#//PoPSecurityScheme/name"/>
     </genClasses>
-    <genClasses ecoreClass="td.ecore#//PopSecurityScheme">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute td.ecore#//PopSecurityScheme/format"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute td.ecore#//PopSecurityScheme/alg"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute td.ecore#//PopSecurityScheme/authorizationUrl"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute td.ecore#//PopSecurityScheme/in"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute td.ecore#//PopSecurityScheme/name"/>
+    <genClasses ecoreClass="td.ecore#//OAuth2SecurityScheme">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute td.ecore#//OAuth2SecurityScheme/authorization"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute td.ecore#//OAuth2SecurityScheme/token"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute td.ecore#//OAuth2SecurityScheme/refresh"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute td.ecore#//OAuth2SecurityScheme/scopes"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute td.ecore#//OAuth2SecurityScheme/flow"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

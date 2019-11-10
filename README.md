@@ -1,30 +1,38 @@
 # Web of Things Toolkit
 
-Prototypical implementation of the W3C Web of Things proposal using the EMF stack
+Prototypical implementation of the W3C Web of Things proposal using the EMF stack.
 
 ## Thing Description metamodel
 
-### Core model
+### Core vocabulary model
 
-![Core model](plugins/edu.uoc.som.wot.td/model/td-core.png)
+![TD core vocabulary model](plugins/edu.uoc.som.wot.td/model/td-core.png)
 
-### Data Schema model
+### Data Schema vocabulary model
 
-![Data Schema model](plugins/edu.uoc.som.wot.td/model/td-data-schema.png)
+![ JSON schema vocabulary model](plugins/edu.uoc.som.wot.td/model/json-schema.png)
 
-### Security model
+### WoT security vocabulary model
 
-![Security model](plugins/edu.uoc.som.wot.td/model/td-security.png)
+![WoT security vocabulary model](plugins/edu.uoc.som.wot.td/model/wot-security.png)
+
+### Hypermedia controls vocabulary model
+
+![Hypermedia controls vocabulary model](plugins/edu.uoc.som.wot.td/model/hypermedia-controls.png)
 
 ## Example instance
 
-Example Thing Description from [https://www.w3.org/TR/wot-thing-description/#simple-thing-description-sample](https://www.w3.org/TR/wot-thing-description/#simple-thing-description-sample):
+Example Thing Description from [https://www.w3.org/TR/2019/CR-wot-thing-description-20190516/#simple-thing-description-sample](https://www.w3.org/TR/2019/CR-wot-thing-description-20190516/#simple-thing-description-sample):
 
 ```
 {
-    "id": "urn:dev:wot:com:example:servient:lamp",
-    "name": "MyLampThing",
-    "security": [{"scheme": "basic"}],
+    "@context": "https://www.w3.org/2019/wot/td/v1",
+    "id": "urn:dev:ops:32473-WoTLamp-1234",
+    "title": "MyLampThing",
+    "securityDefinitions": {
+        "basic_sc": {"scheme": "basic", "in":"header"}
+    },
+    "security": ["basic_sc"],
     "properties": {
         "status" : {
             "type": "string",
@@ -38,10 +46,10 @@ Example Thing Description from [https://www.w3.org/TR/wot-thing-description/#sim
     },
     "events":{
         "overheating":{
-            "type": "string",
+            "data": {"type": "string"},
             "forms": [{
                 "href": "https://mylamp.example.com/oh",
-                "subProtocol": "LongPoll"
+                "subprotocol": "longpoll"
             }]
         }
     }
@@ -57,23 +65,26 @@ Example Thing Description represented as an instance of the _Thing Description m
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:td="http://edu.uoc.som/wot/td/1.0"
     xsi:schemaLocation="http://edu.uoc.som/wot/td/1.0 td.ecore"
-    name="MyLampThing"
-    id="urn:dev:wot:com:example:servient:lamp">
-  <security
-      xsi:type="td:BasicSecurityScheme"
-      scheme="basic"/>
+    id="urn:dev:ops:32473-WoTLamp-1234"
+    title="MyLampThing">
+  <security>basic_sc</security>
   <properties
-      label="status"
+      id="status"
       type="string">
-    <forms href="https://mylamp.example.com/status"/>
+    <forms _href="https://mylamp.example.com/status"/>
   </properties>
-  <events label="overheating"
-      type="string">
-    <forms href="https://mylamp.example.com/oh"
-        subProtocol="LongPoll"/>
-  </events>
-  <actions label="toggle">
-    <forms href="https://mylamp.example.com/toggle"/>
+  <actions id="toggle">
+    <forms _href="https://mylamp.example.com/toggle"/>
   </actions>
+  <events id="overheating">
+    <forms _href="https://mylamp.example.com/oh"
+        subProtocol="longpoll"/>
+    <data xsi:type="td:StringSchema"/>
+  </events>
+  <securityDefinitions
+      xsi:type="td:BasicSecurityScheme"
+      id="basic_sc"
+      scheme="basic"
+      in="header"/>
 </td:Thing>
 ```
