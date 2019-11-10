@@ -1,0 +1,257 @@
+grammar edu.uoc.som.wot.td.json.ThingDescriptionJson hidden(WS)
+
+generate thingDescriptionJson "http://www.uoc.edu/som/wot/td/json/ThingDescriptionJson"
+
+import "http://www.eclipse.org/emf/2002/Ecore" as ecore
+
+JsonThingDescription:
+	{JsonThingDescription} '{'	(
+		  // TODO: Parse the @context tag completely
+		  ( '"@context"' ':' ( ld_context+=AnyString | '[' ( ld_context+=AnyString | JsonGenericExpression ) (',' ( ld_context+=AnyString | JsonGenericExpression ) )* ']')','? )
+		& ( '"@type"' ':' ( ld_type+=AnyString | '[' ld_type+=AnyString (',' ld_type+=AnyString)* ']' ) ','? )?
+		& ( '"id"' ':' id=AnyString ','? )? 
+		& ( '"title"' ':' title=AnyString ','? )? 
+		& ( '"description"' ':' description=AnyString ','? )? 
+		& ( '"created"' ':' created=AnyString ','? )? 
+		& ( '"modified"' ':' modified=AnyString ','? )? 
+		& ( '"support"' ':' support=AnyString ','? )? 
+		& ( '"base"' ':' base=AnyString ','? )? 
+		& ( '"security"' ':' ( security+=AnyString | '[' security+=AnyString (',' security+=AnyString)* ']' ) ','? )?
+		& ( '"forms"' ':' '{' forms+=JsonForm (',' forms+=JsonForm)* '}' ','? )?
+		& ( '"links"' ':' '{' links+=JsonLink (',' links+=JsonLink)* '}' ','? )?
+		& ( '"titles"' ':' '{' titles+=JsonMultiLanguageEntry (',' titles+=JsonMultiLanguageEntry)* '}' ','? )?
+		& ( '"descriptions"' ':' '{' descriptions+=JsonMultiLanguageEntry (',' descriptions+=JsonMultiLanguageEntry)* '}' ','? )?
+		& ( '"version"' ':' version=JsonVersionInfo ','? )?
+		& ( '"properties"' ':' '{' properties+=JsonPropertyAffordance (',' properties+=JsonPropertyAffordance)* '}' ','? )?
+		& ( '"actions"' ':' '{' actions+=JsonActionAffordance (',' actions+=JsonActionAffordance)* '}' ','? )?
+		& ( '"events"' ':' '{' events+=JsonEventAffordance (',' events+=JsonEventAffordance)* '}' ','? )?
+		& ( '"securityDefinitions"' ':' '{' securityDefinitions+=JsonSecurityScheme (',' securityDefinitions+=JsonSecurityScheme)* '}' ','? )?
+	) '}';
+
+JsonVersionInfo:
+	{JsonVersionInfo} '{'
+		'"instance"' ':' instance=AnyString
+	'}';
+
+JsonSecurityScheme:
+	{JsonSecurityScheme} id=AnyString ':' JsonGenericExpression;
+
+JsonPropertyAffordance:
+	{JsonPropertyAffordance} id=AnyString ':' '{' (
+		  ( '"observable"' ':' observable=JsonBoolean','?  )?
+		// Inherited from InteractionAffordance and DataSchema
+		& ( '"@type"' ':' ( ld_type+=AnyString | '[' ld_type+=AnyString (',' ld_type+=AnyString)* ']' ) ','? )?
+		& ( '"title"' ':' title=AnyString ','?  )?
+		& ( '"description"' ':' description=AnyString ','?  ','? )?
+		& ( '"titles"' ':' '{' titles+=JsonMultiLanguageEntry (',' titles+=JsonMultiLanguageEntry)* '}' ','? )?
+		& ( '"descriptions"' ':' '{' descriptions+=JsonMultiLanguageEntry (',' descriptions+=JsonMultiLanguageEntry)* '}' ','? )?
+		// Inherited from InteractionAffordance
+		& ( '"forms"' ':' '[' forms+=JsonForm (',' forms+=JsonForm)* ']' ','? )?
+		& ( '"uriVariable"' ':' '[' uriVariable+=JsonDataSchema (',' uriVariable+=JsonDataSchema)* ']' ','? )?
+		// Inherited from DataSchema 
+		& ( '"type"' ':' type=JsonType ','?  ','? )?
+		& ( '"const"' ':' const=AnyString ','?  )?
+		& ( '"unit"' ':' unit=AnyString ','?  )?
+		& ( '"enum"' ':' '[' ^enum+=AnyString (',' ^enum+=AnyString)* ']' ','? )?
+		& ( '"readOnly"' ':' readOnly=JsonBoolean ','?  )?
+		& ( '"writeOnly"' ':' writeOnly=JsonBoolean ','?  )?
+		& ( '"format"' ':' format=AnyString ','?  )?
+		& ( '"oneOf"' ':' '{' oneOf+=JsonDataSchema (',' oneOf+=JsonDataSchema)* '}' ','? )?
+	) '}';
+
+JsonActionAffordance:
+	{JsonActionAffordance} id=AnyString ':' '{' (
+		  ( '"safe"' ':' safe=JsonBoolean','?  )?
+		& ( '"idempotent"' ':' idempotent=JsonBoolean','?  )?
+		& ( '"input"' ':' input=JsonDataSchema','?  )?
+		& ( '"output"' ':' output=JsonDataSchema','?  )?
+		// Inherited from InteractionAffordance
+		& ( '"@type"' ':' ( ld_type+=AnyString | '[' ld_type+=AnyString (',' ld_type+=AnyString)* ']' ) ','? )?
+		& ( '"title"' ':' title=AnyString ','?  )?
+		& ( '"description"' ':' description=AnyString ','?  )?
+		& ( '"forms"' ':' '[' forms+=JsonForm (',' forms+=JsonForm)* ']' ','? )?
+		& ( '"titles"' ':' '{' titles+=JsonMultiLanguageEntry (',' titles+=JsonMultiLanguageEntry)* '}' ','? )?
+		& ( '"descriptions"' ':' '{' descriptions+=JsonMultiLanguageEntry (',' descriptions+=JsonMultiLanguageEntry)* '}' ','? )?
+		& ( '"uriVariable"' ':' '[' uriVariable+=JsonDataSchema (',' uriVariable+=JsonDataSchema)* ']' ','? )?
+	) '}';
+
+JsonEventAffordance:
+	{JsonEventAffordance} id=AnyString ':' '{' (
+		  ( '"data"' ':' data=JsonDataSchema ','? )?
+		& ( '"subscription"' ':' subscription=JsonDataSchema ','? )?
+		& ( '"cancellation"' ':' cancellation=JsonDataSchema ','? )?
+		// Inherited from InteractionAffordance
+		& ( '"@type"' ':' ( ld_type+=AnyString | '[' ld_type+=AnyString (',' ld_type+=AnyString)* ']' ) ','? )?
+		& ( '"title"' ':' title=AnyString ','?  )?
+		& ( '"description"' ':' description=AnyString ','?  )?
+		& ( '"forms"' ':' '[' forms+=JsonForm (',' forms+=JsonForm)* ']' ','? )?
+		& ( '"titles"' ':' '{' titles+=JsonMultiLanguageEntry (',' titles+=JsonMultiLanguageEntry)* '}' ','? )?
+		& ( '"descriptions"' ':' '{' descriptions+=JsonMultiLanguageEntry (',' descriptions+=JsonMultiLanguageEntry)* '}' ','? )?
+		& ( '"uriVariable"' ':' '[' uriVariable+=JsonDataSchema (',' uriVariable+=JsonDataSchema)* ']' ','? )?
+	) '}';
+
+JsonDataSchema:
+	{JsonDataSchema} '{' (
+		// Generic properties, also valid for string, boolean, and null
+		  ( '"@type"' ':' ( ld_type+=AnyString | '[' ld_type+=AnyString (',' ld_type+=AnyString)* ']' ) ','? )?
+		& ( '"title"' ':' title=AnyString ','?  )?
+		& ( '"description"' ':' description=AnyString ','?  ','? )?
+		& ( '"type"' ':' type=JsonType ','?  ','? )?
+		& ( '"const"' ':' const=AnyString ','?  )?
+		& ( '"unit"' ':' unit=AnyString ','?  )?
+		& ( '"enum"' ':' '[' ^enum+=AnyString (',' ^enum+=AnyString)* ']' ','? )?
+		& ( '"readOnly"' ':' readOnly=JsonBoolean ','?  )?
+		& ( '"writeOnly"' ':' writeOnly=JsonBoolean ','?  )?
+		& ( '"format"' ':' format=AnyString ','?  )?
+		& ( '"oneOf"' ':' '{' oneOf+=JsonDataSchema (',' oneOf+=JsonDataSchema)* '}' ','? )?
+		& ( '"titles"' ':' '{' titles+=JsonMultiLanguageEntry (',' titles+=JsonMultiLanguageEntry)* '}' ','? )?
+		& ( '"descriptions"' ':' '{' descriptions+=JsonMultiLanguageEntry (',' descriptions+=JsonMultiLanguageEntry)* '}' ','? )?
+		// Arrays
+		& ( '"minItems"' ':' minItems=INT ','?  )?
+		& ( '"maxItems"' ':' maxItems=INT ','?  )?
+		& ( '"items"' ':' '[' items+=JsonDataSchema (',' items+=JsonDataSchema)* ']' ','? )?
+		// Objects
+		& ( '"required"' ':' '[' required+=AnyString (',' required+=AnyString)* ']' ','? )?
+		& ( '"properties"' ':' '[' properties+=JsonDataSchema (',' properties+=JsonDataSchema)* ']' ','? )?
+		// Number and Integer
+		& ( '"minimum"' ':' minimum=INT ','?  )?
+		& ( '"maximum"' ':' maximum=INT ','?  )?
+	) '}';
+
+JsonLink:
+	{JsonLink} '{' (
+		  ( '"href"' ':' _href=AnyString ','? )?
+		& ( '"type"' ':' type=AnyString ','? )?
+		& ( '"rel"' ':' rel=AnyString ','? )?
+		& ( '"anchor"' ':' anchor=AnyString ','? )?
+	) '}';
+
+JsonForm:
+	{JsonForm} '{' (
+		  ( '"@type"' ':' ( ld_type+=AnyString | '[' ld_type+=AnyString (',' ld_type+=AnyString)* ']' ) ','? )?
+		& ( '"op"' ':' ( op+=AnyString | '[' op+=AnyString (',' op+=AnyString)* ']' ) ','? )?
+		& ( '"href"' ':' _href=AnyString ','? )?
+		& ( '"contentType"' ':' contentType=AnyString ','? )?
+		& ( '"contentCoding"' ':' contentCoding=AnyString ','? )?
+		& ( '"subprotocol"' ':' subprotocol=AnyString ','? )?
+		& ( '"security"' ':' ( security+=AnyString | '[' security+=AnyString (',' security+=AnyString)* ']' ) ','? )?
+		& ( '"scopes"' ':' ( scopes+=AnyString | '[' scopes+=AnyString (',' scopes+=AnyString)* ']' ) ','? )?
+		& ( '"response"' ':' response=JsonExpectedResponse','? )?
+	) '}';
+
+JsonExpectedResponse:
+	{JsonExpectedResponse} '{'
+		  '"contentType"' ':' contentType=AnyString
+	'}';
+
+JsonMultiLanguageEntry:
+	{JsonMultiLanguageEntry} language=AnyString ':' content=AnyString;
+
+JsonGenericExpression:
+	JsonPrimitiveValue
+	| JsonGenericObject
+	| JsonGenericArray;
+
+JsonGenericObject:
+	'{' '}' | '{' JsonGenericTuple (',' JsonGenericTuple)* '}';
+
+JsonGenericArray:
+	'[' ']' | '[' JsonGenericExpression (',' JsonGenericExpression)* ']';
+
+JsonGenericTuple: AnyString ':' JsonGenericExpression;
+	
+JsonPrimitiveValue:
+	AnyString
+	| "true" 
+	| "false"
+	| INT;
+
+
+AnyString:
+	STRING
+	| Keyword;
+	
+terminal INT returns ecore::EInt:
+	('0'..'9')+;
+	
+terminal STRING:
+	'"' ( '\\' . | !('\\'|'"') )* '"' 
+	| "'" ( '\\' . | !('\\'|"'") )* "'";
+
+terminal WS:
+	(' '|'\t'|'\r'|'\n')+;
+
+enum JsonBoolean:
+	_false = "false"
+	| _true = "true";
+
+enum JsonType:
+	string = '"string"'
+	| number = '"number"'
+	| integer = '"integer"'
+	| boolean = '"boolean"'
+	| object = '"object"'
+	| array = '"array"'
+	| null = '"null"';
+
+Keyword:
+	'"@context"'
+	| '"@type"'
+	| '"actions"'
+	| '"anchor"'
+	| '"any"'
+	| '"array"'
+	| '"base"'
+	| '"boolean"'
+	| '"cancellation"'
+	| '"const"'
+	| '"contentEncoding"'
+	| '"contentType"'
+	| '"created"'
+	| '"data"'
+	| '"description"'
+	| '"descriptions"'
+	| '"enum"'
+	| '"events"'
+	| '"format"'
+	| '"forms"'
+	| '"href"'
+	| '"id"'
+	| '"idempotent"'
+	| '"input"'
+	| '"instance"'
+	| '"integer"'
+	| '"items"'
+	| '"links"'
+	| '"maxItems"'
+	| '"maximum"'
+	| '"minItems"'
+	| '"minimum"'
+	| '"modified"'
+	| '"null"'
+	| '"number"'
+	| '"object"'
+	| '"observable"'
+	| '"oneOf"'
+	| '"op"'
+	| '"output"'
+	| '"properties"'
+	| '"readOnly"'
+	| '"rel"'
+	| '"required"'
+	| '"response"'
+	| '"safe"'
+	| '"scopes"'
+	| '"security"'
+	| '"securityDefinitions"'
+	| '"string"'
+	| '"subprotocol"'
+	| '"subscription"'
+	| '"support"'
+	| '"title"'
+	| '"titles"'
+	| '"type"'
+	| '"unit"'
+	| '"uriVariable"'
+	| '"version"'
+	| '"writeOnly"';
