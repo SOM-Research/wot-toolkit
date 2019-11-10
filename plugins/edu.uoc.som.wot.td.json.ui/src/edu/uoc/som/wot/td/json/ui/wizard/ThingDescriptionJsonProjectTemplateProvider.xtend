@@ -25,18 +25,17 @@ class ThingDescriptionJsonProjectTemplateProvider implements IProjectTemplatePro
 	}
 }
 
-@ProjectTemplate(label="Hello World", icon="project_template.png", description="<p><b>Hello World</b></p>
-<p>This is a parameterized hello world for ThingDescriptionJson. You can set a parameter to modify the content in the generated file
-and a parameter to set the package the file is created in.</p>")
+@ProjectTemplate(label="My Lamp Examples", icon="project_template.png", description="<p><b>My Lamp</b></p>
+<p>Example project with a simple Thing Description for a lamp Thing with the name MyLampThing.</p>")
 final class HelloWorldProject {
 	val advanced = check("Advanced:", false)
 	val advancedGroup = group("Properties")
-	val path = text("Package:", "mydsl", "The package path to place the files in", advancedGroup)
+	val path = text("Package:", "wot", "The package path to place the files in", advancedGroup)
 
 	override protected updateVariables() {
 		path.enabled = advanced.value
 		if (!advanced.value) {
-			path.value = "tdjson"
+			path.value = "wot"
 		}
 	}
 
@@ -51,10 +50,10 @@ final class HelloWorldProject {
 		generator.generate(new PluginProjectFactory => [
 			projectName = projectInfo.projectName
 			location = projectInfo.locationPath
-			projectNatures += #[JavaCore.NATURE_ID, "org.eclipse.pde.PluginNature", XtextProjectHelper.NATURE_ID]
-			builderIds += #[JavaCore.BUILDER_ID, XtextProjectHelper.BUILDER_ID]
+			projectNatures += #[XtextProjectHelper.NATURE_ID]
+			builderIds += #[XtextProjectHelper.BUILDER_ID]
 			folders += "src"
-			addFile('''src/«path»/Model.tdjson''', '''
+			addFile('''«path»/MyLampThing.tdjson''', '''
 				{
 				    "@context": "https://www.w3.org/2019/wot/td/v1",
 				    "id": "urn:dev:ops:32473-WoTLamp-1234",

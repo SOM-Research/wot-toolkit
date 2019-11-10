@@ -433,13 +433,13 @@
 	</extension>
 	<extension
 		point="org.eclipse.ui.newWizards">
-		<category id="edu.uoc.som.wot.td.json.ui.category" name="ThingDescriptionJson">
+		<category id="edu.uoc.som.wot.td.json.ui.category" name="WoT Thing Description">
 		</category>
 		<wizard
 			category="edu.uoc.som.wot.td.json.ui.category"
 			class="edu.uoc.som.wot.td.json.ui.ThingDescriptionJsonExecutableExtensionFactory:org.eclipse.xtext.ui.wizard.template.TemplateNewProjectWizard"
 			id="edu.uoc.som.wot.td.json.ui.wizard.ThingDescriptionJsonNewProjectWizard"
-			name="ThingDescriptionJson Project"
+			name="WoT Thing Description Project"
 			icon="icons/new_ThingDescriptionJson_proj.gif"
 			project="true">
 		</wizard>
