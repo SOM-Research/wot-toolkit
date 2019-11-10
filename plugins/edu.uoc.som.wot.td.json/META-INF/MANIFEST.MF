@@ -1,9 +1,9 @@
 Manifest-Version: 1.0
 Automatic-Module-Name: edu.uoc.som.wot.td.json
 Bundle-ManifestVersion: 2
-Bundle-Name: edu.uoc.som.wot.td.json
-Bundle-Vendor: My Company
-Bundle-Version: 1.0.0.qualifier
+Bundle-Name: Web of Things JSON Syntax Plug-in
+Bundle-Vendor: SOM Research Lab
+Bundle-Version: 0.1.0.qualifier
 Bundle-SymbolicName: edu.uoc.som.wot.td.json; singleton:=true
 Bundle-ActivationPolicy: lazy
 Require-Bundle: org.eclipse.xtext,

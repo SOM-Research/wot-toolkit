@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <feature
-      id="edu.uoc.som.wot.td.json.feature"
-      label="Web of Things Toolkit - JSON Support"
+      id="edu.uoc.som.wot.td.json.ui.feature"
+      label="Web of Things Toolkit - JSON Support UI"
       version="0.1.0.qualifier"
       provider-name="SOM Research Lab">
 
    <description url="https://github.com/SOM-Research/wot-toolkit/">
-      Prototypical implementation of the JSON concrete syntax for the W3C Web of Things proposal using the EMF stack
+      UI plug-ins of the prototypical implementation of the JSON concrete syntax for the W3C Web of Things proposal using the EMF stack
    </description>
 
    <copyright url="https://github.com/SOM-Research/wot-toolkit/">
@@ -294,16 +294,7 @@ version(s), and exceptions or additional permissions here}.&quot;
    </license>
 
    <requires>
-      <import plugin="org.eclipse.xtext"/>
-      <import plugin="org.eclipse.xtext.xbase"/>
-      <import plugin="org.eclipse.equinox.common" version="3.5.0" match="greaterOrEqual"/>
-      <import plugin="org.eclipse.emf.ecore"/>
-      <import plugin="org.eclipse.xtext.xbase.lib" version="2.14.0" match="greaterOrEqual"/>
-      <import plugin="org.eclipse.xtext.util"/>
-      <import plugin="org.eclipse.emf.common"/>
-      <import plugin="org.eclipse.xtend.lib" version="2.14.0" match="greaterOrEqual"/>
-      <import plugin="edu.uoc.som.wot.td" version="0.1.0" match="greaterOrEqual"/>
-      <import plugin="org.apache.log4j"/>
+      <import plugin="edu.uoc.som.wot.td.json"/>
       <import plugin="org.eclipse.xtext.ide"/>
       <import plugin="org.eclipse.xtext.xbase.ide"/>
       <import plugin="org.eclipse.xtext.ui"/>
@@ -314,15 +305,25 @@ version(s), and exceptions or additional permissions here}.&quot;
       <import plugin="org.eclipse.ui"/>
       <import plugin="org.eclipse.compare"/>
       <import plugin="org.eclipse.xtext.builder"/>
+      <import plugin="org.eclipse.xtext.xbase.lib" version="2.14.0" match="greaterOrEqual"/>
       <import plugin="org.eclipse.jdt.core"/>
       <import plugin="org.eclipse.core.runtime"/>
       <import plugin="org.eclipse.core.resources"/>
       <import plugin="org.eclipse.pde.core"/>
       <import plugin="org.eclipse.ui.forms"/>
+      <import plugin="org.apache.log4j"/>
+      <import feature="org.eclipse.xtext.redist" version="2.17.0.v20190304-1445"/>
    </requires>
 
    <plugin
-         id="edu.uoc.som.wot.td.json"
+         id="edu.uoc.som.wot.td.json.ide"
+         download-size="0"
+         install-size="0"
+         version="0.1.0.qualifier"
+         unpack="false"/>
+
+   <plugin
+         id="edu.uoc.som.wot.td.json.ui"
          download-size="0"
          install-size="0"
          version="0.1.0.qualifier"
