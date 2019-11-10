@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<associateSites>
+	<associateSite url="https://download.eclipse.org/releases/2019-03/" label="Eclipse Repository 2019-03"/>
+	<associateSite url="https://download.eclipse.org/tools/orbit/downloads/drops/R20190226160451/repository"/>
+</associateSites>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site
+      associateSitesURL="https://som-research.github.io/wot-toolkit/updates/associateSites.xml">
+   <description name="Web of Things Toolkit Updates" url="https://som-research.github.io/wot-toolkit/updates/">
+      Repository containing the Eclipse plug-ins to develop Web of Things architectures based on the W3C Web of Things Thing Description proposal using the EMF stack.  A Thing Description describes the metadata and interfaces of Things, where a Thing is an abstraction of a physical or virtual entity that provides interactions to and participates in the Web of Things. Thing Descriptions provide a set of interactions based on a small vocabulary that makes it possible both to integrate diverse devices and to allow diverse applications to interoperate. Thing Descriptions, by default, are encoded in a JSON format that also allows JSON-LD processing.
+   </description>
+   <feature url="features/edu.uoc.som.wot.td.feature_0.1.0.201911102251.jar" id="edu.uoc.som.wot.td.feature" version="0.1.0.201911102251">
+      <category name="Web of Things Toolkit"/>
+   </feature>
+   <feature url="features/edu.uoc.som.wot.td.json.feature_0.1.0.201911102251.jar" id="edu.uoc.som.wot.td.json.feature" version="0.1.0.201911102251">
+      <category name="Web of Things Toolkit"/>
+   </feature>
+   <feature url="features/edu.uoc.som.wot.td.json.ui.feature_0.1.0.201911102251.jar" id="edu.uoc.som.wot.td.json.ui.feature" version="0.1.0.201911102251">
+      <category name="Web of Things Toolkit"/>
+   </feature>
+   <feature url="features/edu.uoc.som.wot.td.ui.feature_0.1.0.201911102251.jar" id="edu.uoc.som.wot.td.ui.feature" version="0.1.0.201911102251">
+      <category name="Web of Things Toolkit"/>
+   </feature>
+   <category-def name="Web of Things Toolkit" label="Web of Things Toolkit">
+      <description>
+         Eclipse plug-ins to develop Web of Things architectures based on the W3C Web of Things Thing Description proposal using the EMF stack.  A Thing Description describes the metadata and interfaces of Things, where a Thing is an abstraction of a physical or virtual entity that provides interactions to and participates in the Web of Things. Thing Descriptions provide a set of interactions based on a small vocabulary that makes it possible both to integrate diverse devices and to allow diverse applications to interoperate. Thing Descriptions, by default, are encoded in a JSON format that also allows JSON-LD processing.
+      </description>
+   </category-def>
+</site>
