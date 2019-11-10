@@ -20,6 +20,16 @@ Prototypical implementation of the W3C Web of Things proposal using the EMF stac
 
 ![Hypermedia controls vocabulary model](plugins/edu.uoc.som.wot.td/model/hypermedia-controls.png)
 
+## Installation
+
+To install the toolkit use the following update site:
+
+> https://som-research.github.io/wot-toolkit/updates
+
+### Prerequisites
+
+* The toolkit requires [Eclipse 4.12 (2019-06)](https://download.eclipse.org/eclipse/downloads/drops4/R-4.12-201906051800/) or [above](https://download.eclipse.org/eclipse/downloads/).
+
 ## Example instance
 
 Example Thing Description from [https://www.w3.org/TR/2019/CR-wot-thing-description-20190516/#simple-thing-description-sample](https://www.w3.org/TR/2019/CR-wot-thing-description-20190516/#simple-thing-description-sample):
