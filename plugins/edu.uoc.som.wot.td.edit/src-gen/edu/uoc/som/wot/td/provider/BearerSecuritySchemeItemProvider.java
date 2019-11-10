@@ -44,9 +44,9 @@ public class BearerSecuritySchemeItemProvider extends SecuritySchemeItemProvider
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addFormatPropertyDescriptor(object);
+			addAuthorizationPropertyDescriptor(object);
 			addAlgPropertyDescriptor(object);
-			addAuthorizationUrlPropertyDescriptor(object);
+			addFormatPropertyDescriptor(object);
 			addInPropertyDescriptor(object);
 			addNamePropertyDescriptor(object);
 		}
@@ -54,19 +54,19 @@ public class BearerSecuritySchemeItemProvider extends SecuritySchemeItemProvider
 	}
 
 	/**
-	 * This adds a property descriptor for the Format feature.
+	 * This adds a property descriptor for the Authorization feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addFormatPropertyDescriptor(Object object) {
-		itemPropertyDescriptors
-				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_BearerSecurityScheme_format_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_BearerSecurityScheme_format_feature",
-								"_UI_BearerSecurityScheme_type"),
-						TdPackage.Literals.BEARER_SECURITY_SCHEME__FORMAT, true, false, false,
-						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+	protected void addAuthorizationPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add(createItemPropertyDescriptor(
+				((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(), getResourceLocator(),
+				getString("_UI_BearerSecurityScheme_authorization_feature"),
+				getString("_UI_PropertyDescriptor_description", "_UI_BearerSecurityScheme_authorization_feature",
+						"_UI_BearerSecurityScheme_type"),
+				TdPackage.Literals.BEARER_SECURITY_SCHEME__AUTHORIZATION, true, false, false,
+				ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
 	}
 
 	/**
@@ -86,19 +86,19 @@ public class BearerSecuritySchemeItemProvider extends SecuritySchemeItemProvider
 	}
 
 	/**
-	 * This adds a property descriptor for the Authorization Url feature.
+	 * This adds a property descriptor for the Format feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addAuthorizationUrlPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add(createItemPropertyDescriptor(
-				((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(), getResourceLocator(),
-				getString("_UI_BearerSecurityScheme_authorizationUrl_feature"),
-				getString("_UI_PropertyDescriptor_description", "_UI_BearerSecurityScheme_authorizationUrl_feature",
-						"_UI_BearerSecurityScheme_type"),
-				TdPackage.Literals.BEARER_SECURITY_SCHEME__AUTHORIZATION_URL, true, false, false,
-				ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+	protected void addFormatPropertyDescriptor(Object object) {
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_BearerSecurityScheme_format_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_BearerSecurityScheme_format_feature",
+								"_UI_BearerSecurityScheme_type"),
+						TdPackage.Literals.BEARER_SECURITY_SCHEME__FORMAT, true, false, false,
+						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
 	}
 
 	/**
@@ -179,9 +179,9 @@ public class BearerSecuritySchemeItemProvider extends SecuritySchemeItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(BearerSecurityScheme.class)) {
-		case TdPackage.BEARER_SECURITY_SCHEME__FORMAT:
+		case TdPackage.BEARER_SECURITY_SCHEME__AUTHORIZATION:
 		case TdPackage.BEARER_SECURITY_SCHEME__ALG:
-		case TdPackage.BEARER_SECURITY_SCHEME__AUTHORIZATION_URL:
+		case TdPackage.BEARER_SECURITY_SCHEME__FORMAT:
 		case TdPackage.BEARER_SECURITY_SCHEME__IN:
 		case TdPackage.BEARER_SECURITY_SCHEME__NAME:
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));

@@ -94,7 +94,7 @@ public class CertSecuritySchemeItemProvider extends SecuritySchemeItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((CertSecurityScheme) object).getScheme();
+		String label = ((CertSecurityScheme) object).getId();
 		return label == null || label.length() == 0 ? getString("_UI_CertSecurityScheme_type")
 				: getString("_UI_CertSecurityScheme_type") + " " + label;
 	}

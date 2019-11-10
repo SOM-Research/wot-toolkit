@@ -3,6 +3,7 @@
 package edu.uoc.som.wot.td.provider;
 
 import edu.uoc.som.wot.td.DataSchema;
+import edu.uoc.som.wot.td.TdFactory;
 import edu.uoc.som.wot.td.TdPackage;
 
 import java.util.Collection;
@@ -12,6 +13,9 @@ import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.common.util.ResourceLocator;
+
+import org.eclipse.emf.ecore.EObject;
+import org.eclipse.emf.ecore.EStructuralFeature;
 
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
@@ -53,12 +57,51 @@ public class DataSchemaItemProvider extends ItemProviderAdapter implements IEdit
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
+			addDtitlePropertyDescriptor(object);
+			addDdescriptionPropertyDescriptor(object);
 			addTypePropertyDescriptor(object);
-			addDescriptionPropertyDescriptor(object);
 			addConstPropertyDescriptor(object);
+			addUnitPropertyDescriptor(object);
 			addEnumPropertyDescriptor(object);
+			addReadOnlyPropertyDescriptor(object);
+			addWriteOnlyPropertyDescriptor(object);
+			addFormatPropertyDescriptor(object);
+			addDtitlesPropertyDescriptor(object);
+			addDdescriptionsPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
+	}
+
+	/**
+	 * This adds a property descriptor for the Dtitle feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addDtitlePropertyDescriptor(Object object) {
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_DataSchema_dtitle_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_DataSchema_dtitle_feature",
+								"_UI_DataSchema_type"),
+						TdPackage.Literals.DATA_SCHEMA__DTITLE, true, false, false,
+						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Ddescription feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addDdescriptionPropertyDescriptor(Object object) {
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_DataSchema_ddescription_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_DataSchema_ddescription_feature",
+								"_UI_DataSchema_type"),
+						TdPackage.Literals.DATA_SCHEMA__DDESCRIPTION, true, false, false,
+						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
 	}
 
 	/**
@@ -74,22 +117,6 @@ public class DataSchemaItemProvider extends ItemProviderAdapter implements IEdit
 						getString("_UI_PropertyDescriptor_description", "_UI_DataSchema_type_feature",
 								"_UI_DataSchema_type"),
 						TdPackage.Literals.DATA_SCHEMA__TYPE, true, false, false,
-						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Description feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addDescriptionPropertyDescriptor(Object object) {
-		itemPropertyDescriptors
-				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_DataSchema_description_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_DataSchema_description_feature",
-								"_UI_DataSchema_type"),
-						TdPackage.Literals.DATA_SCHEMA__DESCRIPTION, true, false, false,
 						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
 	}
 
@@ -110,6 +137,22 @@ public class DataSchemaItemProvider extends ItemProviderAdapter implements IEdit
 	}
 
 	/**
+	 * This adds a property descriptor for the Unit feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addUnitPropertyDescriptor(Object object) {
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_DataSchema_unit_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_DataSchema_unit_feature",
+								"_UI_DataSchema_type"),
+						TdPackage.Literals.DATA_SCHEMA__UNIT, true, false, false,
+						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+	}
+
+	/**
 	 * This adds a property descriptor for the Enum feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -123,6 +166,116 @@ public class DataSchemaItemProvider extends ItemProviderAdapter implements IEdit
 								"_UI_DataSchema_type"),
 						TdPackage.Literals.DATA_SCHEMA__ENUM, true, false, false,
 						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Read Only feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addReadOnlyPropertyDescriptor(Object object) {
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_DataSchema_readOnly_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_DataSchema_readOnly_feature",
+								"_UI_DataSchema_type"),
+						TdPackage.Literals.DATA_SCHEMA__READ_ONLY, true, false, false,
+						ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE, null, null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Write Only feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addWriteOnlyPropertyDescriptor(Object object) {
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_DataSchema_writeOnly_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_DataSchema_writeOnly_feature",
+								"_UI_DataSchema_type"),
+						TdPackage.Literals.DATA_SCHEMA__WRITE_ONLY, true, false, false,
+						ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE, null, null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Format feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addFormatPropertyDescriptor(Object object) {
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_DataSchema_format_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_DataSchema_format_feature",
+								"_UI_DataSchema_type"),
+						TdPackage.Literals.DATA_SCHEMA__FORMAT, true, false, false,
+						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Dtitles feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addDtitlesPropertyDescriptor(Object object) {
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_DataSchema_dtitles_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_DataSchema_dtitles_feature",
+								"_UI_DataSchema_type"),
+						TdPackage.Literals.DATA_SCHEMA__DTITLES, true, false, true, null, null, null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Ddescriptions feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addDdescriptionsPropertyDescriptor(Object object) {
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_DataSchema_ddescriptions_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_DataSchema_ddescriptions_feature",
+								"_UI_DataSchema_type"),
+						TdPackage.Literals.DATA_SCHEMA__DDESCRIPTIONS, true, false, true, null, null, null));
+	}
+
+	/**
+	 * This specifies how to implement {@link #getChildren} and is used to deduce an appropriate feature for an
+	 * {@link org.eclipse.emf.edit.command.AddCommand}, {@link org.eclipse.emf.edit.command.RemoveCommand} or
+	 * {@link org.eclipse.emf.edit.command.MoveCommand} in {@link #createCommand}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
+		if (childrenFeatures == null) {
+			super.getChildrenFeatures(object);
+			childrenFeatures.add(TdPackage.Literals.DATA_SCHEMA__ONE_OF);
+			childrenFeatures.add(TdPackage.Literals.DATA_SCHEMA__DTITLES);
+			childrenFeatures.add(TdPackage.Literals.DATA_SCHEMA__DDESCRIPTIONS);
+		}
+		return childrenFeatures;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	protected EStructuralFeature getChildFeature(Object object, Object child) {
+		// Check the type of the specified child object and return the proper feature to use for
+		// adding (see {@link AddCommand}) it as a child.
+
+		return super.getChildFeature(object, child);
 	}
 
 	/**
@@ -154,7 +307,8 @@ public class DataSchemaItemProvider extends ItemProviderAdapter implements IEdit
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((DataSchema) object).getType();
+		Object labelValue = ((EObject) object).eGet(TdPackage.Literals.DATA_SCHEMA__DTITLE);
+		String label = labelValue == null ? null : labelValue.toString();
 		return label == null || label.length() == 0 ? getString("_UI_DataSchema_type")
 				: getString("_UI_DataSchema_type") + " " + label;
 	}
@@ -171,11 +325,21 @@ public class DataSchemaItemProvider extends ItemProviderAdapter implements IEdit
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(DataSchema.class)) {
+		case TdPackage.DATA_SCHEMA__DTITLE:
+		case TdPackage.DATA_SCHEMA__DDESCRIPTION:
 		case TdPackage.DATA_SCHEMA__TYPE:
-		case TdPackage.DATA_SCHEMA__DESCRIPTION:
 		case TdPackage.DATA_SCHEMA__CONST:
+		case TdPackage.DATA_SCHEMA__UNIT:
 		case TdPackage.DATA_SCHEMA__ENUM:
+		case TdPackage.DATA_SCHEMA__READ_ONLY:
+		case TdPackage.DATA_SCHEMA__WRITE_ONLY:
+		case TdPackage.DATA_SCHEMA__FORMAT:
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
+			return;
+		case TdPackage.DATA_SCHEMA__ONE_OF:
+		case TdPackage.DATA_SCHEMA__DTITLES:
+		case TdPackage.DATA_SCHEMA__DDESCRIPTIONS:
+			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 			return;
 		}
 		super.notifyChanged(notification);
@@ -191,6 +355,60 @@ public class DataSchemaItemProvider extends ItemProviderAdapter implements IEdit
 	@Override
 	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
+
+		newChildDescriptors.add(createChildParameter(TdPackage.Literals.DATA_SCHEMA__ONE_OF,
+				TdFactory.eINSTANCE.createPropertyAffordance()));
+
+		newChildDescriptors.add(
+				createChildParameter(TdPackage.Literals.DATA_SCHEMA__ONE_OF, TdFactory.eINSTANCE.createDataSchema()));
+
+		newChildDescriptors.add(
+				createChildParameter(TdPackage.Literals.DATA_SCHEMA__ONE_OF, TdFactory.eINSTANCE.createArraySchema()));
+
+		newChildDescriptors.add(
+				createChildParameter(TdPackage.Literals.DATA_SCHEMA__ONE_OF, TdFactory.eINSTANCE.createObjectSchema()));
+
+		newChildDescriptors.add(
+				createChildParameter(TdPackage.Literals.DATA_SCHEMA__ONE_OF, TdFactory.eINSTANCE.createNumberSchema()));
+
+		newChildDescriptors.add(createChildParameter(TdPackage.Literals.DATA_SCHEMA__ONE_OF,
+				TdFactory.eINSTANCE.createIntegerSchema()));
+
+		newChildDescriptors.add(
+				createChildParameter(TdPackage.Literals.DATA_SCHEMA__ONE_OF, TdFactory.eINSTANCE.createStringSchema()));
+
+		newChildDescriptors.add(createChildParameter(TdPackage.Literals.DATA_SCHEMA__ONE_OF,
+				TdFactory.eINSTANCE.createBooleanSchema()));
+
+		newChildDescriptors.add(
+				createChildParameter(TdPackage.Literals.DATA_SCHEMA__ONE_OF, TdFactory.eINSTANCE.createNullSchema()));
+
+		newChildDescriptors.add(createChildParameter(TdPackage.Literals.DATA_SCHEMA__DTITLES,
+				TdFactory.eINSTANCE.createMultiLanguage()));
+
+		newChildDescriptors.add(createChildParameter(TdPackage.Literals.DATA_SCHEMA__DDESCRIPTIONS,
+				TdFactory.eINSTANCE.createMultiLanguage()));
+	}
+
+	/**
+	 * This returns the label text for {@link org.eclipse.emf.edit.command.CreateChildCommand}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String getCreateChildText(Object owner, Object feature, Object child, Collection<?> selection) {
+		Object childFeature = feature;
+		Object childObject = child;
+
+		boolean qualify = childFeature == TdPackage.Literals.DATA_SCHEMA__DTITLES
+				|| childFeature == TdPackage.Literals.DATA_SCHEMA__DDESCRIPTIONS;
+
+		if (qualify) {
+			return getString("_UI_CreateChild_text2",
+					new Object[] { getTypeText(childObject), getFeatureText(childFeature), getTypeText(owner) });
+		}
+		return super.getCreateChildText(owner, feature, child, selection);
 	}
 
 	/**

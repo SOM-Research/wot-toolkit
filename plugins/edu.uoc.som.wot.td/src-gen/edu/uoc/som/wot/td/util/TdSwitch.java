@@ -4,6 +4,8 @@ package edu.uoc.som.wot.td.util;
 
 import edu.uoc.som.wot.td.*;
 
+import java.util.Map;
+
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 
@@ -73,47 +75,16 @@ public class TdSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case TdPackage.PROPERTY: {
-			Property property = (Property) theEObject;
-			T result = caseProperty(property);
-			if (result == null)
-				result = caseInteractionPattern(property);
-			if (result == null)
-				result = caseDataSchema(property);
+		case TdPackage.FORM: {
+			Form form = (Form) theEObject;
+			T result = caseForm(form);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case TdPackage.INTERACTION_PATTERN: {
-			InteractionPattern interactionPattern = (InteractionPattern) theEObject;
-			T result = caseInteractionPattern(interactionPattern);
-			if (result == null)
-				result = defaultCase(theEObject);
-			return result;
-		}
-		case TdPackage.ACTION: {
-			Action action = (Action) theEObject;
-			T result = caseAction(action);
-			if (result == null)
-				result = caseInteractionPattern(action);
-			if (result == null)
-				result = defaultCase(theEObject);
-			return result;
-		}
-		case TdPackage.EVENT: {
-			Event event = (Event) theEObject;
-			T result = caseEvent(event);
-			if (result == null)
-				result = caseInteractionPattern(event);
-			if (result == null)
-				result = caseDataSchema(event);
-			if (result == null)
-				result = defaultCase(theEObject);
-			return result;
-		}
-		case TdPackage.SECURITY_SCHEME: {
-			SecurityScheme securityScheme = (SecurityScheme) theEObject;
-			T result = caseSecurityScheme(securityScheme);
+		case TdPackage.EXPECTED_RESPONSE: {
+			ExpectedResponse expectedResponse = (ExpectedResponse) theEObject;
+			T result = caseExpectedResponse(expectedResponse);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -125,9 +96,60 @@ public class TdSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case TdPackage.FORM: {
-			Form form = (Form) theEObject;
-			T result = caseForm(form);
+		case TdPackage.MULTI_LANGUAGE: {
+			MultiLanguage multiLanguage = (MultiLanguage) theEObject;
+			T result = caseMultiLanguage(multiLanguage);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case TdPackage.LANGUAGE_TO_CONTENT_MAP: {
+			@SuppressWarnings("unchecked")
+			Map.Entry<String, String> languageToContentMap = (Map.Entry<String, String>) theEObject;
+			T result = caseLanguageToContentMap(languageToContentMap);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case TdPackage.VERSION_INFO: {
+			VersionInfo versionInfo = (VersionInfo) theEObject;
+			T result = caseVersionInfo(versionInfo);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case TdPackage.INTERACTION_AFFORDANCE: {
+			InteractionAffordance interactionAffordance = (InteractionAffordance) theEObject;
+			T result = caseInteractionAffordance(interactionAffordance);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case TdPackage.PROPERTY_AFFORDANCE: {
+			PropertyAffordance propertyAffordance = (PropertyAffordance) theEObject;
+			T result = casePropertyAffordance(propertyAffordance);
+			if (result == null)
+				result = caseInteractionAffordance(propertyAffordance);
+			if (result == null)
+				result = caseDataSchema(propertyAffordance);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case TdPackage.ACTION_AFFORDANCE: {
+			ActionAffordance actionAffordance = (ActionAffordance) theEObject;
+			T result = caseActionAffordance(actionAffordance);
+			if (result == null)
+				result = caseInteractionAffordance(actionAffordance);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case TdPackage.EVENT_AFFORDANCE: {
+			EventAffordance eventAffordance = (EventAffordance) theEObject;
+			T result = caseEventAffordance(eventAffordance);
+			if (result == null)
+				result = caseInteractionAffordance(eventAffordance);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -148,11 +170,29 @@ public class TdSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
+		case TdPackage.OBJECT_SCHEMA: {
+			ObjectSchema objectSchema = (ObjectSchema) theEObject;
+			T result = caseObjectSchema(objectSchema);
+			if (result == null)
+				result = caseDataSchema(objectSchema);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
 		case TdPackage.NUMBER_SCHEMA: {
 			NumberSchema numberSchema = (NumberSchema) theEObject;
 			T result = caseNumberSchema(numberSchema);
 			if (result == null)
 				result = caseDataSchema(numberSchema);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case TdPackage.INTEGER_SCHEMA: {
+			IntegerSchema integerSchema = (IntegerSchema) theEObject;
+			T result = caseIntegerSchema(integerSchema);
+			if (result == null)
+				result = caseDataSchema(integerSchema);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -175,29 +215,27 @@ public class TdSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case TdPackage.OBJECT_SCHEMA: {
-			ObjectSchema objectSchema = (ObjectSchema) theEObject;
-			T result = caseObjectSchema(objectSchema);
+		case TdPackage.NULL_SCHEMA: {
+			NullSchema nullSchema = (NullSchema) theEObject;
+			T result = caseNullSchema(nullSchema);
 			if (result == null)
-				result = caseDataSchema(objectSchema);
-			if (result == null)
-				result = defaultCase(theEObject);
-			return result;
-		}
-		case TdPackage.INTEGER_SCHEMA: {
-			IntegerSchema integerSchema = (IntegerSchema) theEObject;
-			T result = caseIntegerSchema(integerSchema);
-			if (result == null)
-				result = caseDataSchema(integerSchema);
+				result = caseDataSchema(nullSchema);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case TdPackage.NO_SECURITY_CHEME: {
-			NoSecurityCheme noSecurityCheme = (NoSecurityCheme) theEObject;
-			T result = caseNoSecurityCheme(noSecurityCheme);
+		case TdPackage.SECURITY_SCHEME: {
+			SecurityScheme securityScheme = (SecurityScheme) theEObject;
+			T result = caseSecurityScheme(securityScheme);
 			if (result == null)
-				result = caseSecurityScheme(noSecurityCheme);
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case TdPackage.NO_SECURITY_SCHEME: {
+			NoSecurityScheme noSecurityScheme = (NoSecurityScheme) theEObject;
+			T result = caseNoSecurityScheme(noSecurityScheme);
+			if (result == null)
+				result = caseSecurityScheme(noSecurityScheme);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -211,15 +249,6 @@ public class TdSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case TdPackage.OAUTH2_SECURITY_SCHEME: {
-			OAuth2SecurityScheme oAuth2SecurityScheme = (OAuth2SecurityScheme) theEObject;
-			T result = caseOAuth2SecurityScheme(oAuth2SecurityScheme);
-			if (result == null)
-				result = caseSecurityScheme(oAuth2SecurityScheme);
-			if (result == null)
-				result = defaultCase(theEObject);
-			return result;
-		}
 		case TdPackage.DIGEST_SECURITY_SCHEME: {
 			DigestSecurityScheme digestSecurityScheme = (DigestSecurityScheme) theEObject;
 			T result = caseDigestSecurityScheme(digestSecurityScheme);
@@ -229,38 +258,11 @@ public class TdSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case TdPackage.APIKEY_SECURITY_SCHEME: {
-			ApikeySecurityScheme apikeySecurityScheme = (ApikeySecurityScheme) theEObject;
-			T result = caseApikeySecurityScheme(apikeySecurityScheme);
+		case TdPackage.API_KEY_SECURITY_SCHEME: {
+			APIKeySecurityScheme apiKeySecurityScheme = (APIKeySecurityScheme) theEObject;
+			T result = caseAPIKeySecurityScheme(apiKeySecurityScheme);
 			if (result == null)
-				result = caseSecurityScheme(apikeySecurityScheme);
-			if (result == null)
-				result = defaultCase(theEObject);
-			return result;
-		}
-		case TdPackage.PSK_SECURITY_SCHEME: {
-			PSKSecurityScheme pskSecurityScheme = (PSKSecurityScheme) theEObject;
-			T result = casePSKSecurityScheme(pskSecurityScheme);
-			if (result == null)
-				result = caseSecurityScheme(pskSecurityScheme);
-			if (result == null)
-				result = defaultCase(theEObject);
-			return result;
-		}
-		case TdPackage.CERT_SECURITY_SCHEME: {
-			CertSecurityScheme certSecurityScheme = (CertSecurityScheme) theEObject;
-			T result = caseCertSecurityScheme(certSecurityScheme);
-			if (result == null)
-				result = caseSecurityScheme(certSecurityScheme);
-			if (result == null)
-				result = defaultCase(theEObject);
-			return result;
-		}
-		case TdPackage.PUBLIC_SECURITY_SCHEME: {
-			PublicSecurityScheme publicSecurityScheme = (PublicSecurityScheme) theEObject;
-			T result = casePublicSecurityScheme(publicSecurityScheme);
-			if (result == null)
-				result = caseSecurityScheme(publicSecurityScheme);
+				result = caseSecurityScheme(apiKeySecurityScheme);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -274,11 +276,47 @@ public class TdSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case TdPackage.POP_SECURITY_SCHEME: {
-			PopSecurityScheme popSecurityScheme = (PopSecurityScheme) theEObject;
-			T result = casePopSecurityScheme(popSecurityScheme);
+		case TdPackage.CERT_SECURITY_SCHEME: {
+			CertSecurityScheme certSecurityScheme = (CertSecurityScheme) theEObject;
+			T result = caseCertSecurityScheme(certSecurityScheme);
 			if (result == null)
-				result = caseSecurityScheme(popSecurityScheme);
+				result = caseSecurityScheme(certSecurityScheme);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case TdPackage.PSK_SECURITY_SCHEME: {
+			PSKSecurityScheme pskSecurityScheme = (PSKSecurityScheme) theEObject;
+			T result = casePSKSecurityScheme(pskSecurityScheme);
+			if (result == null)
+				result = caseSecurityScheme(pskSecurityScheme);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case TdPackage.PUBLIC_SECURITY_SCHEME: {
+			PublicSecurityScheme publicSecurityScheme = (PublicSecurityScheme) theEObject;
+			T result = casePublicSecurityScheme(publicSecurityScheme);
+			if (result == null)
+				result = caseSecurityScheme(publicSecurityScheme);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case TdPackage.PO_PSECURITY_SCHEME: {
+			PoPSecurityScheme poPSecurityScheme = (PoPSecurityScheme) theEObject;
+			T result = casePoPSecurityScheme(poPSecurityScheme);
+			if (result == null)
+				result = caseSecurityScheme(poPSecurityScheme);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case TdPackage.OAUTH2_SECURITY_SCHEME: {
+			OAuth2SecurityScheme oAuth2SecurityScheme = (OAuth2SecurityScheme) theEObject;
+			T result = caseOAuth2SecurityScheme(oAuth2SecurityScheme);
+			if (result == null)
+				result = caseSecurityScheme(oAuth2SecurityScheme);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -304,77 +342,32 @@ public class TdSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Property</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Form</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Property</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Form</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseProperty(Property object) {
+	public T caseForm(Form object) {
 		return null;
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Interaction Pattern</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Expected Response</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Interaction Pattern</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Expected Response</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseInteractionPattern(InteractionPattern object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Action</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Action</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseAction(Action object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Event</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Event</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseEvent(Event object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Security Scheme</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Security Scheme</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseSecurityScheme(SecurityScheme object) {
+	public T caseExpectedResponse(ExpectedResponse object) {
 		return null;
 	}
 
@@ -394,17 +387,107 @@ public class TdSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Form</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Multi Language</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Form</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Multi Language</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseForm(Form object) {
+	public T caseMultiLanguage(MultiLanguage object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Language To Content Map</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Language To Content Map</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseLanguageToContentMap(Map.Entry<String, String> object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Version Info</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Version Info</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseVersionInfo(VersionInfo object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Interaction Affordance</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Interaction Affordance</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseInteractionAffordance(InteractionAffordance object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Property Affordance</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Property Affordance</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T casePropertyAffordance(PropertyAffordance object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Action Affordance</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Action Affordance</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseActionAffordance(ActionAffordance object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Event Affordance</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Event Affordance</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseEventAffordance(EventAffordance object) {
 		return null;
 	}
 
@@ -439,6 +522,21 @@ public class TdSwitch<T> extends Switch<T> {
 	}
 
 	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Object Schema</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Object Schema</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseObjectSchema(ObjectSchema object) {
+		return null;
+	}
+
+	/**
 	 * Returns the result of interpreting the object as an instance of '<em>Number Schema</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -450,6 +548,21 @@ public class TdSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseNumberSchema(NumberSchema object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Integer Schema</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Integer Schema</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseIntegerSchema(IntegerSchema object) {
 		return null;
 	}
 
@@ -484,47 +597,47 @@ public class TdSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Object Schema</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Null Schema</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Object Schema</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Null Schema</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseObjectSchema(ObjectSchema object) {
+	public T caseNullSchema(NullSchema object) {
 		return null;
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Integer Schema</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Security Scheme</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Integer Schema</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Security Scheme</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseIntegerSchema(IntegerSchema object) {
+	public T caseSecurityScheme(SecurityScheme object) {
 		return null;
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>No Security Cheme</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>No Security Scheme</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>No Security Cheme</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>No Security Scheme</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseNoSecurityCheme(NoSecurityCheme object) {
+	public T caseNoSecurityScheme(NoSecurityScheme object) {
 		return null;
 	}
 
@@ -544,21 +657,6 @@ public class TdSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>OAuth2 Security Scheme</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>OAuth2 Security Scheme</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseOAuth2SecurityScheme(OAuth2SecurityScheme object) {
-		return null;
-	}
-
-	/**
 	 * Returns the result of interpreting the object as an instance of '<em>Digest Security Scheme</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -574,62 +672,17 @@ public class TdSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Apikey Security Scheme</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>API Key Security Scheme</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Apikey Security Scheme</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>API Key Security Scheme</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseApikeySecurityScheme(ApikeySecurityScheme object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>PSK Security Scheme</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>PSK Security Scheme</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T casePSKSecurityScheme(PSKSecurityScheme object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Cert Security Scheme</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Cert Security Scheme</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseCertSecurityScheme(CertSecurityScheme object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Public Security Scheme</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Public Security Scheme</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T casePublicSecurityScheme(PublicSecurityScheme object) {
+	public T caseAPIKeySecurityScheme(APIKeySecurityScheme object) {
 		return null;
 	}
 
@@ -649,17 +702,77 @@ public class TdSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Pop Security Scheme</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Cert Security Scheme</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Pop Security Scheme</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Cert Security Scheme</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T casePopSecurityScheme(PopSecurityScheme object) {
+	public T caseCertSecurityScheme(CertSecurityScheme object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>PSK Security Scheme</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>PSK Security Scheme</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T casePSKSecurityScheme(PSKSecurityScheme object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Public Security Scheme</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Public Security Scheme</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T casePublicSecurityScheme(PublicSecurityScheme object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Po PSecurity Scheme</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Po PSecurity Scheme</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T casePoPSecurityScheme(PoPSecurityScheme object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>OAuth2 Security Scheme</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>OAuth2 Security Scheme</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseOAuth2SecurityScheme(OAuth2SecurityScheme object) {
 		return null;
 	}
 

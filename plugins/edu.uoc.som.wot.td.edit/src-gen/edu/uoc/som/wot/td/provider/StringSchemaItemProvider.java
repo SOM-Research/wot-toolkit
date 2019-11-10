@@ -2,13 +2,15 @@
  */
 package edu.uoc.som.wot.td.provider;
 
-import edu.uoc.som.wot.td.StringSchema;
+import edu.uoc.som.wot.td.TdPackage;
 
 import java.util.Collection;
 import java.util.List;
 
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
+
+import org.eclipse.emf.ecore.EObject;
 
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 
@@ -73,7 +75,8 @@ public class StringSchemaItemProvider extends DataSchemaItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((StringSchema) object).getType();
+		Object labelValue = ((EObject) object).eGet(TdPackage.Literals.DATA_SCHEMA__DTITLE);
+		String label = labelValue == null ? null : labelValue.toString();
 		return label == null || label.length() == 0 ? getString("_UI_StringSchema_type")
 				: getString("_UI_StringSchema_type") + " " + label;
 	}
@@ -101,6 +104,27 @@ public class StringSchemaItemProvider extends DataSchemaItemProvider {
 	@Override
 	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
+	}
+
+	/**
+	 * This returns the label text for {@link org.eclipse.emf.edit.command.CreateChildCommand}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String getCreateChildText(Object owner, Object feature, Object child, Collection<?> selection) {
+		Object childFeature = feature;
+		Object childObject = child;
+
+		boolean qualify = childFeature == TdPackage.Literals.DATA_SCHEMA__DTITLES
+				|| childFeature == TdPackage.Literals.DATA_SCHEMA__DDESCRIPTIONS;
+
+		if (qualify) {
+			return getString("_UI_CreateChild_text2",
+					new Object[] { getTypeText(childObject), getFeatureText(childFeature), getTypeText(owner) });
+		}
+		return super.getCreateChildText(owner, feature, child, selection);
 	}
 
 }

@@ -13,8 +13,8 @@ import org.eclipse.emf.common.util.EList;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link edu.uoc.som.wot.td.ObjectSchema#getProperties <em>Properties</em>}</li>
  *   <li>{@link edu.uoc.som.wot.td.ObjectSchema#getRequired <em>Required</em>}</li>
+ *   <li>{@link edu.uoc.som.wot.td.ObjectSchema#getProperties <em>Properties</em>}</li>
  * </ul>
  *
  * @see edu.uoc.som.wot.td.TdPackage#getObjectSchema()
@@ -22,28 +22,6 @@ import org.eclipse.emf.common.util.EList;
  * @generated
  */
 public interface ObjectSchema extends DataSchema {
-	/**
-	 * Returns the value of the '<em><b>Properties</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Properties</em>' reference.
-	 * @see #setProperties(DataSchema)
-	 * @see edu.uoc.som.wot.td.TdPackage#getObjectSchema_Properties()
-	 * @model
-	 * @generated
-	 */
-	DataSchema getProperties();
-
-	/**
-	 * Sets the value of the '{@link edu.uoc.som.wot.td.ObjectSchema#getProperties <em>Properties</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Properties</em>' reference.
-	 * @see #getProperties()
-	 * @generated
-	 */
-	void setProperties(DataSchema value);
-
 	/**
 	 * Returns the value of the '<em><b>Required</b></em>' attribute list.
 	 * The list contents are of type {@link java.lang.String}.
@@ -55,5 +33,17 @@ public interface ObjectSchema extends DataSchema {
 	 * @generated
 	 */
 	EList<String> getRequired();
+
+	/**
+	 * Returns the value of the '<em><b>Properties</b></em>' containment reference list.
+	 * The list contents are of type {@link edu.uoc.som.wot.td.DataSchema}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Properties</em>' containment reference list.
+	 * @see edu.uoc.som.wot.td.TdPackage#getObjectSchema_Properties()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<DataSchema> getProperties();
 
 } // ObjectSchema

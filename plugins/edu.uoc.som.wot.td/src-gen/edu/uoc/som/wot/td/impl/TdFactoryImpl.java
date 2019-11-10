@@ -4,7 +4,7 @@ package edu.uoc.som.wot.td.impl;
 
 import edu.uoc.som.wot.td.*;
 
-import java.net.URI;
+import java.util.Map;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
@@ -60,54 +60,64 @@ public class TdFactoryImpl extends EFactoryImpl implements TdFactory {
 		switch (eClass.getClassifierID()) {
 		case TdPackage.THING:
 			return createThing();
-		case TdPackage.PROPERTY:
-			return createProperty();
-		case TdPackage.INTERACTION_PATTERN:
-			return createInteractionPattern();
-		case TdPackage.ACTION:
-			return createAction();
-		case TdPackage.EVENT:
-			return createEvent();
-		case TdPackage.SECURITY_SCHEME:
-			return createSecurityScheme();
-		case TdPackage.LINK:
-			return createLink();
 		case TdPackage.FORM:
 			return createForm();
+		case TdPackage.EXPECTED_RESPONSE:
+			return createExpectedResponse();
+		case TdPackage.LINK:
+			return createLink();
+		case TdPackage.MULTI_LANGUAGE:
+			return createMultiLanguage();
+		case TdPackage.LANGUAGE_TO_CONTENT_MAP:
+			return (EObject) createLanguageToContentMap();
+		case TdPackage.VERSION_INFO:
+			return createVersionInfo();
+		case TdPackage.INTERACTION_AFFORDANCE:
+			return createInteractionAffordance();
+		case TdPackage.PROPERTY_AFFORDANCE:
+			return createPropertyAffordance();
+		case TdPackage.ACTION_AFFORDANCE:
+			return createActionAffordance();
+		case TdPackage.EVENT_AFFORDANCE:
+			return createEventAffordance();
 		case TdPackage.DATA_SCHEMA:
 			return createDataSchema();
 		case TdPackage.ARRAY_SCHEMA:
 			return createArraySchema();
+		case TdPackage.OBJECT_SCHEMA:
+			return createObjectSchema();
 		case TdPackage.NUMBER_SCHEMA:
 			return createNumberSchema();
+		case TdPackage.INTEGER_SCHEMA:
+			return createIntegerSchema();
 		case TdPackage.STRING_SCHEMA:
 			return createStringSchema();
 		case TdPackage.BOOLEAN_SCHEMA:
 			return createBooleanSchema();
-		case TdPackage.OBJECT_SCHEMA:
-			return createObjectSchema();
-		case TdPackage.INTEGER_SCHEMA:
-			return createIntegerSchema();
-		case TdPackage.NO_SECURITY_CHEME:
-			return createNoSecurityCheme();
+		case TdPackage.NULL_SCHEMA:
+			return createNullSchema();
+		case TdPackage.SECURITY_SCHEME:
+			return createSecurityScheme();
+		case TdPackage.NO_SECURITY_SCHEME:
+			return createNoSecurityScheme();
 		case TdPackage.BASIC_SECURITY_SCHEME:
 			return createBasicSecurityScheme();
-		case TdPackage.OAUTH2_SECURITY_SCHEME:
-			return createOAuth2SecurityScheme();
 		case TdPackage.DIGEST_SECURITY_SCHEME:
 			return createDigestSecurityScheme();
-		case TdPackage.APIKEY_SECURITY_SCHEME:
-			return createApikeySecurityScheme();
-		case TdPackage.PSK_SECURITY_SCHEME:
-			return createPSKSecurityScheme();
-		case TdPackage.CERT_SECURITY_SCHEME:
-			return createCertSecurityScheme();
-		case TdPackage.PUBLIC_SECURITY_SCHEME:
-			return createPublicSecurityScheme();
+		case TdPackage.API_KEY_SECURITY_SCHEME:
+			return createAPIKeySecurityScheme();
 		case TdPackage.BEARER_SECURITY_SCHEME:
 			return createBearerSecurityScheme();
-		case TdPackage.POP_SECURITY_SCHEME:
-			return createPopSecurityScheme();
+		case TdPackage.CERT_SECURITY_SCHEME:
+			return createCertSecurityScheme();
+		case TdPackage.PSK_SECURITY_SCHEME:
+			return createPSKSecurityScheme();
+		case TdPackage.PUBLIC_SECURITY_SCHEME:
+			return createPublicSecurityScheme();
+		case TdPackage.PO_PSECURITY_SCHEME:
+			return createPoPSecurityScheme();
+		case TdPackage.OAUTH2_SECURITY_SCHEME:
+			return createOAuth2SecurityScheme();
 		default:
 			throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -121,8 +131,6 @@ public class TdFactoryImpl extends EFactoryImpl implements TdFactory {
 	@Override
 	public Object createFromString(EDataType eDataType, String initialValue) {
 		switch (eDataType.getClassifierID()) {
-		case TdPackage.ANY_URI:
-			return createAnyURIFromString(eDataType, initialValue);
 		case TdPackage.ANY_TYPE:
 			return createAnyTypeFromString(eDataType, initialValue);
 		default:
@@ -138,8 +146,6 @@ public class TdFactoryImpl extends EFactoryImpl implements TdFactory {
 	@Override
 	public String convertToString(EDataType eDataType, Object instanceValue) {
 		switch (eDataType.getClassifierID()) {
-		case TdPackage.ANY_URI:
-			return convertAnyURIToString(eDataType, instanceValue);
 		case TdPackage.ANY_TYPE:
 			return convertAnyTypeToString(eDataType, instanceValue);
 		default:
@@ -164,9 +170,9 @@ public class TdFactoryImpl extends EFactoryImpl implements TdFactory {
 	 * @generated
 	 */
 	@Override
-	public Property createProperty() {
-		PropertyImpl property = new PropertyImpl();
-		return property;
+	public Form createForm() {
+		FormImpl form = new FormImpl();
+		return form;
 	}
 
 	/**
@@ -175,42 +181,9 @@ public class TdFactoryImpl extends EFactoryImpl implements TdFactory {
 	 * @generated
 	 */
 	@Override
-	public InteractionPattern createInteractionPattern() {
-		InteractionPatternImpl interactionPattern = new InteractionPatternImpl();
-		return interactionPattern;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Action createAction() {
-		ActionImpl action = new ActionImpl();
-		return action;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Event createEvent() {
-		EventImpl event = new EventImpl();
-		return event;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public SecurityScheme createSecurityScheme() {
-		SecuritySchemeImpl securityScheme = new SecuritySchemeImpl();
-		return securityScheme;
+	public ExpectedResponse createExpectedResponse() {
+		ExpectedResponseImpl expectedResponse = new ExpectedResponseImpl();
+		return expectedResponse;
 	}
 
 	/**
@@ -230,9 +203,74 @@ public class TdFactoryImpl extends EFactoryImpl implements TdFactory {
 	 * @generated
 	 */
 	@Override
-	public Form createForm() {
-		FormImpl form = new FormImpl();
-		return form;
+	public MultiLanguage createMultiLanguage() {
+		MultiLanguageImpl multiLanguage = new MultiLanguageImpl();
+		return multiLanguage;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Map.Entry<String, String> createLanguageToContentMap() {
+		LanguageToContentMapImpl languageToContentMap = new LanguageToContentMapImpl();
+		return languageToContentMap;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public VersionInfo createVersionInfo() {
+		VersionInfoImpl versionInfo = new VersionInfoImpl();
+		return versionInfo;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public InteractionAffordance createInteractionAffordance() {
+		InteractionAffordanceImpl interactionAffordance = new InteractionAffordanceImpl();
+		return interactionAffordance;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public PropertyAffordance createPropertyAffordance() {
+		PropertyAffordanceImpl propertyAffordance = new PropertyAffordanceImpl();
+		return propertyAffordance;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public ActionAffordance createActionAffordance() {
+		ActionAffordanceImpl actionAffordance = new ActionAffordanceImpl();
+		return actionAffordance;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EventAffordance createEventAffordance() {
+		EventAffordanceImpl eventAffordance = new EventAffordanceImpl();
+		return eventAffordance;
 	}
 
 	/**
@@ -263,9 +301,31 @@ public class TdFactoryImpl extends EFactoryImpl implements TdFactory {
 	 * @generated
 	 */
 	@Override
+	public ObjectSchema createObjectSchema() {
+		ObjectSchemaImpl objectSchema = new ObjectSchemaImpl();
+		return objectSchema;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public NumberSchema createNumberSchema() {
 		NumberSchemaImpl numberSchema = new NumberSchemaImpl();
 		return numberSchema;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public IntegerSchema createIntegerSchema() {
+		IntegerSchemaImpl integerSchema = new IntegerSchemaImpl();
+		return integerSchema;
 	}
 
 	/**
@@ -296,9 +356,9 @@ public class TdFactoryImpl extends EFactoryImpl implements TdFactory {
 	 * @generated
 	 */
 	@Override
-	public ObjectSchema createObjectSchema() {
-		ObjectSchemaImpl objectSchema = new ObjectSchemaImpl();
-		return objectSchema;
+	public NullSchema createNullSchema() {
+		NullSchemaImpl nullSchema = new NullSchemaImpl();
+		return nullSchema;
 	}
 
 	/**
@@ -307,9 +367,9 @@ public class TdFactoryImpl extends EFactoryImpl implements TdFactory {
 	 * @generated
 	 */
 	@Override
-	public IntegerSchema createIntegerSchema() {
-		IntegerSchemaImpl integerSchema = new IntegerSchemaImpl();
-		return integerSchema;
+	public SecurityScheme createSecurityScheme() {
+		SecuritySchemeImpl securityScheme = new SecuritySchemeImpl();
+		return securityScheme;
 	}
 
 	/**
@@ -318,9 +378,9 @@ public class TdFactoryImpl extends EFactoryImpl implements TdFactory {
 	 * @generated
 	 */
 	@Override
-	public NoSecurityCheme createNoSecurityCheme() {
-		NoSecurityChemeImpl noSecurityCheme = new NoSecurityChemeImpl();
-		return noSecurityCheme;
+	public NoSecurityScheme createNoSecurityScheme() {
+		NoSecuritySchemeImpl noSecurityScheme = new NoSecuritySchemeImpl();
+		return noSecurityScheme;
 	}
 
 	/**
@@ -340,17 +400,6 @@ public class TdFactoryImpl extends EFactoryImpl implements TdFactory {
 	 * @generated
 	 */
 	@Override
-	public OAuth2SecurityScheme createOAuth2SecurityScheme() {
-		OAuth2SecuritySchemeImpl oAuth2SecurityScheme = new OAuth2SecuritySchemeImpl();
-		return oAuth2SecurityScheme;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public DigestSecurityScheme createDigestSecurityScheme() {
 		DigestSecuritySchemeImpl digestSecurityScheme = new DigestSecuritySchemeImpl();
 		return digestSecurityScheme;
@@ -362,42 +411,9 @@ public class TdFactoryImpl extends EFactoryImpl implements TdFactory {
 	 * @generated
 	 */
 	@Override
-	public ApikeySecurityScheme createApikeySecurityScheme() {
-		ApikeySecuritySchemeImpl apikeySecurityScheme = new ApikeySecuritySchemeImpl();
-		return apikeySecurityScheme;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public PSKSecurityScheme createPSKSecurityScheme() {
-		PSKSecuritySchemeImpl pskSecurityScheme = new PSKSecuritySchemeImpl();
-		return pskSecurityScheme;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public CertSecurityScheme createCertSecurityScheme() {
-		CertSecuritySchemeImpl certSecurityScheme = new CertSecuritySchemeImpl();
-		return certSecurityScheme;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public PublicSecurityScheme createPublicSecurityScheme() {
-		PublicSecuritySchemeImpl publicSecurityScheme = new PublicSecuritySchemeImpl();
-		return publicSecurityScheme;
+	public APIKeySecurityScheme createAPIKeySecurityScheme() {
+		APIKeySecuritySchemeImpl apiKeySecurityScheme = new APIKeySecuritySchemeImpl();
+		return apiKeySecurityScheme;
 	}
 
 	/**
@@ -417,9 +433,9 @@ public class TdFactoryImpl extends EFactoryImpl implements TdFactory {
 	 * @generated
 	 */
 	@Override
-	public PopSecurityScheme createPopSecurityScheme() {
-		PopSecuritySchemeImpl popSecurityScheme = new PopSecuritySchemeImpl();
-		return popSecurityScheme;
+	public CertSecurityScheme createCertSecurityScheme() {
+		CertSecuritySchemeImpl certSecurityScheme = new CertSecuritySchemeImpl();
+		return certSecurityScheme;
 	}
 
 	/**
@@ -427,8 +443,10 @@ public class TdFactoryImpl extends EFactoryImpl implements TdFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public URI createAnyURIFromString(EDataType eDataType, String initialValue) {
-		return (URI) super.createFromString(eDataType, initialValue);
+	@Override
+	public PSKSecurityScheme createPSKSecurityScheme() {
+		PSKSecuritySchemeImpl pskSecurityScheme = new PSKSecuritySchemeImpl();
+		return pskSecurityScheme;
 	}
 
 	/**
@@ -436,8 +454,32 @@ public class TdFactoryImpl extends EFactoryImpl implements TdFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String convertAnyURIToString(EDataType eDataType, Object instanceValue) {
-		return super.convertToString(eDataType, instanceValue);
+	@Override
+	public PublicSecurityScheme createPublicSecurityScheme() {
+		PublicSecuritySchemeImpl publicSecurityScheme = new PublicSecuritySchemeImpl();
+		return publicSecurityScheme;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public PoPSecurityScheme createPoPSecurityScheme() {
+		PoPSecuritySchemeImpl poPSecurityScheme = new PoPSecuritySchemeImpl();
+		return poPSecurityScheme;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public OAuth2SecurityScheme createOAuth2SecurityScheme() {
+		OAuth2SecuritySchemeImpl oAuth2SecurityScheme = new OAuth2SecuritySchemeImpl();
+		return oAuth2SecurityScheme;
 	}
 
 	/**

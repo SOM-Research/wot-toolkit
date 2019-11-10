@@ -20,7 +20,6 @@ package edu.uoc.som.wot.td;
  * @generated
  */
 public interface IntegerSchema extends DataSchema {
-
 	/**
 	 * Returns the value of the '<em><b>Minimum</b></em>' attribute.
 	 * <!-- begin-user-doc -->
@@ -64,4 +63,5 @@ public interface IntegerSchema extends DataSchema {
 	 * @generated
 	 */
 	void setMaximum(int value);
+
 } // IntegerSchema

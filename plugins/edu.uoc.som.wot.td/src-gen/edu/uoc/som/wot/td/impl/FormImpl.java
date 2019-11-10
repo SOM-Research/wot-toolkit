@@ -2,25 +2,26 @@
  */
 package edu.uoc.som.wot.td.impl;
 
+import edu.uoc.som.wot.td.ExpectedResponse;
 import edu.uoc.som.wot.td.Form;
-import edu.uoc.som.wot.td.SecurityScheme;
 import edu.uoc.som.wot.td.TdPackage;
 
-import java.net.URI;
+import java.lang.reflect.InvocationTargetException;
 
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.eclipse.emf.ecore.util.EDataTypeUniqueEList;
-import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -30,76 +31,88 @@ import org.eclipse.emf.ecore.util.EObjectResolvingEList;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link edu.uoc.som.wot.td.impl.FormImpl#getHref <em>Href</em>}</li>
- *   <li>{@link edu.uoc.som.wot.td.impl.FormImpl#getMediaType <em>Media Type</em>}</li>
- *   <li>{@link edu.uoc.som.wot.td.impl.FormImpl#getRel <em>Rel</em>}</li>
+ *   <li>{@link edu.uoc.som.wot.td.impl.FormImpl#getOp <em>Op</em>}</li>
+ *   <li>{@link edu.uoc.som.wot.td.impl.FormImpl#get_href <em>href</em>}</li>
+ *   <li>{@link edu.uoc.som.wot.td.impl.FormImpl#getContentType <em>Content Type</em>}</li>
+ *   <li>{@link edu.uoc.som.wot.td.impl.FormImpl#getContentCoding <em>Content Coding</em>}</li>
  *   <li>{@link edu.uoc.som.wot.td.impl.FormImpl#getSubProtocol <em>Sub Protocol</em>}</li>
- *   <li>{@link edu.uoc.som.wot.td.impl.FormImpl#getScopes <em>Scopes</em>}</li>
  *   <li>{@link edu.uoc.som.wot.td.impl.FormImpl#getSecurity <em>Security</em>}</li>
+ *   <li>{@link edu.uoc.som.wot.td.impl.FormImpl#getScopes <em>Scopes</em>}</li>
+ *   <li>{@link edu.uoc.som.wot.td.impl.FormImpl#getResponse <em>Response</em>}</li>
  * </ul>
  *
  * @generated
  */
 public class FormImpl extends MinimalEObjectImpl.Container implements Form {
 	/**
-	 * The default value of the '{@link #getHref() <em>Href</em>}' attribute.
+	 * The cached value of the '{@link #getOp() <em>Op</em>}' attribute list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getHref()
+	 * @see #getOp()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final URI HREF_EDEFAULT = null;
+	protected EList<String> op;
 
 	/**
-	 * The cached value of the '{@link #getHref() <em>Href</em>}' attribute.
+	 * The default value of the '{@link #get_href() <em>href</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getHref()
+	 * @see #get_href()
 	 * @generated
 	 * @ordered
 	 */
-	protected URI href = HREF_EDEFAULT;
+	protected static final String _HREF_EDEFAULT = null;
 
 	/**
-	 * The default value of the '{@link #getMediaType() <em>Media Type</em>}' attribute.
+	 * The cached value of the '{@link #get_href() <em>href</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getMediaType()
+	 * @see #get_href()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String MEDIA_TYPE_EDEFAULT = null;
+	protected String _href = _HREF_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getMediaType() <em>Media Type</em>}' attribute.
+	 * The default value of the '{@link #getContentType() <em>Content Type</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getMediaType()
+	 * @see #getContentType()
 	 * @generated
 	 * @ordered
 	 */
-	protected String mediaType = MEDIA_TYPE_EDEFAULT;
+	protected static final String CONTENT_TYPE_EDEFAULT = null;
 
 	/**
-	 * The default value of the '{@link #getRel() <em>Rel</em>}' attribute.
+	 * The cached value of the '{@link #getContentType() <em>Content Type</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getRel()
+	 * @see #getContentType()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String REL_EDEFAULT = null;
+	protected String contentType = CONTENT_TYPE_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getRel() <em>Rel</em>}' attribute.
+	 * The default value of the '{@link #getContentCoding() <em>Content Coding</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getRel()
+	 * @see #getContentCoding()
 	 * @generated
 	 * @ordered
 	 */
-	protected String rel = REL_EDEFAULT;
+	protected static final String CONTENT_CODING_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getContentCoding() <em>Content Coding</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getContentCoding()
+	 * @generated
+	 * @ordered
+	 */
+	protected String contentCoding = CONTENT_CODING_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getSubProtocol() <em>Sub Protocol</em>}' attribute.
@@ -122,6 +135,16 @@ public class FormImpl extends MinimalEObjectImpl.Container implements Form {
 	protected String subProtocol = SUB_PROTOCOL_EDEFAULT;
 
 	/**
+	 * The cached value of the '{@link #getSecurity() <em>Security</em>}' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getSecurity()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<String> security;
+
+	/**
 	 * The cached value of the '{@link #getScopes() <em>Scopes</em>}' attribute list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -132,14 +155,14 @@ public class FormImpl extends MinimalEObjectImpl.Container implements Form {
 	protected EList<String> scopes;
 
 	/**
-	 * The cached value of the '{@link #getSecurity() <em>Security</em>}' reference list.
+	 * The cached value of the '{@link #getResponse() <em>Response</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getSecurity()
+	 * @see #getResponse()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<SecurityScheme> security;
+	protected ExpectedResponse response;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -166,8 +189,11 @@ public class FormImpl extends MinimalEObjectImpl.Container implements Form {
 	 * @generated
 	 */
 	@Override
-	public URI getHref() {
-		return href;
+	public EList<String> getOp() {
+		if (op == null) {
+			op = new EDataTypeUniqueEList<String>(String.class, this, TdPackage.FORM__OP);
+		}
+		return op;
 	}
 
 	/**
@@ -175,12 +201,20 @@ public class FormImpl extends MinimalEObjectImpl.Container implements Form {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
-	public void setHref(URI newHref) {
-		URI oldHref = href;
-		href = newHref;
+	public String get_href() {
+		return _href;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void set_href(String new_href) {
+		String old_href = _href;
+		_href = new_href;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, TdPackage.FORM__HREF, oldHref, href));
+			eNotify(new ENotificationImpl(this, Notification.SET, TdPackage.FORM__HREF, old_href, _href));
 	}
 
 	/**
@@ -189,8 +223,8 @@ public class FormImpl extends MinimalEObjectImpl.Container implements Form {
 	 * @generated
 	 */
 	@Override
-	public String getMediaType() {
-		return mediaType;
+	public String getContentType() {
+		return contentType;
 	}
 
 	/**
@@ -199,11 +233,12 @@ public class FormImpl extends MinimalEObjectImpl.Container implements Form {
 	 * @generated
 	 */
 	@Override
-	public void setMediaType(String newMediaType) {
-		String oldMediaType = mediaType;
-		mediaType = newMediaType;
+	public void setContentType(String newContentType) {
+		String oldContentType = contentType;
+		contentType = newContentType;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, TdPackage.FORM__MEDIA_TYPE, oldMediaType, mediaType));
+			eNotify(new ENotificationImpl(this, Notification.SET, TdPackage.FORM__CONTENT_TYPE, oldContentType,
+					contentType));
 	}
 
 	/**
@@ -212,8 +247,8 @@ public class FormImpl extends MinimalEObjectImpl.Container implements Form {
 	 * @generated
 	 */
 	@Override
-	public String getRel() {
-		return rel;
+	public String getContentCoding() {
+		return contentCoding;
 	}
 
 	/**
@@ -222,11 +257,12 @@ public class FormImpl extends MinimalEObjectImpl.Container implements Form {
 	 * @generated
 	 */
 	@Override
-	public void setRel(String newRel) {
-		String oldRel = rel;
-		rel = newRel;
+	public void setContentCoding(String newContentCoding) {
+		String oldContentCoding = contentCoding;
+		contentCoding = newContentCoding;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, TdPackage.FORM__REL, oldRel, rel));
+			eNotify(new ENotificationImpl(this, Notification.SET, TdPackage.FORM__CONTENT_CODING, oldContentCoding,
+					contentCoding));
 	}
 
 	/**
@@ -259,6 +295,19 @@ public class FormImpl extends MinimalEObjectImpl.Container implements Form {
 	 * @generated
 	 */
 	@Override
+	public EList<String> getSecurity() {
+		if (security == null) {
+			security = new EDataTypeUniqueEList<String>(String.class, this, TdPackage.FORM__SECURITY);
+		}
+		return security;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EList<String> getScopes() {
 		if (scopes == null) {
 			scopes = new EDataTypeUniqueEList<String>(String.class, this, TdPackage.FORM__SCOPES);
@@ -272,11 +321,83 @@ public class FormImpl extends MinimalEObjectImpl.Container implements Form {
 	 * @generated
 	 */
 	@Override
-	public EList<SecurityScheme> getSecurity() {
-		if (security == null) {
-			security = new EObjectResolvingEList<SecurityScheme>(SecurityScheme.class, this, TdPackage.FORM__SECURITY);
+	public ExpectedResponse getResponse() {
+		return response;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetResponse(ExpectedResponse newResponse, NotificationChain msgs) {
+		ExpectedResponse oldResponse = response;
+		response = newResponse;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, TdPackage.FORM__RESPONSE,
+					oldResponse, newResponse);
+			if (msgs == null)
+				msgs = notification;
+			else
+				msgs.add(notification);
 		}
-		return security;
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setResponse(ExpectedResponse newResponse) {
+		if (newResponse != response) {
+			NotificationChain msgs = null;
+			if (response != null)
+				msgs = ((InternalEObject) response).eInverseRemove(this,
+						EOPPOSITE_FEATURE_BASE - TdPackage.FORM__RESPONSE, null, msgs);
+			if (newResponse != null)
+				msgs = ((InternalEObject) newResponse).eInverseAdd(this,
+						EOPPOSITE_FEATURE_BASE - TdPackage.FORM__RESPONSE, null, msgs);
+			msgs = basicSetResponse(newResponse, msgs);
+			if (msgs != null)
+				msgs.dispatch();
+		} else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, TdPackage.FORM__RESPONSE, newResponse, newResponse));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String getHref() {
+		return this._href;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setHref(final String href) {
+		this._href = href;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+		case TdPackage.FORM__RESPONSE:
+			return basicSetResponse(null, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
 
 	/**
@@ -287,18 +408,22 @@ public class FormImpl extends MinimalEObjectImpl.Container implements Form {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
+		case TdPackage.FORM__OP:
+			return getOp();
 		case TdPackage.FORM__HREF:
-			return getHref();
-		case TdPackage.FORM__MEDIA_TYPE:
-			return getMediaType();
-		case TdPackage.FORM__REL:
-			return getRel();
+			return get_href();
+		case TdPackage.FORM__CONTENT_TYPE:
+			return getContentType();
+		case TdPackage.FORM__CONTENT_CODING:
+			return getContentCoding();
 		case TdPackage.FORM__SUB_PROTOCOL:
 			return getSubProtocol();
-		case TdPackage.FORM__SCOPES:
-			return getScopes();
 		case TdPackage.FORM__SECURITY:
 			return getSecurity();
+		case TdPackage.FORM__SCOPES:
+			return getScopes();
+		case TdPackage.FORM__RESPONSE:
+			return getResponse();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -312,25 +437,32 @@ public class FormImpl extends MinimalEObjectImpl.Container implements Form {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
+		case TdPackage.FORM__OP:
+			getOp().clear();
+			getOp().addAll((Collection<? extends String>) newValue);
+			return;
 		case TdPackage.FORM__HREF:
-			setHref((URI) newValue);
+			set_href((String) newValue);
 			return;
-		case TdPackage.FORM__MEDIA_TYPE:
-			setMediaType((String) newValue);
+		case TdPackage.FORM__CONTENT_TYPE:
+			setContentType((String) newValue);
 			return;
-		case TdPackage.FORM__REL:
-			setRel((String) newValue);
+		case TdPackage.FORM__CONTENT_CODING:
+			setContentCoding((String) newValue);
 			return;
 		case TdPackage.FORM__SUB_PROTOCOL:
 			setSubProtocol((String) newValue);
+			return;
+		case TdPackage.FORM__SECURITY:
+			getSecurity().clear();
+			getSecurity().addAll((Collection<? extends String>) newValue);
 			return;
 		case TdPackage.FORM__SCOPES:
 			getScopes().clear();
 			getScopes().addAll((Collection<? extends String>) newValue);
 			return;
-		case TdPackage.FORM__SECURITY:
-			getSecurity().clear();
-			getSecurity().addAll((Collection<? extends SecurityScheme>) newValue);
+		case TdPackage.FORM__RESPONSE:
+			setResponse((ExpectedResponse) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -344,23 +476,29 @@ public class FormImpl extends MinimalEObjectImpl.Container implements Form {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
+		case TdPackage.FORM__OP:
+			getOp().clear();
+			return;
 		case TdPackage.FORM__HREF:
-			setHref(HREF_EDEFAULT);
+			set_href(_HREF_EDEFAULT);
 			return;
-		case TdPackage.FORM__MEDIA_TYPE:
-			setMediaType(MEDIA_TYPE_EDEFAULT);
+		case TdPackage.FORM__CONTENT_TYPE:
+			setContentType(CONTENT_TYPE_EDEFAULT);
 			return;
-		case TdPackage.FORM__REL:
-			setRel(REL_EDEFAULT);
+		case TdPackage.FORM__CONTENT_CODING:
+			setContentCoding(CONTENT_CODING_EDEFAULT);
 			return;
 		case TdPackage.FORM__SUB_PROTOCOL:
 			setSubProtocol(SUB_PROTOCOL_EDEFAULT);
 			return;
+		case TdPackage.FORM__SECURITY:
+			getSecurity().clear();
+			return;
 		case TdPackage.FORM__SCOPES:
 			getScopes().clear();
 			return;
-		case TdPackage.FORM__SECURITY:
-			getSecurity().clear();
+		case TdPackage.FORM__RESPONSE:
+			setResponse((ExpectedResponse) null);
 			return;
 		}
 		super.eUnset(featureID);
@@ -374,20 +512,42 @@ public class FormImpl extends MinimalEObjectImpl.Container implements Form {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
+		case TdPackage.FORM__OP:
+			return op != null && !op.isEmpty();
 		case TdPackage.FORM__HREF:
-			return HREF_EDEFAULT == null ? href != null : !HREF_EDEFAULT.equals(href);
-		case TdPackage.FORM__MEDIA_TYPE:
-			return MEDIA_TYPE_EDEFAULT == null ? mediaType != null : !MEDIA_TYPE_EDEFAULT.equals(mediaType);
-		case TdPackage.FORM__REL:
-			return REL_EDEFAULT == null ? rel != null : !REL_EDEFAULT.equals(rel);
+			return _HREF_EDEFAULT == null ? _href != null : !_HREF_EDEFAULT.equals(_href);
+		case TdPackage.FORM__CONTENT_TYPE:
+			return CONTENT_TYPE_EDEFAULT == null ? contentType != null : !CONTENT_TYPE_EDEFAULT.equals(contentType);
+		case TdPackage.FORM__CONTENT_CODING:
+			return CONTENT_CODING_EDEFAULT == null ? contentCoding != null
+					: !CONTENT_CODING_EDEFAULT.equals(contentCoding);
 		case TdPackage.FORM__SUB_PROTOCOL:
 			return SUB_PROTOCOL_EDEFAULT == null ? subProtocol != null : !SUB_PROTOCOL_EDEFAULT.equals(subProtocol);
-		case TdPackage.FORM__SCOPES:
-			return scopes != null && !scopes.isEmpty();
 		case TdPackage.FORM__SECURITY:
 			return security != null && !security.isEmpty();
+		case TdPackage.FORM__SCOPES:
+			return scopes != null && !scopes.isEmpty();
+		case TdPackage.FORM__RESPONSE:
+			return response != null;
 		}
 		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
+		switch (operationID) {
+		case TdPackage.FORM___GET_HREF:
+			return getHref();
+		case TdPackage.FORM___SET_HREF__STRING:
+			setHref((String) arguments.get(0));
+			return null;
+		}
+		return super.eInvoke(operationID, arguments);
 	}
 
 	/**
@@ -401,14 +561,18 @@ public class FormImpl extends MinimalEObjectImpl.Container implements Form {
 			return super.toString();
 
 		StringBuilder result = new StringBuilder(super.toString());
-		result.append(" (href: ");
-		result.append(href);
-		result.append(", mediaType: ");
-		result.append(mediaType);
-		result.append(", rel: ");
-		result.append(rel);
+		result.append(" (op: ");
+		result.append(op);
+		result.append(", _href: ");
+		result.append(_href);
+		result.append(", contentType: ");
+		result.append(contentType);
+		result.append(", contentCoding: ");
+		result.append(contentCoding);
 		result.append(", subProtocol: ");
 		result.append(subProtocol);
+		result.append(", security: ");
+		result.append(security);
 		result.append(", scopes: ");
 		result.append(scopes);
 		result.append(')');

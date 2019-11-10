@@ -27,7 +27,7 @@ public interface BasicSecurityScheme extends SecurityScheme {
 	 * @return the value of the '<em>In</em>' attribute.
 	 * @see #setIn(String)
 	 * @see edu.uoc.som.wot.td.TdPackage#getBasicSecurityScheme_In()
-	 * @model
+	 * @model required="true"
 	 * @generated
 	 */
 	String getIn();

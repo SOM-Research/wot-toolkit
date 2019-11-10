@@ -94,7 +94,7 @@ public class PublicSecuritySchemeItemProvider extends SecuritySchemeItemProvider
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((PublicSecurityScheme) object).getScheme();
+		String label = ((PublicSecurityScheme) object).getId();
 		return label == null || label.length() == 0 ? getString("_UI_PublicSecurityScheme_type")
 				: getString("_UI_PublicSecurityScheme_type") + " " + label;
 	}

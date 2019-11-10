@@ -2,8 +2,6 @@
  */
 package edu.uoc.som.wot.td;
 
-import java.net.URI;
-
 import org.eclipse.emf.common.util.EList;
 
 /**
@@ -15,11 +13,11 @@ import org.eclipse.emf.common.util.EList;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link edu.uoc.som.wot.td.OAuth2SecurityScheme#getFlow <em>Flow</em>}</li>
+ *   <li>{@link edu.uoc.som.wot.td.OAuth2SecurityScheme#getAuthorization <em>Authorization</em>}</li>
+ *   <li>{@link edu.uoc.som.wot.td.OAuth2SecurityScheme#getToken <em>Token</em>}</li>
+ *   <li>{@link edu.uoc.som.wot.td.OAuth2SecurityScheme#getRefresh <em>Refresh</em>}</li>
  *   <li>{@link edu.uoc.som.wot.td.OAuth2SecurityScheme#getScopes <em>Scopes</em>}</li>
- *   <li>{@link edu.uoc.som.wot.td.OAuth2SecurityScheme#getTokenUrl <em>Token Url</em>}</li>
- *   <li>{@link edu.uoc.som.wot.td.OAuth2SecurityScheme#getAuthorizationUrl <em>Authorization Url</em>}</li>
- *   <li>{@link edu.uoc.som.wot.td.OAuth2SecurityScheme#getRefreshUrl <em>Refresh Url</em>}</li>
+ *   <li>{@link edu.uoc.som.wot.td.OAuth2SecurityScheme#getFlow <em>Flow</em>}</li>
  * </ul>
  *
  * @see edu.uoc.som.wot.td.TdPackage#getOAuth2SecurityScheme()
@@ -28,26 +26,70 @@ import org.eclipse.emf.common.util.EList;
  */
 public interface OAuth2SecurityScheme extends SecurityScheme {
 	/**
-	 * Returns the value of the '<em><b>Flow</b></em>' attribute.
+	 * Returns the value of the '<em><b>Authorization</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Flow</em>' attribute.
-	 * @see #setFlow(String)
-	 * @see edu.uoc.som.wot.td.TdPackage#getOAuth2SecurityScheme_Flow()
-	 * @model
+	 * @return the value of the '<em>Authorization</em>' attribute.
+	 * @see #setAuthorization(String)
+	 * @see edu.uoc.som.wot.td.TdPackage#getOAuth2SecurityScheme_Authorization()
+	 * @model dataType="org.eclipse.emf.ecore.xml.type.AnyURI"
 	 * @generated
 	 */
-	String getFlow();
+	String getAuthorization();
 
 	/**
-	 * Sets the value of the '{@link edu.uoc.som.wot.td.OAuth2SecurityScheme#getFlow <em>Flow</em>}' attribute.
+	 * Sets the value of the '{@link edu.uoc.som.wot.td.OAuth2SecurityScheme#getAuthorization <em>Authorization</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Flow</em>' attribute.
-	 * @see #getFlow()
+	 * @param value the new value of the '<em>Authorization</em>' attribute.
+	 * @see #getAuthorization()
 	 * @generated
 	 */
-	void setFlow(String value);
+	void setAuthorization(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Token</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Token</em>' attribute.
+	 * @see #setToken(String)
+	 * @see edu.uoc.som.wot.td.TdPackage#getOAuth2SecurityScheme_Token()
+	 * @model dataType="org.eclipse.emf.ecore.xml.type.AnyURI"
+	 * @generated
+	 */
+	String getToken();
+
+	/**
+	 * Sets the value of the '{@link edu.uoc.som.wot.td.OAuth2SecurityScheme#getToken <em>Token</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Token</em>' attribute.
+	 * @see #getToken()
+	 * @generated
+	 */
+	void setToken(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Refresh</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Refresh</em>' attribute.
+	 * @see #setRefresh(String)
+	 * @see edu.uoc.som.wot.td.TdPackage#getOAuth2SecurityScheme_Refresh()
+	 * @model dataType="org.eclipse.emf.ecore.xml.type.AnyURI"
+	 * @generated
+	 */
+	String getRefresh();
+
+	/**
+	 * Sets the value of the '{@link edu.uoc.som.wot.td.OAuth2SecurityScheme#getRefresh <em>Refresh</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Refresh</em>' attribute.
+	 * @see #getRefresh()
+	 * @generated
+	 */
+	void setRefresh(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Scopes</b></em>' attribute list.
@@ -62,69 +104,25 @@ public interface OAuth2SecurityScheme extends SecurityScheme {
 	EList<String> getScopes();
 
 	/**
-	 * Returns the value of the '<em><b>Token Url</b></em>' attribute.
+	 * Returns the value of the '<em><b>Flow</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Token Url</em>' attribute.
-	 * @see #setTokenUrl(URI)
-	 * @see edu.uoc.som.wot.td.TdPackage#getOAuth2SecurityScheme_TokenUrl()
-	 * @model dataType="edu.uoc.som.wot.td.AnyURI"
+	 * @return the value of the '<em>Flow</em>' attribute.
+	 * @see #setFlow(String)
+	 * @see edu.uoc.som.wot.td.TdPackage#getOAuth2SecurityScheme_Flow()
+	 * @model required="true"
 	 * @generated
 	 */
-	URI getTokenUrl();
+	String getFlow();
 
 	/**
-	 * Sets the value of the '{@link edu.uoc.som.wot.td.OAuth2SecurityScheme#getTokenUrl <em>Token Url</em>}' attribute.
+	 * Sets the value of the '{@link edu.uoc.som.wot.td.OAuth2SecurityScheme#getFlow <em>Flow</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Token Url</em>' attribute.
-	 * @see #getTokenUrl()
+	 * @param value the new value of the '<em>Flow</em>' attribute.
+	 * @see #getFlow()
 	 * @generated
 	 */
-	void setTokenUrl(URI value);
-
-	/**
-	 * Returns the value of the '<em><b>Authorization Url</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Authorization Url</em>' attribute.
-	 * @see #setAuthorizationUrl(URI)
-	 * @see edu.uoc.som.wot.td.TdPackage#getOAuth2SecurityScheme_AuthorizationUrl()
-	 * @model dataType="edu.uoc.som.wot.td.AnyURI"
-	 * @generated
-	 */
-	URI getAuthorizationUrl();
-
-	/**
-	 * Sets the value of the '{@link edu.uoc.som.wot.td.OAuth2SecurityScheme#getAuthorizationUrl <em>Authorization Url</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Authorization Url</em>' attribute.
-	 * @see #getAuthorizationUrl()
-	 * @generated
-	 */
-	void setAuthorizationUrl(URI value);
-
-	/**
-	 * Returns the value of the '<em><b>Refresh Url</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Refresh Url</em>' attribute.
-	 * @see #setRefreshUrl(URI)
-	 * @see edu.uoc.som.wot.td.TdPackage#getOAuth2SecurityScheme_RefreshUrl()
-	 * @model dataType="edu.uoc.som.wot.td.AnyURI"
-	 * @generated
-	 */
-	URI getRefreshUrl();
-
-	/**
-	 * Sets the value of the '{@link edu.uoc.som.wot.td.OAuth2SecurityScheme#getRefreshUrl <em>Refresh Url</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Refresh Url</em>' attribute.
-	 * @see #getRefreshUrl()
-	 * @generated
-	 */
-	void setRefreshUrl(URI value);
+	void setFlow(String value);
 
 } // OAuth2SecurityScheme

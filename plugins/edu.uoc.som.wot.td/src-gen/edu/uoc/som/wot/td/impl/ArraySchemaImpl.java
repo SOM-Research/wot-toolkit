@@ -6,12 +6,20 @@ import edu.uoc.som.wot.td.ArraySchema;
 import edu.uoc.som.wot.td.DataSchema;
 import edu.uoc.som.wot.td.TdPackage;
 
+import java.util.Collection;
+
 import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.NotificationChain;
+
+import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
+import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -21,24 +29,14 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link edu.uoc.som.wot.td.impl.ArraySchemaImpl#getItems <em>Items</em>}</li>
  *   <li>{@link edu.uoc.som.wot.td.impl.ArraySchemaImpl#getMinItems <em>Min Items</em>}</li>
  *   <li>{@link edu.uoc.som.wot.td.impl.ArraySchemaImpl#getMaxItems <em>Max Items</em>}</li>
+ *   <li>{@link edu.uoc.som.wot.td.impl.ArraySchemaImpl#getItems <em>Items</em>}</li>
  * </ul>
  *
  * @generated
  */
 public class ArraySchemaImpl extends DataSchemaImpl implements ArraySchema {
-	/**
-	 * The cached value of the '{@link #getItems() <em>Items</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getItems()
-	 * @generated
-	 * @ordered
-	 */
-	protected DataSchema items;
-
 	/**
 	 * The default value of the '{@link #getMinItems() <em>Min Items</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -80,6 +78,16 @@ public class ArraySchemaImpl extends DataSchemaImpl implements ArraySchema {
 	protected int maxItems = MAX_ITEMS_EDEFAULT;
 
 	/**
+	 * The cached value of the '{@link #getItems() <em>Items</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getItems()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<DataSchema> items;
+
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -96,47 +104,6 @@ public class ArraySchemaImpl extends DataSchemaImpl implements ArraySchema {
 	@Override
 	protected EClass eStaticClass() {
 		return TdPackage.Literals.ARRAY_SCHEMA;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public DataSchema getItems() {
-		if (items != null && items.eIsProxy()) {
-			InternalEObject oldItems = (InternalEObject) items;
-			items = (DataSchema) eResolveProxy(oldItems);
-			if (items != oldItems) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, TdPackage.ARRAY_SCHEMA__ITEMS, oldItems,
-							items));
-			}
-		}
-		return items;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public DataSchema basicGetItems() {
-		return items;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void setItems(DataSchema newItems) {
-		DataSchema oldItems = items;
-		items = newItems;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, TdPackage.ARRAY_SCHEMA__ITEMS, oldItems, items));
 	}
 
 	/**
@@ -193,16 +160,41 @@ public class ArraySchemaImpl extends DataSchemaImpl implements ArraySchema {
 	 * @generated
 	 */
 	@Override
-	public Object eGet(int featureID, boolean resolve, boolean coreType) {
+	public EList<DataSchema> getItems() {
+		if (items == null) {
+			items = new EObjectContainmentEList<DataSchema>(DataSchema.class, this, TdPackage.ARRAY_SCHEMA__ITEMS);
+		}
+		return items;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
 		case TdPackage.ARRAY_SCHEMA__ITEMS:
-			if (resolve)
-				return getItems();
-			return basicGetItems();
+			return ((InternalEList<?>) getItems()).basicRemove(otherEnd, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Object eGet(int featureID, boolean resolve, boolean coreType) {
+		switch (featureID) {
 		case TdPackage.ARRAY_SCHEMA__MIN_ITEMS:
 			return getMinItems();
 		case TdPackage.ARRAY_SCHEMA__MAX_ITEMS:
 			return getMaxItems();
+		case TdPackage.ARRAY_SCHEMA__ITEMS:
+			return getItems();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -212,17 +204,19 @@ public class ArraySchemaImpl extends DataSchemaImpl implements ArraySchema {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-		case TdPackage.ARRAY_SCHEMA__ITEMS:
-			setItems((DataSchema) newValue);
-			return;
 		case TdPackage.ARRAY_SCHEMA__MIN_ITEMS:
 			setMinItems((Integer) newValue);
 			return;
 		case TdPackage.ARRAY_SCHEMA__MAX_ITEMS:
 			setMaxItems((Integer) newValue);
+			return;
+		case TdPackage.ARRAY_SCHEMA__ITEMS:
+			getItems().clear();
+			getItems().addAll((Collection<? extends DataSchema>) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -236,14 +230,14 @@ public class ArraySchemaImpl extends DataSchemaImpl implements ArraySchema {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-		case TdPackage.ARRAY_SCHEMA__ITEMS:
-			setItems((DataSchema) null);
-			return;
 		case TdPackage.ARRAY_SCHEMA__MIN_ITEMS:
 			setMinItems(MIN_ITEMS_EDEFAULT);
 			return;
 		case TdPackage.ARRAY_SCHEMA__MAX_ITEMS:
 			setMaxItems(MAX_ITEMS_EDEFAULT);
+			return;
+		case TdPackage.ARRAY_SCHEMA__ITEMS:
+			getItems().clear();
 			return;
 		}
 		super.eUnset(featureID);
@@ -257,12 +251,12 @@ public class ArraySchemaImpl extends DataSchemaImpl implements ArraySchema {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-		case TdPackage.ARRAY_SCHEMA__ITEMS:
-			return items != null;
 		case TdPackage.ARRAY_SCHEMA__MIN_ITEMS:
 			return minItems != MIN_ITEMS_EDEFAULT;
 		case TdPackage.ARRAY_SCHEMA__MAX_ITEMS:
 			return maxItems != MAX_ITEMS_EDEFAULT;
+		case TdPackage.ARRAY_SCHEMA__ITEMS:
+			return items != null && !items.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

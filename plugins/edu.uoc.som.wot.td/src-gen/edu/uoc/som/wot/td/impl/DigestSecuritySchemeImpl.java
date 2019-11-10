@@ -19,14 +19,34 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * The following features are implemented:
  * </p>
  * <ul>
+ *   <li>{@link edu.uoc.som.wot.td.impl.DigestSecuritySchemeImpl#getQop <em>Qop</em>}</li>
  *   <li>{@link edu.uoc.som.wot.td.impl.DigestSecuritySchemeImpl#getIn <em>In</em>}</li>
  *   <li>{@link edu.uoc.som.wot.td.impl.DigestSecuritySchemeImpl#getName <em>Name</em>}</li>
- *   <li>{@link edu.uoc.som.wot.td.impl.DigestSecuritySchemeImpl#getQop <em>Qop</em>}</li>
  * </ul>
  *
  * @generated
  */
 public class DigestSecuritySchemeImpl extends SecuritySchemeImpl implements DigestSecurityScheme {
+	/**
+	 * The default value of the '{@link #getQop() <em>Qop</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getQop()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String QOP_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getQop() <em>Qop</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getQop()
+	 * @generated
+	 * @ordered
+	 */
+	protected String qop = QOP_EDEFAULT;
+
 	/**
 	 * The default value of the '{@link #getIn() <em>In</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -68,26 +88,6 @@ public class DigestSecuritySchemeImpl extends SecuritySchemeImpl implements Dige
 	protected String name = NAME_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #getQop() <em>Qop</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getQop()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String QOP_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getQop() <em>Qop</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getQop()
-	 * @generated
-	 * @ordered
-	 */
-	protected String qop = QOP_EDEFAULT;
-
-	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -104,6 +104,29 @@ public class DigestSecuritySchemeImpl extends SecuritySchemeImpl implements Dige
 	@Override
 	protected EClass eStaticClass() {
 		return TdPackage.Literals.DIGEST_SECURITY_SCHEME;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String getQop() {
+		return qop;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setQop(String newQop) {
+		String oldQop = qop;
+		qop = newQop;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, TdPackage.DIGEST_SECURITY_SCHEME__QOP, oldQop, qop));
 	}
 
 	/**
@@ -159,37 +182,14 @@ public class DigestSecuritySchemeImpl extends SecuritySchemeImpl implements Dige
 	 * @generated
 	 */
 	@Override
-	public String getQop() {
-		return qop;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void setQop(String newQop) {
-		String oldQop = qop;
-		qop = newQop;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, TdPackage.DIGEST_SECURITY_SCHEME__QOP, oldQop, qop));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
+		case TdPackage.DIGEST_SECURITY_SCHEME__QOP:
+			return getQop();
 		case TdPackage.DIGEST_SECURITY_SCHEME__IN:
 			return getIn();
 		case TdPackage.DIGEST_SECURITY_SCHEME__NAME:
 			return getName();
-		case TdPackage.DIGEST_SECURITY_SCHEME__QOP:
-			return getQop();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -202,14 +202,14 @@ public class DigestSecuritySchemeImpl extends SecuritySchemeImpl implements Dige
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
+		case TdPackage.DIGEST_SECURITY_SCHEME__QOP:
+			setQop((String) newValue);
+			return;
 		case TdPackage.DIGEST_SECURITY_SCHEME__IN:
 			setIn((String) newValue);
 			return;
 		case TdPackage.DIGEST_SECURITY_SCHEME__NAME:
 			setName((String) newValue);
-			return;
-		case TdPackage.DIGEST_SECURITY_SCHEME__QOP:
-			setQop((String) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -223,14 +223,14 @@ public class DigestSecuritySchemeImpl extends SecuritySchemeImpl implements Dige
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
+		case TdPackage.DIGEST_SECURITY_SCHEME__QOP:
+			setQop(QOP_EDEFAULT);
+			return;
 		case TdPackage.DIGEST_SECURITY_SCHEME__IN:
 			setIn(IN_EDEFAULT);
 			return;
 		case TdPackage.DIGEST_SECURITY_SCHEME__NAME:
 			setName(NAME_EDEFAULT);
-			return;
-		case TdPackage.DIGEST_SECURITY_SCHEME__QOP:
-			setQop(QOP_EDEFAULT);
 			return;
 		}
 		super.eUnset(featureID);
@@ -244,12 +244,12 @@ public class DigestSecuritySchemeImpl extends SecuritySchemeImpl implements Dige
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
+		case TdPackage.DIGEST_SECURITY_SCHEME__QOP:
+			return QOP_EDEFAULT == null ? qop != null : !QOP_EDEFAULT.equals(qop);
 		case TdPackage.DIGEST_SECURITY_SCHEME__IN:
 			return IN_EDEFAULT == null ? in != null : !IN_EDEFAULT.equals(in);
 		case TdPackage.DIGEST_SECURITY_SCHEME__NAME:
 			return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-		case TdPackage.DIGEST_SECURITY_SCHEME__QOP:
-			return QOP_EDEFAULT == null ? qop != null : !QOP_EDEFAULT.equals(qop);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -265,12 +265,12 @@ public class DigestSecuritySchemeImpl extends SecuritySchemeImpl implements Dige
 			return super.toString();
 
 		StringBuilder result = new StringBuilder(super.toString());
-		result.append(" (in: ");
+		result.append(" (qop: ");
+		result.append(qop);
+		result.append(", in: ");
 		result.append(in);
 		result.append(", name: ");
 		result.append(name);
-		result.append(", qop: ");
-		result.append(qop);
 		result.append(')');
 		return result.toString();
 	}

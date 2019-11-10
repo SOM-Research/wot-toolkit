@@ -6,7 +6,9 @@ import edu.uoc.som.wot.td.IntegerSchema;
 import edu.uoc.som.wot.td.TdPackage;
 
 import org.eclipse.emf.common.notify.Notification;
+
 import org.eclipse.emf.ecore.EClass;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 /**
@@ -33,6 +35,7 @@ public class IntegerSchemaImpl extends DataSchemaImpl implements IntegerSchema {
 	 * @ordered
 	 */
 	protected static final int MINIMUM_EDEFAULT = 0;
+
 	/**
 	 * The cached value of the '{@link #getMinimum() <em>Minimum</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -42,6 +45,7 @@ public class IntegerSchemaImpl extends DataSchemaImpl implements IntegerSchema {
 	 * @ordered
 	 */
 	protected int minimum = MINIMUM_EDEFAULT;
+
 	/**
 	 * The default value of the '{@link #getMaximum() <em>Maximum</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -51,6 +55,7 @@ public class IntegerSchemaImpl extends DataSchemaImpl implements IntegerSchema {
 	 * @ordered
 	 */
 	protected static final int MAXIMUM_EDEFAULT = 0;
+
 	/**
 	 * The cached value of the '{@link #getMaximum() <em>Maximum</em>}' attribute.
 	 * <!-- begin-user-doc -->

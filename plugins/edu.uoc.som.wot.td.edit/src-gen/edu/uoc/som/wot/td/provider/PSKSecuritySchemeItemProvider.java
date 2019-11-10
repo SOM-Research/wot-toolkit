@@ -94,7 +94,7 @@ public class PSKSecuritySchemeItemProvider extends SecuritySchemeItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((PSKSecurityScheme) object).getScheme();
+		String label = ((PSKSecurityScheme) object).getId();
 		return label == null || label.length() == 0 ? getString("_UI_PSKSecurityScheme_type")
 				: getString("_UI_PSKSecurityScheme_type") + " " + label;
 	}

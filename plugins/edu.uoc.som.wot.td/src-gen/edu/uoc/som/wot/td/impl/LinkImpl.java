@@ -5,9 +5,11 @@ package edu.uoc.som.wot.td.impl;
 import edu.uoc.som.wot.td.Link;
 import edu.uoc.som.wot.td.TdPackage;
 
-import java.net.URI;
+import java.lang.reflect.InvocationTargetException;
 
 import org.eclipse.emf.common.notify.Notification;
+
+import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
 
@@ -22,8 +24,8 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link edu.uoc.som.wot.td.impl.LinkImpl#getHref <em>Href</em>}</li>
- *   <li>{@link edu.uoc.som.wot.td.impl.LinkImpl#getMediaType <em>Media Type</em>}</li>
+ *   <li>{@link edu.uoc.som.wot.td.impl.LinkImpl#get_href <em>href</em>}</li>
+ *   <li>{@link edu.uoc.som.wot.td.impl.LinkImpl#getType <em>Type</em>}</li>
  *   <li>{@link edu.uoc.som.wot.td.impl.LinkImpl#getRel <em>Rel</em>}</li>
  *   <li>{@link edu.uoc.som.wot.td.impl.LinkImpl#getAnchor <em>Anchor</em>}</li>
  * </ul>
@@ -32,44 +34,44 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  */
 public class LinkImpl extends MinimalEObjectImpl.Container implements Link {
 	/**
-	 * The default value of the '{@link #getHref() <em>Href</em>}' attribute.
+	 * The default value of the '{@link #get_href() <em>href</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getHref()
+	 * @see #get_href()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final URI HREF_EDEFAULT = null;
+	protected static final String _HREF_EDEFAULT = null;
 
 	/**
-	 * The cached value of the '{@link #getHref() <em>Href</em>}' attribute.
+	 * The cached value of the '{@link #get_href() <em>href</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getHref()
+	 * @see #get_href()
 	 * @generated
 	 * @ordered
 	 */
-	protected URI href = HREF_EDEFAULT;
+	protected String _href = _HREF_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #getMediaType() <em>Media Type</em>}' attribute.
+	 * The default value of the '{@link #getType() <em>Type</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getMediaType()
+	 * @see #getType()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String MEDIA_TYPE_EDEFAULT = null;
+	protected static final String TYPE_EDEFAULT = null;
 
 	/**
-	 * The cached value of the '{@link #getMediaType() <em>Media Type</em>}' attribute.
+	 * The cached value of the '{@link #getType() <em>Type</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getMediaType()
+	 * @see #getType()
 	 * @generated
 	 * @ordered
 	 */
-	protected String mediaType = MEDIA_TYPE_EDEFAULT;
+	protected String type = TYPE_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getRel() <em>Rel</em>}' attribute.
@@ -99,7 +101,7 @@ public class LinkImpl extends MinimalEObjectImpl.Container implements Link {
 	 * @generated
 	 * @ordered
 	 */
-	protected static final URI ANCHOR_EDEFAULT = null;
+	protected static final String ANCHOR_EDEFAULT = null;
 
 	/**
 	 * The cached value of the '{@link #getAnchor() <em>Anchor</em>}' attribute.
@@ -109,7 +111,7 @@ public class LinkImpl extends MinimalEObjectImpl.Container implements Link {
 	 * @generated
 	 * @ordered
 	 */
-	protected URI anchor = ANCHOR_EDEFAULT;
+	protected String anchor = ANCHOR_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -135,9 +137,8 @@ public class LinkImpl extends MinimalEObjectImpl.Container implements Link {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
-	public URI getHref() {
-		return href;
+	public String get_href() {
+		return _href;
 	}
 
 	/**
@@ -145,12 +146,11 @@ public class LinkImpl extends MinimalEObjectImpl.Container implements Link {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
-	public void setHref(URI newHref) {
-		URI oldHref = href;
-		href = newHref;
+	public void set_href(String new_href) {
+		String old_href = _href;
+		_href = new_href;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, TdPackage.LINK__HREF, oldHref, href));
+			eNotify(new ENotificationImpl(this, Notification.SET, TdPackage.LINK__HREF, old_href, _href));
 	}
 
 	/**
@@ -159,8 +159,8 @@ public class LinkImpl extends MinimalEObjectImpl.Container implements Link {
 	 * @generated
 	 */
 	@Override
-	public String getMediaType() {
-		return mediaType;
+	public String getType() {
+		return type;
 	}
 
 	/**
@@ -169,11 +169,11 @@ public class LinkImpl extends MinimalEObjectImpl.Container implements Link {
 	 * @generated
 	 */
 	@Override
-	public void setMediaType(String newMediaType) {
-		String oldMediaType = mediaType;
-		mediaType = newMediaType;
+	public void setType(String newType) {
+		String oldType = type;
+		type = newType;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, TdPackage.LINK__MEDIA_TYPE, oldMediaType, mediaType));
+			eNotify(new ENotificationImpl(this, Notification.SET, TdPackage.LINK__TYPE, oldType, type));
 	}
 
 	/**
@@ -205,7 +205,7 @@ public class LinkImpl extends MinimalEObjectImpl.Container implements Link {
 	 * @generated
 	 */
 	@Override
-	public URI getAnchor() {
+	public String getAnchor() {
 		return anchor;
 	}
 
@@ -215,8 +215,8 @@ public class LinkImpl extends MinimalEObjectImpl.Container implements Link {
 	 * @generated
 	 */
 	@Override
-	public void setAnchor(URI newAnchor) {
-		URI oldAnchor = anchor;
+	public void setAnchor(String newAnchor) {
+		String oldAnchor = anchor;
 		anchor = newAnchor;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, TdPackage.LINK__ANCHOR, oldAnchor, anchor));
@@ -228,12 +228,32 @@ public class LinkImpl extends MinimalEObjectImpl.Container implements Link {
 	 * @generated
 	 */
 	@Override
+	public String getHref() {
+		return this._href;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setHref(final String href) {
+		this._href = href;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 		case TdPackage.LINK__HREF:
-			return getHref();
-		case TdPackage.LINK__MEDIA_TYPE:
-			return getMediaType();
+			return get_href();
+		case TdPackage.LINK__TYPE:
+			return getType();
 		case TdPackage.LINK__REL:
 			return getRel();
 		case TdPackage.LINK__ANCHOR:
@@ -251,16 +271,16 @@ public class LinkImpl extends MinimalEObjectImpl.Container implements Link {
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 		case TdPackage.LINK__HREF:
-			setHref((URI) newValue);
+			set_href((String) newValue);
 			return;
-		case TdPackage.LINK__MEDIA_TYPE:
-			setMediaType((String) newValue);
+		case TdPackage.LINK__TYPE:
+			setType((String) newValue);
 			return;
 		case TdPackage.LINK__REL:
 			setRel((String) newValue);
 			return;
 		case TdPackage.LINK__ANCHOR:
-			setAnchor((URI) newValue);
+			setAnchor((String) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -275,10 +295,10 @@ public class LinkImpl extends MinimalEObjectImpl.Container implements Link {
 	public void eUnset(int featureID) {
 		switch (featureID) {
 		case TdPackage.LINK__HREF:
-			setHref(HREF_EDEFAULT);
+			set_href(_HREF_EDEFAULT);
 			return;
-		case TdPackage.LINK__MEDIA_TYPE:
-			setMediaType(MEDIA_TYPE_EDEFAULT);
+		case TdPackage.LINK__TYPE:
+			setType(TYPE_EDEFAULT);
 			return;
 		case TdPackage.LINK__REL:
 			setRel(REL_EDEFAULT);
@@ -299,9 +319,9 @@ public class LinkImpl extends MinimalEObjectImpl.Container implements Link {
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 		case TdPackage.LINK__HREF:
-			return HREF_EDEFAULT == null ? href != null : !HREF_EDEFAULT.equals(href);
-		case TdPackage.LINK__MEDIA_TYPE:
-			return MEDIA_TYPE_EDEFAULT == null ? mediaType != null : !MEDIA_TYPE_EDEFAULT.equals(mediaType);
+			return _HREF_EDEFAULT == null ? _href != null : !_HREF_EDEFAULT.equals(_href);
+		case TdPackage.LINK__TYPE:
+			return TYPE_EDEFAULT == null ? type != null : !TYPE_EDEFAULT.equals(type);
 		case TdPackage.LINK__REL:
 			return REL_EDEFAULT == null ? rel != null : !REL_EDEFAULT.equals(rel);
 		case TdPackage.LINK__ANCHOR:
@@ -316,15 +336,32 @@ public class LinkImpl extends MinimalEObjectImpl.Container implements Link {
 	 * @generated
 	 */
 	@Override
+	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
+		switch (operationID) {
+		case TdPackage.LINK___GET_HREF:
+			return getHref();
+		case TdPackage.LINK___SET_HREF__STRING:
+			setHref((String) arguments.get(0));
+			return null;
+		}
+		return super.eInvoke(operationID, arguments);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public String toString() {
 		if (eIsProxy())
 			return super.toString();
 
 		StringBuilder result = new StringBuilder(super.toString());
-		result.append(" (href: ");
-		result.append(href);
-		result.append(", mediaType: ");
-		result.append(mediaType);
+		result.append(" (_href: ");
+		result.append(_href);
+		result.append(", type: ");
+		result.append(type);
 		result.append(", rel: ");
 		result.append(rel);
 		result.append(", anchor: ");

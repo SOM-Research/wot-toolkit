@@ -2,8 +2,6 @@
  */
 package edu.uoc.som.wot.td;
 
-import java.net.URI;
-
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EObject;
@@ -17,84 +15,76 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link edu.uoc.som.wot.td.Form#getHref <em>Href</em>}</li>
- *   <li>{@link edu.uoc.som.wot.td.Form#getMediaType <em>Media Type</em>}</li>
- *   <li>{@link edu.uoc.som.wot.td.Form#getRel <em>Rel</em>}</li>
+ *   <li>{@link edu.uoc.som.wot.td.Form#getOp <em>Op</em>}</li>
+ *   <li>{@link edu.uoc.som.wot.td.Form#getContentType <em>Content Type</em>}</li>
+ *   <li>{@link edu.uoc.som.wot.td.Form#getContentCoding <em>Content Coding</em>}</li>
  *   <li>{@link edu.uoc.som.wot.td.Form#getSubProtocol <em>Sub Protocol</em>}</li>
- *   <li>{@link edu.uoc.som.wot.td.Form#getScopes <em>Scopes</em>}</li>
  *   <li>{@link edu.uoc.som.wot.td.Form#getSecurity <em>Security</em>}</li>
+ *   <li>{@link edu.uoc.som.wot.td.Form#getScopes <em>Scopes</em>}</li>
+ *   <li>{@link edu.uoc.som.wot.td.Form#getResponse <em>Response</em>}</li>
  * </ul>
  *
  * @see edu.uoc.som.wot.td.TdPackage#getForm()
- * @model
+ * @model features="_href" 
+ *        _hrefDataType="org.eclipse.emf.ecore.xml.type.AnyURI" _hrefRequired="true" _hrefSuppressedGetVisibility="true" _hrefSuppressedSetVisibility="true" _hrefSuppressedIsSetVisibility="true" _hrefSuppressedUnsetVisibility="true"
  * @generated
  */
 public interface Form extends EObject {
 	/**
-	 * Returns the value of the '<em><b>Href</b></em>' attribute.
+	 * Returns the value of the '<em><b>Op</b></em>' attribute list.
+	 * The list contents are of type {@link java.lang.String}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Href</em>' attribute.
-	 * @see #setHref(URI)
-	 * @see edu.uoc.som.wot.td.TdPackage#getForm_Href()
-	 * @model dataType="edu.uoc.som.wot.td.AnyURI" required="true"
+	 * @return the value of the '<em>Op</em>' attribute list.
+	 * @see edu.uoc.som.wot.td.TdPackage#getForm_Op()
+	 * @model required="true"
 	 * @generated
 	 */
-	URI getHref();
+	EList<String> getOp();
 
 	/**
-	 * Sets the value of the '{@link edu.uoc.som.wot.td.Form#getHref <em>Href</em>}' attribute.
+	 * Returns the value of the '<em><b>Content Type</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Href</em>' attribute.
-	 * @see #getHref()
+	 * @return the value of the '<em>Content Type</em>' attribute.
+	 * @see #setContentType(String)
+	 * @see edu.uoc.som.wot.td.TdPackage#getForm_ContentType()
+	 * @model required="true"
 	 * @generated
 	 */
-	void setHref(URI value);
+	String getContentType();
 
 	/**
-	 * Returns the value of the '<em><b>Media Type</b></em>' attribute.
+	 * Sets the value of the '{@link edu.uoc.som.wot.td.Form#getContentType <em>Content Type</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Media Type</em>' attribute.
-	 * @see #setMediaType(String)
-	 * @see edu.uoc.som.wot.td.TdPackage#getForm_MediaType()
+	 * @param value the new value of the '<em>Content Type</em>' attribute.
+	 * @see #getContentType()
+	 * @generated
+	 */
+	void setContentType(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Content Coding</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Content Coding</em>' attribute.
+	 * @see #setContentCoding(String)
+	 * @see edu.uoc.som.wot.td.TdPackage#getForm_ContentCoding()
 	 * @model
 	 * @generated
 	 */
-	String getMediaType();
+	String getContentCoding();
 
 	/**
-	 * Sets the value of the '{@link edu.uoc.som.wot.td.Form#getMediaType <em>Media Type</em>}' attribute.
+	 * Sets the value of the '{@link edu.uoc.som.wot.td.Form#getContentCoding <em>Content Coding</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Media Type</em>' attribute.
-	 * @see #getMediaType()
+	 * @param value the new value of the '<em>Content Coding</em>' attribute.
+	 * @see #getContentCoding()
 	 * @generated
 	 */
-	void setMediaType(String value);
-
-	/**
-	 * Returns the value of the '<em><b>Rel</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Rel</em>' attribute.
-	 * @see #setRel(String)
-	 * @see edu.uoc.som.wot.td.TdPackage#getForm_Rel()
-	 * @model
-	 * @generated
-	 */
-	String getRel();
-
-	/**
-	 * Sets the value of the '{@link edu.uoc.som.wot.td.Form#getRel <em>Rel</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Rel</em>' attribute.
-	 * @see #getRel()
-	 * @generated
-	 */
-	void setRel(String value);
+	void setContentCoding(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Sub Protocol</b></em>' attribute.
@@ -119,6 +109,18 @@ public interface Form extends EObject {
 	void setSubProtocol(String value);
 
 	/**
+	 * Returns the value of the '<em><b>Security</b></em>' attribute list.
+	 * The list contents are of type {@link java.lang.String}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Security</em>' attribute list.
+	 * @see edu.uoc.som.wot.td.TdPackage#getForm_Security()
+	 * @model
+	 * @generated
+	 */
+	EList<String> getSecurity();
+
+	/**
 	 * Returns the value of the '<em><b>Scopes</b></em>' attribute list.
 	 * The list contents are of type {@link java.lang.String}.
 	 * <!-- begin-user-doc -->
@@ -131,15 +133,41 @@ public interface Form extends EObject {
 	EList<String> getScopes();
 
 	/**
-	 * Returns the value of the '<em><b>Security</b></em>' reference list.
-	 * The list contents are of type {@link edu.uoc.som.wot.td.SecurityScheme}.
+	 * Returns the value of the '<em><b>Response</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Security</em>' reference list.
-	 * @see edu.uoc.som.wot.td.TdPackage#getForm_Security()
-	 * @model
+	 * @return the value of the '<em>Response</em>' containment reference.
+	 * @see #setResponse(ExpectedResponse)
+	 * @see edu.uoc.som.wot.td.TdPackage#getForm_Response()
+	 * @model containment="true"
 	 * @generated
 	 */
-	EList<SecurityScheme> getSecurity();
+	ExpectedResponse getResponse();
+
+	/**
+	 * Sets the value of the '{@link edu.uoc.som.wot.td.Form#getResponse <em>Response</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Response</em>' containment reference.
+	 * @see #getResponse()
+	 * @generated
+	 */
+	void setResponse(ExpectedResponse value);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model kind="operation" dataType="org.eclipse.emf.ecore.xml.type.AnyURI"
+	 * @generated
+	 */
+	String getHref();
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model hrefDataType="org.eclipse.emf.ecore.xml.type.AnyURI"
+	 * @generated
+	 */
+	void setHref(String href);
 
 } // Form

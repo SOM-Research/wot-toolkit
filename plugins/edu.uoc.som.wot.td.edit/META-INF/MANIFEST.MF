@@ -12,5 +12,6 @@ Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Export-Package: edu.uoc.som.wot.td.provider
 Require-Bundle: org.eclipse.core.runtime,
  edu.uoc.som.wot.td;visibility:=reexport,
- org.eclipse.emf.edit;visibility:=reexport
+ org.eclipse.emf.edit;visibility:=reexport,
+ edu.uoc.som.wot.td.edit;visibility:=reexport
 Bundle-ActivationPolicy: lazy

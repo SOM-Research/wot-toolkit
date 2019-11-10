@@ -3,6 +3,7 @@
 package edu.uoc.som.wot.td.provider;
 
 import edu.uoc.som.wot.td.SecurityScheme;
+import edu.uoc.som.wot.td.TdFactory;
 import edu.uoc.som.wot.td.TdPackage;
 
 import java.util.Collection;
@@ -12,6 +13,8 @@ import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.common.util.ResourceLocator;
+
+import org.eclipse.emf.ecore.EStructuralFeature;
 
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
@@ -53,11 +56,28 @@ public class SecuritySchemeItemProvider extends ItemProviderAdapter implements I
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
+			addIdPropertyDescriptor(object);
 			addSchemePropertyDescriptor(object);
 			addDescriptionPropertyDescriptor(object);
-			addProxyUrlPropertyDescriptor(object);
+			addProxyPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
+	}
+
+	/**
+	 * This adds a property descriptor for the Id feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addIdPropertyDescriptor(Object object) {
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_SecurityScheme_id_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_SecurityScheme_id_feature",
+								"_UI_SecurityScheme_type"),
+						TdPackage.Literals.SECURITY_SCHEME__ID, true, false, false,
+						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
 	}
 
 	/**
@@ -93,19 +113,49 @@ public class SecuritySchemeItemProvider extends ItemProviderAdapter implements I
 	}
 
 	/**
-	 * This adds a property descriptor for the Proxy Url feature.
+	 * This adds a property descriptor for the Proxy feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addProxyUrlPropertyDescriptor(Object object) {
+	protected void addProxyPropertyDescriptor(Object object) {
 		itemPropertyDescriptors
 				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_SecurityScheme_proxyUrl_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_SecurityScheme_proxyUrl_feature",
+						getResourceLocator(), getString("_UI_SecurityScheme_proxy_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_SecurityScheme_proxy_feature",
 								"_UI_SecurityScheme_type"),
-						TdPackage.Literals.SECURITY_SCHEME__PROXY_URL, true, false, false,
+						TdPackage.Literals.SECURITY_SCHEME__PROXY, true, false, false,
 						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+	}
+
+	/**
+	 * This specifies how to implement {@link #getChildren} and is used to deduce an appropriate feature for an
+	 * {@link org.eclipse.emf.edit.command.AddCommand}, {@link org.eclipse.emf.edit.command.RemoveCommand} or
+	 * {@link org.eclipse.emf.edit.command.MoveCommand} in {@link #createCommand}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
+		if (childrenFeatures == null) {
+			super.getChildrenFeatures(object);
+			childrenFeatures.add(TdPackage.Literals.SECURITY_SCHEME__DESCRIPTIONS);
+		}
+		return childrenFeatures;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	protected EStructuralFeature getChildFeature(Object object, Object child) {
+		// Check the type of the specified child object and return the proper feature to use for
+		// adding (see {@link AddCommand}) it as a child.
+
+		return super.getChildFeature(object, child);
 	}
 
 	/**
@@ -137,7 +187,7 @@ public class SecuritySchemeItemProvider extends ItemProviderAdapter implements I
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((SecurityScheme) object).getScheme();
+		String label = ((SecurityScheme) object).getId();
 		return label == null || label.length() == 0 ? getString("_UI_SecurityScheme_type")
 				: getString("_UI_SecurityScheme_type") + " " + label;
 	}
@@ -154,10 +204,14 @@ public class SecuritySchemeItemProvider extends ItemProviderAdapter implements I
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(SecurityScheme.class)) {
+		case TdPackage.SECURITY_SCHEME__ID:
 		case TdPackage.SECURITY_SCHEME__SCHEME:
 		case TdPackage.SECURITY_SCHEME__DESCRIPTION:
-		case TdPackage.SECURITY_SCHEME__PROXY_URL:
+		case TdPackage.SECURITY_SCHEME__PROXY:
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
+			return;
+		case TdPackage.SECURITY_SCHEME__DESCRIPTIONS:
+			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 			return;
 		}
 		super.notifyChanged(notification);
@@ -173,6 +227,9 @@ public class SecuritySchemeItemProvider extends ItemProviderAdapter implements I
 	@Override
 	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
+
+		newChildDescriptors.add(createChildParameter(TdPackage.Literals.SECURITY_SCHEME__DESCRIPTIONS,
+				TdFactory.eINSTANCE.createMultiLanguage()));
 	}
 
 	/**

@@ -4,6 +4,8 @@ package edu.uoc.som.wot.td.util;
 
 import edu.uoc.som.wot.td.*;
 
+import java.util.Map;
+
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notifier;
 
@@ -72,28 +74,13 @@ public class TdAdapterFactory extends AdapterFactoryImpl {
 		}
 
 		@Override
-		public Adapter caseProperty(Property object) {
-			return createPropertyAdapter();
+		public Adapter caseForm(Form object) {
+			return createFormAdapter();
 		}
 
 		@Override
-		public Adapter caseInteractionPattern(InteractionPattern object) {
-			return createInteractionPatternAdapter();
-		}
-
-		@Override
-		public Adapter caseAction(Action object) {
-			return createActionAdapter();
-		}
-
-		@Override
-		public Adapter caseEvent(Event object) {
-			return createEventAdapter();
-		}
-
-		@Override
-		public Adapter caseSecurityScheme(SecurityScheme object) {
-			return createSecuritySchemeAdapter();
+		public Adapter caseExpectedResponse(ExpectedResponse object) {
+			return createExpectedResponseAdapter();
 		}
 
 		@Override
@@ -102,8 +89,38 @@ public class TdAdapterFactory extends AdapterFactoryImpl {
 		}
 
 		@Override
-		public Adapter caseForm(Form object) {
-			return createFormAdapter();
+		public Adapter caseMultiLanguage(MultiLanguage object) {
+			return createMultiLanguageAdapter();
+		}
+
+		@Override
+		public Adapter caseLanguageToContentMap(Map.Entry<String, String> object) {
+			return createLanguageToContentMapAdapter();
+		}
+
+		@Override
+		public Adapter caseVersionInfo(VersionInfo object) {
+			return createVersionInfoAdapter();
+		}
+
+		@Override
+		public Adapter caseInteractionAffordance(InteractionAffordance object) {
+			return createInteractionAffordanceAdapter();
+		}
+
+		@Override
+		public Adapter casePropertyAffordance(PropertyAffordance object) {
+			return createPropertyAffordanceAdapter();
+		}
+
+		@Override
+		public Adapter caseActionAffordance(ActionAffordance object) {
+			return createActionAffordanceAdapter();
+		}
+
+		@Override
+		public Adapter caseEventAffordance(EventAffordance object) {
+			return createEventAffordanceAdapter();
 		}
 
 		@Override
@@ -117,8 +134,18 @@ public class TdAdapterFactory extends AdapterFactoryImpl {
 		}
 
 		@Override
+		public Adapter caseObjectSchema(ObjectSchema object) {
+			return createObjectSchemaAdapter();
+		}
+
+		@Override
 		public Adapter caseNumberSchema(NumberSchema object) {
 			return createNumberSchemaAdapter();
+		}
+
+		@Override
+		public Adapter caseIntegerSchema(IntegerSchema object) {
+			return createIntegerSchemaAdapter();
 		}
 
 		@Override
@@ -132,18 +159,18 @@ public class TdAdapterFactory extends AdapterFactoryImpl {
 		}
 
 		@Override
-		public Adapter caseObjectSchema(ObjectSchema object) {
-			return createObjectSchemaAdapter();
+		public Adapter caseNullSchema(NullSchema object) {
+			return createNullSchemaAdapter();
 		}
 
 		@Override
-		public Adapter caseIntegerSchema(IntegerSchema object) {
-			return createIntegerSchemaAdapter();
+		public Adapter caseSecurityScheme(SecurityScheme object) {
+			return createSecuritySchemeAdapter();
 		}
 
 		@Override
-		public Adapter caseNoSecurityCheme(NoSecurityCheme object) {
-			return createNoSecurityChemeAdapter();
+		public Adapter caseNoSecurityScheme(NoSecurityScheme object) {
+			return createNoSecuritySchemeAdapter();
 		}
 
 		@Override
@@ -152,33 +179,13 @@ public class TdAdapterFactory extends AdapterFactoryImpl {
 		}
 
 		@Override
-		public Adapter caseOAuth2SecurityScheme(OAuth2SecurityScheme object) {
-			return createOAuth2SecuritySchemeAdapter();
-		}
-
-		@Override
 		public Adapter caseDigestSecurityScheme(DigestSecurityScheme object) {
 			return createDigestSecuritySchemeAdapter();
 		}
 
 		@Override
-		public Adapter caseApikeySecurityScheme(ApikeySecurityScheme object) {
-			return createApikeySecuritySchemeAdapter();
-		}
-
-		@Override
-		public Adapter casePSKSecurityScheme(PSKSecurityScheme object) {
-			return createPSKSecuritySchemeAdapter();
-		}
-
-		@Override
-		public Adapter caseCertSecurityScheme(CertSecurityScheme object) {
-			return createCertSecuritySchemeAdapter();
-		}
-
-		@Override
-		public Adapter casePublicSecurityScheme(PublicSecurityScheme object) {
-			return createPublicSecuritySchemeAdapter();
+		public Adapter caseAPIKeySecurityScheme(APIKeySecurityScheme object) {
+			return createAPIKeySecuritySchemeAdapter();
 		}
 
 		@Override
@@ -187,8 +194,28 @@ public class TdAdapterFactory extends AdapterFactoryImpl {
 		}
 
 		@Override
-		public Adapter casePopSecurityScheme(PopSecurityScheme object) {
-			return createPopSecuritySchemeAdapter();
+		public Adapter caseCertSecurityScheme(CertSecurityScheme object) {
+			return createCertSecuritySchemeAdapter();
+		}
+
+		@Override
+		public Adapter casePSKSecurityScheme(PSKSecurityScheme object) {
+			return createPSKSecuritySchemeAdapter();
+		}
+
+		@Override
+		public Adapter casePublicSecurityScheme(PublicSecurityScheme object) {
+			return createPublicSecuritySchemeAdapter();
+		}
+
+		@Override
+		public Adapter casePoPSecurityScheme(PoPSecurityScheme object) {
+			return createPoPSecuritySchemeAdapter();
+		}
+
+		@Override
+		public Adapter caseOAuth2SecurityScheme(OAuth2SecurityScheme object) {
+			return createOAuth2SecuritySchemeAdapter();
 		}
 
 		@Override
@@ -225,72 +252,30 @@ public class TdAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link edu.uoc.som.wot.td.Property <em>Property</em>}'.
+	 * Creates a new adapter for an object of class '{@link edu.uoc.som.wot.td.Form <em>Form</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see edu.uoc.som.wot.td.Property
+	 * @see edu.uoc.som.wot.td.Form
 	 * @generated
 	 */
-	public Adapter createPropertyAdapter() {
+	public Adapter createFormAdapter() {
 		return null;
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link edu.uoc.som.wot.td.InteractionPattern <em>Interaction Pattern</em>}'.
+	 * Creates a new adapter for an object of class '{@link edu.uoc.som.wot.td.ExpectedResponse <em>Expected Response</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see edu.uoc.som.wot.td.InteractionPattern
+	 * @see edu.uoc.som.wot.td.ExpectedResponse
 	 * @generated
 	 */
-	public Adapter createInteractionPatternAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link edu.uoc.som.wot.td.Action <em>Action</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see edu.uoc.som.wot.td.Action
-	 * @generated
-	 */
-	public Adapter createActionAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link edu.uoc.som.wot.td.Event <em>Event</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see edu.uoc.som.wot.td.Event
-	 * @generated
-	 */
-	public Adapter createEventAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link edu.uoc.som.wot.td.SecurityScheme <em>Security Scheme</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see edu.uoc.som.wot.td.SecurityScheme
-	 * @generated
-	 */
-	public Adapter createSecuritySchemeAdapter() {
+	public Adapter createExpectedResponseAdapter() {
 		return null;
 	}
 
@@ -309,16 +294,100 @@ public class TdAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link edu.uoc.som.wot.td.Form <em>Form</em>}'.
+	 * Creates a new adapter for an object of class '{@link edu.uoc.som.wot.td.MultiLanguage <em>Multi Language</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see edu.uoc.som.wot.td.Form
+	 * @see edu.uoc.som.wot.td.MultiLanguage
 	 * @generated
 	 */
-	public Adapter createFormAdapter() {
+	public Adapter createMultiLanguageAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link java.util.Map.Entry <em>Language To Content Map</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see java.util.Map.Entry
+	 * @generated
+	 */
+	public Adapter createLanguageToContentMapAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link edu.uoc.som.wot.td.VersionInfo <em>Version Info</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see edu.uoc.som.wot.td.VersionInfo
+	 * @generated
+	 */
+	public Adapter createVersionInfoAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link edu.uoc.som.wot.td.InteractionAffordance <em>Interaction Affordance</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see edu.uoc.som.wot.td.InteractionAffordance
+	 * @generated
+	 */
+	public Adapter createInteractionAffordanceAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link edu.uoc.som.wot.td.PropertyAffordance <em>Property Affordance</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see edu.uoc.som.wot.td.PropertyAffordance
+	 * @generated
+	 */
+	public Adapter createPropertyAffordanceAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link edu.uoc.som.wot.td.ActionAffordance <em>Action Affordance</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see edu.uoc.som.wot.td.ActionAffordance
+	 * @generated
+	 */
+	public Adapter createActionAffordanceAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link edu.uoc.som.wot.td.EventAffordance <em>Event Affordance</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see edu.uoc.som.wot.td.EventAffordance
+	 * @generated
+	 */
+	public Adapter createEventAffordanceAdapter() {
 		return null;
 	}
 
@@ -351,6 +420,20 @@ public class TdAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
+	 * Creates a new adapter for an object of class '{@link edu.uoc.som.wot.td.ObjectSchema <em>Object Schema</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see edu.uoc.som.wot.td.ObjectSchema
+	 * @generated
+	 */
+	public Adapter createObjectSchemaAdapter() {
+		return null;
+	}
+
+	/**
 	 * Creates a new adapter for an object of class '{@link edu.uoc.som.wot.td.NumberSchema <em>Number Schema</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -361,6 +444,20 @@ public class TdAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createNumberSchemaAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link edu.uoc.som.wot.td.IntegerSchema <em>Integer Schema</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see edu.uoc.som.wot.td.IntegerSchema
+	 * @generated
+	 */
+	public Adapter createIntegerSchemaAdapter() {
 		return null;
 	}
 
@@ -393,44 +490,44 @@ public class TdAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link edu.uoc.som.wot.td.ObjectSchema <em>Object Schema</em>}'.
+	 * Creates a new adapter for an object of class '{@link edu.uoc.som.wot.td.NullSchema <em>Null Schema</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see edu.uoc.som.wot.td.ObjectSchema
+	 * @see edu.uoc.som.wot.td.NullSchema
 	 * @generated
 	 */
-	public Adapter createObjectSchemaAdapter() {
+	public Adapter createNullSchemaAdapter() {
 		return null;
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link edu.uoc.som.wot.td.IntegerSchema <em>Integer Schema</em>}'.
+	 * Creates a new adapter for an object of class '{@link edu.uoc.som.wot.td.SecurityScheme <em>Security Scheme</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see edu.uoc.som.wot.td.IntegerSchema
+	 * @see edu.uoc.som.wot.td.SecurityScheme
 	 * @generated
 	 */
-	public Adapter createIntegerSchemaAdapter() {
+	public Adapter createSecuritySchemeAdapter() {
 		return null;
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link edu.uoc.som.wot.td.NoSecurityCheme <em>No Security Cheme</em>}'.
+	 * Creates a new adapter for an object of class '{@link edu.uoc.som.wot.td.NoSecurityScheme <em>No Security Scheme</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see edu.uoc.som.wot.td.NoSecurityCheme
+	 * @see edu.uoc.som.wot.td.NoSecurityScheme
 	 * @generated
 	 */
-	public Adapter createNoSecurityChemeAdapter() {
+	public Adapter createNoSecuritySchemeAdapter() {
 		return null;
 	}
 
@@ -449,20 +546,6 @@ public class TdAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link edu.uoc.som.wot.td.OAuth2SecurityScheme <em>OAuth2 Security Scheme</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see edu.uoc.som.wot.td.OAuth2SecurityScheme
-	 * @generated
-	 */
-	public Adapter createOAuth2SecuritySchemeAdapter() {
-		return null;
-	}
-
-	/**
 	 * Creates a new adapter for an object of class '{@link edu.uoc.som.wot.td.DigestSecurityScheme <em>Digest Security Scheme</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -477,58 +560,16 @@ public class TdAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link edu.uoc.som.wot.td.ApikeySecurityScheme <em>Apikey Security Scheme</em>}'.
+	 * Creates a new adapter for an object of class '{@link edu.uoc.som.wot.td.APIKeySecurityScheme <em>API Key Security Scheme</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see edu.uoc.som.wot.td.ApikeySecurityScheme
+	 * @see edu.uoc.som.wot.td.APIKeySecurityScheme
 	 * @generated
 	 */
-	public Adapter createApikeySecuritySchemeAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link edu.uoc.som.wot.td.PSKSecurityScheme <em>PSK Security Scheme</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see edu.uoc.som.wot.td.PSKSecurityScheme
-	 * @generated
-	 */
-	public Adapter createPSKSecuritySchemeAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link edu.uoc.som.wot.td.CertSecurityScheme <em>Cert Security Scheme</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see edu.uoc.som.wot.td.CertSecurityScheme
-	 * @generated
-	 */
-	public Adapter createCertSecuritySchemeAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link edu.uoc.som.wot.td.PublicSecurityScheme <em>Public Security Scheme</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see edu.uoc.som.wot.td.PublicSecurityScheme
-	 * @generated
-	 */
-	public Adapter createPublicSecuritySchemeAdapter() {
+	public Adapter createAPIKeySecuritySchemeAdapter() {
 		return null;
 	}
 
@@ -547,16 +588,72 @@ public class TdAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link edu.uoc.som.wot.td.PopSecurityScheme <em>Pop Security Scheme</em>}'.
+	 * Creates a new adapter for an object of class '{@link edu.uoc.som.wot.td.CertSecurityScheme <em>Cert Security Scheme</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see edu.uoc.som.wot.td.PopSecurityScheme
+	 * @see edu.uoc.som.wot.td.CertSecurityScheme
 	 * @generated
 	 */
-	public Adapter createPopSecuritySchemeAdapter() {
+	public Adapter createCertSecuritySchemeAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link edu.uoc.som.wot.td.PSKSecurityScheme <em>PSK Security Scheme</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see edu.uoc.som.wot.td.PSKSecurityScheme
+	 * @generated
+	 */
+	public Adapter createPSKSecuritySchemeAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link edu.uoc.som.wot.td.PublicSecurityScheme <em>Public Security Scheme</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see edu.uoc.som.wot.td.PublicSecurityScheme
+	 * @generated
+	 */
+	public Adapter createPublicSecuritySchemeAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link edu.uoc.som.wot.td.PoPSecurityScheme <em>Po PSecurity Scheme</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see edu.uoc.som.wot.td.PoPSecurityScheme
+	 * @generated
+	 */
+	public Adapter createPoPSecuritySchemeAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link edu.uoc.som.wot.td.OAuth2SecurityScheme <em>OAuth2 Security Scheme</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see edu.uoc.som.wot.td.OAuth2SecurityScheme
+	 * @generated
+	 */
+	public Adapter createOAuth2SecuritySchemeAdapter() {
 		return null;
 	}
 

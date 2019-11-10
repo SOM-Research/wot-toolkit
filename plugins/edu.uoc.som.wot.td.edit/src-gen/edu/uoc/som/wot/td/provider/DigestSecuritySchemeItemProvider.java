@@ -44,11 +44,27 @@ public class DigestSecuritySchemeItemProvider extends SecuritySchemeItemProvider
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
+			addQopPropertyDescriptor(object);
 			addInPropertyDescriptor(object);
 			addNamePropertyDescriptor(object);
-			addQopPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
+	}
+
+	/**
+	 * This adds a property descriptor for the Qop feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addQopPropertyDescriptor(Object object) {
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_DigestSecurityScheme_qop_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_DigestSecurityScheme_qop_feature",
+								"_UI_DigestSecurityScheme_type"),
+						TdPackage.Literals.DIGEST_SECURITY_SCHEME__QOP, true, false, false,
+						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
 	}
 
 	/**
@@ -80,22 +96,6 @@ public class DigestSecuritySchemeItemProvider extends SecuritySchemeItemProvider
 						getString("_UI_PropertyDescriptor_description", "_UI_DigestSecurityScheme_name_feature",
 								"_UI_DigestSecurityScheme_type"),
 						TdPackage.Literals.DIGEST_SECURITY_SCHEME__NAME, true, false, false,
-						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Qop feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addQopPropertyDescriptor(Object object) {
-		itemPropertyDescriptors
-				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_DigestSecurityScheme_qop_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_DigestSecurityScheme_qop_feature",
-								"_UI_DigestSecurityScheme_type"),
-						TdPackage.Literals.DIGEST_SECURITY_SCHEME__QOP, true, false, false,
 						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
 	}
 
@@ -145,9 +145,9 @@ public class DigestSecuritySchemeItemProvider extends SecuritySchemeItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(DigestSecurityScheme.class)) {
+		case TdPackage.DIGEST_SECURITY_SCHEME__QOP:
 		case TdPackage.DIGEST_SECURITY_SCHEME__IN:
 		case TdPackage.DIGEST_SECURITY_SCHEME__NAME:
-		case TdPackage.DIGEST_SECURITY_SCHEME__QOP:
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 			return;
 		}

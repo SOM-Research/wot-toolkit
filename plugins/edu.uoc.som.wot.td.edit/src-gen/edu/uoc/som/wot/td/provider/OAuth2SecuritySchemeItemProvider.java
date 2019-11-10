@@ -44,28 +44,60 @@ public class OAuth2SecuritySchemeItemProvider extends SecuritySchemeItemProvider
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addFlowPropertyDescriptor(object);
+			addAuthorizationPropertyDescriptor(object);
+			addTokenPropertyDescriptor(object);
+			addRefreshPropertyDescriptor(object);
 			addScopesPropertyDescriptor(object);
-			addTokenUrlPropertyDescriptor(object);
-			addAuthorizationUrlPropertyDescriptor(object);
-			addRefreshUrlPropertyDescriptor(object);
+			addFlowPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
 
 	/**
-	 * This adds a property descriptor for the Flow feature.
+	 * This adds a property descriptor for the Authorization feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addFlowPropertyDescriptor(Object object) {
+	protected void addAuthorizationPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add(createItemPropertyDescriptor(
+				((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(), getResourceLocator(),
+				getString("_UI_OAuth2SecurityScheme_authorization_feature"),
+				getString("_UI_PropertyDescriptor_description", "_UI_OAuth2SecurityScheme_authorization_feature",
+						"_UI_OAuth2SecurityScheme_type"),
+				TdPackage.Literals.OAUTH2_SECURITY_SCHEME__AUTHORIZATION, true, false, false,
+				ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Token feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addTokenPropertyDescriptor(Object object) {
 		itemPropertyDescriptors
 				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_OAuth2SecurityScheme_flow_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_OAuth2SecurityScheme_flow_feature",
+						getResourceLocator(), getString("_UI_OAuth2SecurityScheme_token_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_OAuth2SecurityScheme_token_feature",
 								"_UI_OAuth2SecurityScheme_type"),
-						TdPackage.Literals.OAUTH2_SECURITY_SCHEME__FLOW, true, false, false,
+						TdPackage.Literals.OAUTH2_SECURITY_SCHEME__TOKEN, true, false, false,
+						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Refresh feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addRefreshPropertyDescriptor(Object object) {
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_OAuth2SecurityScheme_refresh_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_OAuth2SecurityScheme_refresh_feature",
+								"_UI_OAuth2SecurityScheme_type"),
+						TdPackage.Literals.OAUTH2_SECURITY_SCHEME__REFRESH, true, false, false,
 						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
 	}
 
@@ -86,51 +118,19 @@ public class OAuth2SecuritySchemeItemProvider extends SecuritySchemeItemProvider
 	}
 
 	/**
-	 * This adds a property descriptor for the Token Url feature.
+	 * This adds a property descriptor for the Flow feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addTokenUrlPropertyDescriptor(Object object) {
+	protected void addFlowPropertyDescriptor(Object object) {
 		itemPropertyDescriptors
 				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_OAuth2SecurityScheme_tokenUrl_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_OAuth2SecurityScheme_tokenUrl_feature",
+						getResourceLocator(), getString("_UI_OAuth2SecurityScheme_flow_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_OAuth2SecurityScheme_flow_feature",
 								"_UI_OAuth2SecurityScheme_type"),
-						TdPackage.Literals.OAUTH2_SECURITY_SCHEME__TOKEN_URL, true, false, false,
+						TdPackage.Literals.OAUTH2_SECURITY_SCHEME__FLOW, true, false, false,
 						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Authorization Url feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addAuthorizationUrlPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add(createItemPropertyDescriptor(
-				((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(), getResourceLocator(),
-				getString("_UI_OAuth2SecurityScheme_authorizationUrl_feature"),
-				getString("_UI_PropertyDescriptor_description", "_UI_OAuth2SecurityScheme_authorizationUrl_feature",
-						"_UI_OAuth2SecurityScheme_type"),
-				TdPackage.Literals.OAUTH2_SECURITY_SCHEME__AUTHORIZATION_URL, true, false, false,
-				ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Refresh Url feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addRefreshUrlPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add(createItemPropertyDescriptor(
-				((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(), getResourceLocator(),
-				getString("_UI_OAuth2SecurityScheme_refreshUrl_feature"),
-				getString("_UI_PropertyDescriptor_description", "_UI_OAuth2SecurityScheme_refreshUrl_feature",
-						"_UI_OAuth2SecurityScheme_type"),
-				TdPackage.Literals.OAUTH2_SECURITY_SCHEME__REFRESH_URL, true, false, false,
-				ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
 	}
 
 	/**
@@ -162,7 +162,7 @@ public class OAuth2SecuritySchemeItemProvider extends SecuritySchemeItemProvider
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((OAuth2SecurityScheme) object).getScheme();
+		String label = ((OAuth2SecurityScheme) object).getId();
 		return label == null || label.length() == 0 ? getString("_UI_OAuth2SecurityScheme_type")
 				: getString("_UI_OAuth2SecurityScheme_type") + " " + label;
 	}
@@ -179,11 +179,11 @@ public class OAuth2SecuritySchemeItemProvider extends SecuritySchemeItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(OAuth2SecurityScheme.class)) {
-		case TdPackage.OAUTH2_SECURITY_SCHEME__FLOW:
+		case TdPackage.OAUTH2_SECURITY_SCHEME__AUTHORIZATION:
+		case TdPackage.OAUTH2_SECURITY_SCHEME__TOKEN:
+		case TdPackage.OAUTH2_SECURITY_SCHEME__REFRESH:
 		case TdPackage.OAUTH2_SECURITY_SCHEME__SCOPES:
-		case TdPackage.OAUTH2_SECURITY_SCHEME__TOKEN_URL:
-		case TdPackage.OAUTH2_SECURITY_SCHEME__AUTHORIZATION_URL:
-		case TdPackage.OAUTH2_SECURITY_SCHEME__REFRESH_URL:
+		case TdPackage.OAUTH2_SECURITY_SCHEME__FLOW:
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 			return;
 		}

@@ -5,8 +5,6 @@ package edu.uoc.som.wot.td.impl;
 import edu.uoc.som.wot.td.BearerSecurityScheme;
 import edu.uoc.som.wot.td.TdPackage;
 
-import java.net.URI;
-
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.ecore.EClass;
@@ -21,9 +19,9 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link edu.uoc.som.wot.td.impl.BearerSecuritySchemeImpl#getFormat <em>Format</em>}</li>
+ *   <li>{@link edu.uoc.som.wot.td.impl.BearerSecuritySchemeImpl#getAuthorization <em>Authorization</em>}</li>
  *   <li>{@link edu.uoc.som.wot.td.impl.BearerSecuritySchemeImpl#getAlg <em>Alg</em>}</li>
- *   <li>{@link edu.uoc.som.wot.td.impl.BearerSecuritySchemeImpl#getAuthorizationUrl <em>Authorization Url</em>}</li>
+ *   <li>{@link edu.uoc.som.wot.td.impl.BearerSecuritySchemeImpl#getFormat <em>Format</em>}</li>
  *   <li>{@link edu.uoc.som.wot.td.impl.BearerSecuritySchemeImpl#getIn <em>In</em>}</li>
  *   <li>{@link edu.uoc.som.wot.td.impl.BearerSecuritySchemeImpl#getName <em>Name</em>}</li>
  * </ul>
@@ -32,24 +30,24 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  */
 public class BearerSecuritySchemeImpl extends SecuritySchemeImpl implements BearerSecurityScheme {
 	/**
-	 * The default value of the '{@link #getFormat() <em>Format</em>}' attribute.
+	 * The default value of the '{@link #getAuthorization() <em>Authorization</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getFormat()
+	 * @see #getAuthorization()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String FORMAT_EDEFAULT = null;
+	protected static final String AUTHORIZATION_EDEFAULT = null;
 
 	/**
-	 * The cached value of the '{@link #getFormat() <em>Format</em>}' attribute.
+	 * The cached value of the '{@link #getAuthorization() <em>Authorization</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getFormat()
+	 * @see #getAuthorization()
 	 * @generated
 	 * @ordered
 	 */
-	protected String format = FORMAT_EDEFAULT;
+	protected String authorization = AUTHORIZATION_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getAlg() <em>Alg</em>}' attribute.
@@ -72,24 +70,24 @@ public class BearerSecuritySchemeImpl extends SecuritySchemeImpl implements Bear
 	protected String alg = ALG_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #getAuthorizationUrl() <em>Authorization Url</em>}' attribute.
+	 * The default value of the '{@link #getFormat() <em>Format</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getAuthorizationUrl()
+	 * @see #getFormat()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final URI AUTHORIZATION_URL_EDEFAULT = null;
+	protected static final String FORMAT_EDEFAULT = null;
 
 	/**
-	 * The cached value of the '{@link #getAuthorizationUrl() <em>Authorization Url</em>}' attribute.
+	 * The cached value of the '{@link #getFormat() <em>Format</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getAuthorizationUrl()
+	 * @see #getFormat()
 	 * @generated
 	 * @ordered
 	 */
-	protected URI authorizationUrl = AUTHORIZATION_URL_EDEFAULT;
+	protected String format = FORMAT_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getIn() <em>In</em>}' attribute.
@@ -156,8 +154,8 @@ public class BearerSecuritySchemeImpl extends SecuritySchemeImpl implements Bear
 	 * @generated
 	 */
 	@Override
-	public String getFormat() {
-		return format;
+	public String getAuthorization() {
+		return authorization;
 	}
 
 	/**
@@ -166,12 +164,12 @@ public class BearerSecuritySchemeImpl extends SecuritySchemeImpl implements Bear
 	 * @generated
 	 */
 	@Override
-	public void setFormat(String newFormat) {
-		String oldFormat = format;
-		format = newFormat;
+	public void setAuthorization(String newAuthorization) {
+		String oldAuthorization = authorization;
+		authorization = newAuthorization;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, TdPackage.BEARER_SECURITY_SCHEME__FORMAT, oldFormat,
-					format));
+			eNotify(new ENotificationImpl(this, Notification.SET, TdPackage.BEARER_SECURITY_SCHEME__AUTHORIZATION,
+					oldAuthorization, authorization));
 	}
 
 	/**
@@ -203,8 +201,8 @@ public class BearerSecuritySchemeImpl extends SecuritySchemeImpl implements Bear
 	 * @generated
 	 */
 	@Override
-	public URI getAuthorizationUrl() {
-		return authorizationUrl;
+	public String getFormat() {
+		return format;
 	}
 
 	/**
@@ -213,12 +211,12 @@ public class BearerSecuritySchemeImpl extends SecuritySchemeImpl implements Bear
 	 * @generated
 	 */
 	@Override
-	public void setAuthorizationUrl(URI newAuthorizationUrl) {
-		URI oldAuthorizationUrl = authorizationUrl;
-		authorizationUrl = newAuthorizationUrl;
+	public void setFormat(String newFormat) {
+		String oldFormat = format;
+		format = newFormat;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, TdPackage.BEARER_SECURITY_SCHEME__AUTHORIZATION_URL,
-					oldAuthorizationUrl, authorizationUrl));
+			eNotify(new ENotificationImpl(this, Notification.SET, TdPackage.BEARER_SECURITY_SCHEME__FORMAT, oldFormat,
+					format));
 	}
 
 	/**
@@ -276,12 +274,12 @@ public class BearerSecuritySchemeImpl extends SecuritySchemeImpl implements Bear
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-		case TdPackage.BEARER_SECURITY_SCHEME__FORMAT:
-			return getFormat();
+		case TdPackage.BEARER_SECURITY_SCHEME__AUTHORIZATION:
+			return getAuthorization();
 		case TdPackage.BEARER_SECURITY_SCHEME__ALG:
 			return getAlg();
-		case TdPackage.BEARER_SECURITY_SCHEME__AUTHORIZATION_URL:
-			return getAuthorizationUrl();
+		case TdPackage.BEARER_SECURITY_SCHEME__FORMAT:
+			return getFormat();
 		case TdPackage.BEARER_SECURITY_SCHEME__IN:
 			return getIn();
 		case TdPackage.BEARER_SECURITY_SCHEME__NAME:
@@ -298,14 +296,14 @@ public class BearerSecuritySchemeImpl extends SecuritySchemeImpl implements Bear
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-		case TdPackage.BEARER_SECURITY_SCHEME__FORMAT:
-			setFormat((String) newValue);
+		case TdPackage.BEARER_SECURITY_SCHEME__AUTHORIZATION:
+			setAuthorization((String) newValue);
 			return;
 		case TdPackage.BEARER_SECURITY_SCHEME__ALG:
 			setAlg((String) newValue);
 			return;
-		case TdPackage.BEARER_SECURITY_SCHEME__AUTHORIZATION_URL:
-			setAuthorizationUrl((URI) newValue);
+		case TdPackage.BEARER_SECURITY_SCHEME__FORMAT:
+			setFormat((String) newValue);
 			return;
 		case TdPackage.BEARER_SECURITY_SCHEME__IN:
 			setIn((String) newValue);
@@ -325,14 +323,14 @@ public class BearerSecuritySchemeImpl extends SecuritySchemeImpl implements Bear
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-		case TdPackage.BEARER_SECURITY_SCHEME__FORMAT:
-			setFormat(FORMAT_EDEFAULT);
+		case TdPackage.BEARER_SECURITY_SCHEME__AUTHORIZATION:
+			setAuthorization(AUTHORIZATION_EDEFAULT);
 			return;
 		case TdPackage.BEARER_SECURITY_SCHEME__ALG:
 			setAlg(ALG_EDEFAULT);
 			return;
-		case TdPackage.BEARER_SECURITY_SCHEME__AUTHORIZATION_URL:
-			setAuthorizationUrl(AUTHORIZATION_URL_EDEFAULT);
+		case TdPackage.BEARER_SECURITY_SCHEME__FORMAT:
+			setFormat(FORMAT_EDEFAULT);
 			return;
 		case TdPackage.BEARER_SECURITY_SCHEME__IN:
 			setIn(IN_EDEFAULT);
@@ -352,13 +350,13 @@ public class BearerSecuritySchemeImpl extends SecuritySchemeImpl implements Bear
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-		case TdPackage.BEARER_SECURITY_SCHEME__FORMAT:
-			return FORMAT_EDEFAULT == null ? format != null : !FORMAT_EDEFAULT.equals(format);
+		case TdPackage.BEARER_SECURITY_SCHEME__AUTHORIZATION:
+			return AUTHORIZATION_EDEFAULT == null ? authorization != null
+					: !AUTHORIZATION_EDEFAULT.equals(authorization);
 		case TdPackage.BEARER_SECURITY_SCHEME__ALG:
 			return ALG_EDEFAULT == null ? alg != null : !ALG_EDEFAULT.equals(alg);
-		case TdPackage.BEARER_SECURITY_SCHEME__AUTHORIZATION_URL:
-			return AUTHORIZATION_URL_EDEFAULT == null ? authorizationUrl != null
-					: !AUTHORIZATION_URL_EDEFAULT.equals(authorizationUrl);
+		case TdPackage.BEARER_SECURITY_SCHEME__FORMAT:
+			return FORMAT_EDEFAULT == null ? format != null : !FORMAT_EDEFAULT.equals(format);
 		case TdPackage.BEARER_SECURITY_SCHEME__IN:
 			return IN_EDEFAULT == null ? in != null : !IN_EDEFAULT.equals(in);
 		case TdPackage.BEARER_SECURITY_SCHEME__NAME:
@@ -378,12 +376,12 @@ public class BearerSecuritySchemeImpl extends SecuritySchemeImpl implements Bear
 			return super.toString();
 
 		StringBuilder result = new StringBuilder(super.toString());
-		result.append(" (format: ");
-		result.append(format);
+		result.append(" (authorization: ");
+		result.append(authorization);
 		result.append(", alg: ");
 		result.append(alg);
-		result.append(", authorizationUrl: ");
-		result.append(authorizationUrl);
+		result.append(", format: ");
+		result.append(format);
 		result.append(", in: ");
 		result.append(in);
 		result.append(", name: ");

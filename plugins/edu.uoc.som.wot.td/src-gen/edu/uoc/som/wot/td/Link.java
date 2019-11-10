@@ -2,8 +2,6 @@
  */
 package edu.uoc.som.wot.td;
 
-import java.net.URI;
-
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -15,60 +13,38 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link edu.uoc.som.wot.td.Link#getHref <em>Href</em>}</li>
- *   <li>{@link edu.uoc.som.wot.td.Link#getMediaType <em>Media Type</em>}</li>
+ *   <li>{@link edu.uoc.som.wot.td.Link#getType <em>Type</em>}</li>
  *   <li>{@link edu.uoc.som.wot.td.Link#getRel <em>Rel</em>}</li>
  *   <li>{@link edu.uoc.som.wot.td.Link#getAnchor <em>Anchor</em>}</li>
  * </ul>
  *
  * @see edu.uoc.som.wot.td.TdPackage#getLink()
- * @model
+ * @model features="_href" 
+ *        _hrefDataType="org.eclipse.emf.ecore.xml.type.AnyURI" _hrefRequired="true" _hrefSuppressedGetVisibility="true" _hrefSuppressedSetVisibility="true" _hrefSuppressedIsSetVisibility="true" _hrefSuppressedUnsetVisibility="true"
  * @generated
  */
 public interface Link extends EObject {
 	/**
-	 * Returns the value of the '<em><b>Href</b></em>' attribute.
+	 * Returns the value of the '<em><b>Type</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Href</em>' attribute.
-	 * @see #setHref(URI)
-	 * @see edu.uoc.som.wot.td.TdPackage#getLink_Href()
-	 * @model dataType="edu.uoc.som.wot.td.AnyURI" required="true"
-	 * @generated
-	 */
-	URI getHref();
-
-	/**
-	 * Sets the value of the '{@link edu.uoc.som.wot.td.Link#getHref <em>Href</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Href</em>' attribute.
-	 * @see #getHref()
-	 * @generated
-	 */
-	void setHref(URI value);
-
-	/**
-	 * Returns the value of the '<em><b>Media Type</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Media Type</em>' attribute.
-	 * @see #setMediaType(String)
-	 * @see edu.uoc.som.wot.td.TdPackage#getLink_MediaType()
+	 * @return the value of the '<em>Type</em>' attribute.
+	 * @see #setType(String)
+	 * @see edu.uoc.som.wot.td.TdPackage#getLink_Type()
 	 * @model
 	 * @generated
 	 */
-	String getMediaType();
+	String getType();
 
 	/**
-	 * Sets the value of the '{@link edu.uoc.som.wot.td.Link#getMediaType <em>Media Type</em>}' attribute.
+	 * Sets the value of the '{@link edu.uoc.som.wot.td.Link#getType <em>Type</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Media Type</em>' attribute.
-	 * @see #getMediaType()
+	 * @param value the new value of the '<em>Type</em>' attribute.
+	 * @see #getType()
 	 * @generated
 	 */
-	void setMediaType(String value);
+	void setType(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Rel</b></em>' attribute.
@@ -97,12 +73,12 @@ public interface Link extends EObject {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Anchor</em>' attribute.
-	 * @see #setAnchor(URI)
+	 * @see #setAnchor(String)
 	 * @see edu.uoc.som.wot.td.TdPackage#getLink_Anchor()
-	 * @model dataType="edu.uoc.som.wot.td.AnyURI"
+	 * @model dataType="org.eclipse.emf.ecore.xml.type.AnyURI"
 	 * @generated
 	 */
-	URI getAnchor();
+	String getAnchor();
 
 	/**
 	 * Sets the value of the '{@link edu.uoc.som.wot.td.Link#getAnchor <em>Anchor</em>}' attribute.
@@ -112,6 +88,22 @@ public interface Link extends EObject {
 	 * @see #getAnchor()
 	 * @generated
 	 */
-	void setAnchor(URI value);
+	void setAnchor(String value);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model kind="operation" dataType="org.eclipse.emf.ecore.xml.type.AnyURI"
+	 * @generated
+	 */
+	String getHref();
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model hrefDataType="org.eclipse.emf.ecore.xml.type.AnyURI"
+	 * @generated
+	 */
+	void setHref(String href);
 
 } // Link

@@ -15,6 +15,7 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.util.ResourceLocator;
 
 import org.eclipse.emf.ecore.EStructuralFeature;
+
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
 import org.eclipse.emf.edit.provider.IItemLabelProvider;
@@ -55,48 +56,23 @@ public class ThingItemProvider extends ItemProviderAdapter implements IEditingDo
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addNamePropertyDescriptor(object);
-			addBasePropertyDescriptor(object);
 			addIdPropertyDescriptor(object);
+			addTitlePropertyDescriptor(object);
 			addDescriptionPropertyDescriptor(object);
+			addCreatedPropertyDescriptor(object);
+			addModifiedPropertyDescriptor(object);
 			addSupportPropertyDescriptor(object);
+			addBasePropertyDescriptor(object);
 			addSecurityPropertyDescriptor(object);
-			addPropertiesPropertyDescriptor(object);
 			addLinksPropertyDescriptor(object);
-			addEventsPropertyDescriptor(object);
+			addTitlesPropertyDescriptor(object);
+			addDescriptionsPropertyDescriptor(object);
+			addVersionPropertyDescriptor(object);
+			addPropertiesPropertyDescriptor(object);
 			addActionsPropertyDescriptor(object);
+			addEventsPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
-	}
-
-	/**
-	 * This adds a property descriptor for the Name feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addNamePropertyDescriptor(Object object) {
-		itemPropertyDescriptors
-				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_Thing_name_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_Thing_name_feature", "_UI_Thing_type"),
-						TdPackage.Literals.THING__NAME, true, false, false, ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-						null, null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Base feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addBasePropertyDescriptor(Object object) {
-		itemPropertyDescriptors
-				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_Thing_base_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_Thing_base_feature", "_UI_Thing_type"),
-						TdPackage.Literals.THING__BASE, true, false, false, ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-						null, null));
 	}
 
 	/**
@@ -111,6 +87,21 @@ public class ThingItemProvider extends ItemProviderAdapter implements IEditingDo
 						getResourceLocator(), getString("_UI_Thing_id_feature"),
 						getString("_UI_PropertyDescriptor_description", "_UI_Thing_id_feature", "_UI_Thing_type"),
 						TdPackage.Literals.THING__ID, true, false, false, ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+						null, null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Title feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addTitlePropertyDescriptor(Object object) {
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_Thing_title_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_Thing_title_feature", "_UI_Thing_type"),
+						TdPackage.Literals.THING__TITLE, true, false, false, ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
 						null, null));
 	}
 
@@ -131,6 +122,36 @@ public class ThingItemProvider extends ItemProviderAdapter implements IEditingDo
 	}
 
 	/**
+	 * This adds a property descriptor for the Created feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addCreatedPropertyDescriptor(Object object) {
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_Thing_created_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_Thing_created_feature", "_UI_Thing_type"),
+						TdPackage.Literals.THING__CREATED, true, false, false,
+						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Modified feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addModifiedPropertyDescriptor(Object object) {
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_Thing_modified_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_Thing_modified_feature", "_UI_Thing_type"),
+						TdPackage.Literals.THING__MODIFIED, true, false, false,
+						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+	}
+
+	/**
 	 * This adds a property descriptor for the Support feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -146,6 +167,21 @@ public class ThingItemProvider extends ItemProviderAdapter implements IEditingDo
 	}
 
 	/**
+	 * This adds a property descriptor for the Base feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addBasePropertyDescriptor(Object object) {
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_Thing_base_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_Thing_base_feature", "_UI_Thing_type"),
+						TdPackage.Literals.THING__BASE, true, false, false, ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+						null, null));
+	}
+
+	/**
 	 * This adds a property descriptor for the Security feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -156,7 +192,65 @@ public class ThingItemProvider extends ItemProviderAdapter implements IEditingDo
 				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
 						getResourceLocator(), getString("_UI_Thing_security_feature"),
 						getString("_UI_PropertyDescriptor_description", "_UI_Thing_security_feature", "_UI_Thing_type"),
-						TdPackage.Literals.THING__SECURITY, true, false, true, null, null, null));
+						TdPackage.Literals.THING__SECURITY, true, false, false,
+						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Links feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addLinksPropertyDescriptor(Object object) {
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_Thing_links_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_Thing_links_feature", "_UI_Thing_type"),
+						TdPackage.Literals.THING__LINKS, true, false, true, null, null, null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Titles feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addTitlesPropertyDescriptor(Object object) {
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_Thing_titles_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_Thing_titles_feature", "_UI_Thing_type"),
+						TdPackage.Literals.THING__TITLES, true, false, true, null, null, null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Descriptions feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addDescriptionsPropertyDescriptor(Object object) {
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_Thing_descriptions_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_Thing_descriptions_feature",
+								"_UI_Thing_type"),
+						TdPackage.Literals.THING__DESCRIPTIONS, true, false, true, null, null, null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Version feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addVersionPropertyDescriptor(Object object) {
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_Thing_version_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_Thing_version_feature", "_UI_Thing_type"),
+						TdPackage.Literals.THING__VERSION, true, false, true, null, null, null));
 	}
 
 	/**
@@ -175,17 +269,17 @@ public class ThingItemProvider extends ItemProviderAdapter implements IEditingDo
 	}
 
 	/**
-	 * This adds a property descriptor for the Links feature.
+	 * This adds a property descriptor for the Actions feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addLinksPropertyDescriptor(Object object) {
+	protected void addActionsPropertyDescriptor(Object object) {
 		itemPropertyDescriptors
 				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_Thing_links_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_Thing_links_feature", "_UI_Thing_type"),
-						TdPackage.Literals.THING__LINKS, true, false, true, null, null, null));
+						getResourceLocator(), getString("_UI_Thing_actions_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_Thing_actions_feature", "_UI_Thing_type"),
+						TdPackage.Literals.THING__ACTIONS, true, false, true, null, null, null));
 	}
 
 	/**
@@ -203,20 +297,6 @@ public class ThingItemProvider extends ItemProviderAdapter implements IEditingDo
 	}
 
 	/**
-	 * This adds a property descriptor for the Actions feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addActionsPropertyDescriptor(Object object) {
-		itemPropertyDescriptors
-				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_Thing_actions_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_Thing_actions_feature", "_UI_Thing_type"),
-						TdPackage.Literals.THING__ACTIONS, true, false, true, null, null, null));
-	}
-
-	/**
 	 * This specifies how to implement {@link #getChildren} and is used to deduce an appropriate feature for an
 	 * {@link org.eclipse.emf.edit.command.AddCommand}, {@link org.eclipse.emf.edit.command.RemoveCommand} or
 	 * {@link org.eclipse.emf.edit.command.MoveCommand} in {@link #createCommand}.
@@ -228,11 +308,15 @@ public class ThingItemProvider extends ItemProviderAdapter implements IEditingDo
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(TdPackage.Literals.THING__SECURITY);
-			childrenFeatures.add(TdPackage.Literals.THING__PROPERTIES);
+			childrenFeatures.add(TdPackage.Literals.THING__FORMS);
 			childrenFeatures.add(TdPackage.Literals.THING__LINKS);
-			childrenFeatures.add(TdPackage.Literals.THING__EVENTS);
+			childrenFeatures.add(TdPackage.Literals.THING__TITLES);
+			childrenFeatures.add(TdPackage.Literals.THING__DESCRIPTIONS);
+			childrenFeatures.add(TdPackage.Literals.THING__VERSION);
+			childrenFeatures.add(TdPackage.Literals.THING__PROPERTIES);
 			childrenFeatures.add(TdPackage.Literals.THING__ACTIONS);
+			childrenFeatures.add(TdPackage.Literals.THING__EVENTS);
+			childrenFeatures.add(TdPackage.Literals.THING__SECURITY_DEFINITIONS);
 		}
 		return childrenFeatures;
 	}
@@ -279,7 +363,7 @@ public class ThingItemProvider extends ItemProviderAdapter implements IEditingDo
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((Thing) object).getName();
+		String label = ((Thing) object).getId();
 		return label == null || label.length() == 0 ? getString("_UI_Thing_type")
 				: getString("_UI_Thing_type") + " " + label;
 	}
@@ -296,18 +380,25 @@ public class ThingItemProvider extends ItemProviderAdapter implements IEditingDo
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(Thing.class)) {
-		case TdPackage.THING__NAME:
-		case TdPackage.THING__BASE:
 		case TdPackage.THING__ID:
+		case TdPackage.THING__TITLE:
 		case TdPackage.THING__DESCRIPTION:
+		case TdPackage.THING__CREATED:
+		case TdPackage.THING__MODIFIED:
 		case TdPackage.THING__SUPPORT:
+		case TdPackage.THING__BASE:
+		case TdPackage.THING__SECURITY:
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 			return;
-		case TdPackage.THING__SECURITY:
-		case TdPackage.THING__PROPERTIES:
+		case TdPackage.THING__FORMS:
 		case TdPackage.THING__LINKS:
-		case TdPackage.THING__EVENTS:
+		case TdPackage.THING__TITLES:
+		case TdPackage.THING__DESCRIPTIONS:
+		case TdPackage.THING__VERSION:
+		case TdPackage.THING__PROPERTIES:
 		case TdPackage.THING__ACTIONS:
+		case TdPackage.THING__EVENTS:
+		case TdPackage.THING__SECURITY_DEFINITIONS:
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 			return;
 		}
@@ -325,50 +416,83 @@ public class ThingItemProvider extends ItemProviderAdapter implements IEditingDo
 	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
 
-		newChildDescriptors.add(
-				createChildParameter(TdPackage.Literals.THING__SECURITY, TdFactory.eINSTANCE.createSecurityScheme()));
-
-		newChildDescriptors.add(
-				createChildParameter(TdPackage.Literals.THING__SECURITY, TdFactory.eINSTANCE.createNoSecurityCheme()));
-
-		newChildDescriptors.add(createChildParameter(TdPackage.Literals.THING__SECURITY,
-				TdFactory.eINSTANCE.createBasicSecurityScheme()));
-
-		newChildDescriptors.add(createChildParameter(TdPackage.Literals.THING__SECURITY,
-				TdFactory.eINSTANCE.createOAuth2SecurityScheme()));
-
-		newChildDescriptors.add(createChildParameter(TdPackage.Literals.THING__SECURITY,
-				TdFactory.eINSTANCE.createDigestSecurityScheme()));
-
-		newChildDescriptors.add(createChildParameter(TdPackage.Literals.THING__SECURITY,
-				TdFactory.eINSTANCE.createApikeySecurityScheme()));
-
-		newChildDescriptors.add(createChildParameter(TdPackage.Literals.THING__SECURITY,
-				TdFactory.eINSTANCE.createPSKSecurityScheme()));
-
-		newChildDescriptors.add(createChildParameter(TdPackage.Literals.THING__SECURITY,
-				TdFactory.eINSTANCE.createCertSecurityScheme()));
-
-		newChildDescriptors.add(createChildParameter(TdPackage.Literals.THING__SECURITY,
-				TdFactory.eINSTANCE.createPublicSecurityScheme()));
-
-		newChildDescriptors.add(createChildParameter(TdPackage.Literals.THING__SECURITY,
-				TdFactory.eINSTANCE.createBearerSecurityScheme()));
-
-		newChildDescriptors.add(createChildParameter(TdPackage.Literals.THING__SECURITY,
-				TdFactory.eINSTANCE.createPopSecurityScheme()));
-
 		newChildDescriptors
-				.add(createChildParameter(TdPackage.Literals.THING__PROPERTIES, TdFactory.eINSTANCE.createProperty()));
+				.add(createChildParameter(TdPackage.Literals.THING__FORMS, TdFactory.eINSTANCE.createForm()));
 
 		newChildDescriptors
 				.add(createChildParameter(TdPackage.Literals.THING__LINKS, TdFactory.eINSTANCE.createLink()));
 
 		newChildDescriptors
-				.add(createChildParameter(TdPackage.Literals.THING__EVENTS, TdFactory.eINSTANCE.createEvent()));
+				.add(createChildParameter(TdPackage.Literals.THING__TITLES, TdFactory.eINSTANCE.createMultiLanguage()));
+
+		newChildDescriptors.add(createChildParameter(TdPackage.Literals.THING__DESCRIPTIONS,
+				TdFactory.eINSTANCE.createMultiLanguage()));
 
 		newChildDescriptors
-				.add(createChildParameter(TdPackage.Literals.THING__ACTIONS, TdFactory.eINSTANCE.createAction()));
+				.add(createChildParameter(TdPackage.Literals.THING__VERSION, TdFactory.eINSTANCE.createVersionInfo()));
+
+		newChildDescriptors.add(createChildParameter(TdPackage.Literals.THING__PROPERTIES,
+				TdFactory.eINSTANCE.createPropertyAffordance()));
+
+		newChildDescriptors.add(
+				createChildParameter(TdPackage.Literals.THING__ACTIONS, TdFactory.eINSTANCE.createActionAffordance()));
+
+		newChildDescriptors.add(
+				createChildParameter(TdPackage.Literals.THING__EVENTS, TdFactory.eINSTANCE.createEventAffordance()));
+
+		newChildDescriptors.add(createChildParameter(TdPackage.Literals.THING__SECURITY_DEFINITIONS,
+				TdFactory.eINSTANCE.createSecurityScheme()));
+
+		newChildDescriptors.add(createChildParameter(TdPackage.Literals.THING__SECURITY_DEFINITIONS,
+				TdFactory.eINSTANCE.createNoSecurityScheme()));
+
+		newChildDescriptors.add(createChildParameter(TdPackage.Literals.THING__SECURITY_DEFINITIONS,
+				TdFactory.eINSTANCE.createBasicSecurityScheme()));
+
+		newChildDescriptors.add(createChildParameter(TdPackage.Literals.THING__SECURITY_DEFINITIONS,
+				TdFactory.eINSTANCE.createDigestSecurityScheme()));
+
+		newChildDescriptors.add(createChildParameter(TdPackage.Literals.THING__SECURITY_DEFINITIONS,
+				TdFactory.eINSTANCE.createAPIKeySecurityScheme()));
+
+		newChildDescriptors.add(createChildParameter(TdPackage.Literals.THING__SECURITY_DEFINITIONS,
+				TdFactory.eINSTANCE.createBearerSecurityScheme()));
+
+		newChildDescriptors.add(createChildParameter(TdPackage.Literals.THING__SECURITY_DEFINITIONS,
+				TdFactory.eINSTANCE.createCertSecurityScheme()));
+
+		newChildDescriptors.add(createChildParameter(TdPackage.Literals.THING__SECURITY_DEFINITIONS,
+				TdFactory.eINSTANCE.createPSKSecurityScheme()));
+
+		newChildDescriptors.add(createChildParameter(TdPackage.Literals.THING__SECURITY_DEFINITIONS,
+				TdFactory.eINSTANCE.createPublicSecurityScheme()));
+
+		newChildDescriptors.add(createChildParameter(TdPackage.Literals.THING__SECURITY_DEFINITIONS,
+				TdFactory.eINSTANCE.createPoPSecurityScheme()));
+
+		newChildDescriptors.add(createChildParameter(TdPackage.Literals.THING__SECURITY_DEFINITIONS,
+				TdFactory.eINSTANCE.createOAuth2SecurityScheme()));
+	}
+
+	/**
+	 * This returns the label text for {@link org.eclipse.emf.edit.command.CreateChildCommand}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String getCreateChildText(Object owner, Object feature, Object child, Collection<?> selection) {
+		Object childFeature = feature;
+		Object childObject = child;
+
+		boolean qualify = childFeature == TdPackage.Literals.THING__TITLES
+				|| childFeature == TdPackage.Literals.THING__DESCRIPTIONS;
+
+		if (qualify) {
+			return getString("_UI_CreateChild_text2",
+					new Object[] { getTypeText(childObject), getFeatureText(childFeature), getTypeText(owner) });
+		}
+		return super.getCreateChildText(owner, feature, child, selection);
 	}
 
 	/**

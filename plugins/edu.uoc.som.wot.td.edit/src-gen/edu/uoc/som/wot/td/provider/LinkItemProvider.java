@@ -5,8 +5,6 @@ package edu.uoc.som.wot.td.provider;
 import edu.uoc.som.wot.td.Link;
 import edu.uoc.som.wot.td.TdPackage;
 
-import java.net.URI;
-
 import java.util.Collection;
 import java.util.List;
 
@@ -14,6 +12,8 @@ import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.common.util.ResourceLocator;
+
+import org.eclipse.emf.ecore.EObject;
 
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
@@ -55,8 +55,8 @@ public class LinkItemProvider extends ItemProviderAdapter implements IEditingDom
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addHrefPropertyDescriptor(object);
-			addMediaTypePropertyDescriptor(object);
+			add_hrefPropertyDescriptor(object);
+			addTypePropertyDescriptor(object);
 			addRelPropertyDescriptor(object);
 			addAnchorPropertyDescriptor(object);
 		}
@@ -64,33 +64,33 @@ public class LinkItemProvider extends ItemProviderAdapter implements IEditingDom
 	}
 
 	/**
-	 * This adds a property descriptor for the Href feature.
+	 * This adds a property descriptor for the href feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addHrefPropertyDescriptor(Object object) {
+	protected void add_hrefPropertyDescriptor(Object object) {
 		itemPropertyDescriptors
 				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_Link_href_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_Link_href_feature", "_UI_Link_type"),
+						getResourceLocator(), getString("_UI_Link__href_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_Link__href_feature", "_UI_Link_type"),
 						TdPackage.Literals.LINK__HREF, true, false, false, ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
 						null, null));
 	}
 
 	/**
-	 * This adds a property descriptor for the Media Type feature.
+	 * This adds a property descriptor for the Type feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addMediaTypePropertyDescriptor(Object object) {
+	protected void addTypePropertyDescriptor(Object object) {
 		itemPropertyDescriptors
 				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_Link_mediaType_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_Link_mediaType_feature", "_UI_Link_type"),
-						TdPackage.Literals.LINK__MEDIA_TYPE, true, false, false,
-						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+						getResourceLocator(), getString("_UI_Link_type_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_Link_type_feature", "_UI_Link_type"),
+						TdPackage.Literals.LINK__TYPE, true, false, false, ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+						null, null));
 	}
 
 	/**
@@ -152,7 +152,7 @@ public class LinkItemProvider extends ItemProviderAdapter implements IEditingDom
 	 */
 	@Override
 	public String getText(Object object) {
-		URI labelValue = ((Link) object).getHref();
+		Object labelValue = ((EObject) object).eGet(TdPackage.Literals.LINK__HREF);
 		String label = labelValue == null ? null : labelValue.toString();
 		return label == null || label.length() == 0 ? getString("_UI_Link_type")
 				: getString("_UI_Link_type") + " " + label;
@@ -171,7 +171,7 @@ public class LinkItemProvider extends ItemProviderAdapter implements IEditingDom
 
 		switch (notification.getFeatureID(Link.class)) {
 		case TdPackage.LINK__HREF:
-		case TdPackage.LINK__MEDIA_TYPE:
+		case TdPackage.LINK__TYPE:
 		case TdPackage.LINK__REL:
 		case TdPackage.LINK__ANCHOR:
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
