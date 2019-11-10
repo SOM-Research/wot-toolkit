@@ -28,23 +28,6 @@ class ThingDescriptionJsonProjectTemplateProvider implements IProjectTemplatePro
 @ProjectTemplate(label="My Lamp Examples", icon="project_template.png", description="<p><b>My Lamp</b></p>
 <p>Example project with a simple Thing Description for a lamp Thing with the name MyLampThing.</p>")
 final class HelloWorldProject {
-	val advanced = check("Advanced:", false)
-	val advancedGroup = group("Properties")
-	val path = text("Package:", "wot", "The package path to place the files in", advancedGroup)
-
-	override protected updateVariables() {
-		path.enabled = advanced.value
-		if (!advanced.value) {
-			path.value = "wot"
-		}
-	}
-
-	override protected validate() {
-		if (path.value.matches('[a-z][a-z0-9_]*(/[a-z][a-z0-9_]*)*'))
-			null
-		else
-			new Status(ERROR, "Wizard", "'" + path + "' is not a valid package name")
-	}
 
 	override generateProjects(IProjectGenerator generator) {
 		generator.generate(new PluginProjectFactory => [
@@ -53,7 +36,7 @@ final class HelloWorldProject {
 			projectNatures += #[XtextProjectHelper.NATURE_ID]
 			builderIds += #[XtextProjectHelper.BUILDER_ID]
 			folders += "src"
-			addFile('''«path»/MyLampThing.tdjson''', '''
+			addFile('''src/MyLampThing.tdjson''', '''
 				{
 				    "@context": "https://www.w3.org/2019/wot/td/v1",
 				    "id": "urn:dev:ops:32473-WoTLamp-1234",
