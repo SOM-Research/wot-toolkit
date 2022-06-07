@@ -10,7 +10,7 @@ import edu.uoc.som.wot.td.json.thingDescriptionJson.JsonLink;
 import edu.uoc.som.wot.td.json.thingDescriptionJson.JsonMultiLanguageEntry;
 import edu.uoc.som.wot.td.json.thingDescriptionJson.JsonPropertyAffordance;
 import edu.uoc.som.wot.td.json.thingDescriptionJson.JsonSecurityScheme;
-import edu.uoc.som.wot.td.json.thingDescriptionJson.JsonThingDescription;
+import edu.uoc.som.wot.td.json.thingDescriptionJson.JsonThing;
 import edu.uoc.som.wot.td.json.thingDescriptionJson.JsonVersionInfo;
 import edu.uoc.som.wot.td.json.thingDescriptionJson.ThingDescriptionJsonPackage;
 
@@ -33,36 +33,36 @@ import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Json Thing Description</b></em>'.
+ * An implementation of the model object '<em><b>Json Thing</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link edu.uoc.som.wot.td.json.thingDescriptionJson.impl.JsonThingDescriptionImpl#getLd_context <em>Ld context</em>}</li>
- *   <li>{@link edu.uoc.som.wot.td.json.thingDescriptionJson.impl.JsonThingDescriptionImpl#getLd_type <em>Ld type</em>}</li>
- *   <li>{@link edu.uoc.som.wot.td.json.thingDescriptionJson.impl.JsonThingDescriptionImpl#getId <em>Id</em>}</li>
- *   <li>{@link edu.uoc.som.wot.td.json.thingDescriptionJson.impl.JsonThingDescriptionImpl#getTitle <em>Title</em>}</li>
- *   <li>{@link edu.uoc.som.wot.td.json.thingDescriptionJson.impl.JsonThingDescriptionImpl#getDescription <em>Description</em>}</li>
- *   <li>{@link edu.uoc.som.wot.td.json.thingDescriptionJson.impl.JsonThingDescriptionImpl#getCreated <em>Created</em>}</li>
- *   <li>{@link edu.uoc.som.wot.td.json.thingDescriptionJson.impl.JsonThingDescriptionImpl#getModified <em>Modified</em>}</li>
- *   <li>{@link edu.uoc.som.wot.td.json.thingDescriptionJson.impl.JsonThingDescriptionImpl#getSupport <em>Support</em>}</li>
- *   <li>{@link edu.uoc.som.wot.td.json.thingDescriptionJson.impl.JsonThingDescriptionImpl#getBase <em>Base</em>}</li>
- *   <li>{@link edu.uoc.som.wot.td.json.thingDescriptionJson.impl.JsonThingDescriptionImpl#getSecurity <em>Security</em>}</li>
- *   <li>{@link edu.uoc.som.wot.td.json.thingDescriptionJson.impl.JsonThingDescriptionImpl#getForms <em>Forms</em>}</li>
- *   <li>{@link edu.uoc.som.wot.td.json.thingDescriptionJson.impl.JsonThingDescriptionImpl#getLinks <em>Links</em>}</li>
- *   <li>{@link edu.uoc.som.wot.td.json.thingDescriptionJson.impl.JsonThingDescriptionImpl#getTitles <em>Titles</em>}</li>
- *   <li>{@link edu.uoc.som.wot.td.json.thingDescriptionJson.impl.JsonThingDescriptionImpl#getDescriptions <em>Descriptions</em>}</li>
- *   <li>{@link edu.uoc.som.wot.td.json.thingDescriptionJson.impl.JsonThingDescriptionImpl#getVersion <em>Version</em>}</li>
- *   <li>{@link edu.uoc.som.wot.td.json.thingDescriptionJson.impl.JsonThingDescriptionImpl#getProperties <em>Properties</em>}</li>
- *   <li>{@link edu.uoc.som.wot.td.json.thingDescriptionJson.impl.JsonThingDescriptionImpl#getActions <em>Actions</em>}</li>
- *   <li>{@link edu.uoc.som.wot.td.json.thingDescriptionJson.impl.JsonThingDescriptionImpl#getEvents <em>Events</em>}</li>
- *   <li>{@link edu.uoc.som.wot.td.json.thingDescriptionJson.impl.JsonThingDescriptionImpl#getSecurityDefinitions <em>Security Definitions</em>}</li>
+ *   <li>{@link edu.uoc.som.wot.td.json.thingDescriptionJson.impl.JsonThingImpl#getLd_context <em>Ld context</em>}</li>
+ *   <li>{@link edu.uoc.som.wot.td.json.thingDescriptionJson.impl.JsonThingImpl#getLd_type <em>Ld type</em>}</li>
+ *   <li>{@link edu.uoc.som.wot.td.json.thingDescriptionJson.impl.JsonThingImpl#getId <em>Id</em>}</li>
+ *   <li>{@link edu.uoc.som.wot.td.json.thingDescriptionJson.impl.JsonThingImpl#getTitle <em>Title</em>}</li>
+ *   <li>{@link edu.uoc.som.wot.td.json.thingDescriptionJson.impl.JsonThingImpl#getDescription <em>Description</em>}</li>
+ *   <li>{@link edu.uoc.som.wot.td.json.thingDescriptionJson.impl.JsonThingImpl#getCreated <em>Created</em>}</li>
+ *   <li>{@link edu.uoc.som.wot.td.json.thingDescriptionJson.impl.JsonThingImpl#getModified <em>Modified</em>}</li>
+ *   <li>{@link edu.uoc.som.wot.td.json.thingDescriptionJson.impl.JsonThingImpl#getSupport <em>Support</em>}</li>
+ *   <li>{@link edu.uoc.som.wot.td.json.thingDescriptionJson.impl.JsonThingImpl#getBase <em>Base</em>}</li>
+ *   <li>{@link edu.uoc.som.wot.td.json.thingDescriptionJson.impl.JsonThingImpl#getSecurity <em>Security</em>}</li>
+ *   <li>{@link edu.uoc.som.wot.td.json.thingDescriptionJson.impl.JsonThingImpl#getForms <em>Forms</em>}</li>
+ *   <li>{@link edu.uoc.som.wot.td.json.thingDescriptionJson.impl.JsonThingImpl#getLinks <em>Links</em>}</li>
+ *   <li>{@link edu.uoc.som.wot.td.json.thingDescriptionJson.impl.JsonThingImpl#getTitles <em>Titles</em>}</li>
+ *   <li>{@link edu.uoc.som.wot.td.json.thingDescriptionJson.impl.JsonThingImpl#getDescriptions <em>Descriptions</em>}</li>
+ *   <li>{@link edu.uoc.som.wot.td.json.thingDescriptionJson.impl.JsonThingImpl#getVersion <em>Version</em>}</li>
+ *   <li>{@link edu.uoc.som.wot.td.json.thingDescriptionJson.impl.JsonThingImpl#getProperties <em>Properties</em>}</li>
+ *   <li>{@link edu.uoc.som.wot.td.json.thingDescriptionJson.impl.JsonThingImpl#getActions <em>Actions</em>}</li>
+ *   <li>{@link edu.uoc.som.wot.td.json.thingDescriptionJson.impl.JsonThingImpl#getEvents <em>Events</em>}</li>
+ *   <li>{@link edu.uoc.som.wot.td.json.thingDescriptionJson.impl.JsonThingImpl#getSecurityDefinitions <em>Security Definitions</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class JsonThingDescriptionImpl extends MinimalEObjectImpl.Container implements JsonThingDescription
+public class JsonThingImpl extends MinimalEObjectImpl.Container implements JsonThing
 {
   /**
    * The cached value of the '{@link #getLd_context() <em>Ld context</em>}' attribute list.
@@ -329,7 +329,7 @@ public class JsonThingDescriptionImpl extends MinimalEObjectImpl.Container imple
    * <!-- end-user-doc -->
    * @generated
    */
-  protected JsonThingDescriptionImpl()
+  protected JsonThingImpl()
   {
     super();
   }
@@ -342,7 +342,7 @@ public class JsonThingDescriptionImpl extends MinimalEObjectImpl.Container imple
   @Override
   protected EClass eStaticClass()
   {
-    return ThingDescriptionJsonPackage.Literals.JSON_THING_DESCRIPTION;
+    return ThingDescriptionJsonPackage.Literals.JSON_THING;
   }
 
   /**
@@ -355,7 +355,7 @@ public class JsonThingDescriptionImpl extends MinimalEObjectImpl.Container imple
   {
     if (ld_context == null)
     {
-      ld_context = new EDataTypeEList<String>(String.class, this, ThingDescriptionJsonPackage.JSON_THING_DESCRIPTION__LD_CONTEXT);
+      ld_context = new EDataTypeEList<String>(String.class, this, ThingDescriptionJsonPackage.JSON_THING__LD_CONTEXT);
     }
     return ld_context;
   }
@@ -370,7 +370,7 @@ public class JsonThingDescriptionImpl extends MinimalEObjectImpl.Container imple
   {
     if (ld_type == null)
     {
-      ld_type = new EDataTypeEList<String>(String.class, this, ThingDescriptionJsonPackage.JSON_THING_DESCRIPTION__LD_TYPE);
+      ld_type = new EDataTypeEList<String>(String.class, this, ThingDescriptionJsonPackage.JSON_THING__LD_TYPE);
     }
     return ld_type;
   }
@@ -397,7 +397,7 @@ public class JsonThingDescriptionImpl extends MinimalEObjectImpl.Container imple
     String oldId = id;
     id = newId;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, ThingDescriptionJsonPackage.JSON_THING_DESCRIPTION__ID, oldId, id));
+      eNotify(new ENotificationImpl(this, Notification.SET, ThingDescriptionJsonPackage.JSON_THING__ID, oldId, id));
   }
 
   /**
@@ -422,7 +422,7 @@ public class JsonThingDescriptionImpl extends MinimalEObjectImpl.Container imple
     String oldTitle = title;
     title = newTitle;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, ThingDescriptionJsonPackage.JSON_THING_DESCRIPTION__TITLE, oldTitle, title));
+      eNotify(new ENotificationImpl(this, Notification.SET, ThingDescriptionJsonPackage.JSON_THING__TITLE, oldTitle, title));
   }
 
   /**
@@ -447,7 +447,7 @@ public class JsonThingDescriptionImpl extends MinimalEObjectImpl.Container imple
     String oldDescription = description;
     description = newDescription;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, ThingDescriptionJsonPackage.JSON_THING_DESCRIPTION__DESCRIPTION, oldDescription, description));
+      eNotify(new ENotificationImpl(this, Notification.SET, ThingDescriptionJsonPackage.JSON_THING__DESCRIPTION, oldDescription, description));
   }
 
   /**
@@ -472,7 +472,7 @@ public class JsonThingDescriptionImpl extends MinimalEObjectImpl.Container imple
     String oldCreated = created;
     created = newCreated;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, ThingDescriptionJsonPackage.JSON_THING_DESCRIPTION__CREATED, oldCreated, created));
+      eNotify(new ENotificationImpl(this, Notification.SET, ThingDescriptionJsonPackage.JSON_THING__CREATED, oldCreated, created));
   }
 
   /**
@@ -497,7 +497,7 @@ public class JsonThingDescriptionImpl extends MinimalEObjectImpl.Container imple
     String oldModified = modified;
     modified = newModified;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, ThingDescriptionJsonPackage.JSON_THING_DESCRIPTION__MODIFIED, oldModified, modified));
+      eNotify(new ENotificationImpl(this, Notification.SET, ThingDescriptionJsonPackage.JSON_THING__MODIFIED, oldModified, modified));
   }
 
   /**
@@ -522,7 +522,7 @@ public class JsonThingDescriptionImpl extends MinimalEObjectImpl.Container imple
     String oldSupport = support;
     support = newSupport;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, ThingDescriptionJsonPackage.JSON_THING_DESCRIPTION__SUPPORT, oldSupport, support));
+      eNotify(new ENotificationImpl(this, Notification.SET, ThingDescriptionJsonPackage.JSON_THING__SUPPORT, oldSupport, support));
   }
 
   /**
@@ -547,7 +547,7 @@ public class JsonThingDescriptionImpl extends MinimalEObjectImpl.Container imple
     String oldBase = base;
     base = newBase;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, ThingDescriptionJsonPackage.JSON_THING_DESCRIPTION__BASE, oldBase, base));
+      eNotify(new ENotificationImpl(this, Notification.SET, ThingDescriptionJsonPackage.JSON_THING__BASE, oldBase, base));
   }
 
   /**
@@ -560,7 +560,7 @@ public class JsonThingDescriptionImpl extends MinimalEObjectImpl.Container imple
   {
     if (security == null)
     {
-      security = new EDataTypeEList<String>(String.class, this, ThingDescriptionJsonPackage.JSON_THING_DESCRIPTION__SECURITY);
+      security = new EDataTypeEList<String>(String.class, this, ThingDescriptionJsonPackage.JSON_THING__SECURITY);
     }
     return security;
   }
@@ -575,7 +575,7 @@ public class JsonThingDescriptionImpl extends MinimalEObjectImpl.Container imple
   {
     if (forms == null)
     {
-      forms = new EObjectContainmentEList<JsonForm>(JsonForm.class, this, ThingDescriptionJsonPackage.JSON_THING_DESCRIPTION__FORMS);
+      forms = new EObjectContainmentEList<JsonForm>(JsonForm.class, this, ThingDescriptionJsonPackage.JSON_THING__FORMS);
     }
     return forms;
   }
@@ -590,7 +590,7 @@ public class JsonThingDescriptionImpl extends MinimalEObjectImpl.Container imple
   {
     if (links == null)
     {
-      links = new EObjectContainmentEList<JsonLink>(JsonLink.class, this, ThingDescriptionJsonPackage.JSON_THING_DESCRIPTION__LINKS);
+      links = new EObjectContainmentEList<JsonLink>(JsonLink.class, this, ThingDescriptionJsonPackage.JSON_THING__LINKS);
     }
     return links;
   }
@@ -605,7 +605,7 @@ public class JsonThingDescriptionImpl extends MinimalEObjectImpl.Container imple
   {
     if (titles == null)
     {
-      titles = new EObjectContainmentEList<JsonMultiLanguageEntry>(JsonMultiLanguageEntry.class, this, ThingDescriptionJsonPackage.JSON_THING_DESCRIPTION__TITLES);
+      titles = new EObjectContainmentEList<JsonMultiLanguageEntry>(JsonMultiLanguageEntry.class, this, ThingDescriptionJsonPackage.JSON_THING__TITLES);
     }
     return titles;
   }
@@ -620,7 +620,7 @@ public class JsonThingDescriptionImpl extends MinimalEObjectImpl.Container imple
   {
     if (descriptions == null)
     {
-      descriptions = new EObjectContainmentEList<JsonMultiLanguageEntry>(JsonMultiLanguageEntry.class, this, ThingDescriptionJsonPackage.JSON_THING_DESCRIPTION__DESCRIPTIONS);
+      descriptions = new EObjectContainmentEList<JsonMultiLanguageEntry>(JsonMultiLanguageEntry.class, this, ThingDescriptionJsonPackage.JSON_THING__DESCRIPTIONS);
     }
     return descriptions;
   }
@@ -647,7 +647,7 @@ public class JsonThingDescriptionImpl extends MinimalEObjectImpl.Container imple
     version = newVersion;
     if (eNotificationRequired())
     {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ThingDescriptionJsonPackage.JSON_THING_DESCRIPTION__VERSION, oldVersion, newVersion);
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ThingDescriptionJsonPackage.JSON_THING__VERSION, oldVersion, newVersion);
       if (msgs == null) msgs = notification; else msgs.add(notification);
     }
     return msgs;
@@ -665,14 +665,14 @@ public class JsonThingDescriptionImpl extends MinimalEObjectImpl.Container imple
     {
       NotificationChain msgs = null;
       if (version != null)
-        msgs = ((InternalEObject)version).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - ThingDescriptionJsonPackage.JSON_THING_DESCRIPTION__VERSION, null, msgs);
+        msgs = ((InternalEObject)version).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - ThingDescriptionJsonPackage.JSON_THING__VERSION, null, msgs);
       if (newVersion != null)
-        msgs = ((InternalEObject)newVersion).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - ThingDescriptionJsonPackage.JSON_THING_DESCRIPTION__VERSION, null, msgs);
+        msgs = ((InternalEObject)newVersion).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - ThingDescriptionJsonPackage.JSON_THING__VERSION, null, msgs);
       msgs = basicSetVersion(newVersion, msgs);
       if (msgs != null) msgs.dispatch();
     }
     else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, ThingDescriptionJsonPackage.JSON_THING_DESCRIPTION__VERSION, newVersion, newVersion));
+      eNotify(new ENotificationImpl(this, Notification.SET, ThingDescriptionJsonPackage.JSON_THING__VERSION, newVersion, newVersion));
   }
 
   /**
@@ -685,7 +685,7 @@ public class JsonThingDescriptionImpl extends MinimalEObjectImpl.Container imple
   {
     if (properties == null)
     {
-      properties = new EObjectContainmentEList<JsonPropertyAffordance>(JsonPropertyAffordance.class, this, ThingDescriptionJsonPackage.JSON_THING_DESCRIPTION__PROPERTIES);
+      properties = new EObjectContainmentEList<JsonPropertyAffordance>(JsonPropertyAffordance.class, this, ThingDescriptionJsonPackage.JSON_THING__PROPERTIES);
     }
     return properties;
   }
@@ -700,7 +700,7 @@ public class JsonThingDescriptionImpl extends MinimalEObjectImpl.Container imple
   {
     if (actions == null)
     {
-      actions = new EObjectContainmentEList<JsonActionAffordance>(JsonActionAffordance.class, this, ThingDescriptionJsonPackage.JSON_THING_DESCRIPTION__ACTIONS);
+      actions = new EObjectContainmentEList<JsonActionAffordance>(JsonActionAffordance.class, this, ThingDescriptionJsonPackage.JSON_THING__ACTIONS);
     }
     return actions;
   }
@@ -715,7 +715,7 @@ public class JsonThingDescriptionImpl extends MinimalEObjectImpl.Container imple
   {
     if (events == null)
     {
-      events = new EObjectContainmentEList<JsonEventAffordance>(JsonEventAffordance.class, this, ThingDescriptionJsonPackage.JSON_THING_DESCRIPTION__EVENTS);
+      events = new EObjectContainmentEList<JsonEventAffordance>(JsonEventAffordance.class, this, ThingDescriptionJsonPackage.JSON_THING__EVENTS);
     }
     return events;
   }
@@ -730,7 +730,7 @@ public class JsonThingDescriptionImpl extends MinimalEObjectImpl.Container imple
   {
     if (securityDefinitions == null)
     {
-      securityDefinitions = new EObjectContainmentEList<JsonSecurityScheme>(JsonSecurityScheme.class, this, ThingDescriptionJsonPackage.JSON_THING_DESCRIPTION__SECURITY_DEFINITIONS);
+      securityDefinitions = new EObjectContainmentEList<JsonSecurityScheme>(JsonSecurityScheme.class, this, ThingDescriptionJsonPackage.JSON_THING__SECURITY_DEFINITIONS);
     }
     return securityDefinitions;
   }
@@ -745,23 +745,23 @@ public class JsonThingDescriptionImpl extends MinimalEObjectImpl.Container imple
   {
     switch (featureID)
     {
-      case ThingDescriptionJsonPackage.JSON_THING_DESCRIPTION__FORMS:
+      case ThingDescriptionJsonPackage.JSON_THING__FORMS:
         return ((InternalEList<?>)getForms()).basicRemove(otherEnd, msgs);
-      case ThingDescriptionJsonPackage.JSON_THING_DESCRIPTION__LINKS:
+      case ThingDescriptionJsonPackage.JSON_THING__LINKS:
         return ((InternalEList<?>)getLinks()).basicRemove(otherEnd, msgs);
-      case ThingDescriptionJsonPackage.JSON_THING_DESCRIPTION__TITLES:
+      case ThingDescriptionJsonPackage.JSON_THING__TITLES:
         return ((InternalEList<?>)getTitles()).basicRemove(otherEnd, msgs);
-      case ThingDescriptionJsonPackage.JSON_THING_DESCRIPTION__DESCRIPTIONS:
+      case ThingDescriptionJsonPackage.JSON_THING__DESCRIPTIONS:
         return ((InternalEList<?>)getDescriptions()).basicRemove(otherEnd, msgs);
-      case ThingDescriptionJsonPackage.JSON_THING_DESCRIPTION__VERSION:
+      case ThingDescriptionJsonPackage.JSON_THING__VERSION:
         return basicSetVersion(null, msgs);
-      case ThingDescriptionJsonPackage.JSON_THING_DESCRIPTION__PROPERTIES:
+      case ThingDescriptionJsonPackage.JSON_THING__PROPERTIES:
         return ((InternalEList<?>)getProperties()).basicRemove(otherEnd, msgs);
-      case ThingDescriptionJsonPackage.JSON_THING_DESCRIPTION__ACTIONS:
+      case ThingDescriptionJsonPackage.JSON_THING__ACTIONS:
         return ((InternalEList<?>)getActions()).basicRemove(otherEnd, msgs);
-      case ThingDescriptionJsonPackage.JSON_THING_DESCRIPTION__EVENTS:
+      case ThingDescriptionJsonPackage.JSON_THING__EVENTS:
         return ((InternalEList<?>)getEvents()).basicRemove(otherEnd, msgs);
-      case ThingDescriptionJsonPackage.JSON_THING_DESCRIPTION__SECURITY_DEFINITIONS:
+      case ThingDescriptionJsonPackage.JSON_THING__SECURITY_DEFINITIONS:
         return ((InternalEList<?>)getSecurityDefinitions()).basicRemove(otherEnd, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -777,43 +777,43 @@ public class JsonThingDescriptionImpl extends MinimalEObjectImpl.Container imple
   {
     switch (featureID)
     {
-      case ThingDescriptionJsonPackage.JSON_THING_DESCRIPTION__LD_CONTEXT:
+      case ThingDescriptionJsonPackage.JSON_THING__LD_CONTEXT:
         return getLd_context();
-      case ThingDescriptionJsonPackage.JSON_THING_DESCRIPTION__LD_TYPE:
+      case ThingDescriptionJsonPackage.JSON_THING__LD_TYPE:
         return getLd_type();
-      case ThingDescriptionJsonPackage.JSON_THING_DESCRIPTION__ID:
+      case ThingDescriptionJsonPackage.JSON_THING__ID:
         return getId();
-      case ThingDescriptionJsonPackage.JSON_THING_DESCRIPTION__TITLE:
+      case ThingDescriptionJsonPackage.JSON_THING__TITLE:
         return getTitle();
-      case ThingDescriptionJsonPackage.JSON_THING_DESCRIPTION__DESCRIPTION:
+      case ThingDescriptionJsonPackage.JSON_THING__DESCRIPTION:
         return getDescription();
-      case ThingDescriptionJsonPackage.JSON_THING_DESCRIPTION__CREATED:
+      case ThingDescriptionJsonPackage.JSON_THING__CREATED:
         return getCreated();
-      case ThingDescriptionJsonPackage.JSON_THING_DESCRIPTION__MODIFIED:
+      case ThingDescriptionJsonPackage.JSON_THING__MODIFIED:
         return getModified();
-      case ThingDescriptionJsonPackage.JSON_THING_DESCRIPTION__SUPPORT:
+      case ThingDescriptionJsonPackage.JSON_THING__SUPPORT:
         return getSupport();
-      case ThingDescriptionJsonPackage.JSON_THING_DESCRIPTION__BASE:
+      case ThingDescriptionJsonPackage.JSON_THING__BASE:
         return getBase();
-      case ThingDescriptionJsonPackage.JSON_THING_DESCRIPTION__SECURITY:
+      case ThingDescriptionJsonPackage.JSON_THING__SECURITY:
         return getSecurity();
-      case ThingDescriptionJsonPackage.JSON_THING_DESCRIPTION__FORMS:
+      case ThingDescriptionJsonPackage.JSON_THING__FORMS:
         return getForms();
-      case ThingDescriptionJsonPackage.JSON_THING_DESCRIPTION__LINKS:
+      case ThingDescriptionJsonPackage.JSON_THING__LINKS:
         return getLinks();
-      case ThingDescriptionJsonPackage.JSON_THING_DESCRIPTION__TITLES:
+      case ThingDescriptionJsonPackage.JSON_THING__TITLES:
         return getTitles();
-      case ThingDescriptionJsonPackage.JSON_THING_DESCRIPTION__DESCRIPTIONS:
+      case ThingDescriptionJsonPackage.JSON_THING__DESCRIPTIONS:
         return getDescriptions();
-      case ThingDescriptionJsonPackage.JSON_THING_DESCRIPTION__VERSION:
+      case ThingDescriptionJsonPackage.JSON_THING__VERSION:
         return getVersion();
-      case ThingDescriptionJsonPackage.JSON_THING_DESCRIPTION__PROPERTIES:
+      case ThingDescriptionJsonPackage.JSON_THING__PROPERTIES:
         return getProperties();
-      case ThingDescriptionJsonPackage.JSON_THING_DESCRIPTION__ACTIONS:
+      case ThingDescriptionJsonPackage.JSON_THING__ACTIONS:
         return getActions();
-      case ThingDescriptionJsonPackage.JSON_THING_DESCRIPTION__EVENTS:
+      case ThingDescriptionJsonPackage.JSON_THING__EVENTS:
         return getEvents();
-      case ThingDescriptionJsonPackage.JSON_THING_DESCRIPTION__SECURITY_DEFINITIONS:
+      case ThingDescriptionJsonPackage.JSON_THING__SECURITY_DEFINITIONS:
         return getSecurityDefinitions();
     }
     return super.eGet(featureID, resolve, coreType);
@@ -830,71 +830,71 @@ public class JsonThingDescriptionImpl extends MinimalEObjectImpl.Container imple
   {
     switch (featureID)
     {
-      case ThingDescriptionJsonPackage.JSON_THING_DESCRIPTION__LD_CONTEXT:
+      case ThingDescriptionJsonPackage.JSON_THING__LD_CONTEXT:
         getLd_context().clear();
         getLd_context().addAll((Collection<? extends String>)newValue);
         return;
-      case ThingDescriptionJsonPackage.JSON_THING_DESCRIPTION__LD_TYPE:
+      case ThingDescriptionJsonPackage.JSON_THING__LD_TYPE:
         getLd_type().clear();
         getLd_type().addAll((Collection<? extends String>)newValue);
         return;
-      case ThingDescriptionJsonPackage.JSON_THING_DESCRIPTION__ID:
+      case ThingDescriptionJsonPackage.JSON_THING__ID:
         setId((String)newValue);
         return;
-      case ThingDescriptionJsonPackage.JSON_THING_DESCRIPTION__TITLE:
+      case ThingDescriptionJsonPackage.JSON_THING__TITLE:
         setTitle((String)newValue);
         return;
-      case ThingDescriptionJsonPackage.JSON_THING_DESCRIPTION__DESCRIPTION:
+      case ThingDescriptionJsonPackage.JSON_THING__DESCRIPTION:
         setDescription((String)newValue);
         return;
-      case ThingDescriptionJsonPackage.JSON_THING_DESCRIPTION__CREATED:
+      case ThingDescriptionJsonPackage.JSON_THING__CREATED:
         setCreated((String)newValue);
         return;
-      case ThingDescriptionJsonPackage.JSON_THING_DESCRIPTION__MODIFIED:
+      case ThingDescriptionJsonPackage.JSON_THING__MODIFIED:
         setModified((String)newValue);
         return;
-      case ThingDescriptionJsonPackage.JSON_THING_DESCRIPTION__SUPPORT:
+      case ThingDescriptionJsonPackage.JSON_THING__SUPPORT:
         setSupport((String)newValue);
         return;
-      case ThingDescriptionJsonPackage.JSON_THING_DESCRIPTION__BASE:
+      case ThingDescriptionJsonPackage.JSON_THING__BASE:
         setBase((String)newValue);
         return;
-      case ThingDescriptionJsonPackage.JSON_THING_DESCRIPTION__SECURITY:
+      case ThingDescriptionJsonPackage.JSON_THING__SECURITY:
         getSecurity().clear();
         getSecurity().addAll((Collection<? extends String>)newValue);
         return;
-      case ThingDescriptionJsonPackage.JSON_THING_DESCRIPTION__FORMS:
+      case ThingDescriptionJsonPackage.JSON_THING__FORMS:
         getForms().clear();
         getForms().addAll((Collection<? extends JsonForm>)newValue);
         return;
-      case ThingDescriptionJsonPackage.JSON_THING_DESCRIPTION__LINKS:
+      case ThingDescriptionJsonPackage.JSON_THING__LINKS:
         getLinks().clear();
         getLinks().addAll((Collection<? extends JsonLink>)newValue);
         return;
-      case ThingDescriptionJsonPackage.JSON_THING_DESCRIPTION__TITLES:
+      case ThingDescriptionJsonPackage.JSON_THING__TITLES:
         getTitles().clear();
         getTitles().addAll((Collection<? extends JsonMultiLanguageEntry>)newValue);
         return;
-      case ThingDescriptionJsonPackage.JSON_THING_DESCRIPTION__DESCRIPTIONS:
+      case ThingDescriptionJsonPackage.JSON_THING__DESCRIPTIONS:
         getDescriptions().clear();
         getDescriptions().addAll((Collection<? extends JsonMultiLanguageEntry>)newValue);
         return;
-      case ThingDescriptionJsonPackage.JSON_THING_DESCRIPTION__VERSION:
+      case ThingDescriptionJsonPackage.JSON_THING__VERSION:
         setVersion((JsonVersionInfo)newValue);
         return;
-      case ThingDescriptionJsonPackage.JSON_THING_DESCRIPTION__PROPERTIES:
+      case ThingDescriptionJsonPackage.JSON_THING__PROPERTIES:
         getProperties().clear();
         getProperties().addAll((Collection<? extends JsonPropertyAffordance>)newValue);
         return;
-      case ThingDescriptionJsonPackage.JSON_THING_DESCRIPTION__ACTIONS:
+      case ThingDescriptionJsonPackage.JSON_THING__ACTIONS:
         getActions().clear();
         getActions().addAll((Collection<? extends JsonActionAffordance>)newValue);
         return;
-      case ThingDescriptionJsonPackage.JSON_THING_DESCRIPTION__EVENTS:
+      case ThingDescriptionJsonPackage.JSON_THING__EVENTS:
         getEvents().clear();
         getEvents().addAll((Collection<? extends JsonEventAffordance>)newValue);
         return;
-      case ThingDescriptionJsonPackage.JSON_THING_DESCRIPTION__SECURITY_DEFINITIONS:
+      case ThingDescriptionJsonPackage.JSON_THING__SECURITY_DEFINITIONS:
         getSecurityDefinitions().clear();
         getSecurityDefinitions().addAll((Collection<? extends JsonSecurityScheme>)newValue);
         return;
@@ -912,61 +912,61 @@ public class JsonThingDescriptionImpl extends MinimalEObjectImpl.Container imple
   {
     switch (featureID)
     {
-      case ThingDescriptionJsonPackage.JSON_THING_DESCRIPTION__LD_CONTEXT:
+      case ThingDescriptionJsonPackage.JSON_THING__LD_CONTEXT:
         getLd_context().clear();
         return;
-      case ThingDescriptionJsonPackage.JSON_THING_DESCRIPTION__LD_TYPE:
+      case ThingDescriptionJsonPackage.JSON_THING__LD_TYPE:
         getLd_type().clear();
         return;
-      case ThingDescriptionJsonPackage.JSON_THING_DESCRIPTION__ID:
+      case ThingDescriptionJsonPackage.JSON_THING__ID:
         setId(ID_EDEFAULT);
         return;
-      case ThingDescriptionJsonPackage.JSON_THING_DESCRIPTION__TITLE:
+      case ThingDescriptionJsonPackage.JSON_THING__TITLE:
         setTitle(TITLE_EDEFAULT);
         return;
-      case ThingDescriptionJsonPackage.JSON_THING_DESCRIPTION__DESCRIPTION:
+      case ThingDescriptionJsonPackage.JSON_THING__DESCRIPTION:
         setDescription(DESCRIPTION_EDEFAULT);
         return;
-      case ThingDescriptionJsonPackage.JSON_THING_DESCRIPTION__CREATED:
+      case ThingDescriptionJsonPackage.JSON_THING__CREATED:
         setCreated(CREATED_EDEFAULT);
         return;
-      case ThingDescriptionJsonPackage.JSON_THING_DESCRIPTION__MODIFIED:
+      case ThingDescriptionJsonPackage.JSON_THING__MODIFIED:
         setModified(MODIFIED_EDEFAULT);
         return;
-      case ThingDescriptionJsonPackage.JSON_THING_DESCRIPTION__SUPPORT:
+      case ThingDescriptionJsonPackage.JSON_THING__SUPPORT:
         setSupport(SUPPORT_EDEFAULT);
         return;
-      case ThingDescriptionJsonPackage.JSON_THING_DESCRIPTION__BASE:
+      case ThingDescriptionJsonPackage.JSON_THING__BASE:
         setBase(BASE_EDEFAULT);
         return;
-      case ThingDescriptionJsonPackage.JSON_THING_DESCRIPTION__SECURITY:
+      case ThingDescriptionJsonPackage.JSON_THING__SECURITY:
         getSecurity().clear();
         return;
-      case ThingDescriptionJsonPackage.JSON_THING_DESCRIPTION__FORMS:
+      case ThingDescriptionJsonPackage.JSON_THING__FORMS:
         getForms().clear();
         return;
-      case ThingDescriptionJsonPackage.JSON_THING_DESCRIPTION__LINKS:
+      case ThingDescriptionJsonPackage.JSON_THING__LINKS:
         getLinks().clear();
         return;
-      case ThingDescriptionJsonPackage.JSON_THING_DESCRIPTION__TITLES:
+      case ThingDescriptionJsonPackage.JSON_THING__TITLES:
         getTitles().clear();
         return;
-      case ThingDescriptionJsonPackage.JSON_THING_DESCRIPTION__DESCRIPTIONS:
+      case ThingDescriptionJsonPackage.JSON_THING__DESCRIPTIONS:
         getDescriptions().clear();
         return;
-      case ThingDescriptionJsonPackage.JSON_THING_DESCRIPTION__VERSION:
+      case ThingDescriptionJsonPackage.JSON_THING__VERSION:
         setVersion((JsonVersionInfo)null);
         return;
-      case ThingDescriptionJsonPackage.JSON_THING_DESCRIPTION__PROPERTIES:
+      case ThingDescriptionJsonPackage.JSON_THING__PROPERTIES:
         getProperties().clear();
         return;
-      case ThingDescriptionJsonPackage.JSON_THING_DESCRIPTION__ACTIONS:
+      case ThingDescriptionJsonPackage.JSON_THING__ACTIONS:
         getActions().clear();
         return;
-      case ThingDescriptionJsonPackage.JSON_THING_DESCRIPTION__EVENTS:
+      case ThingDescriptionJsonPackage.JSON_THING__EVENTS:
         getEvents().clear();
         return;
-      case ThingDescriptionJsonPackage.JSON_THING_DESCRIPTION__SECURITY_DEFINITIONS:
+      case ThingDescriptionJsonPackage.JSON_THING__SECURITY_DEFINITIONS:
         getSecurityDefinitions().clear();
         return;
     }
@@ -983,43 +983,43 @@ public class JsonThingDescriptionImpl extends MinimalEObjectImpl.Container imple
   {
     switch (featureID)
     {
-      case ThingDescriptionJsonPackage.JSON_THING_DESCRIPTION__LD_CONTEXT:
+      case ThingDescriptionJsonPackage.JSON_THING__LD_CONTEXT:
         return ld_context != null && !ld_context.isEmpty();
-      case ThingDescriptionJsonPackage.JSON_THING_DESCRIPTION__LD_TYPE:
+      case ThingDescriptionJsonPackage.JSON_THING__LD_TYPE:
         return ld_type != null && !ld_type.isEmpty();
-      case ThingDescriptionJsonPackage.JSON_THING_DESCRIPTION__ID:
+      case ThingDescriptionJsonPackage.JSON_THING__ID:
         return ID_EDEFAULT == null ? id != null : !ID_EDEFAULT.equals(id);
-      case ThingDescriptionJsonPackage.JSON_THING_DESCRIPTION__TITLE:
+      case ThingDescriptionJsonPackage.JSON_THING__TITLE:
         return TITLE_EDEFAULT == null ? title != null : !TITLE_EDEFAULT.equals(title);
-      case ThingDescriptionJsonPackage.JSON_THING_DESCRIPTION__DESCRIPTION:
+      case ThingDescriptionJsonPackage.JSON_THING__DESCRIPTION:
         return DESCRIPTION_EDEFAULT == null ? description != null : !DESCRIPTION_EDEFAULT.equals(description);
-      case ThingDescriptionJsonPackage.JSON_THING_DESCRIPTION__CREATED:
+      case ThingDescriptionJsonPackage.JSON_THING__CREATED:
         return CREATED_EDEFAULT == null ? created != null : !CREATED_EDEFAULT.equals(created);
-      case ThingDescriptionJsonPackage.JSON_THING_DESCRIPTION__MODIFIED:
+      case ThingDescriptionJsonPackage.JSON_THING__MODIFIED:
         return MODIFIED_EDEFAULT == null ? modified != null : !MODIFIED_EDEFAULT.equals(modified);
-      case ThingDescriptionJsonPackage.JSON_THING_DESCRIPTION__SUPPORT:
+      case ThingDescriptionJsonPackage.JSON_THING__SUPPORT:
         return SUPPORT_EDEFAULT == null ? support != null : !SUPPORT_EDEFAULT.equals(support);
-      case ThingDescriptionJsonPackage.JSON_THING_DESCRIPTION__BASE:
+      case ThingDescriptionJsonPackage.JSON_THING__BASE:
         return BASE_EDEFAULT == null ? base != null : !BASE_EDEFAULT.equals(base);
-      case ThingDescriptionJsonPackage.JSON_THING_DESCRIPTION__SECURITY:
+      case ThingDescriptionJsonPackage.JSON_THING__SECURITY:
         return security != null && !security.isEmpty();
-      case ThingDescriptionJsonPackage.JSON_THING_DESCRIPTION__FORMS:
+      case ThingDescriptionJsonPackage.JSON_THING__FORMS:
         return forms != null && !forms.isEmpty();
-      case ThingDescriptionJsonPackage.JSON_THING_DESCRIPTION__LINKS:
+      case ThingDescriptionJsonPackage.JSON_THING__LINKS:
         return links != null && !links.isEmpty();
-      case ThingDescriptionJsonPackage.JSON_THING_DESCRIPTION__TITLES:
+      case ThingDescriptionJsonPackage.JSON_THING__TITLES:
         return titles != null && !titles.isEmpty();
-      case ThingDescriptionJsonPackage.JSON_THING_DESCRIPTION__DESCRIPTIONS:
+      case ThingDescriptionJsonPackage.JSON_THING__DESCRIPTIONS:
         return descriptions != null && !descriptions.isEmpty();
-      case ThingDescriptionJsonPackage.JSON_THING_DESCRIPTION__VERSION:
+      case ThingDescriptionJsonPackage.JSON_THING__VERSION:
         return version != null;
-      case ThingDescriptionJsonPackage.JSON_THING_DESCRIPTION__PROPERTIES:
+      case ThingDescriptionJsonPackage.JSON_THING__PROPERTIES:
         return properties != null && !properties.isEmpty();
-      case ThingDescriptionJsonPackage.JSON_THING_DESCRIPTION__ACTIONS:
+      case ThingDescriptionJsonPackage.JSON_THING__ACTIONS:
         return actions != null && !actions.isEmpty();
-      case ThingDescriptionJsonPackage.JSON_THING_DESCRIPTION__EVENTS:
+      case ThingDescriptionJsonPackage.JSON_THING__EVENTS:
         return events != null && !events.isEmpty();
-      case ThingDescriptionJsonPackage.JSON_THING_DESCRIPTION__SECURITY_DEFINITIONS:
+      case ThingDescriptionJsonPackage.JSON_THING__SECURITY_DEFINITIONS:
         return securityDefinitions != null && !securityDefinitions.isEmpty();
     }
     return super.eIsSet(featureID);
@@ -1060,4 +1060,4 @@ public class JsonThingDescriptionImpl extends MinimalEObjectImpl.Container imple
     return result.toString();
   }
 
-} //JsonThingDescriptionImpl
+} //JsonThingImpl

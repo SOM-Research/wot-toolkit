@@ -66,7 +66,7 @@ public class ThingDescriptionJsonFactoryImpl extends EFactoryImpl implements Thi
   {
     switch (eClass.getClassifierID())
     {
-      case ThingDescriptionJsonPackage.JSON_THING_DESCRIPTION: return createJsonThingDescription();
+      case ThingDescriptionJsonPackage.JSON_THING: return createJsonThing();
       case ThingDescriptionJsonPackage.JSON_VERSION_INFO: return createJsonVersionInfo();
       case ThingDescriptionJsonPackage.JSON_SECURITY_SCHEME: return createJsonSecurityScheme();
       case ThingDescriptionJsonPackage.JSON_PROPERTY_AFFORDANCE: return createJsonPropertyAffordance();
@@ -126,10 +126,10 @@ public class ThingDescriptionJsonFactoryImpl extends EFactoryImpl implements Thi
    * @generated
    */
   @Override
-  public JsonThingDescription createJsonThingDescription()
+  public JsonThing createJsonThing()
   {
-    JsonThingDescriptionImpl jsonThingDescription = new JsonThingDescriptionImpl();
-    return jsonThingDescription;
+    JsonThingImpl jsonThing = new JsonThingImpl();
+    return jsonThing;
   }
 
   /**

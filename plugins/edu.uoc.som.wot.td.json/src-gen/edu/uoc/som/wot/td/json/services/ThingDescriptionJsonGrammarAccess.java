@@ -26,10 +26,10 @@ import org.eclipse.xtext.service.GrammarProvider;
 @Singleton
 public class ThingDescriptionJsonGrammarAccess extends AbstractGrammarElementFinder {
 	
-	public class JsonThingDescriptionElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "edu.uoc.som.wot.td.json.ThingDescriptionJson.JsonThingDescription");
+	public class JsonThingElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "edu.uoc.som.wot.td.json.ThingDescriptionJson.JsonThing");
 		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Action cJsonThingDescriptionAction_0 = (Action)cGroup.eContents().get(0);
+		private final Action cJsonThingAction_0 = (Action)cGroup.eContents().get(0);
 		private final Keyword cLeftCurlyBracketKeyword_1 = (Keyword)cGroup.eContents().get(1);
 		private final UnorderedGroup cUnorderedGroup_2 = (UnorderedGroup)cGroup.eContents().get(2);
 		private final Group cGroup_2_0 = (Group)cUnorderedGroup_2.eContents().get(0);
@@ -230,10 +230,10 @@ public class ThingDescriptionJsonGrammarAccess extends AbstractGrammarElementFin
 		private final Keyword cCommaKeyword_2_18_6 = (Keyword)cGroup_2_18.eContents().get(6);
 		private final Keyword cRightCurlyBracketKeyword_3 = (Keyword)cGroup.eContents().get(3);
 		
-		//JsonThingDescription:
-		//	{JsonThingDescription} '{' ('"@context"' ':' (ld_context+=AnyString | '[' (ld_context+=AnyString |
-		//	JsonGenericExpression) (',' (ld_context+=AnyString | JsonGenericExpression))* ']') ','? & ('"@type"' ':'
-		//	(ld_type+=AnyString | '[' ld_type+=AnyString (',' ld_type+=AnyString)* ']') ','?)?
+		//JsonThing:
+		//	{JsonThing} '{' ('"@context"' ':' (ld_context+=AnyString | '[' (ld_context+=AnyString | JsonGenericExpression) (','
+		//	(ld_context+=AnyString | JsonGenericExpression))* ']') ','? & ('"@type"' ':' (ld_type+=AnyString | '['
+		//	ld_type+=AnyString (',' ld_type+=AnyString)* ']') ','?)?
 		//	& ('"id"' ':' id=AnyString ','?)?
 		//	& ('"title"' ':' title=AnyString ','?)?
 		//	& ('"description"' ':' description=AnyString ','?)?
@@ -255,14 +255,14 @@ public class ThingDescriptionJsonGrammarAccess extends AbstractGrammarElementFin
 		//	securityDefinitions+=JsonSecurityScheme)* '}' ','?)?) '}';
 		@Override public ParserRule getRule() { return rule; }
 		
-		//{JsonThingDescription} '{' ('"@context"' ':' (ld_context+=AnyString | '[' (ld_context+=AnyString |
-		//JsonGenericExpression) (',' (ld_context+=AnyString | JsonGenericExpression))* ']') ','? & ('"@type"' ':'
-		//(ld_type+=AnyString | '[' ld_type+=AnyString (',' ld_type+=AnyString)* ']') ','?)? & ('"id"' ':' id=AnyString ','?)? &
-		//('"title"' ':' title=AnyString ','?)? & ('"description"' ':' description=AnyString ','?)? & ('"created"' ':'
-		//created=AnyString ','?)? & ('"modified"' ':' modified=AnyString ','?)? & ('"support"' ':' support=AnyString ','?)? &
-		//('"base"' ':' base=AnyString ','?)? & ('"security"' ':' (security+=AnyString | '[' security+=AnyString (','
-		//security+=AnyString)* ']') ','?)? & ('"forms"' ':' '{' forms+=JsonForm (',' forms+=JsonForm)* '}' ','?)? & ('"links"'
-		//':' '{' links+=JsonLink (',' links+=JsonLink)* '}' ','?)? & ('"titles"' ':' '{' titles+=JsonMultiLanguageEntry (','
+		//{JsonThing} '{' ('"@context"' ':' (ld_context+=AnyString | '[' (ld_context+=AnyString | JsonGenericExpression) (','
+		//(ld_context+=AnyString | JsonGenericExpression))* ']') ','? & ('"@type"' ':' (ld_type+=AnyString | '['
+		//ld_type+=AnyString (',' ld_type+=AnyString)* ']') ','?)? & ('"id"' ':' id=AnyString ','?)? & ('"title"' ':'
+		//title=AnyString ','?)? & ('"description"' ':' description=AnyString ','?)? & ('"created"' ':' created=AnyString ','?)?
+		//& ('"modified"' ':' modified=AnyString ','?)? & ('"support"' ':' support=AnyString ','?)? & ('"base"' ':'
+		//base=AnyString ','?)? & ('"security"' ':' (security+=AnyString | '[' security+=AnyString (',' security+=AnyString)*
+		//']') ','?)? & ('"forms"' ':' '{' forms+=JsonForm (',' forms+=JsonForm)* '}' ','?)? & ('"links"' ':' '{'
+		//links+=JsonLink (',' links+=JsonLink)* '}' ','?)? & ('"titles"' ':' '{' titles+=JsonMultiLanguageEntry (','
 		//titles+=JsonMultiLanguageEntry)* '}' ','?)? & ('"descriptions"' ':' '{' descriptions+=JsonMultiLanguageEntry (','
 		//descriptions+=JsonMultiLanguageEntry)* '}' ','?)? & ('"version"' ':' version=JsonVersionInfo ','?)? & ('"properties"'
 		//':' '{' properties+=JsonPropertyAffordance (',' properties+=JsonPropertyAffordance)* '}' ','?)? & ('"actions"' ':' '{'
@@ -271,8 +271,8 @@ public class ThingDescriptionJsonGrammarAccess extends AbstractGrammarElementFin
 		//securityDefinitions+=JsonSecurityScheme (',' securityDefinitions+=JsonSecurityScheme)* '}' ','?)?) '}'
 		public Group getGroup() { return cGroup; }
 		
-		//{JsonThingDescription}
-		public Action getJsonThingDescriptionAction_0() { return cJsonThingDescriptionAction_0; }
+		//{JsonThing}
+		public Action getJsonThingAction_0() { return cJsonThingAction_0; }
 		
 		//'{'
 		public Keyword getLeftCurlyBracketKeyword_1() { return cLeftCurlyBracketKeyword_1; }
@@ -4537,7 +4537,7 @@ public class ThingDescriptionJsonGrammarAccess extends AbstractGrammarElementFin
 		public Keyword getNullNullKeyword_6_0() { return cNullNullKeyword_6_0; }
 	}
 	
-	private final JsonThingDescriptionElements pJsonThingDescription;
+	private final JsonThingElements pJsonThing;
 	private final JsonVersionInfoElements pJsonVersionInfo;
 	private final JsonSecuritySchemeElements pJsonSecurityScheme;
 	private final JsonPropertyAffordanceElements pJsonPropertyAffordance;
@@ -4566,7 +4566,7 @@ public class ThingDescriptionJsonGrammarAccess extends AbstractGrammarElementFin
 	@Inject
 	public ThingDescriptionJsonGrammarAccess(GrammarProvider grammarProvider) {
 		this.grammar = internalFindGrammar(grammarProvider);
-		this.pJsonThingDescription = new JsonThingDescriptionElements();
+		this.pJsonThing = new JsonThingElements();
 		this.pJsonVersionInfo = new JsonVersionInfoElements();
 		this.pJsonSecurityScheme = new JsonSecuritySchemeElements();
 		this.pJsonPropertyAffordance = new JsonPropertyAffordanceElements();
@@ -4614,10 +4614,10 @@ public class ThingDescriptionJsonGrammarAccess extends AbstractGrammarElementFin
 	
 
 	
-	//JsonThingDescription:
-	//	{JsonThingDescription} '{' ('"@context"' ':' (ld_context+=AnyString | '[' (ld_context+=AnyString |
-	//	JsonGenericExpression) (',' (ld_context+=AnyString | JsonGenericExpression))* ']') ','? & ('"@type"' ':'
-	//	(ld_type+=AnyString | '[' ld_type+=AnyString (',' ld_type+=AnyString)* ']') ','?)?
+	//JsonThing:
+	//	{JsonThing} '{' ('"@context"' ':' (ld_context+=AnyString | '[' (ld_context+=AnyString | JsonGenericExpression) (','
+	//	(ld_context+=AnyString | JsonGenericExpression))* ']') ','? & ('"@type"' ':' (ld_type+=AnyString | '['
+	//	ld_type+=AnyString (',' ld_type+=AnyString)* ']') ','?)?
 	//	& ('"id"' ':' id=AnyString ','?)?
 	//	& ('"title"' ':' title=AnyString ','?)?
 	//	& ('"description"' ':' description=AnyString ','?)?
@@ -4637,12 +4637,12 @@ public class ThingDescriptionJsonGrammarAccess extends AbstractGrammarElementFin
 	//	& ('"events"' ':' '{' events+=JsonEventAffordance (',' events+=JsonEventAffordance)* '}' ','?)?
 	//	& ('"securityDefinitions"' ':' '{' securityDefinitions+=JsonSecurityScheme (','
 	//	securityDefinitions+=JsonSecurityScheme)* '}' ','?)?) '}';
-	public JsonThingDescriptionElements getJsonThingDescriptionAccess() {
-		return pJsonThingDescription;
+	public JsonThingElements getJsonThingAccess() {
+		return pJsonThing;
 	}
 	
-	public ParserRule getJsonThingDescriptionRule() {
-		return getJsonThingDescriptionAccess().getRule();
+	public ParserRule getJsonThingRule() {
+		return getJsonThingAccess().getRule();
 	}
 	
 	//JsonVersionInfo:

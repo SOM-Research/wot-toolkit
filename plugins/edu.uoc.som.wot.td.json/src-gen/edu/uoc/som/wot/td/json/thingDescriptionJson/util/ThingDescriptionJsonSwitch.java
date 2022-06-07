@@ -73,10 +73,10 @@ public class ThingDescriptionJsonSwitch<T> extends Switch<T>
   {
     switch (classifierID)
     {
-      case ThingDescriptionJsonPackage.JSON_THING_DESCRIPTION:
+      case ThingDescriptionJsonPackage.JSON_THING:
       {
-        JsonThingDescription jsonThingDescription = (JsonThingDescription)theEObject;
-        T result = caseJsonThingDescription(jsonThingDescription);
+        JsonThing jsonThing = (JsonThing)theEObject;
+        T result = caseJsonThing(jsonThing);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -155,17 +155,17 @@ public class ThingDescriptionJsonSwitch<T> extends Switch<T>
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>Json Thing Description</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Json Thing</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Json Thing Description</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Json Thing</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T caseJsonThingDescription(JsonThingDescription object)
+  public T caseJsonThing(JsonThing object)
   {
     return null;
   }

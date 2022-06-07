@@ -19,26 +19,26 @@
       <genEnumLiterals ecoreEnumLiteral="ThingDescriptionJson.ecore#//JsonType/array"/>
       <genEnumLiterals ecoreEnumLiteral="ThingDescriptionJson.ecore#//JsonType/null"/>
     </genEnums>
-    <genClasses ecoreClass="ThingDescriptionJson.ecore#//JsonThingDescription">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ThingDescriptionJson.ecore#//JsonThingDescription/ld_context"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ThingDescriptionJson.ecore#//JsonThingDescription/ld_type"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ThingDescriptionJson.ecore#//JsonThingDescription/id"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ThingDescriptionJson.ecore#//JsonThingDescription/title"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ThingDescriptionJson.ecore#//JsonThingDescription/description"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ThingDescriptionJson.ecore#//JsonThingDescription/created"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ThingDescriptionJson.ecore#//JsonThingDescription/modified"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ThingDescriptionJson.ecore#//JsonThingDescription/support"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ThingDescriptionJson.ecore#//JsonThingDescription/base"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ThingDescriptionJson.ecore#//JsonThingDescription/security"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ThingDescriptionJson.ecore#//JsonThingDescription/forms"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ThingDescriptionJson.ecore#//JsonThingDescription/links"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ThingDescriptionJson.ecore#//JsonThingDescription/titles"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ThingDescriptionJson.ecore#//JsonThingDescription/descriptions"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ThingDescriptionJson.ecore#//JsonThingDescription/version"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ThingDescriptionJson.ecore#//JsonThingDescription/properties"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ThingDescriptionJson.ecore#//JsonThingDescription/actions"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ThingDescriptionJson.ecore#//JsonThingDescription/events"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ThingDescriptionJson.ecore#//JsonThingDescription/securityDefinitions"/>
+    <genClasses ecoreClass="ThingDescriptionJson.ecore#//JsonThing">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ThingDescriptionJson.ecore#//JsonThing/ld_context"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ThingDescriptionJson.ecore#//JsonThing/ld_type"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ThingDescriptionJson.ecore#//JsonThing/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ThingDescriptionJson.ecore#//JsonThing/title"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ThingDescriptionJson.ecore#//JsonThing/description"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ThingDescriptionJson.ecore#//JsonThing/created"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ThingDescriptionJson.ecore#//JsonThing/modified"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ThingDescriptionJson.ecore#//JsonThing/support"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ThingDescriptionJson.ecore#//JsonThing/base"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ThingDescriptionJson.ecore#//JsonThing/security"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ThingDescriptionJson.ecore#//JsonThing/forms"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ThingDescriptionJson.ecore#//JsonThing/links"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ThingDescriptionJson.ecore#//JsonThing/titles"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ThingDescriptionJson.ecore#//JsonThing/descriptions"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ThingDescriptionJson.ecore#//JsonThing/version"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ThingDescriptionJson.ecore#//JsonThing/properties"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ThingDescriptionJson.ecore#//JsonThing/actions"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ThingDescriptionJson.ecore#//JsonThing/events"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ThingDescriptionJson.ecore#//JsonThing/securityDefinitions"/>
     </genClasses>
     <genClasses ecoreClass="ThingDescriptionJson.ecore#//JsonVersionInfo">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ThingDescriptionJson.ecore#//JsonVersionInfo/instance"/>

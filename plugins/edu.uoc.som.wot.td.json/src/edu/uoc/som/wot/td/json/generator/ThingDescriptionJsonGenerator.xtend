@@ -32,7 +32,6 @@ import edu.uoc.som.wot.td.json.thingDescriptionJson.JsonLink
 import edu.uoc.som.wot.td.json.thingDescriptionJson.JsonMultiLanguageEntry
 import edu.uoc.som.wot.td.json.thingDescriptionJson.JsonPropertyAffordance
 import edu.uoc.som.wot.td.json.thingDescriptionJson.JsonSecurityScheme
-import edu.uoc.som.wot.td.json.thingDescriptionJson.JsonThingDescription
 import edu.uoc.som.wot.td.json.thingDescriptionJson.JsonVersionInfo
 import java.util.Collections
 import javax.xml.datatype.DatatypeFactory
@@ -43,6 +42,7 @@ import org.eclipse.emf.ecore.xmi.impl.XMIResourceImpl
 import org.eclipse.xtext.generator.AbstractGenerator
 import org.eclipse.xtext.generator.IFileSystemAccess2
 import org.eclipse.xtext.generator.IGeneratorContext
+import edu.uoc.som.wot.td.json.thingDescriptionJson.JsonThing
 
 class ThingDescriptionJsonGenerator extends AbstractGenerator {
 
@@ -55,11 +55,11 @@ class ThingDescriptionJsonGenerator extends AbstractGenerator {
 	
 	static def Resource transform(Resource resource) {
 		return new XMIResourceImpl() => [
-			contents.addAll(resource.allContents.toIterable.filter(JsonThingDescription).map[toThing])
+			contents += resource.allContents.toIterable.filter(JsonThing).map[toThing]
 		]
 	}
 
-	static def Thing toThing(JsonThingDescription jtd) {
+	static def Thing toThing(JsonThing jtd) {
 		return TdFactory.eINSTANCE.createThing => [
 			id = jtd.id
 			title = jtd.title
@@ -68,16 +68,16 @@ class ThingDescriptionJsonGenerator extends AbstractGenerator {
 			modified = jtd.modified?.toXMLGregorianCalendar
 			support = jtd.support
 			base = jtd.base
-			security.addAll(jtd.security)
-			forms.addAll(jtd.forms.map[toForm])
-			links.addAll(jtd.links.map[toLink])
+			security += jtd.security
+			forms += jtd.forms.map[toForm]
+			links += jtd.links.map[toLink]
 			titles = jtd.titles?.toMultiLanguage
 			descriptions= jtd.descriptions?.toMultiLanguage
 			version = jtd.version?.toVersionInfo
-			securityDefinitions.addAll(jtd.securityDefinitions.map[toSecurityScheme])
-			properties.addAll(jtd.properties.map[toPropertyAffordance])
-			actions.addAll(jtd.actions.map[toActionAffordance])
-			events.addAll(jtd.events.map[toEventAffordance])
+			securityDefinitions += jtd.securityDefinitions.map[toSecurityScheme]
+			properties += jtd.properties.map[toPropertyAffordance]
+			actions += jtd.actions.map[toActionAffordance]
+			events += jtd.events.map[toEventAffordance]
 		]
 	}
 	
@@ -91,13 +91,13 @@ class ThingDescriptionJsonGenerator extends AbstractGenerator {
 	
 	static def Form toForm(JsonForm jf) {
 		return TdFactory.eINSTANCE.createForm => [
-			op.addAll(jf.op)
+			op += jf.op
 			href = jf._href
 			contentType = jf.contentType
 			contentCoding = jf.contentCoding
 			subProtocol = jf.subprotocol
-			security.addAll(jf.security)
-			scopes.addAll(jf.scopes)
+			security += jf.security
+			scopes += jf.scopes
 			response = jf.response?.toExpectedResponse
 		]
 	}
@@ -141,11 +141,11 @@ class ThingDescriptionJsonGenerator extends AbstractGenerator {
 			readOnly = (jpa.readOnly == JsonBoolean._TRUE)			
 			writeOnly = (jpa.writeOnly == JsonBoolean._TRUE)
 			format = jpa.format
-			oneOf.addAll(jpa.oneOf.map[toDataSchema])
+			oneOf += jpa.oneOf.map[toDataSchema]
 			titles = jpa.titles?.toMultiLanguage
 			descriptions = jpa.descriptions?.toMultiLanguage
-			forms.addAll(jpa.forms.map[toForm])
-			uriVariable.addAll(jpa.uriVariable.map[toDataSchema])
+			forms += jpa.forms.map[toForm]
+			uriVariable += jpa.uriVariable.map[toDataSchema]
 			observable = (jpa.observable == JsonBoolean._TRUE)
 		]
 	}
@@ -157,8 +157,8 @@ class ThingDescriptionJsonGenerator extends AbstractGenerator {
 			description = jaa.description
 			titles = jaa.titles?.toMultiLanguage
 			descriptions = jaa.descriptions?.toMultiLanguage
-			forms.addAll(jaa.forms.map[toForm])
-			uriVariable.addAll(jaa.uriVariable.map[toDataSchema])
+			forms += jaa.forms.map[toForm]
+			uriVariable += jaa.uriVariable.map[toDataSchema]
 			safe = (jaa.safe == JsonBoolean._TRUE)
 			idempotent = (jaa.idempotent == JsonBoolean._TRUE)
 			input = jaa.input?.toDataSchema
@@ -173,8 +173,8 @@ class ThingDescriptionJsonGenerator extends AbstractGenerator {
 			description = jvi.description
 			titles = jvi.titles?.toMultiLanguage
 			descriptions = jvi.descriptions?.toMultiLanguage
-			forms.addAll(jvi.forms.map[toForm])
-			uriVariable.addAll(jvi.uriVariable.map[toDataSchema])
+			forms += jvi.forms.map[toForm]
+			uriVariable += jvi.uriVariable.map[toDataSchema]
 			data = jvi.data?.toDataSchema
 			subscription = jvi.subscription?.toDataSchema
 			cancellation = jvi.cancellation?.toDataSchema
@@ -199,7 +199,7 @@ class ThingDescriptionJsonGenerator extends AbstractGenerator {
 			readOnly = (jds.readOnly == JsonBoolean._TRUE)			
 			writeOnly = (jds.writeOnly == JsonBoolean._TRUE)
 			format = jds.format
-			oneOf.addAll(jds.oneOf.map[toDataSchema])
+			oneOf += jds.oneOf.map[toDataSchema]
 			titles = jds.titles?.toMultiLanguage
 			descriptions = jds.descriptions?.toMultiLanguage
 		]
@@ -209,14 +209,14 @@ class ThingDescriptionJsonGenerator extends AbstractGenerator {
 		return TdFactory.eINSTANCE.createArraySchema => [
 			minItems = jds.minItems
 			maxItems = jds.maxItems
-			items.addAll(jds.items.map[toDataSchema])
+			items += jds.items.map[toDataSchema]
 		]
 	}
 
 	static def ObjectSchema toObjectSchema(JsonDataSchema jds) {
 		return TdFactory.eINSTANCE.createObjectSchema => [
-			required.addAll(jds.required)
-			properties.addAll(jds.items.map[toDataSchema])
+			required += jds.required
+			properties += jds.items.map[toDataSchema]
 		]
 	}
 

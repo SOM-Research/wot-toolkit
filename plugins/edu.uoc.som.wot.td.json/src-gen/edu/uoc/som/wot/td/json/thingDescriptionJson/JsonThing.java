@@ -9,39 +9,39 @@ import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
- * A representation of the model object '<em><b>Json Thing Description</b></em>'.
+ * A representation of the model object '<em><b>Json Thing</b></em>'.
  * <!-- end-user-doc -->
  *
  * <p>
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link edu.uoc.som.wot.td.json.thingDescriptionJson.JsonThingDescription#getLd_context <em>Ld context</em>}</li>
- *   <li>{@link edu.uoc.som.wot.td.json.thingDescriptionJson.JsonThingDescription#getLd_type <em>Ld type</em>}</li>
- *   <li>{@link edu.uoc.som.wot.td.json.thingDescriptionJson.JsonThingDescription#getId <em>Id</em>}</li>
- *   <li>{@link edu.uoc.som.wot.td.json.thingDescriptionJson.JsonThingDescription#getTitle <em>Title</em>}</li>
- *   <li>{@link edu.uoc.som.wot.td.json.thingDescriptionJson.JsonThingDescription#getDescription <em>Description</em>}</li>
- *   <li>{@link edu.uoc.som.wot.td.json.thingDescriptionJson.JsonThingDescription#getCreated <em>Created</em>}</li>
- *   <li>{@link edu.uoc.som.wot.td.json.thingDescriptionJson.JsonThingDescription#getModified <em>Modified</em>}</li>
- *   <li>{@link edu.uoc.som.wot.td.json.thingDescriptionJson.JsonThingDescription#getSupport <em>Support</em>}</li>
- *   <li>{@link edu.uoc.som.wot.td.json.thingDescriptionJson.JsonThingDescription#getBase <em>Base</em>}</li>
- *   <li>{@link edu.uoc.som.wot.td.json.thingDescriptionJson.JsonThingDescription#getSecurity <em>Security</em>}</li>
- *   <li>{@link edu.uoc.som.wot.td.json.thingDescriptionJson.JsonThingDescription#getForms <em>Forms</em>}</li>
- *   <li>{@link edu.uoc.som.wot.td.json.thingDescriptionJson.JsonThingDescription#getLinks <em>Links</em>}</li>
- *   <li>{@link edu.uoc.som.wot.td.json.thingDescriptionJson.JsonThingDescription#getTitles <em>Titles</em>}</li>
- *   <li>{@link edu.uoc.som.wot.td.json.thingDescriptionJson.JsonThingDescription#getDescriptions <em>Descriptions</em>}</li>
- *   <li>{@link edu.uoc.som.wot.td.json.thingDescriptionJson.JsonThingDescription#getVersion <em>Version</em>}</li>
- *   <li>{@link edu.uoc.som.wot.td.json.thingDescriptionJson.JsonThingDescription#getProperties <em>Properties</em>}</li>
- *   <li>{@link edu.uoc.som.wot.td.json.thingDescriptionJson.JsonThingDescription#getActions <em>Actions</em>}</li>
- *   <li>{@link edu.uoc.som.wot.td.json.thingDescriptionJson.JsonThingDescription#getEvents <em>Events</em>}</li>
- *   <li>{@link edu.uoc.som.wot.td.json.thingDescriptionJson.JsonThingDescription#getSecurityDefinitions <em>Security Definitions</em>}</li>
+ *   <li>{@link edu.uoc.som.wot.td.json.thingDescriptionJson.JsonThing#getLd_context <em>Ld context</em>}</li>
+ *   <li>{@link edu.uoc.som.wot.td.json.thingDescriptionJson.JsonThing#getLd_type <em>Ld type</em>}</li>
+ *   <li>{@link edu.uoc.som.wot.td.json.thingDescriptionJson.JsonThing#getId <em>Id</em>}</li>
+ *   <li>{@link edu.uoc.som.wot.td.json.thingDescriptionJson.JsonThing#getTitle <em>Title</em>}</li>
+ *   <li>{@link edu.uoc.som.wot.td.json.thingDescriptionJson.JsonThing#getDescription <em>Description</em>}</li>
+ *   <li>{@link edu.uoc.som.wot.td.json.thingDescriptionJson.JsonThing#getCreated <em>Created</em>}</li>
+ *   <li>{@link edu.uoc.som.wot.td.json.thingDescriptionJson.JsonThing#getModified <em>Modified</em>}</li>
+ *   <li>{@link edu.uoc.som.wot.td.json.thingDescriptionJson.JsonThing#getSupport <em>Support</em>}</li>
+ *   <li>{@link edu.uoc.som.wot.td.json.thingDescriptionJson.JsonThing#getBase <em>Base</em>}</li>
+ *   <li>{@link edu.uoc.som.wot.td.json.thingDescriptionJson.JsonThing#getSecurity <em>Security</em>}</li>
+ *   <li>{@link edu.uoc.som.wot.td.json.thingDescriptionJson.JsonThing#getForms <em>Forms</em>}</li>
+ *   <li>{@link edu.uoc.som.wot.td.json.thingDescriptionJson.JsonThing#getLinks <em>Links</em>}</li>
+ *   <li>{@link edu.uoc.som.wot.td.json.thingDescriptionJson.JsonThing#getTitles <em>Titles</em>}</li>
+ *   <li>{@link edu.uoc.som.wot.td.json.thingDescriptionJson.JsonThing#getDescriptions <em>Descriptions</em>}</li>
+ *   <li>{@link edu.uoc.som.wot.td.json.thingDescriptionJson.JsonThing#getVersion <em>Version</em>}</li>
+ *   <li>{@link edu.uoc.som.wot.td.json.thingDescriptionJson.JsonThing#getProperties <em>Properties</em>}</li>
+ *   <li>{@link edu.uoc.som.wot.td.json.thingDescriptionJson.JsonThing#getActions <em>Actions</em>}</li>
+ *   <li>{@link edu.uoc.som.wot.td.json.thingDescriptionJson.JsonThing#getEvents <em>Events</em>}</li>
+ *   <li>{@link edu.uoc.som.wot.td.json.thingDescriptionJson.JsonThing#getSecurityDefinitions <em>Security Definitions</em>}</li>
  * </ul>
  *
- * @see edu.uoc.som.wot.td.json.thingDescriptionJson.ThingDescriptionJsonPackage#getJsonThingDescription()
+ * @see edu.uoc.som.wot.td.json.thingDescriptionJson.ThingDescriptionJsonPackage#getJsonThing()
  * @model
  * @generated
  */
-public interface JsonThingDescription extends EObject
+public interface JsonThing extends EObject
 {
   /**
    * Returns the value of the '<em><b>Ld context</b></em>' attribute list.
@@ -49,7 +49,7 @@ public interface JsonThingDescription extends EObject
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the value of the '<em>Ld context</em>' attribute list.
-   * @see edu.uoc.som.wot.td.json.thingDescriptionJson.ThingDescriptionJsonPackage#getJsonThingDescription_Ld_context()
+   * @see edu.uoc.som.wot.td.json.thingDescriptionJson.ThingDescriptionJsonPackage#getJsonThing_Ld_context()
    * @model unique="false"
    * @generated
    */
@@ -61,7 +61,7 @@ public interface JsonThingDescription extends EObject
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the value of the '<em>Ld type</em>' attribute list.
-   * @see edu.uoc.som.wot.td.json.thingDescriptionJson.ThingDescriptionJsonPackage#getJsonThingDescription_Ld_type()
+   * @see edu.uoc.som.wot.td.json.thingDescriptionJson.ThingDescriptionJsonPackage#getJsonThing_Ld_type()
    * @model unique="false"
    * @generated
    */
@@ -73,14 +73,14 @@ public interface JsonThingDescription extends EObject
    * <!-- end-user-doc -->
    * @return the value of the '<em>Id</em>' attribute.
    * @see #setId(String)
-   * @see edu.uoc.som.wot.td.json.thingDescriptionJson.ThingDescriptionJsonPackage#getJsonThingDescription_Id()
+   * @see edu.uoc.som.wot.td.json.thingDescriptionJson.ThingDescriptionJsonPackage#getJsonThing_Id()
    * @model
    * @generated
    */
   String getId();
 
   /**
-   * Sets the value of the '{@link edu.uoc.som.wot.td.json.thingDescriptionJson.JsonThingDescription#getId <em>Id</em>}' attribute.
+   * Sets the value of the '{@link edu.uoc.som.wot.td.json.thingDescriptionJson.JsonThing#getId <em>Id</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @param value the new value of the '<em>Id</em>' attribute.
@@ -95,14 +95,14 @@ public interface JsonThingDescription extends EObject
    * <!-- end-user-doc -->
    * @return the value of the '<em>Title</em>' attribute.
    * @see #setTitle(String)
-   * @see edu.uoc.som.wot.td.json.thingDescriptionJson.ThingDescriptionJsonPackage#getJsonThingDescription_Title()
+   * @see edu.uoc.som.wot.td.json.thingDescriptionJson.ThingDescriptionJsonPackage#getJsonThing_Title()
    * @model
    * @generated
    */
   String getTitle();
 
   /**
-   * Sets the value of the '{@link edu.uoc.som.wot.td.json.thingDescriptionJson.JsonThingDescription#getTitle <em>Title</em>}' attribute.
+   * Sets the value of the '{@link edu.uoc.som.wot.td.json.thingDescriptionJson.JsonThing#getTitle <em>Title</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @param value the new value of the '<em>Title</em>' attribute.
@@ -117,14 +117,14 @@ public interface JsonThingDescription extends EObject
    * <!-- end-user-doc -->
    * @return the value of the '<em>Description</em>' attribute.
    * @see #setDescription(String)
-   * @see edu.uoc.som.wot.td.json.thingDescriptionJson.ThingDescriptionJsonPackage#getJsonThingDescription_Description()
+   * @see edu.uoc.som.wot.td.json.thingDescriptionJson.ThingDescriptionJsonPackage#getJsonThing_Description()
    * @model
    * @generated
    */
   String getDescription();
 
   /**
-   * Sets the value of the '{@link edu.uoc.som.wot.td.json.thingDescriptionJson.JsonThingDescription#getDescription <em>Description</em>}' attribute.
+   * Sets the value of the '{@link edu.uoc.som.wot.td.json.thingDescriptionJson.JsonThing#getDescription <em>Description</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @param value the new value of the '<em>Description</em>' attribute.
@@ -139,14 +139,14 @@ public interface JsonThingDescription extends EObject
    * <!-- end-user-doc -->
    * @return the value of the '<em>Created</em>' attribute.
    * @see #setCreated(String)
-   * @see edu.uoc.som.wot.td.json.thingDescriptionJson.ThingDescriptionJsonPackage#getJsonThingDescription_Created()
+   * @see edu.uoc.som.wot.td.json.thingDescriptionJson.ThingDescriptionJsonPackage#getJsonThing_Created()
    * @model
    * @generated
    */
   String getCreated();
 
   /**
-   * Sets the value of the '{@link edu.uoc.som.wot.td.json.thingDescriptionJson.JsonThingDescription#getCreated <em>Created</em>}' attribute.
+   * Sets the value of the '{@link edu.uoc.som.wot.td.json.thingDescriptionJson.JsonThing#getCreated <em>Created</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @param value the new value of the '<em>Created</em>' attribute.
@@ -161,14 +161,14 @@ public interface JsonThingDescription extends EObject
    * <!-- end-user-doc -->
    * @return the value of the '<em>Modified</em>' attribute.
    * @see #setModified(String)
-   * @see edu.uoc.som.wot.td.json.thingDescriptionJson.ThingDescriptionJsonPackage#getJsonThingDescription_Modified()
+   * @see edu.uoc.som.wot.td.json.thingDescriptionJson.ThingDescriptionJsonPackage#getJsonThing_Modified()
    * @model
    * @generated
    */
   String getModified();
 
   /**
-   * Sets the value of the '{@link edu.uoc.som.wot.td.json.thingDescriptionJson.JsonThingDescription#getModified <em>Modified</em>}' attribute.
+   * Sets the value of the '{@link edu.uoc.som.wot.td.json.thingDescriptionJson.JsonThing#getModified <em>Modified</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @param value the new value of the '<em>Modified</em>' attribute.
@@ -183,14 +183,14 @@ public interface JsonThingDescription extends EObject
    * <!-- end-user-doc -->
    * @return the value of the '<em>Support</em>' attribute.
    * @see #setSupport(String)
-   * @see edu.uoc.som.wot.td.json.thingDescriptionJson.ThingDescriptionJsonPackage#getJsonThingDescription_Support()
+   * @see edu.uoc.som.wot.td.json.thingDescriptionJson.ThingDescriptionJsonPackage#getJsonThing_Support()
    * @model
    * @generated
    */
   String getSupport();
 
   /**
-   * Sets the value of the '{@link edu.uoc.som.wot.td.json.thingDescriptionJson.JsonThingDescription#getSupport <em>Support</em>}' attribute.
+   * Sets the value of the '{@link edu.uoc.som.wot.td.json.thingDescriptionJson.JsonThing#getSupport <em>Support</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @param value the new value of the '<em>Support</em>' attribute.
@@ -205,14 +205,14 @@ public interface JsonThingDescription extends EObject
    * <!-- end-user-doc -->
    * @return the value of the '<em>Base</em>' attribute.
    * @see #setBase(String)
-   * @see edu.uoc.som.wot.td.json.thingDescriptionJson.ThingDescriptionJsonPackage#getJsonThingDescription_Base()
+   * @see edu.uoc.som.wot.td.json.thingDescriptionJson.ThingDescriptionJsonPackage#getJsonThing_Base()
    * @model
    * @generated
    */
   String getBase();
 
   /**
-   * Sets the value of the '{@link edu.uoc.som.wot.td.json.thingDescriptionJson.JsonThingDescription#getBase <em>Base</em>}' attribute.
+   * Sets the value of the '{@link edu.uoc.som.wot.td.json.thingDescriptionJson.JsonThing#getBase <em>Base</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @param value the new value of the '<em>Base</em>' attribute.
@@ -227,7 +227,7 @@ public interface JsonThingDescription extends EObject
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the value of the '<em>Security</em>' attribute list.
-   * @see edu.uoc.som.wot.td.json.thingDescriptionJson.ThingDescriptionJsonPackage#getJsonThingDescription_Security()
+   * @see edu.uoc.som.wot.td.json.thingDescriptionJson.ThingDescriptionJsonPackage#getJsonThing_Security()
    * @model unique="false"
    * @generated
    */
@@ -239,7 +239,7 @@ public interface JsonThingDescription extends EObject
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the value of the '<em>Forms</em>' containment reference list.
-   * @see edu.uoc.som.wot.td.json.thingDescriptionJson.ThingDescriptionJsonPackage#getJsonThingDescription_Forms()
+   * @see edu.uoc.som.wot.td.json.thingDescriptionJson.ThingDescriptionJsonPackage#getJsonThing_Forms()
    * @model containment="true"
    * @generated
    */
@@ -251,7 +251,7 @@ public interface JsonThingDescription extends EObject
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the value of the '<em>Links</em>' containment reference list.
-   * @see edu.uoc.som.wot.td.json.thingDescriptionJson.ThingDescriptionJsonPackage#getJsonThingDescription_Links()
+   * @see edu.uoc.som.wot.td.json.thingDescriptionJson.ThingDescriptionJsonPackage#getJsonThing_Links()
    * @model containment="true"
    * @generated
    */
@@ -263,7 +263,7 @@ public interface JsonThingDescription extends EObject
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the value of the '<em>Titles</em>' containment reference list.
-   * @see edu.uoc.som.wot.td.json.thingDescriptionJson.ThingDescriptionJsonPackage#getJsonThingDescription_Titles()
+   * @see edu.uoc.som.wot.td.json.thingDescriptionJson.ThingDescriptionJsonPackage#getJsonThing_Titles()
    * @model containment="true"
    * @generated
    */
@@ -275,7 +275,7 @@ public interface JsonThingDescription extends EObject
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the value of the '<em>Descriptions</em>' containment reference list.
-   * @see edu.uoc.som.wot.td.json.thingDescriptionJson.ThingDescriptionJsonPackage#getJsonThingDescription_Descriptions()
+   * @see edu.uoc.som.wot.td.json.thingDescriptionJson.ThingDescriptionJsonPackage#getJsonThing_Descriptions()
    * @model containment="true"
    * @generated
    */
@@ -287,14 +287,14 @@ public interface JsonThingDescription extends EObject
    * <!-- end-user-doc -->
    * @return the value of the '<em>Version</em>' containment reference.
    * @see #setVersion(JsonVersionInfo)
-   * @see edu.uoc.som.wot.td.json.thingDescriptionJson.ThingDescriptionJsonPackage#getJsonThingDescription_Version()
+   * @see edu.uoc.som.wot.td.json.thingDescriptionJson.ThingDescriptionJsonPackage#getJsonThing_Version()
    * @model containment="true"
    * @generated
    */
   JsonVersionInfo getVersion();
 
   /**
-   * Sets the value of the '{@link edu.uoc.som.wot.td.json.thingDescriptionJson.JsonThingDescription#getVersion <em>Version</em>}' containment reference.
+   * Sets the value of the '{@link edu.uoc.som.wot.td.json.thingDescriptionJson.JsonThing#getVersion <em>Version</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @param value the new value of the '<em>Version</em>' containment reference.
@@ -309,7 +309,7 @@ public interface JsonThingDescription extends EObject
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the value of the '<em>Properties</em>' containment reference list.
-   * @see edu.uoc.som.wot.td.json.thingDescriptionJson.ThingDescriptionJsonPackage#getJsonThingDescription_Properties()
+   * @see edu.uoc.som.wot.td.json.thingDescriptionJson.ThingDescriptionJsonPackage#getJsonThing_Properties()
    * @model containment="true"
    * @generated
    */
@@ -321,7 +321,7 @@ public interface JsonThingDescription extends EObject
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the value of the '<em>Actions</em>' containment reference list.
-   * @see edu.uoc.som.wot.td.json.thingDescriptionJson.ThingDescriptionJsonPackage#getJsonThingDescription_Actions()
+   * @see edu.uoc.som.wot.td.json.thingDescriptionJson.ThingDescriptionJsonPackage#getJsonThing_Actions()
    * @model containment="true"
    * @generated
    */
@@ -333,7 +333,7 @@ public interface JsonThingDescription extends EObject
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the value of the '<em>Events</em>' containment reference list.
-   * @see edu.uoc.som.wot.td.json.thingDescriptionJson.ThingDescriptionJsonPackage#getJsonThingDescription_Events()
+   * @see edu.uoc.som.wot.td.json.thingDescriptionJson.ThingDescriptionJsonPackage#getJsonThing_Events()
    * @model containment="true"
    * @generated
    */
@@ -345,10 +345,10 @@ public interface JsonThingDescription extends EObject
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the value of the '<em>Security Definitions</em>' containment reference list.
-   * @see edu.uoc.som.wot.td.json.thingDescriptionJson.ThingDescriptionJsonPackage#getJsonThingDescription_SecurityDefinitions()
+   * @see edu.uoc.som.wot.td.json.thingDescriptionJson.ThingDescriptionJsonPackage#getJsonThing_SecurityDefinitions()
    * @model containment="true"
    * @generated
    */
   EList<JsonSecurityScheme> getSecurityDefinitions();
 
-} // JsonThingDescription
+} // JsonThing

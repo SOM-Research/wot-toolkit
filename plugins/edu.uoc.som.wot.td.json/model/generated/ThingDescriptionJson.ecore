@@ -2,7 +2,7 @@
 <ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="thingDescriptionJson" nsURI="http://www.uoc.edu/som/wot/td/json/ThingDescriptionJson"
     nsPrefix="thingDescriptionJson">
-  <eClassifiers xsi:type="ecore:EClass" name="JsonThingDescription">
+  <eClassifiers xsi:type="ecore:EClass" name="JsonThing">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="ld_context" unique="false"
         upperBound="-1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="ld_type" unique="false"

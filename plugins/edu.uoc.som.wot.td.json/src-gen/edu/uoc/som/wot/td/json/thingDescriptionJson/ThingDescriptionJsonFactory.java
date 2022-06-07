@@ -24,13 +24,13 @@ public interface ThingDescriptionJsonFactory extends EFactory
   ThingDescriptionJsonFactory eINSTANCE = edu.uoc.som.wot.td.json.thingDescriptionJson.impl.ThingDescriptionJsonFactoryImpl.init();
 
   /**
-   * Returns a new object of class '<em>Json Thing Description</em>'.
+   * Returns a new object of class '<em>Json Thing</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Json Thing Description</em>'.
+   * @return a new object of class '<em>Json Thing</em>'.
    * @generated
    */
-  JsonThingDescription createJsonThingDescription();
+  JsonThing createJsonThing();
 
   /**
    * Returns a new object of class '<em>Json Version Info</em>'.

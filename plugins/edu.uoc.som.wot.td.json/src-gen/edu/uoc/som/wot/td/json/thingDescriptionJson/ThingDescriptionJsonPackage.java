@@ -59,14 +59,14 @@ public interface ThingDescriptionJsonPackage extends EPackage
   ThingDescriptionJsonPackage eINSTANCE = edu.uoc.som.wot.td.json.thingDescriptionJson.impl.ThingDescriptionJsonPackageImpl.init();
 
   /**
-   * The meta object id for the '{@link edu.uoc.som.wot.td.json.thingDescriptionJson.impl.JsonThingDescriptionImpl <em>Json Thing Description</em>}' class.
+   * The meta object id for the '{@link edu.uoc.som.wot.td.json.thingDescriptionJson.impl.JsonThingImpl <em>Json Thing</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see edu.uoc.som.wot.td.json.thingDescriptionJson.impl.JsonThingDescriptionImpl
-   * @see edu.uoc.som.wot.td.json.thingDescriptionJson.impl.ThingDescriptionJsonPackageImpl#getJsonThingDescription()
+   * @see edu.uoc.som.wot.td.json.thingDescriptionJson.impl.JsonThingImpl
+   * @see edu.uoc.som.wot.td.json.thingDescriptionJson.impl.ThingDescriptionJsonPackageImpl#getJsonThing()
    * @generated
    */
-  int JSON_THING_DESCRIPTION = 0;
+  int JSON_THING = 0;
 
   /**
    * The feature id for the '<em><b>Ld context</b></em>' attribute list.
@@ -75,7 +75,7 @@ public interface ThingDescriptionJsonPackage extends EPackage
    * @generated
    * @ordered
    */
-  int JSON_THING_DESCRIPTION__LD_CONTEXT = 0;
+  int JSON_THING__LD_CONTEXT = 0;
 
   /**
    * The feature id for the '<em><b>Ld type</b></em>' attribute list.
@@ -84,7 +84,7 @@ public interface ThingDescriptionJsonPackage extends EPackage
    * @generated
    * @ordered
    */
-  int JSON_THING_DESCRIPTION__LD_TYPE = 1;
+  int JSON_THING__LD_TYPE = 1;
 
   /**
    * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -93,7 +93,7 @@ public interface ThingDescriptionJsonPackage extends EPackage
    * @generated
    * @ordered
    */
-  int JSON_THING_DESCRIPTION__ID = 2;
+  int JSON_THING__ID = 2;
 
   /**
    * The feature id for the '<em><b>Title</b></em>' attribute.
@@ -102,7 +102,7 @@ public interface ThingDescriptionJsonPackage extends EPackage
    * @generated
    * @ordered
    */
-  int JSON_THING_DESCRIPTION__TITLE = 3;
+  int JSON_THING__TITLE = 3;
 
   /**
    * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -111,7 +111,7 @@ public interface ThingDescriptionJsonPackage extends EPackage
    * @generated
    * @ordered
    */
-  int JSON_THING_DESCRIPTION__DESCRIPTION = 4;
+  int JSON_THING__DESCRIPTION = 4;
 
   /**
    * The feature id for the '<em><b>Created</b></em>' attribute.
@@ -120,7 +120,7 @@ public interface ThingDescriptionJsonPackage extends EPackage
    * @generated
    * @ordered
    */
-  int JSON_THING_DESCRIPTION__CREATED = 5;
+  int JSON_THING__CREATED = 5;
 
   /**
    * The feature id for the '<em><b>Modified</b></em>' attribute.
@@ -129,7 +129,7 @@ public interface ThingDescriptionJsonPackage extends EPackage
    * @generated
    * @ordered
    */
-  int JSON_THING_DESCRIPTION__MODIFIED = 6;
+  int JSON_THING__MODIFIED = 6;
 
   /**
    * The feature id for the '<em><b>Support</b></em>' attribute.
@@ -138,7 +138,7 @@ public interface ThingDescriptionJsonPackage extends EPackage
    * @generated
    * @ordered
    */
-  int JSON_THING_DESCRIPTION__SUPPORT = 7;
+  int JSON_THING__SUPPORT = 7;
 
   /**
    * The feature id for the '<em><b>Base</b></em>' attribute.
@@ -147,7 +147,7 @@ public interface ThingDescriptionJsonPackage extends EPackage
    * @generated
    * @ordered
    */
-  int JSON_THING_DESCRIPTION__BASE = 8;
+  int JSON_THING__BASE = 8;
 
   /**
    * The feature id for the '<em><b>Security</b></em>' attribute list.
@@ -156,7 +156,7 @@ public interface ThingDescriptionJsonPackage extends EPackage
    * @generated
    * @ordered
    */
-  int JSON_THING_DESCRIPTION__SECURITY = 9;
+  int JSON_THING__SECURITY = 9;
 
   /**
    * The feature id for the '<em><b>Forms</b></em>' containment reference list.
@@ -165,7 +165,7 @@ public interface ThingDescriptionJsonPackage extends EPackage
    * @generated
    * @ordered
    */
-  int JSON_THING_DESCRIPTION__FORMS = 10;
+  int JSON_THING__FORMS = 10;
 
   /**
    * The feature id for the '<em><b>Links</b></em>' containment reference list.
@@ -174,7 +174,7 @@ public interface ThingDescriptionJsonPackage extends EPackage
    * @generated
    * @ordered
    */
-  int JSON_THING_DESCRIPTION__LINKS = 11;
+  int JSON_THING__LINKS = 11;
 
   /**
    * The feature id for the '<em><b>Titles</b></em>' containment reference list.
@@ -183,7 +183,7 @@ public interface ThingDescriptionJsonPackage extends EPackage
    * @generated
    * @ordered
    */
-  int JSON_THING_DESCRIPTION__TITLES = 12;
+  int JSON_THING__TITLES = 12;
 
   /**
    * The feature id for the '<em><b>Descriptions</b></em>' containment reference list.
@@ -192,7 +192,7 @@ public interface ThingDescriptionJsonPackage extends EPackage
    * @generated
    * @ordered
    */
-  int JSON_THING_DESCRIPTION__DESCRIPTIONS = 13;
+  int JSON_THING__DESCRIPTIONS = 13;
 
   /**
    * The feature id for the '<em><b>Version</b></em>' containment reference.
@@ -201,7 +201,7 @@ public interface ThingDescriptionJsonPackage extends EPackage
    * @generated
    * @ordered
    */
-  int JSON_THING_DESCRIPTION__VERSION = 14;
+  int JSON_THING__VERSION = 14;
 
   /**
    * The feature id for the '<em><b>Properties</b></em>' containment reference list.
@@ -210,7 +210,7 @@ public interface ThingDescriptionJsonPackage extends EPackage
    * @generated
    * @ordered
    */
-  int JSON_THING_DESCRIPTION__PROPERTIES = 15;
+  int JSON_THING__PROPERTIES = 15;
 
   /**
    * The feature id for the '<em><b>Actions</b></em>' containment reference list.
@@ -219,7 +219,7 @@ public interface ThingDescriptionJsonPackage extends EPackage
    * @generated
    * @ordered
    */
-  int JSON_THING_DESCRIPTION__ACTIONS = 16;
+  int JSON_THING__ACTIONS = 16;
 
   /**
    * The feature id for the '<em><b>Events</b></em>' containment reference list.
@@ -228,7 +228,7 @@ public interface ThingDescriptionJsonPackage extends EPackage
    * @generated
    * @ordered
    */
-  int JSON_THING_DESCRIPTION__EVENTS = 17;
+  int JSON_THING__EVENTS = 17;
 
   /**
    * The feature id for the '<em><b>Security Definitions</b></em>' containment reference list.
@@ -237,16 +237,16 @@ public interface ThingDescriptionJsonPackage extends EPackage
    * @generated
    * @ordered
    */
-  int JSON_THING_DESCRIPTION__SECURITY_DEFINITIONS = 18;
+  int JSON_THING__SECURITY_DEFINITIONS = 18;
 
   /**
-   * The number of structural features of the '<em>Json Thing Description</em>' class.
+   * The number of structural features of the '<em>Json Thing</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int JSON_THING_DESCRIPTION_FEATURE_COUNT = 19;
+  int JSON_THING_FEATURE_COUNT = 19;
 
   /**
    * The meta object id for the '{@link edu.uoc.som.wot.td.json.thingDescriptionJson.impl.JsonVersionInfoImpl <em>Json Version Info</em>}' class.
@@ -1162,223 +1162,223 @@ public interface ThingDescriptionJsonPackage extends EPackage
 
 
   /**
-   * Returns the meta object for class '{@link edu.uoc.som.wot.td.json.thingDescriptionJson.JsonThingDescription <em>Json Thing Description</em>}'.
+   * Returns the meta object for class '{@link edu.uoc.som.wot.td.json.thingDescriptionJson.JsonThing <em>Json Thing</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Json Thing Description</em>'.
-   * @see edu.uoc.som.wot.td.json.thingDescriptionJson.JsonThingDescription
+   * @return the meta object for class '<em>Json Thing</em>'.
+   * @see edu.uoc.som.wot.td.json.thingDescriptionJson.JsonThing
    * @generated
    */
-  EClass getJsonThingDescription();
+  EClass getJsonThing();
 
   /**
-   * Returns the meta object for the attribute list '{@link edu.uoc.som.wot.td.json.thingDescriptionJson.JsonThingDescription#getLd_context <em>Ld context</em>}'.
+   * Returns the meta object for the attribute list '{@link edu.uoc.som.wot.td.json.thingDescriptionJson.JsonThing#getLd_context <em>Ld context</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the attribute list '<em>Ld context</em>'.
-   * @see edu.uoc.som.wot.td.json.thingDescriptionJson.JsonThingDescription#getLd_context()
-   * @see #getJsonThingDescription()
+   * @see edu.uoc.som.wot.td.json.thingDescriptionJson.JsonThing#getLd_context()
+   * @see #getJsonThing()
    * @generated
    */
-  EAttribute getJsonThingDescription_Ld_context();
+  EAttribute getJsonThing_Ld_context();
 
   /**
-   * Returns the meta object for the attribute list '{@link edu.uoc.som.wot.td.json.thingDescriptionJson.JsonThingDescription#getLd_type <em>Ld type</em>}'.
+   * Returns the meta object for the attribute list '{@link edu.uoc.som.wot.td.json.thingDescriptionJson.JsonThing#getLd_type <em>Ld type</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the attribute list '<em>Ld type</em>'.
-   * @see edu.uoc.som.wot.td.json.thingDescriptionJson.JsonThingDescription#getLd_type()
-   * @see #getJsonThingDescription()
+   * @see edu.uoc.som.wot.td.json.thingDescriptionJson.JsonThing#getLd_type()
+   * @see #getJsonThing()
    * @generated
    */
-  EAttribute getJsonThingDescription_Ld_type();
+  EAttribute getJsonThing_Ld_type();
 
   /**
-   * Returns the meta object for the attribute '{@link edu.uoc.som.wot.td.json.thingDescriptionJson.JsonThingDescription#getId <em>Id</em>}'.
+   * Returns the meta object for the attribute '{@link edu.uoc.som.wot.td.json.thingDescriptionJson.JsonThing#getId <em>Id</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the attribute '<em>Id</em>'.
-   * @see edu.uoc.som.wot.td.json.thingDescriptionJson.JsonThingDescription#getId()
-   * @see #getJsonThingDescription()
+   * @see edu.uoc.som.wot.td.json.thingDescriptionJson.JsonThing#getId()
+   * @see #getJsonThing()
    * @generated
    */
-  EAttribute getJsonThingDescription_Id();
+  EAttribute getJsonThing_Id();
 
   /**
-   * Returns the meta object for the attribute '{@link edu.uoc.som.wot.td.json.thingDescriptionJson.JsonThingDescription#getTitle <em>Title</em>}'.
+   * Returns the meta object for the attribute '{@link edu.uoc.som.wot.td.json.thingDescriptionJson.JsonThing#getTitle <em>Title</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the attribute '<em>Title</em>'.
-   * @see edu.uoc.som.wot.td.json.thingDescriptionJson.JsonThingDescription#getTitle()
-   * @see #getJsonThingDescription()
+   * @see edu.uoc.som.wot.td.json.thingDescriptionJson.JsonThing#getTitle()
+   * @see #getJsonThing()
    * @generated
    */
-  EAttribute getJsonThingDescription_Title();
+  EAttribute getJsonThing_Title();
 
   /**
-   * Returns the meta object for the attribute '{@link edu.uoc.som.wot.td.json.thingDescriptionJson.JsonThingDescription#getDescription <em>Description</em>}'.
+   * Returns the meta object for the attribute '{@link edu.uoc.som.wot.td.json.thingDescriptionJson.JsonThing#getDescription <em>Description</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the attribute '<em>Description</em>'.
-   * @see edu.uoc.som.wot.td.json.thingDescriptionJson.JsonThingDescription#getDescription()
-   * @see #getJsonThingDescription()
+   * @see edu.uoc.som.wot.td.json.thingDescriptionJson.JsonThing#getDescription()
+   * @see #getJsonThing()
    * @generated
    */
-  EAttribute getJsonThingDescription_Description();
+  EAttribute getJsonThing_Description();
 
   /**
-   * Returns the meta object for the attribute '{@link edu.uoc.som.wot.td.json.thingDescriptionJson.JsonThingDescription#getCreated <em>Created</em>}'.
+   * Returns the meta object for the attribute '{@link edu.uoc.som.wot.td.json.thingDescriptionJson.JsonThing#getCreated <em>Created</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the attribute '<em>Created</em>'.
-   * @see edu.uoc.som.wot.td.json.thingDescriptionJson.JsonThingDescription#getCreated()
-   * @see #getJsonThingDescription()
+   * @see edu.uoc.som.wot.td.json.thingDescriptionJson.JsonThing#getCreated()
+   * @see #getJsonThing()
    * @generated
    */
-  EAttribute getJsonThingDescription_Created();
+  EAttribute getJsonThing_Created();
 
   /**
-   * Returns the meta object for the attribute '{@link edu.uoc.som.wot.td.json.thingDescriptionJson.JsonThingDescription#getModified <em>Modified</em>}'.
+   * Returns the meta object for the attribute '{@link edu.uoc.som.wot.td.json.thingDescriptionJson.JsonThing#getModified <em>Modified</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the attribute '<em>Modified</em>'.
-   * @see edu.uoc.som.wot.td.json.thingDescriptionJson.JsonThingDescription#getModified()
-   * @see #getJsonThingDescription()
+   * @see edu.uoc.som.wot.td.json.thingDescriptionJson.JsonThing#getModified()
+   * @see #getJsonThing()
    * @generated
    */
-  EAttribute getJsonThingDescription_Modified();
+  EAttribute getJsonThing_Modified();
 
   /**
-   * Returns the meta object for the attribute '{@link edu.uoc.som.wot.td.json.thingDescriptionJson.JsonThingDescription#getSupport <em>Support</em>}'.
+   * Returns the meta object for the attribute '{@link edu.uoc.som.wot.td.json.thingDescriptionJson.JsonThing#getSupport <em>Support</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the attribute '<em>Support</em>'.
-   * @see edu.uoc.som.wot.td.json.thingDescriptionJson.JsonThingDescription#getSupport()
-   * @see #getJsonThingDescription()
+   * @see edu.uoc.som.wot.td.json.thingDescriptionJson.JsonThing#getSupport()
+   * @see #getJsonThing()
    * @generated
    */
-  EAttribute getJsonThingDescription_Support();
+  EAttribute getJsonThing_Support();
 
   /**
-   * Returns the meta object for the attribute '{@link edu.uoc.som.wot.td.json.thingDescriptionJson.JsonThingDescription#getBase <em>Base</em>}'.
+   * Returns the meta object for the attribute '{@link edu.uoc.som.wot.td.json.thingDescriptionJson.JsonThing#getBase <em>Base</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the attribute '<em>Base</em>'.
-   * @see edu.uoc.som.wot.td.json.thingDescriptionJson.JsonThingDescription#getBase()
-   * @see #getJsonThingDescription()
+   * @see edu.uoc.som.wot.td.json.thingDescriptionJson.JsonThing#getBase()
+   * @see #getJsonThing()
    * @generated
    */
-  EAttribute getJsonThingDescription_Base();
+  EAttribute getJsonThing_Base();
 
   /**
-   * Returns the meta object for the attribute list '{@link edu.uoc.som.wot.td.json.thingDescriptionJson.JsonThingDescription#getSecurity <em>Security</em>}'.
+   * Returns the meta object for the attribute list '{@link edu.uoc.som.wot.td.json.thingDescriptionJson.JsonThing#getSecurity <em>Security</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the attribute list '<em>Security</em>'.
-   * @see edu.uoc.som.wot.td.json.thingDescriptionJson.JsonThingDescription#getSecurity()
-   * @see #getJsonThingDescription()
+   * @see edu.uoc.som.wot.td.json.thingDescriptionJson.JsonThing#getSecurity()
+   * @see #getJsonThing()
    * @generated
    */
-  EAttribute getJsonThingDescription_Security();
+  EAttribute getJsonThing_Security();
 
   /**
-   * Returns the meta object for the containment reference list '{@link edu.uoc.som.wot.td.json.thingDescriptionJson.JsonThingDescription#getForms <em>Forms</em>}'.
+   * Returns the meta object for the containment reference list '{@link edu.uoc.som.wot.td.json.thingDescriptionJson.JsonThing#getForms <em>Forms</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the containment reference list '<em>Forms</em>'.
-   * @see edu.uoc.som.wot.td.json.thingDescriptionJson.JsonThingDescription#getForms()
-   * @see #getJsonThingDescription()
+   * @see edu.uoc.som.wot.td.json.thingDescriptionJson.JsonThing#getForms()
+   * @see #getJsonThing()
    * @generated
    */
-  EReference getJsonThingDescription_Forms();
+  EReference getJsonThing_Forms();
 
   /**
-   * Returns the meta object for the containment reference list '{@link edu.uoc.som.wot.td.json.thingDescriptionJson.JsonThingDescription#getLinks <em>Links</em>}'.
+   * Returns the meta object for the containment reference list '{@link edu.uoc.som.wot.td.json.thingDescriptionJson.JsonThing#getLinks <em>Links</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the containment reference list '<em>Links</em>'.
-   * @see edu.uoc.som.wot.td.json.thingDescriptionJson.JsonThingDescription#getLinks()
-   * @see #getJsonThingDescription()
+   * @see edu.uoc.som.wot.td.json.thingDescriptionJson.JsonThing#getLinks()
+   * @see #getJsonThing()
    * @generated
    */
-  EReference getJsonThingDescription_Links();
+  EReference getJsonThing_Links();
 
   /**
-   * Returns the meta object for the containment reference list '{@link edu.uoc.som.wot.td.json.thingDescriptionJson.JsonThingDescription#getTitles <em>Titles</em>}'.
+   * Returns the meta object for the containment reference list '{@link edu.uoc.som.wot.td.json.thingDescriptionJson.JsonThing#getTitles <em>Titles</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the containment reference list '<em>Titles</em>'.
-   * @see edu.uoc.som.wot.td.json.thingDescriptionJson.JsonThingDescription#getTitles()
-   * @see #getJsonThingDescription()
+   * @see edu.uoc.som.wot.td.json.thingDescriptionJson.JsonThing#getTitles()
+   * @see #getJsonThing()
    * @generated
    */
-  EReference getJsonThingDescription_Titles();
+  EReference getJsonThing_Titles();
 
   /**
-   * Returns the meta object for the containment reference list '{@link edu.uoc.som.wot.td.json.thingDescriptionJson.JsonThingDescription#getDescriptions <em>Descriptions</em>}'.
+   * Returns the meta object for the containment reference list '{@link edu.uoc.som.wot.td.json.thingDescriptionJson.JsonThing#getDescriptions <em>Descriptions</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the containment reference list '<em>Descriptions</em>'.
-   * @see edu.uoc.som.wot.td.json.thingDescriptionJson.JsonThingDescription#getDescriptions()
-   * @see #getJsonThingDescription()
+   * @see edu.uoc.som.wot.td.json.thingDescriptionJson.JsonThing#getDescriptions()
+   * @see #getJsonThing()
    * @generated
    */
-  EReference getJsonThingDescription_Descriptions();
+  EReference getJsonThing_Descriptions();
 
   /**
-   * Returns the meta object for the containment reference '{@link edu.uoc.som.wot.td.json.thingDescriptionJson.JsonThingDescription#getVersion <em>Version</em>}'.
+   * Returns the meta object for the containment reference '{@link edu.uoc.som.wot.td.json.thingDescriptionJson.JsonThing#getVersion <em>Version</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the containment reference '<em>Version</em>'.
-   * @see edu.uoc.som.wot.td.json.thingDescriptionJson.JsonThingDescription#getVersion()
-   * @see #getJsonThingDescription()
+   * @see edu.uoc.som.wot.td.json.thingDescriptionJson.JsonThing#getVersion()
+   * @see #getJsonThing()
    * @generated
    */
-  EReference getJsonThingDescription_Version();
+  EReference getJsonThing_Version();
 
   /**
-   * Returns the meta object for the containment reference list '{@link edu.uoc.som.wot.td.json.thingDescriptionJson.JsonThingDescription#getProperties <em>Properties</em>}'.
+   * Returns the meta object for the containment reference list '{@link edu.uoc.som.wot.td.json.thingDescriptionJson.JsonThing#getProperties <em>Properties</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the containment reference list '<em>Properties</em>'.
-   * @see edu.uoc.som.wot.td.json.thingDescriptionJson.JsonThingDescription#getProperties()
-   * @see #getJsonThingDescription()
+   * @see edu.uoc.som.wot.td.json.thingDescriptionJson.JsonThing#getProperties()
+   * @see #getJsonThing()
    * @generated
    */
-  EReference getJsonThingDescription_Properties();
+  EReference getJsonThing_Properties();
 
   /**
-   * Returns the meta object for the containment reference list '{@link edu.uoc.som.wot.td.json.thingDescriptionJson.JsonThingDescription#getActions <em>Actions</em>}'.
+   * Returns the meta object for the containment reference list '{@link edu.uoc.som.wot.td.json.thingDescriptionJson.JsonThing#getActions <em>Actions</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the containment reference list '<em>Actions</em>'.
-   * @see edu.uoc.som.wot.td.json.thingDescriptionJson.JsonThingDescription#getActions()
-   * @see #getJsonThingDescription()
+   * @see edu.uoc.som.wot.td.json.thingDescriptionJson.JsonThing#getActions()
+   * @see #getJsonThing()
    * @generated
    */
-  EReference getJsonThingDescription_Actions();
+  EReference getJsonThing_Actions();
 
   /**
-   * Returns the meta object for the containment reference list '{@link edu.uoc.som.wot.td.json.thingDescriptionJson.JsonThingDescription#getEvents <em>Events</em>}'.
+   * Returns the meta object for the containment reference list '{@link edu.uoc.som.wot.td.json.thingDescriptionJson.JsonThing#getEvents <em>Events</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the containment reference list '<em>Events</em>'.
-   * @see edu.uoc.som.wot.td.json.thingDescriptionJson.JsonThingDescription#getEvents()
-   * @see #getJsonThingDescription()
+   * @see edu.uoc.som.wot.td.json.thingDescriptionJson.JsonThing#getEvents()
+   * @see #getJsonThing()
    * @generated
    */
-  EReference getJsonThingDescription_Events();
+  EReference getJsonThing_Events();
 
   /**
-   * Returns the meta object for the containment reference list '{@link edu.uoc.som.wot.td.json.thingDescriptionJson.JsonThingDescription#getSecurityDefinitions <em>Security Definitions</em>}'.
+   * Returns the meta object for the containment reference list '{@link edu.uoc.som.wot.td.json.thingDescriptionJson.JsonThing#getSecurityDefinitions <em>Security Definitions</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the containment reference list '<em>Security Definitions</em>'.
-   * @see edu.uoc.som.wot.td.json.thingDescriptionJson.JsonThingDescription#getSecurityDefinitions()
-   * @see #getJsonThingDescription()
+   * @see edu.uoc.som.wot.td.json.thingDescriptionJson.JsonThing#getSecurityDefinitions()
+   * @see #getJsonThing()
    * @generated
    */
-  EReference getJsonThingDescription_SecurityDefinitions();
+  EReference getJsonThing_SecurityDefinitions();
 
   /**
    * Returns the meta object for class '{@link edu.uoc.som.wot.td.json.thingDescriptionJson.JsonVersionInfo <em>Json Version Info</em>}'.
@@ -2382,14 +2382,14 @@ public interface ThingDescriptionJsonPackage extends EPackage
   interface Literals
   {
     /**
-     * The meta object literal for the '{@link edu.uoc.som.wot.td.json.thingDescriptionJson.impl.JsonThingDescriptionImpl <em>Json Thing Description</em>}' class.
+     * The meta object literal for the '{@link edu.uoc.som.wot.td.json.thingDescriptionJson.impl.JsonThingImpl <em>Json Thing</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see edu.uoc.som.wot.td.json.thingDescriptionJson.impl.JsonThingDescriptionImpl
-     * @see edu.uoc.som.wot.td.json.thingDescriptionJson.impl.ThingDescriptionJsonPackageImpl#getJsonThingDescription()
+     * @see edu.uoc.som.wot.td.json.thingDescriptionJson.impl.JsonThingImpl
+     * @see edu.uoc.som.wot.td.json.thingDescriptionJson.impl.ThingDescriptionJsonPackageImpl#getJsonThing()
      * @generated
      */
-    EClass JSON_THING_DESCRIPTION = eINSTANCE.getJsonThingDescription();
+    EClass JSON_THING = eINSTANCE.getJsonThing();
 
     /**
      * The meta object literal for the '<em><b>Ld context</b></em>' attribute list feature.
@@ -2397,7 +2397,7 @@ public interface ThingDescriptionJsonPackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute JSON_THING_DESCRIPTION__LD_CONTEXT = eINSTANCE.getJsonThingDescription_Ld_context();
+    EAttribute JSON_THING__LD_CONTEXT = eINSTANCE.getJsonThing_Ld_context();
 
     /**
      * The meta object literal for the '<em><b>Ld type</b></em>' attribute list feature.
@@ -2405,7 +2405,7 @@ public interface ThingDescriptionJsonPackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute JSON_THING_DESCRIPTION__LD_TYPE = eINSTANCE.getJsonThingDescription_Ld_type();
+    EAttribute JSON_THING__LD_TYPE = eINSTANCE.getJsonThing_Ld_type();
 
     /**
      * The meta object literal for the '<em><b>Id</b></em>' attribute feature.
@@ -2413,7 +2413,7 @@ public interface ThingDescriptionJsonPackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute JSON_THING_DESCRIPTION__ID = eINSTANCE.getJsonThingDescription_Id();
+    EAttribute JSON_THING__ID = eINSTANCE.getJsonThing_Id();
 
     /**
      * The meta object literal for the '<em><b>Title</b></em>' attribute feature.
@@ -2421,7 +2421,7 @@ public interface ThingDescriptionJsonPackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute JSON_THING_DESCRIPTION__TITLE = eINSTANCE.getJsonThingDescription_Title();
+    EAttribute JSON_THING__TITLE = eINSTANCE.getJsonThing_Title();
 
     /**
      * The meta object literal for the '<em><b>Description</b></em>' attribute feature.
@@ -2429,7 +2429,7 @@ public interface ThingDescriptionJsonPackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute JSON_THING_DESCRIPTION__DESCRIPTION = eINSTANCE.getJsonThingDescription_Description();
+    EAttribute JSON_THING__DESCRIPTION = eINSTANCE.getJsonThing_Description();
 
     /**
      * The meta object literal for the '<em><b>Created</b></em>' attribute feature.
@@ -2437,7 +2437,7 @@ public interface ThingDescriptionJsonPackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute JSON_THING_DESCRIPTION__CREATED = eINSTANCE.getJsonThingDescription_Created();
+    EAttribute JSON_THING__CREATED = eINSTANCE.getJsonThing_Created();
 
     /**
      * The meta object literal for the '<em><b>Modified</b></em>' attribute feature.
@@ -2445,7 +2445,7 @@ public interface ThingDescriptionJsonPackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute JSON_THING_DESCRIPTION__MODIFIED = eINSTANCE.getJsonThingDescription_Modified();
+    EAttribute JSON_THING__MODIFIED = eINSTANCE.getJsonThing_Modified();
 
     /**
      * The meta object literal for the '<em><b>Support</b></em>' attribute feature.
@@ -2453,7 +2453,7 @@ public interface ThingDescriptionJsonPackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute JSON_THING_DESCRIPTION__SUPPORT = eINSTANCE.getJsonThingDescription_Support();
+    EAttribute JSON_THING__SUPPORT = eINSTANCE.getJsonThing_Support();
 
     /**
      * The meta object literal for the '<em><b>Base</b></em>' attribute feature.
@@ -2461,7 +2461,7 @@ public interface ThingDescriptionJsonPackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute JSON_THING_DESCRIPTION__BASE = eINSTANCE.getJsonThingDescription_Base();
+    EAttribute JSON_THING__BASE = eINSTANCE.getJsonThing_Base();
 
     /**
      * The meta object literal for the '<em><b>Security</b></em>' attribute list feature.
@@ -2469,7 +2469,7 @@ public interface ThingDescriptionJsonPackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute JSON_THING_DESCRIPTION__SECURITY = eINSTANCE.getJsonThingDescription_Security();
+    EAttribute JSON_THING__SECURITY = eINSTANCE.getJsonThing_Security();
 
     /**
      * The meta object literal for the '<em><b>Forms</b></em>' containment reference list feature.
@@ -2477,7 +2477,7 @@ public interface ThingDescriptionJsonPackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference JSON_THING_DESCRIPTION__FORMS = eINSTANCE.getJsonThingDescription_Forms();
+    EReference JSON_THING__FORMS = eINSTANCE.getJsonThing_Forms();
 
     /**
      * The meta object literal for the '<em><b>Links</b></em>' containment reference list feature.
@@ -2485,7 +2485,7 @@ public interface ThingDescriptionJsonPackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference JSON_THING_DESCRIPTION__LINKS = eINSTANCE.getJsonThingDescription_Links();
+    EReference JSON_THING__LINKS = eINSTANCE.getJsonThing_Links();
 
     /**
      * The meta object literal for the '<em><b>Titles</b></em>' containment reference list feature.
@@ -2493,7 +2493,7 @@ public interface ThingDescriptionJsonPackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference JSON_THING_DESCRIPTION__TITLES = eINSTANCE.getJsonThingDescription_Titles();
+    EReference JSON_THING__TITLES = eINSTANCE.getJsonThing_Titles();
 
     /**
      * The meta object literal for the '<em><b>Descriptions</b></em>' containment reference list feature.
@@ -2501,7 +2501,7 @@ public interface ThingDescriptionJsonPackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference JSON_THING_DESCRIPTION__DESCRIPTIONS = eINSTANCE.getJsonThingDescription_Descriptions();
+    EReference JSON_THING__DESCRIPTIONS = eINSTANCE.getJsonThing_Descriptions();
 
     /**
      * The meta object literal for the '<em><b>Version</b></em>' containment reference feature.
@@ -2509,7 +2509,7 @@ public interface ThingDescriptionJsonPackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference JSON_THING_DESCRIPTION__VERSION = eINSTANCE.getJsonThingDescription_Version();
+    EReference JSON_THING__VERSION = eINSTANCE.getJsonThing_Version();
 
     /**
      * The meta object literal for the '<em><b>Properties</b></em>' containment reference list feature.
@@ -2517,7 +2517,7 @@ public interface ThingDescriptionJsonPackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference JSON_THING_DESCRIPTION__PROPERTIES = eINSTANCE.getJsonThingDescription_Properties();
+    EReference JSON_THING__PROPERTIES = eINSTANCE.getJsonThing_Properties();
 
     /**
      * The meta object literal for the '<em><b>Actions</b></em>' containment reference list feature.
@@ -2525,7 +2525,7 @@ public interface ThingDescriptionJsonPackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference JSON_THING_DESCRIPTION__ACTIONS = eINSTANCE.getJsonThingDescription_Actions();
+    EReference JSON_THING__ACTIONS = eINSTANCE.getJsonThing_Actions();
 
     /**
      * The meta object literal for the '<em><b>Events</b></em>' containment reference list feature.
@@ -2533,7 +2533,7 @@ public interface ThingDescriptionJsonPackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference JSON_THING_DESCRIPTION__EVENTS = eINSTANCE.getJsonThingDescription_Events();
+    EReference JSON_THING__EVENTS = eINSTANCE.getJsonThing_Events();
 
     /**
      * The meta object literal for the '<em><b>Security Definitions</b></em>' containment reference list feature.
@@ -2541,7 +2541,7 @@ public interface ThingDescriptionJsonPackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference JSON_THING_DESCRIPTION__SECURITY_DEFINITIONS = eINSTANCE.getJsonThingDescription_SecurityDefinitions();
+    EReference JSON_THING__SECURITY_DEFINITIONS = eINSTANCE.getJsonThing_SecurityDefinitions();
 
     /**
      * The meta object literal for the '{@link edu.uoc.som.wot.td.json.thingDescriptionJson.impl.JsonVersionInfoImpl <em>Json Version Info</em>}' class.

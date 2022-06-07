@@ -4,8 +4,8 @@ generate thingDescriptionJson "http://www.uoc.edu/som/wot/td/json/ThingDescripti
 
 import "http://www.eclipse.org/emf/2002/Ecore" as ecore
 
-JsonThingDescription:
-	{JsonThingDescription} '{'	(
+JsonThing:
+	{JsonThing} '{'	(
 		  // TODO: Parse the @context tag completely
 		  ( '"@context"' ':' ( ld_context+=AnyString | '[' ( ld_context+=AnyString | JsonGenericExpression ) (',' ( ld_context+=AnyString | JsonGenericExpression ) )* ']')','? )
 		& ( '"@type"' ':' ( ld_type+=AnyString | '[' ld_type+=AnyString (',' ld_type+=AnyString)* ']' ) ','? )?

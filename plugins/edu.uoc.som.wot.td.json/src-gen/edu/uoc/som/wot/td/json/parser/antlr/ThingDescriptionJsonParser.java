@@ -27,7 +27,7 @@ public class ThingDescriptionJsonParser extends AbstractAntlrParser {
 
 	@Override 
 	protected String getDefaultRuleName() {
-		return "JsonThingDescription";
+		return "JsonThing";
 	}
 
 	public ThingDescriptionJsonGrammarAccess getGrammarAccess() {

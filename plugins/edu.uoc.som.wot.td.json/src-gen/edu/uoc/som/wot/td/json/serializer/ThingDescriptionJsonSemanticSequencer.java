@@ -14,7 +14,7 @@ import edu.uoc.som.wot.td.json.thingDescriptionJson.JsonLink;
 import edu.uoc.som.wot.td.json.thingDescriptionJson.JsonMultiLanguageEntry;
 import edu.uoc.som.wot.td.json.thingDescriptionJson.JsonPropertyAffordance;
 import edu.uoc.som.wot.td.json.thingDescriptionJson.JsonSecurityScheme;
-import edu.uoc.som.wot.td.json.thingDescriptionJson.JsonThingDescription;
+import edu.uoc.som.wot.td.json.thingDescriptionJson.JsonThing;
 import edu.uoc.som.wot.td.json.thingDescriptionJson.JsonVersionInfo;
 import edu.uoc.som.wot.td.json.thingDescriptionJson.ThingDescriptionJsonPackage;
 import java.util.Set;
@@ -69,8 +69,8 @@ public class ThingDescriptionJsonSemanticSequencer extends AbstractDelegatingSem
 			case ThingDescriptionJsonPackage.JSON_SECURITY_SCHEME:
 				sequence_JsonSecurityScheme(context, (JsonSecurityScheme) semanticObject); 
 				return; 
-			case ThingDescriptionJsonPackage.JSON_THING_DESCRIPTION:
-				sequence_JsonThingDescription(context, (JsonThingDescription) semanticObject); 
+			case ThingDescriptionJsonPackage.JSON_THING:
+				sequence_JsonThing(context, (JsonThing) semanticObject); 
 				return; 
 			case ThingDescriptionJsonPackage.JSON_VERSION_INFO:
 				sequence_JsonVersionInfo(context, (JsonVersionInfo) semanticObject); 
@@ -309,7 +309,7 @@ public class ThingDescriptionJsonSemanticSequencer extends AbstractDelegatingSem
 	
 	/**
 	 * Contexts:
-	 *     JsonThingDescription returns JsonThingDescription
+	 *     JsonThing returns JsonThing
 	 *
 	 * Constraint:
 	 *     (
@@ -340,7 +340,7 @@ public class ThingDescriptionJsonSemanticSequencer extends AbstractDelegatingSem
 	 *         (securityDefinitions+=JsonSecurityScheme securityDefinitions+=JsonSecurityScheme*)?
 	 *     )+
 	 */
-	protected void sequence_JsonThingDescription(ISerializationContext context, JsonThingDescription semanticObject) {
+	protected void sequence_JsonThing(ISerializationContext context, JsonThing semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	

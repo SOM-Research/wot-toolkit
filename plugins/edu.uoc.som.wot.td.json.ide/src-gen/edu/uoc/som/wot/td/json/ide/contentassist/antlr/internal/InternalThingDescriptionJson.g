@@ -49,25 +49,25 @@ import edu.uoc.som.wot.td.json.services.ThingDescriptionJsonGrammarAccess;
 	}
 }
 
-// Entry rule entryRuleJsonThingDescription
-entryRuleJsonThingDescription
+// Entry rule entryRuleJsonThing
+entryRuleJsonThing
 :
-{ before(grammarAccess.getJsonThingDescriptionRule()); }
-	 ruleJsonThingDescription
-{ after(grammarAccess.getJsonThingDescriptionRule()); } 
+{ before(grammarAccess.getJsonThingRule()); }
+	 ruleJsonThing
+{ after(grammarAccess.getJsonThingRule()); } 
 	 EOF 
 ;
 
-// Rule JsonThingDescription
-ruleJsonThingDescription 
+// Rule JsonThing
+ruleJsonThing 
 	@init {
 		int stackSize = keepStackSize();
 	}
 	:
 	(
-		{ before(grammarAccess.getJsonThingDescriptionAccess().getGroup()); }
-		(rule__JsonThingDescription__Group__0)
-		{ after(grammarAccess.getJsonThingDescriptionAccess().getGroup()); }
+		{ before(grammarAccess.getJsonThingAccess().getGroup()); }
+		(rule__JsonThing__Group__0)
+		{ after(grammarAccess.getJsonThingAccess().getGroup()); }
 	)
 ;
 finally {
@@ -531,105 +531,105 @@ finally {
 	restoreStackSize(stackSize);
 }
 
-rule__JsonThingDescription__Alternatives_2_0_2
+rule__JsonThing__Alternatives_2_0_2
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 	(
-		{ before(grammarAccess.getJsonThingDescriptionAccess().getLd_contextAssignment_2_0_2_0()); }
-		(rule__JsonThingDescription__Ld_contextAssignment_2_0_2_0)
-		{ after(grammarAccess.getJsonThingDescriptionAccess().getLd_contextAssignment_2_0_2_0()); }
+		{ before(grammarAccess.getJsonThingAccess().getLd_contextAssignment_2_0_2_0()); }
+		(rule__JsonThing__Ld_contextAssignment_2_0_2_0)
+		{ after(grammarAccess.getJsonThingAccess().getLd_contextAssignment_2_0_2_0()); }
 	)
 	|
 	(
-		{ before(grammarAccess.getJsonThingDescriptionAccess().getGroup_2_0_2_1()); }
-		(rule__JsonThingDescription__Group_2_0_2_1__0)
-		{ after(grammarAccess.getJsonThingDescriptionAccess().getGroup_2_0_2_1()); }
+		{ before(grammarAccess.getJsonThingAccess().getGroup_2_0_2_1()); }
+		(rule__JsonThing__Group_2_0_2_1__0)
+		{ after(grammarAccess.getJsonThingAccess().getGroup_2_0_2_1()); }
 	)
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__JsonThingDescription__Alternatives_2_0_2_1_1
+rule__JsonThing__Alternatives_2_0_2_1_1
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 	(
-		{ before(grammarAccess.getJsonThingDescriptionAccess().getLd_contextAssignment_2_0_2_1_1_0()); }
-		(rule__JsonThingDescription__Ld_contextAssignment_2_0_2_1_1_0)
-		{ after(grammarAccess.getJsonThingDescriptionAccess().getLd_contextAssignment_2_0_2_1_1_0()); }
+		{ before(grammarAccess.getJsonThingAccess().getLd_contextAssignment_2_0_2_1_1_0()); }
+		(rule__JsonThing__Ld_contextAssignment_2_0_2_1_1_0)
+		{ after(grammarAccess.getJsonThingAccess().getLd_contextAssignment_2_0_2_1_1_0()); }
 	)
 	|
 	(
-		{ before(grammarAccess.getJsonThingDescriptionAccess().getJsonGenericExpressionParserRuleCall_2_0_2_1_1_1()); }
+		{ before(grammarAccess.getJsonThingAccess().getJsonGenericExpressionParserRuleCall_2_0_2_1_1_1()); }
 		ruleJsonGenericExpression
-		{ after(grammarAccess.getJsonThingDescriptionAccess().getJsonGenericExpressionParserRuleCall_2_0_2_1_1_1()); }
+		{ after(grammarAccess.getJsonThingAccess().getJsonGenericExpressionParserRuleCall_2_0_2_1_1_1()); }
 	)
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__JsonThingDescription__Alternatives_2_0_2_1_2_1
+rule__JsonThing__Alternatives_2_0_2_1_2_1
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 	(
-		{ before(grammarAccess.getJsonThingDescriptionAccess().getLd_contextAssignment_2_0_2_1_2_1_0()); }
-		(rule__JsonThingDescription__Ld_contextAssignment_2_0_2_1_2_1_0)
-		{ after(grammarAccess.getJsonThingDescriptionAccess().getLd_contextAssignment_2_0_2_1_2_1_0()); }
+		{ before(grammarAccess.getJsonThingAccess().getLd_contextAssignment_2_0_2_1_2_1_0()); }
+		(rule__JsonThing__Ld_contextAssignment_2_0_2_1_2_1_0)
+		{ after(grammarAccess.getJsonThingAccess().getLd_contextAssignment_2_0_2_1_2_1_0()); }
 	)
 	|
 	(
-		{ before(grammarAccess.getJsonThingDescriptionAccess().getJsonGenericExpressionParserRuleCall_2_0_2_1_2_1_1()); }
+		{ before(grammarAccess.getJsonThingAccess().getJsonGenericExpressionParserRuleCall_2_0_2_1_2_1_1()); }
 		ruleJsonGenericExpression
-		{ after(grammarAccess.getJsonThingDescriptionAccess().getJsonGenericExpressionParserRuleCall_2_0_2_1_2_1_1()); }
+		{ after(grammarAccess.getJsonThingAccess().getJsonGenericExpressionParserRuleCall_2_0_2_1_2_1_1()); }
 	)
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__JsonThingDescription__Alternatives_2_1_2
+rule__JsonThing__Alternatives_2_1_2
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 	(
-		{ before(grammarAccess.getJsonThingDescriptionAccess().getLd_typeAssignment_2_1_2_0()); }
-		(rule__JsonThingDescription__Ld_typeAssignment_2_1_2_0)
-		{ after(grammarAccess.getJsonThingDescriptionAccess().getLd_typeAssignment_2_1_2_0()); }
+		{ before(grammarAccess.getJsonThingAccess().getLd_typeAssignment_2_1_2_0()); }
+		(rule__JsonThing__Ld_typeAssignment_2_1_2_0)
+		{ after(grammarAccess.getJsonThingAccess().getLd_typeAssignment_2_1_2_0()); }
 	)
 	|
 	(
-		{ before(grammarAccess.getJsonThingDescriptionAccess().getGroup_2_1_2_1()); }
-		(rule__JsonThingDescription__Group_2_1_2_1__0)
-		{ after(grammarAccess.getJsonThingDescriptionAccess().getGroup_2_1_2_1()); }
+		{ before(grammarAccess.getJsonThingAccess().getGroup_2_1_2_1()); }
+		(rule__JsonThing__Group_2_1_2_1__0)
+		{ after(grammarAccess.getJsonThingAccess().getGroup_2_1_2_1()); }
 	)
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__JsonThingDescription__Alternatives_2_9_2
+rule__JsonThing__Alternatives_2_9_2
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 	(
-		{ before(grammarAccess.getJsonThingDescriptionAccess().getSecurityAssignment_2_9_2_0()); }
-		(rule__JsonThingDescription__SecurityAssignment_2_9_2_0)
-		{ after(grammarAccess.getJsonThingDescriptionAccess().getSecurityAssignment_2_9_2_0()); }
+		{ before(grammarAccess.getJsonThingAccess().getSecurityAssignment_2_9_2_0()); }
+		(rule__JsonThing__SecurityAssignment_2_9_2_0)
+		{ after(grammarAccess.getJsonThingAccess().getSecurityAssignment_2_9_2_0()); }
 	)
 	|
 	(
-		{ before(grammarAccess.getJsonThingDescriptionAccess().getGroup_2_9_2_1()); }
-		(rule__JsonThingDescription__Group_2_9_2_1__0)
-		{ after(grammarAccess.getJsonThingDescriptionAccess().getGroup_2_9_2_1()); }
+		{ before(grammarAccess.getJsonThingAccess().getGroup_2_9_2_1()); }
+		(rule__JsonThing__Group_2_9_2_1__0)
+		{ after(grammarAccess.getJsonThingAccess().getGroup_2_9_2_1()); }
 	)
 ;
 finally {
@@ -1368,107 +1368,107 @@ finally {
 	restoreStackSize(stackSize);
 }
 
-rule__JsonThingDescription__Group__0
+rule__JsonThing__Group__0
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
-	rule__JsonThingDescription__Group__0__Impl
-	rule__JsonThingDescription__Group__1
+	rule__JsonThing__Group__0__Impl
+	rule__JsonThing__Group__1
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__JsonThingDescription__Group__0__Impl
+rule__JsonThing__Group__0__Impl
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 (
-	{ before(grammarAccess.getJsonThingDescriptionAccess().getJsonThingDescriptionAction_0()); }
+	{ before(grammarAccess.getJsonThingAccess().getJsonThingAction_0()); }
 	()
-	{ after(grammarAccess.getJsonThingDescriptionAccess().getJsonThingDescriptionAction_0()); }
+	{ after(grammarAccess.getJsonThingAccess().getJsonThingAction_0()); }
 )
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__JsonThingDescription__Group__1
+rule__JsonThing__Group__1
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
-	rule__JsonThingDescription__Group__1__Impl
-	rule__JsonThingDescription__Group__2
+	rule__JsonThing__Group__1__Impl
+	rule__JsonThing__Group__2
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__JsonThingDescription__Group__1__Impl
+rule__JsonThing__Group__1__Impl
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 (
-	{ before(grammarAccess.getJsonThingDescriptionAccess().getLeftCurlyBracketKeyword_1()); }
+	{ before(grammarAccess.getJsonThingAccess().getLeftCurlyBracketKeyword_1()); }
 	'{'
-	{ after(grammarAccess.getJsonThingDescriptionAccess().getLeftCurlyBracketKeyword_1()); }
+	{ after(grammarAccess.getJsonThingAccess().getLeftCurlyBracketKeyword_1()); }
 )
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__JsonThingDescription__Group__2
+rule__JsonThing__Group__2
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
-	rule__JsonThingDescription__Group__2__Impl
-	rule__JsonThingDescription__Group__3
+	rule__JsonThing__Group__2__Impl
+	rule__JsonThing__Group__3
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__JsonThingDescription__Group__2__Impl
+rule__JsonThing__Group__2__Impl
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 (
-	{ before(grammarAccess.getJsonThingDescriptionAccess().getUnorderedGroup_2()); }
-	(rule__JsonThingDescription__UnorderedGroup_2)
-	{ after(grammarAccess.getJsonThingDescriptionAccess().getUnorderedGroup_2()); }
+	{ before(grammarAccess.getJsonThingAccess().getUnorderedGroup_2()); }
+	(rule__JsonThing__UnorderedGroup_2)
+	{ after(grammarAccess.getJsonThingAccess().getUnorderedGroup_2()); }
 )
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__JsonThingDescription__Group__3
+rule__JsonThing__Group__3
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
-	rule__JsonThingDescription__Group__3__Impl
+	rule__JsonThing__Group__3__Impl
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__JsonThingDescription__Group__3__Impl
+rule__JsonThing__Group__3__Impl
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 (
-	{ before(grammarAccess.getJsonThingDescriptionAccess().getRightCurlyBracketKeyword_3()); }
+	{ before(grammarAccess.getJsonThingAccess().getRightCurlyBracketKeyword_3()); }
 	'}'
-	{ after(grammarAccess.getJsonThingDescriptionAccess().getRightCurlyBracketKeyword_3()); }
+	{ after(grammarAccess.getJsonThingAccess().getRightCurlyBracketKeyword_3()); }
 )
 ;
 finally {
@@ -1476,107 +1476,107 @@ finally {
 }
 
 
-rule__JsonThingDescription__Group_2_0__0
+rule__JsonThing__Group_2_0__0
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
-	rule__JsonThingDescription__Group_2_0__0__Impl
-	rule__JsonThingDescription__Group_2_0__1
+	rule__JsonThing__Group_2_0__0__Impl
+	rule__JsonThing__Group_2_0__1
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__JsonThingDescription__Group_2_0__0__Impl
+rule__JsonThing__Group_2_0__0__Impl
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 (
-	{ before(grammarAccess.getJsonThingDescriptionAccess().getContextKeyword_2_0_0()); }
+	{ before(grammarAccess.getJsonThingAccess().getContextKeyword_2_0_0()); }
 	'"@context"'
-	{ after(grammarAccess.getJsonThingDescriptionAccess().getContextKeyword_2_0_0()); }
+	{ after(grammarAccess.getJsonThingAccess().getContextKeyword_2_0_0()); }
 )
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__JsonThingDescription__Group_2_0__1
+rule__JsonThing__Group_2_0__1
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
-	rule__JsonThingDescription__Group_2_0__1__Impl
-	rule__JsonThingDescription__Group_2_0__2
+	rule__JsonThing__Group_2_0__1__Impl
+	rule__JsonThing__Group_2_0__2
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__JsonThingDescription__Group_2_0__1__Impl
+rule__JsonThing__Group_2_0__1__Impl
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 (
-	{ before(grammarAccess.getJsonThingDescriptionAccess().getColonKeyword_2_0_1()); }
+	{ before(grammarAccess.getJsonThingAccess().getColonKeyword_2_0_1()); }
 	':'
-	{ after(grammarAccess.getJsonThingDescriptionAccess().getColonKeyword_2_0_1()); }
+	{ after(grammarAccess.getJsonThingAccess().getColonKeyword_2_0_1()); }
 )
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__JsonThingDescription__Group_2_0__2
+rule__JsonThing__Group_2_0__2
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
-	rule__JsonThingDescription__Group_2_0__2__Impl
-	rule__JsonThingDescription__Group_2_0__3
+	rule__JsonThing__Group_2_0__2__Impl
+	rule__JsonThing__Group_2_0__3
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__JsonThingDescription__Group_2_0__2__Impl
+rule__JsonThing__Group_2_0__2__Impl
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 (
-	{ before(grammarAccess.getJsonThingDescriptionAccess().getAlternatives_2_0_2()); }
-	(rule__JsonThingDescription__Alternatives_2_0_2)
-	{ after(grammarAccess.getJsonThingDescriptionAccess().getAlternatives_2_0_2()); }
+	{ before(grammarAccess.getJsonThingAccess().getAlternatives_2_0_2()); }
+	(rule__JsonThing__Alternatives_2_0_2)
+	{ after(grammarAccess.getJsonThingAccess().getAlternatives_2_0_2()); }
 )
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__JsonThingDescription__Group_2_0__3
+rule__JsonThing__Group_2_0__3
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
-	rule__JsonThingDescription__Group_2_0__3__Impl
+	rule__JsonThing__Group_2_0__3__Impl
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__JsonThingDescription__Group_2_0__3__Impl
+rule__JsonThing__Group_2_0__3__Impl
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 (
-	{ before(grammarAccess.getJsonThingDescriptionAccess().getCommaKeyword_2_0_3()); }
+	{ before(grammarAccess.getJsonThingAccess().getCommaKeyword_2_0_3()); }
 	(',')?
-	{ after(grammarAccess.getJsonThingDescriptionAccess().getCommaKeyword_2_0_3()); }
+	{ after(grammarAccess.getJsonThingAccess().getCommaKeyword_2_0_3()); }
 )
 ;
 finally {
@@ -1584,107 +1584,107 @@ finally {
 }
 
 
-rule__JsonThingDescription__Group_2_0_2_1__0
+rule__JsonThing__Group_2_0_2_1__0
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
-	rule__JsonThingDescription__Group_2_0_2_1__0__Impl
-	rule__JsonThingDescription__Group_2_0_2_1__1
+	rule__JsonThing__Group_2_0_2_1__0__Impl
+	rule__JsonThing__Group_2_0_2_1__1
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__JsonThingDescription__Group_2_0_2_1__0__Impl
+rule__JsonThing__Group_2_0_2_1__0__Impl
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 (
-	{ before(grammarAccess.getJsonThingDescriptionAccess().getLeftSquareBracketKeyword_2_0_2_1_0()); }
+	{ before(grammarAccess.getJsonThingAccess().getLeftSquareBracketKeyword_2_0_2_1_0()); }
 	'['
-	{ after(grammarAccess.getJsonThingDescriptionAccess().getLeftSquareBracketKeyword_2_0_2_1_0()); }
+	{ after(grammarAccess.getJsonThingAccess().getLeftSquareBracketKeyword_2_0_2_1_0()); }
 )
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__JsonThingDescription__Group_2_0_2_1__1
+rule__JsonThing__Group_2_0_2_1__1
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
-	rule__JsonThingDescription__Group_2_0_2_1__1__Impl
-	rule__JsonThingDescription__Group_2_0_2_1__2
+	rule__JsonThing__Group_2_0_2_1__1__Impl
+	rule__JsonThing__Group_2_0_2_1__2
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__JsonThingDescription__Group_2_0_2_1__1__Impl
+rule__JsonThing__Group_2_0_2_1__1__Impl
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 (
-	{ before(grammarAccess.getJsonThingDescriptionAccess().getAlternatives_2_0_2_1_1()); }
-	(rule__JsonThingDescription__Alternatives_2_0_2_1_1)
-	{ after(grammarAccess.getJsonThingDescriptionAccess().getAlternatives_2_0_2_1_1()); }
+	{ before(grammarAccess.getJsonThingAccess().getAlternatives_2_0_2_1_1()); }
+	(rule__JsonThing__Alternatives_2_0_2_1_1)
+	{ after(grammarAccess.getJsonThingAccess().getAlternatives_2_0_2_1_1()); }
 )
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__JsonThingDescription__Group_2_0_2_1__2
+rule__JsonThing__Group_2_0_2_1__2
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
-	rule__JsonThingDescription__Group_2_0_2_1__2__Impl
-	rule__JsonThingDescription__Group_2_0_2_1__3
+	rule__JsonThing__Group_2_0_2_1__2__Impl
+	rule__JsonThing__Group_2_0_2_1__3
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__JsonThingDescription__Group_2_0_2_1__2__Impl
+rule__JsonThing__Group_2_0_2_1__2__Impl
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 (
-	{ before(grammarAccess.getJsonThingDescriptionAccess().getGroup_2_0_2_1_2()); }
-	(rule__JsonThingDescription__Group_2_0_2_1_2__0)*
-	{ after(grammarAccess.getJsonThingDescriptionAccess().getGroup_2_0_2_1_2()); }
+	{ before(grammarAccess.getJsonThingAccess().getGroup_2_0_2_1_2()); }
+	(rule__JsonThing__Group_2_0_2_1_2__0)*
+	{ after(grammarAccess.getJsonThingAccess().getGroup_2_0_2_1_2()); }
 )
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__JsonThingDescription__Group_2_0_2_1__3
+rule__JsonThing__Group_2_0_2_1__3
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
-	rule__JsonThingDescription__Group_2_0_2_1__3__Impl
+	rule__JsonThing__Group_2_0_2_1__3__Impl
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__JsonThingDescription__Group_2_0_2_1__3__Impl
+rule__JsonThing__Group_2_0_2_1__3__Impl
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 (
-	{ before(grammarAccess.getJsonThingDescriptionAccess().getRightSquareBracketKeyword_2_0_2_1_3()); }
+	{ before(grammarAccess.getJsonThingAccess().getRightSquareBracketKeyword_2_0_2_1_3()); }
 	']'
-	{ after(grammarAccess.getJsonThingDescriptionAccess().getRightSquareBracketKeyword_2_0_2_1_3()); }
+	{ after(grammarAccess.getJsonThingAccess().getRightSquareBracketKeyword_2_0_2_1_3()); }
 )
 ;
 finally {
@@ -1692,53 +1692,53 @@ finally {
 }
 
 
-rule__JsonThingDescription__Group_2_0_2_1_2__0
+rule__JsonThing__Group_2_0_2_1_2__0
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
-	rule__JsonThingDescription__Group_2_0_2_1_2__0__Impl
-	rule__JsonThingDescription__Group_2_0_2_1_2__1
+	rule__JsonThing__Group_2_0_2_1_2__0__Impl
+	rule__JsonThing__Group_2_0_2_1_2__1
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__JsonThingDescription__Group_2_0_2_1_2__0__Impl
+rule__JsonThing__Group_2_0_2_1_2__0__Impl
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 (
-	{ before(grammarAccess.getJsonThingDescriptionAccess().getCommaKeyword_2_0_2_1_2_0()); }
+	{ before(grammarAccess.getJsonThingAccess().getCommaKeyword_2_0_2_1_2_0()); }
 	','
-	{ after(grammarAccess.getJsonThingDescriptionAccess().getCommaKeyword_2_0_2_1_2_0()); }
+	{ after(grammarAccess.getJsonThingAccess().getCommaKeyword_2_0_2_1_2_0()); }
 )
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__JsonThingDescription__Group_2_0_2_1_2__1
+rule__JsonThing__Group_2_0_2_1_2__1
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
-	rule__JsonThingDescription__Group_2_0_2_1_2__1__Impl
+	rule__JsonThing__Group_2_0_2_1_2__1__Impl
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__JsonThingDescription__Group_2_0_2_1_2__1__Impl
+rule__JsonThing__Group_2_0_2_1_2__1__Impl
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 (
-	{ before(grammarAccess.getJsonThingDescriptionAccess().getAlternatives_2_0_2_1_2_1()); }
-	(rule__JsonThingDescription__Alternatives_2_0_2_1_2_1)
-	{ after(grammarAccess.getJsonThingDescriptionAccess().getAlternatives_2_0_2_1_2_1()); }
+	{ before(grammarAccess.getJsonThingAccess().getAlternatives_2_0_2_1_2_1()); }
+	(rule__JsonThing__Alternatives_2_0_2_1_2_1)
+	{ after(grammarAccess.getJsonThingAccess().getAlternatives_2_0_2_1_2_1()); }
 )
 ;
 finally {
@@ -1746,107 +1746,107 @@ finally {
 }
 
 
-rule__JsonThingDescription__Group_2_1__0
+rule__JsonThing__Group_2_1__0
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
-	rule__JsonThingDescription__Group_2_1__0__Impl
-	rule__JsonThingDescription__Group_2_1__1
+	rule__JsonThing__Group_2_1__0__Impl
+	rule__JsonThing__Group_2_1__1
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__JsonThingDescription__Group_2_1__0__Impl
+rule__JsonThing__Group_2_1__0__Impl
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 (
-	{ before(grammarAccess.getJsonThingDescriptionAccess().getTypeKeyword_2_1_0()); }
+	{ before(grammarAccess.getJsonThingAccess().getTypeKeyword_2_1_0()); }
 	'"@type"'
-	{ after(grammarAccess.getJsonThingDescriptionAccess().getTypeKeyword_2_1_0()); }
+	{ after(grammarAccess.getJsonThingAccess().getTypeKeyword_2_1_0()); }
 )
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__JsonThingDescription__Group_2_1__1
+rule__JsonThing__Group_2_1__1
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
-	rule__JsonThingDescription__Group_2_1__1__Impl
-	rule__JsonThingDescription__Group_2_1__2
+	rule__JsonThing__Group_2_1__1__Impl
+	rule__JsonThing__Group_2_1__2
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__JsonThingDescription__Group_2_1__1__Impl
+rule__JsonThing__Group_2_1__1__Impl
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 (
-	{ before(grammarAccess.getJsonThingDescriptionAccess().getColonKeyword_2_1_1()); }
+	{ before(grammarAccess.getJsonThingAccess().getColonKeyword_2_1_1()); }
 	':'
-	{ after(grammarAccess.getJsonThingDescriptionAccess().getColonKeyword_2_1_1()); }
+	{ after(grammarAccess.getJsonThingAccess().getColonKeyword_2_1_1()); }
 )
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__JsonThingDescription__Group_2_1__2
+rule__JsonThing__Group_2_1__2
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
-	rule__JsonThingDescription__Group_2_1__2__Impl
-	rule__JsonThingDescription__Group_2_1__3
+	rule__JsonThing__Group_2_1__2__Impl
+	rule__JsonThing__Group_2_1__3
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__JsonThingDescription__Group_2_1__2__Impl
+rule__JsonThing__Group_2_1__2__Impl
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 (
-	{ before(grammarAccess.getJsonThingDescriptionAccess().getAlternatives_2_1_2()); }
-	(rule__JsonThingDescription__Alternatives_2_1_2)
-	{ after(grammarAccess.getJsonThingDescriptionAccess().getAlternatives_2_1_2()); }
+	{ before(grammarAccess.getJsonThingAccess().getAlternatives_2_1_2()); }
+	(rule__JsonThing__Alternatives_2_1_2)
+	{ after(grammarAccess.getJsonThingAccess().getAlternatives_2_1_2()); }
 )
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__JsonThingDescription__Group_2_1__3
+rule__JsonThing__Group_2_1__3
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
-	rule__JsonThingDescription__Group_2_1__3__Impl
+	rule__JsonThing__Group_2_1__3__Impl
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__JsonThingDescription__Group_2_1__3__Impl
+rule__JsonThing__Group_2_1__3__Impl
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 (
-	{ before(grammarAccess.getJsonThingDescriptionAccess().getCommaKeyword_2_1_3()); }
+	{ before(grammarAccess.getJsonThingAccess().getCommaKeyword_2_1_3()); }
 	(',')?
-	{ after(grammarAccess.getJsonThingDescriptionAccess().getCommaKeyword_2_1_3()); }
+	{ after(grammarAccess.getJsonThingAccess().getCommaKeyword_2_1_3()); }
 )
 ;
 finally {
@@ -1854,107 +1854,107 @@ finally {
 }
 
 
-rule__JsonThingDescription__Group_2_1_2_1__0
+rule__JsonThing__Group_2_1_2_1__0
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
-	rule__JsonThingDescription__Group_2_1_2_1__0__Impl
-	rule__JsonThingDescription__Group_2_1_2_1__1
+	rule__JsonThing__Group_2_1_2_1__0__Impl
+	rule__JsonThing__Group_2_1_2_1__1
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__JsonThingDescription__Group_2_1_2_1__0__Impl
+rule__JsonThing__Group_2_1_2_1__0__Impl
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 (
-	{ before(grammarAccess.getJsonThingDescriptionAccess().getLeftSquareBracketKeyword_2_1_2_1_0()); }
+	{ before(grammarAccess.getJsonThingAccess().getLeftSquareBracketKeyword_2_1_2_1_0()); }
 	'['
-	{ after(grammarAccess.getJsonThingDescriptionAccess().getLeftSquareBracketKeyword_2_1_2_1_0()); }
+	{ after(grammarAccess.getJsonThingAccess().getLeftSquareBracketKeyword_2_1_2_1_0()); }
 )
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__JsonThingDescription__Group_2_1_2_1__1
+rule__JsonThing__Group_2_1_2_1__1
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
-	rule__JsonThingDescription__Group_2_1_2_1__1__Impl
-	rule__JsonThingDescription__Group_2_1_2_1__2
+	rule__JsonThing__Group_2_1_2_1__1__Impl
+	rule__JsonThing__Group_2_1_2_1__2
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__JsonThingDescription__Group_2_1_2_1__1__Impl
+rule__JsonThing__Group_2_1_2_1__1__Impl
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 (
-	{ before(grammarAccess.getJsonThingDescriptionAccess().getLd_typeAssignment_2_1_2_1_1()); }
-	(rule__JsonThingDescription__Ld_typeAssignment_2_1_2_1_1)
-	{ after(grammarAccess.getJsonThingDescriptionAccess().getLd_typeAssignment_2_1_2_1_1()); }
+	{ before(grammarAccess.getJsonThingAccess().getLd_typeAssignment_2_1_2_1_1()); }
+	(rule__JsonThing__Ld_typeAssignment_2_1_2_1_1)
+	{ after(grammarAccess.getJsonThingAccess().getLd_typeAssignment_2_1_2_1_1()); }
 )
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__JsonThingDescription__Group_2_1_2_1__2
+rule__JsonThing__Group_2_1_2_1__2
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
-	rule__JsonThingDescription__Group_2_1_2_1__2__Impl
-	rule__JsonThingDescription__Group_2_1_2_1__3
+	rule__JsonThing__Group_2_1_2_1__2__Impl
+	rule__JsonThing__Group_2_1_2_1__3
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__JsonThingDescription__Group_2_1_2_1__2__Impl
+rule__JsonThing__Group_2_1_2_1__2__Impl
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 (
-	{ before(grammarAccess.getJsonThingDescriptionAccess().getGroup_2_1_2_1_2()); }
-	(rule__JsonThingDescription__Group_2_1_2_1_2__0)*
-	{ after(grammarAccess.getJsonThingDescriptionAccess().getGroup_2_1_2_1_2()); }
+	{ before(grammarAccess.getJsonThingAccess().getGroup_2_1_2_1_2()); }
+	(rule__JsonThing__Group_2_1_2_1_2__0)*
+	{ after(grammarAccess.getJsonThingAccess().getGroup_2_1_2_1_2()); }
 )
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__JsonThingDescription__Group_2_1_2_1__3
+rule__JsonThing__Group_2_1_2_1__3
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
-	rule__JsonThingDescription__Group_2_1_2_1__3__Impl
+	rule__JsonThing__Group_2_1_2_1__3__Impl
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__JsonThingDescription__Group_2_1_2_1__3__Impl
+rule__JsonThing__Group_2_1_2_1__3__Impl
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 (
-	{ before(grammarAccess.getJsonThingDescriptionAccess().getRightSquareBracketKeyword_2_1_2_1_3()); }
+	{ before(grammarAccess.getJsonThingAccess().getRightSquareBracketKeyword_2_1_2_1_3()); }
 	']'
-	{ after(grammarAccess.getJsonThingDescriptionAccess().getRightSquareBracketKeyword_2_1_2_1_3()); }
+	{ after(grammarAccess.getJsonThingAccess().getRightSquareBracketKeyword_2_1_2_1_3()); }
 )
 ;
 finally {
@@ -1962,53 +1962,53 @@ finally {
 }
 
 
-rule__JsonThingDescription__Group_2_1_2_1_2__0
+rule__JsonThing__Group_2_1_2_1_2__0
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
-	rule__JsonThingDescription__Group_2_1_2_1_2__0__Impl
-	rule__JsonThingDescription__Group_2_1_2_1_2__1
+	rule__JsonThing__Group_2_1_2_1_2__0__Impl
+	rule__JsonThing__Group_2_1_2_1_2__1
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__JsonThingDescription__Group_2_1_2_1_2__0__Impl
+rule__JsonThing__Group_2_1_2_1_2__0__Impl
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 (
-	{ before(grammarAccess.getJsonThingDescriptionAccess().getCommaKeyword_2_1_2_1_2_0()); }
+	{ before(grammarAccess.getJsonThingAccess().getCommaKeyword_2_1_2_1_2_0()); }
 	','
-	{ after(grammarAccess.getJsonThingDescriptionAccess().getCommaKeyword_2_1_2_1_2_0()); }
+	{ after(grammarAccess.getJsonThingAccess().getCommaKeyword_2_1_2_1_2_0()); }
 )
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__JsonThingDescription__Group_2_1_2_1_2__1
+rule__JsonThing__Group_2_1_2_1_2__1
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
-	rule__JsonThingDescription__Group_2_1_2_1_2__1__Impl
+	rule__JsonThing__Group_2_1_2_1_2__1__Impl
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__JsonThingDescription__Group_2_1_2_1_2__1__Impl
+rule__JsonThing__Group_2_1_2_1_2__1__Impl
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 (
-	{ before(grammarAccess.getJsonThingDescriptionAccess().getLd_typeAssignment_2_1_2_1_2_1()); }
-	(rule__JsonThingDescription__Ld_typeAssignment_2_1_2_1_2_1)
-	{ after(grammarAccess.getJsonThingDescriptionAccess().getLd_typeAssignment_2_1_2_1_2_1()); }
+	{ before(grammarAccess.getJsonThingAccess().getLd_typeAssignment_2_1_2_1_2_1()); }
+	(rule__JsonThing__Ld_typeAssignment_2_1_2_1_2_1)
+	{ after(grammarAccess.getJsonThingAccess().getLd_typeAssignment_2_1_2_1_2_1()); }
 )
 ;
 finally {
@@ -2016,107 +2016,107 @@ finally {
 }
 
 
-rule__JsonThingDescription__Group_2_2__0
+rule__JsonThing__Group_2_2__0
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
-	rule__JsonThingDescription__Group_2_2__0__Impl
-	rule__JsonThingDescription__Group_2_2__1
+	rule__JsonThing__Group_2_2__0__Impl
+	rule__JsonThing__Group_2_2__1
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__JsonThingDescription__Group_2_2__0__Impl
+rule__JsonThing__Group_2_2__0__Impl
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 (
-	{ before(grammarAccess.getJsonThingDescriptionAccess().getIdKeyword_2_2_0()); }
+	{ before(grammarAccess.getJsonThingAccess().getIdKeyword_2_2_0()); }
 	'"id"'
-	{ after(grammarAccess.getJsonThingDescriptionAccess().getIdKeyword_2_2_0()); }
+	{ after(grammarAccess.getJsonThingAccess().getIdKeyword_2_2_0()); }
 )
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__JsonThingDescription__Group_2_2__1
+rule__JsonThing__Group_2_2__1
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
-	rule__JsonThingDescription__Group_2_2__1__Impl
-	rule__JsonThingDescription__Group_2_2__2
+	rule__JsonThing__Group_2_2__1__Impl
+	rule__JsonThing__Group_2_2__2
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__JsonThingDescription__Group_2_2__1__Impl
+rule__JsonThing__Group_2_2__1__Impl
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 (
-	{ before(grammarAccess.getJsonThingDescriptionAccess().getColonKeyword_2_2_1()); }
+	{ before(grammarAccess.getJsonThingAccess().getColonKeyword_2_2_1()); }
 	':'
-	{ after(grammarAccess.getJsonThingDescriptionAccess().getColonKeyword_2_2_1()); }
+	{ after(grammarAccess.getJsonThingAccess().getColonKeyword_2_2_1()); }
 )
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__JsonThingDescription__Group_2_2__2
+rule__JsonThing__Group_2_2__2
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
-	rule__JsonThingDescription__Group_2_2__2__Impl
-	rule__JsonThingDescription__Group_2_2__3
+	rule__JsonThing__Group_2_2__2__Impl
+	rule__JsonThing__Group_2_2__3
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__JsonThingDescription__Group_2_2__2__Impl
+rule__JsonThing__Group_2_2__2__Impl
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 (
-	{ before(grammarAccess.getJsonThingDescriptionAccess().getIdAssignment_2_2_2()); }
-	(rule__JsonThingDescription__IdAssignment_2_2_2)
-	{ after(grammarAccess.getJsonThingDescriptionAccess().getIdAssignment_2_2_2()); }
+	{ before(grammarAccess.getJsonThingAccess().getIdAssignment_2_2_2()); }
+	(rule__JsonThing__IdAssignment_2_2_2)
+	{ after(grammarAccess.getJsonThingAccess().getIdAssignment_2_2_2()); }
 )
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__JsonThingDescription__Group_2_2__3
+rule__JsonThing__Group_2_2__3
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
-	rule__JsonThingDescription__Group_2_2__3__Impl
+	rule__JsonThing__Group_2_2__3__Impl
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__JsonThingDescription__Group_2_2__3__Impl
+rule__JsonThing__Group_2_2__3__Impl
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 (
-	{ before(grammarAccess.getJsonThingDescriptionAccess().getCommaKeyword_2_2_3()); }
+	{ before(grammarAccess.getJsonThingAccess().getCommaKeyword_2_2_3()); }
 	(',')?
-	{ after(grammarAccess.getJsonThingDescriptionAccess().getCommaKeyword_2_2_3()); }
+	{ after(grammarAccess.getJsonThingAccess().getCommaKeyword_2_2_3()); }
 )
 ;
 finally {
@@ -2124,107 +2124,107 @@ finally {
 }
 
 
-rule__JsonThingDescription__Group_2_3__0
+rule__JsonThing__Group_2_3__0
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
-	rule__JsonThingDescription__Group_2_3__0__Impl
-	rule__JsonThingDescription__Group_2_3__1
+	rule__JsonThing__Group_2_3__0__Impl
+	rule__JsonThing__Group_2_3__1
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__JsonThingDescription__Group_2_3__0__Impl
+rule__JsonThing__Group_2_3__0__Impl
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 (
-	{ before(grammarAccess.getJsonThingDescriptionAccess().getTitleKeyword_2_3_0()); }
+	{ before(grammarAccess.getJsonThingAccess().getTitleKeyword_2_3_0()); }
 	'"title"'
-	{ after(grammarAccess.getJsonThingDescriptionAccess().getTitleKeyword_2_3_0()); }
+	{ after(grammarAccess.getJsonThingAccess().getTitleKeyword_2_3_0()); }
 )
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__JsonThingDescription__Group_2_3__1
+rule__JsonThing__Group_2_3__1
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
-	rule__JsonThingDescription__Group_2_3__1__Impl
-	rule__JsonThingDescription__Group_2_3__2
+	rule__JsonThing__Group_2_3__1__Impl
+	rule__JsonThing__Group_2_3__2
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__JsonThingDescription__Group_2_3__1__Impl
+rule__JsonThing__Group_2_3__1__Impl
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 (
-	{ before(grammarAccess.getJsonThingDescriptionAccess().getColonKeyword_2_3_1()); }
+	{ before(grammarAccess.getJsonThingAccess().getColonKeyword_2_3_1()); }
 	':'
-	{ after(grammarAccess.getJsonThingDescriptionAccess().getColonKeyword_2_3_1()); }
+	{ after(grammarAccess.getJsonThingAccess().getColonKeyword_2_3_1()); }
 )
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__JsonThingDescription__Group_2_3__2
+rule__JsonThing__Group_2_3__2
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
-	rule__JsonThingDescription__Group_2_3__2__Impl
-	rule__JsonThingDescription__Group_2_3__3
+	rule__JsonThing__Group_2_3__2__Impl
+	rule__JsonThing__Group_2_3__3
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__JsonThingDescription__Group_2_3__2__Impl
+rule__JsonThing__Group_2_3__2__Impl
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 (
-	{ before(grammarAccess.getJsonThingDescriptionAccess().getTitleAssignment_2_3_2()); }
-	(rule__JsonThingDescription__TitleAssignment_2_3_2)
-	{ after(grammarAccess.getJsonThingDescriptionAccess().getTitleAssignment_2_3_2()); }
+	{ before(grammarAccess.getJsonThingAccess().getTitleAssignment_2_3_2()); }
+	(rule__JsonThing__TitleAssignment_2_3_2)
+	{ after(grammarAccess.getJsonThingAccess().getTitleAssignment_2_3_2()); }
 )
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__JsonThingDescription__Group_2_3__3
+rule__JsonThing__Group_2_3__3
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
-	rule__JsonThingDescription__Group_2_3__3__Impl
+	rule__JsonThing__Group_2_3__3__Impl
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__JsonThingDescription__Group_2_3__3__Impl
+rule__JsonThing__Group_2_3__3__Impl
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 (
-	{ before(grammarAccess.getJsonThingDescriptionAccess().getCommaKeyword_2_3_3()); }
+	{ before(grammarAccess.getJsonThingAccess().getCommaKeyword_2_3_3()); }
 	(',')?
-	{ after(grammarAccess.getJsonThingDescriptionAccess().getCommaKeyword_2_3_3()); }
+	{ after(grammarAccess.getJsonThingAccess().getCommaKeyword_2_3_3()); }
 )
 ;
 finally {
@@ -2232,107 +2232,107 @@ finally {
 }
 
 
-rule__JsonThingDescription__Group_2_4__0
+rule__JsonThing__Group_2_4__0
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
-	rule__JsonThingDescription__Group_2_4__0__Impl
-	rule__JsonThingDescription__Group_2_4__1
+	rule__JsonThing__Group_2_4__0__Impl
+	rule__JsonThing__Group_2_4__1
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__JsonThingDescription__Group_2_4__0__Impl
+rule__JsonThing__Group_2_4__0__Impl
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 (
-	{ before(grammarAccess.getJsonThingDescriptionAccess().getDescriptionKeyword_2_4_0()); }
+	{ before(grammarAccess.getJsonThingAccess().getDescriptionKeyword_2_4_0()); }
 	'"description"'
-	{ after(grammarAccess.getJsonThingDescriptionAccess().getDescriptionKeyword_2_4_0()); }
+	{ after(grammarAccess.getJsonThingAccess().getDescriptionKeyword_2_4_0()); }
 )
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__JsonThingDescription__Group_2_4__1
+rule__JsonThing__Group_2_4__1
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
-	rule__JsonThingDescription__Group_2_4__1__Impl
-	rule__JsonThingDescription__Group_2_4__2
+	rule__JsonThing__Group_2_4__1__Impl
+	rule__JsonThing__Group_2_4__2
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__JsonThingDescription__Group_2_4__1__Impl
+rule__JsonThing__Group_2_4__1__Impl
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 (
-	{ before(grammarAccess.getJsonThingDescriptionAccess().getColonKeyword_2_4_1()); }
+	{ before(grammarAccess.getJsonThingAccess().getColonKeyword_2_4_1()); }
 	':'
-	{ after(grammarAccess.getJsonThingDescriptionAccess().getColonKeyword_2_4_1()); }
+	{ after(grammarAccess.getJsonThingAccess().getColonKeyword_2_4_1()); }
 )
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__JsonThingDescription__Group_2_4__2
+rule__JsonThing__Group_2_4__2
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
-	rule__JsonThingDescription__Group_2_4__2__Impl
-	rule__JsonThingDescription__Group_2_4__3
+	rule__JsonThing__Group_2_4__2__Impl
+	rule__JsonThing__Group_2_4__3
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__JsonThingDescription__Group_2_4__2__Impl
+rule__JsonThing__Group_2_4__2__Impl
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 (
-	{ before(grammarAccess.getJsonThingDescriptionAccess().getDescriptionAssignment_2_4_2()); }
-	(rule__JsonThingDescription__DescriptionAssignment_2_4_2)
-	{ after(grammarAccess.getJsonThingDescriptionAccess().getDescriptionAssignment_2_4_2()); }
+	{ before(grammarAccess.getJsonThingAccess().getDescriptionAssignment_2_4_2()); }
+	(rule__JsonThing__DescriptionAssignment_2_4_2)
+	{ after(grammarAccess.getJsonThingAccess().getDescriptionAssignment_2_4_2()); }
 )
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__JsonThingDescription__Group_2_4__3
+rule__JsonThing__Group_2_4__3
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
-	rule__JsonThingDescription__Group_2_4__3__Impl
+	rule__JsonThing__Group_2_4__3__Impl
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__JsonThingDescription__Group_2_4__3__Impl
+rule__JsonThing__Group_2_4__3__Impl
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 (
-	{ before(grammarAccess.getJsonThingDescriptionAccess().getCommaKeyword_2_4_3()); }
+	{ before(grammarAccess.getJsonThingAccess().getCommaKeyword_2_4_3()); }
 	(',')?
-	{ after(grammarAccess.getJsonThingDescriptionAccess().getCommaKeyword_2_4_3()); }
+	{ after(grammarAccess.getJsonThingAccess().getCommaKeyword_2_4_3()); }
 )
 ;
 finally {
@@ -2340,107 +2340,107 @@ finally {
 }
 
 
-rule__JsonThingDescription__Group_2_5__0
+rule__JsonThing__Group_2_5__0
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
-	rule__JsonThingDescription__Group_2_5__0__Impl
-	rule__JsonThingDescription__Group_2_5__1
+	rule__JsonThing__Group_2_5__0__Impl
+	rule__JsonThing__Group_2_5__1
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__JsonThingDescription__Group_2_5__0__Impl
+rule__JsonThing__Group_2_5__0__Impl
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 (
-	{ before(grammarAccess.getJsonThingDescriptionAccess().getCreatedKeyword_2_5_0()); }
+	{ before(grammarAccess.getJsonThingAccess().getCreatedKeyword_2_5_0()); }
 	'"created"'
-	{ after(grammarAccess.getJsonThingDescriptionAccess().getCreatedKeyword_2_5_0()); }
+	{ after(grammarAccess.getJsonThingAccess().getCreatedKeyword_2_5_0()); }
 )
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__JsonThingDescription__Group_2_5__1
+rule__JsonThing__Group_2_5__1
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
-	rule__JsonThingDescription__Group_2_5__1__Impl
-	rule__JsonThingDescription__Group_2_5__2
+	rule__JsonThing__Group_2_5__1__Impl
+	rule__JsonThing__Group_2_5__2
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__JsonThingDescription__Group_2_5__1__Impl
+rule__JsonThing__Group_2_5__1__Impl
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 (
-	{ before(grammarAccess.getJsonThingDescriptionAccess().getColonKeyword_2_5_1()); }
+	{ before(grammarAccess.getJsonThingAccess().getColonKeyword_2_5_1()); }
 	':'
-	{ after(grammarAccess.getJsonThingDescriptionAccess().getColonKeyword_2_5_1()); }
+	{ after(grammarAccess.getJsonThingAccess().getColonKeyword_2_5_1()); }
 )
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__JsonThingDescription__Group_2_5__2
+rule__JsonThing__Group_2_5__2
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
-	rule__JsonThingDescription__Group_2_5__2__Impl
-	rule__JsonThingDescription__Group_2_5__3
+	rule__JsonThing__Group_2_5__2__Impl
+	rule__JsonThing__Group_2_5__3
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__JsonThingDescription__Group_2_5__2__Impl
+rule__JsonThing__Group_2_5__2__Impl
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 (
-	{ before(grammarAccess.getJsonThingDescriptionAccess().getCreatedAssignment_2_5_2()); }
-	(rule__JsonThingDescription__CreatedAssignment_2_5_2)
-	{ after(grammarAccess.getJsonThingDescriptionAccess().getCreatedAssignment_2_5_2()); }
+	{ before(grammarAccess.getJsonThingAccess().getCreatedAssignment_2_5_2()); }
+	(rule__JsonThing__CreatedAssignment_2_5_2)
+	{ after(grammarAccess.getJsonThingAccess().getCreatedAssignment_2_5_2()); }
 )
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__JsonThingDescription__Group_2_5__3
+rule__JsonThing__Group_2_5__3
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
-	rule__JsonThingDescription__Group_2_5__3__Impl
+	rule__JsonThing__Group_2_5__3__Impl
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__JsonThingDescription__Group_2_5__3__Impl
+rule__JsonThing__Group_2_5__3__Impl
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 (
-	{ before(grammarAccess.getJsonThingDescriptionAccess().getCommaKeyword_2_5_3()); }
+	{ before(grammarAccess.getJsonThingAccess().getCommaKeyword_2_5_3()); }
 	(',')?
-	{ after(grammarAccess.getJsonThingDescriptionAccess().getCommaKeyword_2_5_3()); }
+	{ after(grammarAccess.getJsonThingAccess().getCommaKeyword_2_5_3()); }
 )
 ;
 finally {
@@ -2448,107 +2448,107 @@ finally {
 }
 
 
-rule__JsonThingDescription__Group_2_6__0
+rule__JsonThing__Group_2_6__0
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
-	rule__JsonThingDescription__Group_2_6__0__Impl
-	rule__JsonThingDescription__Group_2_6__1
+	rule__JsonThing__Group_2_6__0__Impl
+	rule__JsonThing__Group_2_6__1
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__JsonThingDescription__Group_2_6__0__Impl
+rule__JsonThing__Group_2_6__0__Impl
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 (
-	{ before(grammarAccess.getJsonThingDescriptionAccess().getModifiedKeyword_2_6_0()); }
+	{ before(grammarAccess.getJsonThingAccess().getModifiedKeyword_2_6_0()); }
 	'"modified"'
-	{ after(grammarAccess.getJsonThingDescriptionAccess().getModifiedKeyword_2_6_0()); }
+	{ after(grammarAccess.getJsonThingAccess().getModifiedKeyword_2_6_0()); }
 )
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__JsonThingDescription__Group_2_6__1
+rule__JsonThing__Group_2_6__1
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
-	rule__JsonThingDescription__Group_2_6__1__Impl
-	rule__JsonThingDescription__Group_2_6__2
+	rule__JsonThing__Group_2_6__1__Impl
+	rule__JsonThing__Group_2_6__2
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__JsonThingDescription__Group_2_6__1__Impl
+rule__JsonThing__Group_2_6__1__Impl
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 (
-	{ before(grammarAccess.getJsonThingDescriptionAccess().getColonKeyword_2_6_1()); }
+	{ before(grammarAccess.getJsonThingAccess().getColonKeyword_2_6_1()); }
 	':'
-	{ after(grammarAccess.getJsonThingDescriptionAccess().getColonKeyword_2_6_1()); }
+	{ after(grammarAccess.getJsonThingAccess().getColonKeyword_2_6_1()); }
 )
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__JsonThingDescription__Group_2_6__2
+rule__JsonThing__Group_2_6__2
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
-	rule__JsonThingDescription__Group_2_6__2__Impl
-	rule__JsonThingDescription__Group_2_6__3
+	rule__JsonThing__Group_2_6__2__Impl
+	rule__JsonThing__Group_2_6__3
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__JsonThingDescription__Group_2_6__2__Impl
+rule__JsonThing__Group_2_6__2__Impl
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 (
-	{ before(grammarAccess.getJsonThingDescriptionAccess().getModifiedAssignment_2_6_2()); }
-	(rule__JsonThingDescription__ModifiedAssignment_2_6_2)
-	{ after(grammarAccess.getJsonThingDescriptionAccess().getModifiedAssignment_2_6_2()); }
+	{ before(grammarAccess.getJsonThingAccess().getModifiedAssignment_2_6_2()); }
+	(rule__JsonThing__ModifiedAssignment_2_6_2)
+	{ after(grammarAccess.getJsonThingAccess().getModifiedAssignment_2_6_2()); }
 )
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__JsonThingDescription__Group_2_6__3
+rule__JsonThing__Group_2_6__3
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
-	rule__JsonThingDescription__Group_2_6__3__Impl
+	rule__JsonThing__Group_2_6__3__Impl
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__JsonThingDescription__Group_2_6__3__Impl
+rule__JsonThing__Group_2_6__3__Impl
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 (
-	{ before(grammarAccess.getJsonThingDescriptionAccess().getCommaKeyword_2_6_3()); }
+	{ before(grammarAccess.getJsonThingAccess().getCommaKeyword_2_6_3()); }
 	(',')?
-	{ after(grammarAccess.getJsonThingDescriptionAccess().getCommaKeyword_2_6_3()); }
+	{ after(grammarAccess.getJsonThingAccess().getCommaKeyword_2_6_3()); }
 )
 ;
 finally {
@@ -2556,107 +2556,107 @@ finally {
 }
 
 
-rule__JsonThingDescription__Group_2_7__0
+rule__JsonThing__Group_2_7__0
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
-	rule__JsonThingDescription__Group_2_7__0__Impl
-	rule__JsonThingDescription__Group_2_7__1
+	rule__JsonThing__Group_2_7__0__Impl
+	rule__JsonThing__Group_2_7__1
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__JsonThingDescription__Group_2_7__0__Impl
+rule__JsonThing__Group_2_7__0__Impl
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 (
-	{ before(grammarAccess.getJsonThingDescriptionAccess().getSupportKeyword_2_7_0()); }
+	{ before(grammarAccess.getJsonThingAccess().getSupportKeyword_2_7_0()); }
 	'"support"'
-	{ after(grammarAccess.getJsonThingDescriptionAccess().getSupportKeyword_2_7_0()); }
+	{ after(grammarAccess.getJsonThingAccess().getSupportKeyword_2_7_0()); }
 )
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__JsonThingDescription__Group_2_7__1
+rule__JsonThing__Group_2_7__1
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
-	rule__JsonThingDescription__Group_2_7__1__Impl
-	rule__JsonThingDescription__Group_2_7__2
+	rule__JsonThing__Group_2_7__1__Impl
+	rule__JsonThing__Group_2_7__2
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__JsonThingDescription__Group_2_7__1__Impl
+rule__JsonThing__Group_2_7__1__Impl
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 (
-	{ before(grammarAccess.getJsonThingDescriptionAccess().getColonKeyword_2_7_1()); }
+	{ before(grammarAccess.getJsonThingAccess().getColonKeyword_2_7_1()); }
 	':'
-	{ after(grammarAccess.getJsonThingDescriptionAccess().getColonKeyword_2_7_1()); }
+	{ after(grammarAccess.getJsonThingAccess().getColonKeyword_2_7_1()); }
 )
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__JsonThingDescription__Group_2_7__2
+rule__JsonThing__Group_2_7__2
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
-	rule__JsonThingDescription__Group_2_7__2__Impl
-	rule__JsonThingDescription__Group_2_7__3
+	rule__JsonThing__Group_2_7__2__Impl
+	rule__JsonThing__Group_2_7__3
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__JsonThingDescription__Group_2_7__2__Impl
+rule__JsonThing__Group_2_7__2__Impl
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 (
-	{ before(grammarAccess.getJsonThingDescriptionAccess().getSupportAssignment_2_7_2()); }
-	(rule__JsonThingDescription__SupportAssignment_2_7_2)
-	{ after(grammarAccess.getJsonThingDescriptionAccess().getSupportAssignment_2_7_2()); }
+	{ before(grammarAccess.getJsonThingAccess().getSupportAssignment_2_7_2()); }
+	(rule__JsonThing__SupportAssignment_2_7_2)
+	{ after(grammarAccess.getJsonThingAccess().getSupportAssignment_2_7_2()); }
 )
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__JsonThingDescription__Group_2_7__3
+rule__JsonThing__Group_2_7__3
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
-	rule__JsonThingDescription__Group_2_7__3__Impl
+	rule__JsonThing__Group_2_7__3__Impl
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__JsonThingDescription__Group_2_7__3__Impl
+rule__JsonThing__Group_2_7__3__Impl
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 (
-	{ before(grammarAccess.getJsonThingDescriptionAccess().getCommaKeyword_2_7_3()); }
+	{ before(grammarAccess.getJsonThingAccess().getCommaKeyword_2_7_3()); }
 	(',')?
-	{ after(grammarAccess.getJsonThingDescriptionAccess().getCommaKeyword_2_7_3()); }
+	{ after(grammarAccess.getJsonThingAccess().getCommaKeyword_2_7_3()); }
 )
 ;
 finally {
@@ -2664,107 +2664,107 @@ finally {
 }
 
 
-rule__JsonThingDescription__Group_2_8__0
+rule__JsonThing__Group_2_8__0
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
-	rule__JsonThingDescription__Group_2_8__0__Impl
-	rule__JsonThingDescription__Group_2_8__1
+	rule__JsonThing__Group_2_8__0__Impl
+	rule__JsonThing__Group_2_8__1
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__JsonThingDescription__Group_2_8__0__Impl
+rule__JsonThing__Group_2_8__0__Impl
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 (
-	{ before(grammarAccess.getJsonThingDescriptionAccess().getBaseKeyword_2_8_0()); }
+	{ before(grammarAccess.getJsonThingAccess().getBaseKeyword_2_8_0()); }
 	'"base"'
-	{ after(grammarAccess.getJsonThingDescriptionAccess().getBaseKeyword_2_8_0()); }
+	{ after(grammarAccess.getJsonThingAccess().getBaseKeyword_2_8_0()); }
 )
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__JsonThingDescription__Group_2_8__1
+rule__JsonThing__Group_2_8__1
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
-	rule__JsonThingDescription__Group_2_8__1__Impl
-	rule__JsonThingDescription__Group_2_8__2
+	rule__JsonThing__Group_2_8__1__Impl
+	rule__JsonThing__Group_2_8__2
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__JsonThingDescription__Group_2_8__1__Impl
+rule__JsonThing__Group_2_8__1__Impl
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 (
-	{ before(grammarAccess.getJsonThingDescriptionAccess().getColonKeyword_2_8_1()); }
+	{ before(grammarAccess.getJsonThingAccess().getColonKeyword_2_8_1()); }
 	':'
-	{ after(grammarAccess.getJsonThingDescriptionAccess().getColonKeyword_2_8_1()); }
+	{ after(grammarAccess.getJsonThingAccess().getColonKeyword_2_8_1()); }
 )
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__JsonThingDescription__Group_2_8__2
+rule__JsonThing__Group_2_8__2
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
-	rule__JsonThingDescription__Group_2_8__2__Impl
-	rule__JsonThingDescription__Group_2_8__3
+	rule__JsonThing__Group_2_8__2__Impl
+	rule__JsonThing__Group_2_8__3
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__JsonThingDescription__Group_2_8__2__Impl
+rule__JsonThing__Group_2_8__2__Impl
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 (
-	{ before(grammarAccess.getJsonThingDescriptionAccess().getBaseAssignment_2_8_2()); }
-	(rule__JsonThingDescription__BaseAssignment_2_8_2)
-	{ after(grammarAccess.getJsonThingDescriptionAccess().getBaseAssignment_2_8_2()); }
+	{ before(grammarAccess.getJsonThingAccess().getBaseAssignment_2_8_2()); }
+	(rule__JsonThing__BaseAssignment_2_8_2)
+	{ after(grammarAccess.getJsonThingAccess().getBaseAssignment_2_8_2()); }
 )
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__JsonThingDescription__Group_2_8__3
+rule__JsonThing__Group_2_8__3
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
-	rule__JsonThingDescription__Group_2_8__3__Impl
+	rule__JsonThing__Group_2_8__3__Impl
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__JsonThingDescription__Group_2_8__3__Impl
+rule__JsonThing__Group_2_8__3__Impl
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 (
-	{ before(grammarAccess.getJsonThingDescriptionAccess().getCommaKeyword_2_8_3()); }
+	{ before(grammarAccess.getJsonThingAccess().getCommaKeyword_2_8_3()); }
 	(',')?
-	{ after(grammarAccess.getJsonThingDescriptionAccess().getCommaKeyword_2_8_3()); }
+	{ after(grammarAccess.getJsonThingAccess().getCommaKeyword_2_8_3()); }
 )
 ;
 finally {
@@ -2772,107 +2772,107 @@ finally {
 }
 
 
-rule__JsonThingDescription__Group_2_9__0
+rule__JsonThing__Group_2_9__0
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
-	rule__JsonThingDescription__Group_2_9__0__Impl
-	rule__JsonThingDescription__Group_2_9__1
+	rule__JsonThing__Group_2_9__0__Impl
+	rule__JsonThing__Group_2_9__1
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__JsonThingDescription__Group_2_9__0__Impl
+rule__JsonThing__Group_2_9__0__Impl
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 (
-	{ before(grammarAccess.getJsonThingDescriptionAccess().getSecurityKeyword_2_9_0()); }
+	{ before(grammarAccess.getJsonThingAccess().getSecurityKeyword_2_9_0()); }
 	'"security"'
-	{ after(grammarAccess.getJsonThingDescriptionAccess().getSecurityKeyword_2_9_0()); }
+	{ after(grammarAccess.getJsonThingAccess().getSecurityKeyword_2_9_0()); }
 )
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__JsonThingDescription__Group_2_9__1
+rule__JsonThing__Group_2_9__1
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
-	rule__JsonThingDescription__Group_2_9__1__Impl
-	rule__JsonThingDescription__Group_2_9__2
+	rule__JsonThing__Group_2_9__1__Impl
+	rule__JsonThing__Group_2_9__2
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__JsonThingDescription__Group_2_9__1__Impl
+rule__JsonThing__Group_2_9__1__Impl
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 (
-	{ before(grammarAccess.getJsonThingDescriptionAccess().getColonKeyword_2_9_1()); }
+	{ before(grammarAccess.getJsonThingAccess().getColonKeyword_2_9_1()); }
 	':'
-	{ after(grammarAccess.getJsonThingDescriptionAccess().getColonKeyword_2_9_1()); }
+	{ after(grammarAccess.getJsonThingAccess().getColonKeyword_2_9_1()); }
 )
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__JsonThingDescription__Group_2_9__2
+rule__JsonThing__Group_2_9__2
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
-	rule__JsonThingDescription__Group_2_9__2__Impl
-	rule__JsonThingDescription__Group_2_9__3
+	rule__JsonThing__Group_2_9__2__Impl
+	rule__JsonThing__Group_2_9__3
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__JsonThingDescription__Group_2_9__2__Impl
+rule__JsonThing__Group_2_9__2__Impl
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 (
-	{ before(grammarAccess.getJsonThingDescriptionAccess().getAlternatives_2_9_2()); }
-	(rule__JsonThingDescription__Alternatives_2_9_2)
-	{ after(grammarAccess.getJsonThingDescriptionAccess().getAlternatives_2_9_2()); }
+	{ before(grammarAccess.getJsonThingAccess().getAlternatives_2_9_2()); }
+	(rule__JsonThing__Alternatives_2_9_2)
+	{ after(grammarAccess.getJsonThingAccess().getAlternatives_2_9_2()); }
 )
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__JsonThingDescription__Group_2_9__3
+rule__JsonThing__Group_2_9__3
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
-	rule__JsonThingDescription__Group_2_9__3__Impl
+	rule__JsonThing__Group_2_9__3__Impl
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__JsonThingDescription__Group_2_9__3__Impl
+rule__JsonThing__Group_2_9__3__Impl
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 (
-	{ before(grammarAccess.getJsonThingDescriptionAccess().getCommaKeyword_2_9_3()); }
+	{ before(grammarAccess.getJsonThingAccess().getCommaKeyword_2_9_3()); }
 	(',')?
-	{ after(grammarAccess.getJsonThingDescriptionAccess().getCommaKeyword_2_9_3()); }
+	{ after(grammarAccess.getJsonThingAccess().getCommaKeyword_2_9_3()); }
 )
 ;
 finally {
@@ -2880,107 +2880,107 @@ finally {
 }
 
 
-rule__JsonThingDescription__Group_2_9_2_1__0
+rule__JsonThing__Group_2_9_2_1__0
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
-	rule__JsonThingDescription__Group_2_9_2_1__0__Impl
-	rule__JsonThingDescription__Group_2_9_2_1__1
+	rule__JsonThing__Group_2_9_2_1__0__Impl
+	rule__JsonThing__Group_2_9_2_1__1
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__JsonThingDescription__Group_2_9_2_1__0__Impl
+rule__JsonThing__Group_2_9_2_1__0__Impl
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 (
-	{ before(grammarAccess.getJsonThingDescriptionAccess().getLeftSquareBracketKeyword_2_9_2_1_0()); }
+	{ before(grammarAccess.getJsonThingAccess().getLeftSquareBracketKeyword_2_9_2_1_0()); }
 	'['
-	{ after(grammarAccess.getJsonThingDescriptionAccess().getLeftSquareBracketKeyword_2_9_2_1_0()); }
+	{ after(grammarAccess.getJsonThingAccess().getLeftSquareBracketKeyword_2_9_2_1_0()); }
 )
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__JsonThingDescription__Group_2_9_2_1__1
+rule__JsonThing__Group_2_9_2_1__1
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
-	rule__JsonThingDescription__Group_2_9_2_1__1__Impl
-	rule__JsonThingDescription__Group_2_9_2_1__2
+	rule__JsonThing__Group_2_9_2_1__1__Impl
+	rule__JsonThing__Group_2_9_2_1__2
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__JsonThingDescription__Group_2_9_2_1__1__Impl
+rule__JsonThing__Group_2_9_2_1__1__Impl
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 (
-	{ before(grammarAccess.getJsonThingDescriptionAccess().getSecurityAssignment_2_9_2_1_1()); }
-	(rule__JsonThingDescription__SecurityAssignment_2_9_2_1_1)
-	{ after(grammarAccess.getJsonThingDescriptionAccess().getSecurityAssignment_2_9_2_1_1()); }
+	{ before(grammarAccess.getJsonThingAccess().getSecurityAssignment_2_9_2_1_1()); }
+	(rule__JsonThing__SecurityAssignment_2_9_2_1_1)
+	{ after(grammarAccess.getJsonThingAccess().getSecurityAssignment_2_9_2_1_1()); }
 )
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__JsonThingDescription__Group_2_9_2_1__2
+rule__JsonThing__Group_2_9_2_1__2
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
-	rule__JsonThingDescription__Group_2_9_2_1__2__Impl
-	rule__JsonThingDescription__Group_2_9_2_1__3
+	rule__JsonThing__Group_2_9_2_1__2__Impl
+	rule__JsonThing__Group_2_9_2_1__3
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__JsonThingDescription__Group_2_9_2_1__2__Impl
+rule__JsonThing__Group_2_9_2_1__2__Impl
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 (
-	{ before(grammarAccess.getJsonThingDescriptionAccess().getGroup_2_9_2_1_2()); }
-	(rule__JsonThingDescription__Group_2_9_2_1_2__0)*
-	{ after(grammarAccess.getJsonThingDescriptionAccess().getGroup_2_9_2_1_2()); }
+	{ before(grammarAccess.getJsonThingAccess().getGroup_2_9_2_1_2()); }
+	(rule__JsonThing__Group_2_9_2_1_2__0)*
+	{ after(grammarAccess.getJsonThingAccess().getGroup_2_9_2_1_2()); }
 )
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__JsonThingDescription__Group_2_9_2_1__3
+rule__JsonThing__Group_2_9_2_1__3
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
-	rule__JsonThingDescription__Group_2_9_2_1__3__Impl
+	rule__JsonThing__Group_2_9_2_1__3__Impl
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__JsonThingDescription__Group_2_9_2_1__3__Impl
+rule__JsonThing__Group_2_9_2_1__3__Impl
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 (
-	{ before(grammarAccess.getJsonThingDescriptionAccess().getRightSquareBracketKeyword_2_9_2_1_3()); }
+	{ before(grammarAccess.getJsonThingAccess().getRightSquareBracketKeyword_2_9_2_1_3()); }
 	']'
-	{ after(grammarAccess.getJsonThingDescriptionAccess().getRightSquareBracketKeyword_2_9_2_1_3()); }
+	{ after(grammarAccess.getJsonThingAccess().getRightSquareBracketKeyword_2_9_2_1_3()); }
 )
 ;
 finally {
@@ -2988,53 +2988,53 @@ finally {
 }
 
 
-rule__JsonThingDescription__Group_2_9_2_1_2__0
+rule__JsonThing__Group_2_9_2_1_2__0
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
-	rule__JsonThingDescription__Group_2_9_2_1_2__0__Impl
-	rule__JsonThingDescription__Group_2_9_2_1_2__1
+	rule__JsonThing__Group_2_9_2_1_2__0__Impl
+	rule__JsonThing__Group_2_9_2_1_2__1
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__JsonThingDescription__Group_2_9_2_1_2__0__Impl
+rule__JsonThing__Group_2_9_2_1_2__0__Impl
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 (
-	{ before(grammarAccess.getJsonThingDescriptionAccess().getCommaKeyword_2_9_2_1_2_0()); }
+	{ before(grammarAccess.getJsonThingAccess().getCommaKeyword_2_9_2_1_2_0()); }
 	','
-	{ after(grammarAccess.getJsonThingDescriptionAccess().getCommaKeyword_2_9_2_1_2_0()); }
+	{ after(grammarAccess.getJsonThingAccess().getCommaKeyword_2_9_2_1_2_0()); }
 )
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__JsonThingDescription__Group_2_9_2_1_2__1
+rule__JsonThing__Group_2_9_2_1_2__1
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
-	rule__JsonThingDescription__Group_2_9_2_1_2__1__Impl
+	rule__JsonThing__Group_2_9_2_1_2__1__Impl
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__JsonThingDescription__Group_2_9_2_1_2__1__Impl
+rule__JsonThing__Group_2_9_2_1_2__1__Impl
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 (
-	{ before(grammarAccess.getJsonThingDescriptionAccess().getSecurityAssignment_2_9_2_1_2_1()); }
-	(rule__JsonThingDescription__SecurityAssignment_2_9_2_1_2_1)
-	{ after(grammarAccess.getJsonThingDescriptionAccess().getSecurityAssignment_2_9_2_1_2_1()); }
+	{ before(grammarAccess.getJsonThingAccess().getSecurityAssignment_2_9_2_1_2_1()); }
+	(rule__JsonThing__SecurityAssignment_2_9_2_1_2_1)
+	{ after(grammarAccess.getJsonThingAccess().getSecurityAssignment_2_9_2_1_2_1()); }
 )
 ;
 finally {
@@ -3042,188 +3042,188 @@ finally {
 }
 
 
-rule__JsonThingDescription__Group_2_10__0
+rule__JsonThing__Group_2_10__0
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
-	rule__JsonThingDescription__Group_2_10__0__Impl
-	rule__JsonThingDescription__Group_2_10__1
+	rule__JsonThing__Group_2_10__0__Impl
+	rule__JsonThing__Group_2_10__1
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__JsonThingDescription__Group_2_10__0__Impl
+rule__JsonThing__Group_2_10__0__Impl
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 (
-	{ before(grammarAccess.getJsonThingDescriptionAccess().getFormsKeyword_2_10_0()); }
+	{ before(grammarAccess.getJsonThingAccess().getFormsKeyword_2_10_0()); }
 	'"forms"'
-	{ after(grammarAccess.getJsonThingDescriptionAccess().getFormsKeyword_2_10_0()); }
+	{ after(grammarAccess.getJsonThingAccess().getFormsKeyword_2_10_0()); }
 )
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__JsonThingDescription__Group_2_10__1
+rule__JsonThing__Group_2_10__1
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
-	rule__JsonThingDescription__Group_2_10__1__Impl
-	rule__JsonThingDescription__Group_2_10__2
+	rule__JsonThing__Group_2_10__1__Impl
+	rule__JsonThing__Group_2_10__2
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__JsonThingDescription__Group_2_10__1__Impl
+rule__JsonThing__Group_2_10__1__Impl
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 (
-	{ before(grammarAccess.getJsonThingDescriptionAccess().getColonKeyword_2_10_1()); }
+	{ before(grammarAccess.getJsonThingAccess().getColonKeyword_2_10_1()); }
 	':'
-	{ after(grammarAccess.getJsonThingDescriptionAccess().getColonKeyword_2_10_1()); }
+	{ after(grammarAccess.getJsonThingAccess().getColonKeyword_2_10_1()); }
 )
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__JsonThingDescription__Group_2_10__2
+rule__JsonThing__Group_2_10__2
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
-	rule__JsonThingDescription__Group_2_10__2__Impl
-	rule__JsonThingDescription__Group_2_10__3
+	rule__JsonThing__Group_2_10__2__Impl
+	rule__JsonThing__Group_2_10__3
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__JsonThingDescription__Group_2_10__2__Impl
+rule__JsonThing__Group_2_10__2__Impl
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 (
-	{ before(grammarAccess.getJsonThingDescriptionAccess().getLeftCurlyBracketKeyword_2_10_2()); }
+	{ before(grammarAccess.getJsonThingAccess().getLeftCurlyBracketKeyword_2_10_2()); }
 	'{'
-	{ after(grammarAccess.getJsonThingDescriptionAccess().getLeftCurlyBracketKeyword_2_10_2()); }
+	{ after(grammarAccess.getJsonThingAccess().getLeftCurlyBracketKeyword_2_10_2()); }
 )
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__JsonThingDescription__Group_2_10__3
+rule__JsonThing__Group_2_10__3
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
-	rule__JsonThingDescription__Group_2_10__3__Impl
-	rule__JsonThingDescription__Group_2_10__4
+	rule__JsonThing__Group_2_10__3__Impl
+	rule__JsonThing__Group_2_10__4
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__JsonThingDescription__Group_2_10__3__Impl
+rule__JsonThing__Group_2_10__3__Impl
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 (
-	{ before(grammarAccess.getJsonThingDescriptionAccess().getFormsAssignment_2_10_3()); }
-	(rule__JsonThingDescription__FormsAssignment_2_10_3)
-	{ after(grammarAccess.getJsonThingDescriptionAccess().getFormsAssignment_2_10_3()); }
+	{ before(grammarAccess.getJsonThingAccess().getFormsAssignment_2_10_3()); }
+	(rule__JsonThing__FormsAssignment_2_10_3)
+	{ after(grammarAccess.getJsonThingAccess().getFormsAssignment_2_10_3()); }
 )
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__JsonThingDescription__Group_2_10__4
+rule__JsonThing__Group_2_10__4
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
-	rule__JsonThingDescription__Group_2_10__4__Impl
-	rule__JsonThingDescription__Group_2_10__5
+	rule__JsonThing__Group_2_10__4__Impl
+	rule__JsonThing__Group_2_10__5
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__JsonThingDescription__Group_2_10__4__Impl
+rule__JsonThing__Group_2_10__4__Impl
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 (
-	{ before(grammarAccess.getJsonThingDescriptionAccess().getGroup_2_10_4()); }
-	(rule__JsonThingDescription__Group_2_10_4__0)*
-	{ after(grammarAccess.getJsonThingDescriptionAccess().getGroup_2_10_4()); }
+	{ before(grammarAccess.getJsonThingAccess().getGroup_2_10_4()); }
+	(rule__JsonThing__Group_2_10_4__0)*
+	{ after(grammarAccess.getJsonThingAccess().getGroup_2_10_4()); }
 )
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__JsonThingDescription__Group_2_10__5
+rule__JsonThing__Group_2_10__5
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
-	rule__JsonThingDescription__Group_2_10__5__Impl
-	rule__JsonThingDescription__Group_2_10__6
+	rule__JsonThing__Group_2_10__5__Impl
+	rule__JsonThing__Group_2_10__6
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__JsonThingDescription__Group_2_10__5__Impl
+rule__JsonThing__Group_2_10__5__Impl
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 (
-	{ before(grammarAccess.getJsonThingDescriptionAccess().getRightCurlyBracketKeyword_2_10_5()); }
+	{ before(grammarAccess.getJsonThingAccess().getRightCurlyBracketKeyword_2_10_5()); }
 	'}'
-	{ after(grammarAccess.getJsonThingDescriptionAccess().getRightCurlyBracketKeyword_2_10_5()); }
+	{ after(grammarAccess.getJsonThingAccess().getRightCurlyBracketKeyword_2_10_5()); }
 )
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__JsonThingDescription__Group_2_10__6
+rule__JsonThing__Group_2_10__6
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
-	rule__JsonThingDescription__Group_2_10__6__Impl
+	rule__JsonThing__Group_2_10__6__Impl
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__JsonThingDescription__Group_2_10__6__Impl
+rule__JsonThing__Group_2_10__6__Impl
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 (
-	{ before(grammarAccess.getJsonThingDescriptionAccess().getCommaKeyword_2_10_6()); }
+	{ before(grammarAccess.getJsonThingAccess().getCommaKeyword_2_10_6()); }
 	(',')?
-	{ after(grammarAccess.getJsonThingDescriptionAccess().getCommaKeyword_2_10_6()); }
+	{ after(grammarAccess.getJsonThingAccess().getCommaKeyword_2_10_6()); }
 )
 ;
 finally {
@@ -3231,53 +3231,53 @@ finally {
 }
 
 
-rule__JsonThingDescription__Group_2_10_4__0
+rule__JsonThing__Group_2_10_4__0
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
-	rule__JsonThingDescription__Group_2_10_4__0__Impl
-	rule__JsonThingDescription__Group_2_10_4__1
+	rule__JsonThing__Group_2_10_4__0__Impl
+	rule__JsonThing__Group_2_10_4__1
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__JsonThingDescription__Group_2_10_4__0__Impl
+rule__JsonThing__Group_2_10_4__0__Impl
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 (
-	{ before(grammarAccess.getJsonThingDescriptionAccess().getCommaKeyword_2_10_4_0()); }
+	{ before(grammarAccess.getJsonThingAccess().getCommaKeyword_2_10_4_0()); }
 	','
-	{ after(grammarAccess.getJsonThingDescriptionAccess().getCommaKeyword_2_10_4_0()); }
+	{ after(grammarAccess.getJsonThingAccess().getCommaKeyword_2_10_4_0()); }
 )
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__JsonThingDescription__Group_2_10_4__1
+rule__JsonThing__Group_2_10_4__1
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
-	rule__JsonThingDescription__Group_2_10_4__1__Impl
+	rule__JsonThing__Group_2_10_4__1__Impl
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__JsonThingDescription__Group_2_10_4__1__Impl
+rule__JsonThing__Group_2_10_4__1__Impl
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 (
-	{ before(grammarAccess.getJsonThingDescriptionAccess().getFormsAssignment_2_10_4_1()); }
-	(rule__JsonThingDescription__FormsAssignment_2_10_4_1)
-	{ after(grammarAccess.getJsonThingDescriptionAccess().getFormsAssignment_2_10_4_1()); }
+	{ before(grammarAccess.getJsonThingAccess().getFormsAssignment_2_10_4_1()); }
+	(rule__JsonThing__FormsAssignment_2_10_4_1)
+	{ after(grammarAccess.getJsonThingAccess().getFormsAssignment_2_10_4_1()); }
 )
 ;
 finally {
@@ -3285,188 +3285,188 @@ finally {
 }
 
 
-rule__JsonThingDescription__Group_2_11__0
+rule__JsonThing__Group_2_11__0
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
-	rule__JsonThingDescription__Group_2_11__0__Impl
-	rule__JsonThingDescription__Group_2_11__1
+	rule__JsonThing__Group_2_11__0__Impl
+	rule__JsonThing__Group_2_11__1
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__JsonThingDescription__Group_2_11__0__Impl
+rule__JsonThing__Group_2_11__0__Impl
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 (
-	{ before(grammarAccess.getJsonThingDescriptionAccess().getLinksKeyword_2_11_0()); }
+	{ before(grammarAccess.getJsonThingAccess().getLinksKeyword_2_11_0()); }
 	'"links"'
-	{ after(grammarAccess.getJsonThingDescriptionAccess().getLinksKeyword_2_11_0()); }
+	{ after(grammarAccess.getJsonThingAccess().getLinksKeyword_2_11_0()); }
 )
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__JsonThingDescription__Group_2_11__1
+rule__JsonThing__Group_2_11__1
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
-	rule__JsonThingDescription__Group_2_11__1__Impl
-	rule__JsonThingDescription__Group_2_11__2
+	rule__JsonThing__Group_2_11__1__Impl
+	rule__JsonThing__Group_2_11__2
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__JsonThingDescription__Group_2_11__1__Impl
+rule__JsonThing__Group_2_11__1__Impl
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 (
-	{ before(grammarAccess.getJsonThingDescriptionAccess().getColonKeyword_2_11_1()); }
+	{ before(grammarAccess.getJsonThingAccess().getColonKeyword_2_11_1()); }
 	':'
-	{ after(grammarAccess.getJsonThingDescriptionAccess().getColonKeyword_2_11_1()); }
+	{ after(grammarAccess.getJsonThingAccess().getColonKeyword_2_11_1()); }
 )
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__JsonThingDescription__Group_2_11__2
+rule__JsonThing__Group_2_11__2
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
-	rule__JsonThingDescription__Group_2_11__2__Impl
-	rule__JsonThingDescription__Group_2_11__3
+	rule__JsonThing__Group_2_11__2__Impl
+	rule__JsonThing__Group_2_11__3
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__JsonThingDescription__Group_2_11__2__Impl
+rule__JsonThing__Group_2_11__2__Impl
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 (
-	{ before(grammarAccess.getJsonThingDescriptionAccess().getLeftCurlyBracketKeyword_2_11_2()); }
+	{ before(grammarAccess.getJsonThingAccess().getLeftCurlyBracketKeyword_2_11_2()); }
 	'{'
-	{ after(grammarAccess.getJsonThingDescriptionAccess().getLeftCurlyBracketKeyword_2_11_2()); }
+	{ after(grammarAccess.getJsonThingAccess().getLeftCurlyBracketKeyword_2_11_2()); }
 )
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__JsonThingDescription__Group_2_11__3
+rule__JsonThing__Group_2_11__3
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
-	rule__JsonThingDescription__Group_2_11__3__Impl
-	rule__JsonThingDescription__Group_2_11__4
+	rule__JsonThing__Group_2_11__3__Impl
+	rule__JsonThing__Group_2_11__4
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__JsonThingDescription__Group_2_11__3__Impl
+rule__JsonThing__Group_2_11__3__Impl
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 (
-	{ before(grammarAccess.getJsonThingDescriptionAccess().getLinksAssignment_2_11_3()); }
-	(rule__JsonThingDescription__LinksAssignment_2_11_3)
-	{ after(grammarAccess.getJsonThingDescriptionAccess().getLinksAssignment_2_11_3()); }
+	{ before(grammarAccess.getJsonThingAccess().getLinksAssignment_2_11_3()); }
+	(rule__JsonThing__LinksAssignment_2_11_3)
+	{ after(grammarAccess.getJsonThingAccess().getLinksAssignment_2_11_3()); }
 )
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__JsonThingDescription__Group_2_11__4
+rule__JsonThing__Group_2_11__4
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
-	rule__JsonThingDescription__Group_2_11__4__Impl
-	rule__JsonThingDescription__Group_2_11__5
+	rule__JsonThing__Group_2_11__4__Impl
+	rule__JsonThing__Group_2_11__5
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__JsonThingDescription__Group_2_11__4__Impl
+rule__JsonThing__Group_2_11__4__Impl
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 (
-	{ before(grammarAccess.getJsonThingDescriptionAccess().getGroup_2_11_4()); }
-	(rule__JsonThingDescription__Group_2_11_4__0)*
-	{ after(grammarAccess.getJsonThingDescriptionAccess().getGroup_2_11_4()); }
+	{ before(grammarAccess.getJsonThingAccess().getGroup_2_11_4()); }
+	(rule__JsonThing__Group_2_11_4__0)*
+	{ after(grammarAccess.getJsonThingAccess().getGroup_2_11_4()); }
 )
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__JsonThingDescription__Group_2_11__5
+rule__JsonThing__Group_2_11__5
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
-	rule__JsonThingDescription__Group_2_11__5__Impl
-	rule__JsonThingDescription__Group_2_11__6
+	rule__JsonThing__Group_2_11__5__Impl
+	rule__JsonThing__Group_2_11__6
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__JsonThingDescription__Group_2_11__5__Impl
+rule__JsonThing__Group_2_11__5__Impl
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 (
-	{ before(grammarAccess.getJsonThingDescriptionAccess().getRightCurlyBracketKeyword_2_11_5()); }
+	{ before(grammarAccess.getJsonThingAccess().getRightCurlyBracketKeyword_2_11_5()); }
 	'}'
-	{ after(grammarAccess.getJsonThingDescriptionAccess().getRightCurlyBracketKeyword_2_11_5()); }
+	{ after(grammarAccess.getJsonThingAccess().getRightCurlyBracketKeyword_2_11_5()); }
 )
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__JsonThingDescription__Group_2_11__6
+rule__JsonThing__Group_2_11__6
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
-	rule__JsonThingDescription__Group_2_11__6__Impl
+	rule__JsonThing__Group_2_11__6__Impl
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__JsonThingDescription__Group_2_11__6__Impl
+rule__JsonThing__Group_2_11__6__Impl
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 (
-	{ before(grammarAccess.getJsonThingDescriptionAccess().getCommaKeyword_2_11_6()); }
+	{ before(grammarAccess.getJsonThingAccess().getCommaKeyword_2_11_6()); }
 	(',')?
-	{ after(grammarAccess.getJsonThingDescriptionAccess().getCommaKeyword_2_11_6()); }
+	{ after(grammarAccess.getJsonThingAccess().getCommaKeyword_2_11_6()); }
 )
 ;
 finally {
@@ -3474,53 +3474,53 @@ finally {
 }
 
 
-rule__JsonThingDescription__Group_2_11_4__0
+rule__JsonThing__Group_2_11_4__0
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
-	rule__JsonThingDescription__Group_2_11_4__0__Impl
-	rule__JsonThingDescription__Group_2_11_4__1
+	rule__JsonThing__Group_2_11_4__0__Impl
+	rule__JsonThing__Group_2_11_4__1
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__JsonThingDescription__Group_2_11_4__0__Impl
+rule__JsonThing__Group_2_11_4__0__Impl
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 (
-	{ before(grammarAccess.getJsonThingDescriptionAccess().getCommaKeyword_2_11_4_0()); }
+	{ before(grammarAccess.getJsonThingAccess().getCommaKeyword_2_11_4_0()); }
 	','
-	{ after(grammarAccess.getJsonThingDescriptionAccess().getCommaKeyword_2_11_4_0()); }
+	{ after(grammarAccess.getJsonThingAccess().getCommaKeyword_2_11_4_0()); }
 )
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__JsonThingDescription__Group_2_11_4__1
+rule__JsonThing__Group_2_11_4__1
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
-	rule__JsonThingDescription__Group_2_11_4__1__Impl
+	rule__JsonThing__Group_2_11_4__1__Impl
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__JsonThingDescription__Group_2_11_4__1__Impl
+rule__JsonThing__Group_2_11_4__1__Impl
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 (
-	{ before(grammarAccess.getJsonThingDescriptionAccess().getLinksAssignment_2_11_4_1()); }
-	(rule__JsonThingDescription__LinksAssignment_2_11_4_1)
-	{ after(grammarAccess.getJsonThingDescriptionAccess().getLinksAssignment_2_11_4_1()); }
+	{ before(grammarAccess.getJsonThingAccess().getLinksAssignment_2_11_4_1()); }
+	(rule__JsonThing__LinksAssignment_2_11_4_1)
+	{ after(grammarAccess.getJsonThingAccess().getLinksAssignment_2_11_4_1()); }
 )
 ;
 finally {
@@ -3528,188 +3528,188 @@ finally {
 }
 
 
-rule__JsonThingDescription__Group_2_12__0
+rule__JsonThing__Group_2_12__0
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
-	rule__JsonThingDescription__Group_2_12__0__Impl
-	rule__JsonThingDescription__Group_2_12__1
+	rule__JsonThing__Group_2_12__0__Impl
+	rule__JsonThing__Group_2_12__1
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__JsonThingDescription__Group_2_12__0__Impl
+rule__JsonThing__Group_2_12__0__Impl
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 (
-	{ before(grammarAccess.getJsonThingDescriptionAccess().getTitlesKeyword_2_12_0()); }
+	{ before(grammarAccess.getJsonThingAccess().getTitlesKeyword_2_12_0()); }
 	'"titles"'
-	{ after(grammarAccess.getJsonThingDescriptionAccess().getTitlesKeyword_2_12_0()); }
+	{ after(grammarAccess.getJsonThingAccess().getTitlesKeyword_2_12_0()); }
 )
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__JsonThingDescription__Group_2_12__1
+rule__JsonThing__Group_2_12__1
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
-	rule__JsonThingDescription__Group_2_12__1__Impl
-	rule__JsonThingDescription__Group_2_12__2
+	rule__JsonThing__Group_2_12__1__Impl
+	rule__JsonThing__Group_2_12__2
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__JsonThingDescription__Group_2_12__1__Impl
+rule__JsonThing__Group_2_12__1__Impl
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 (
-	{ before(grammarAccess.getJsonThingDescriptionAccess().getColonKeyword_2_12_1()); }
+	{ before(grammarAccess.getJsonThingAccess().getColonKeyword_2_12_1()); }
 	':'
-	{ after(grammarAccess.getJsonThingDescriptionAccess().getColonKeyword_2_12_1()); }
+	{ after(grammarAccess.getJsonThingAccess().getColonKeyword_2_12_1()); }
 )
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__JsonThingDescription__Group_2_12__2
+rule__JsonThing__Group_2_12__2
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
-	rule__JsonThingDescription__Group_2_12__2__Impl
-	rule__JsonThingDescription__Group_2_12__3
+	rule__JsonThing__Group_2_12__2__Impl
+	rule__JsonThing__Group_2_12__3
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__JsonThingDescription__Group_2_12__2__Impl
+rule__JsonThing__Group_2_12__2__Impl
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 (
-	{ before(grammarAccess.getJsonThingDescriptionAccess().getLeftCurlyBracketKeyword_2_12_2()); }
+	{ before(grammarAccess.getJsonThingAccess().getLeftCurlyBracketKeyword_2_12_2()); }
 	'{'
-	{ after(grammarAccess.getJsonThingDescriptionAccess().getLeftCurlyBracketKeyword_2_12_2()); }
+	{ after(grammarAccess.getJsonThingAccess().getLeftCurlyBracketKeyword_2_12_2()); }
 )
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__JsonThingDescription__Group_2_12__3
+rule__JsonThing__Group_2_12__3
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
-	rule__JsonThingDescription__Group_2_12__3__Impl
-	rule__JsonThingDescription__Group_2_12__4
+	rule__JsonThing__Group_2_12__3__Impl
+	rule__JsonThing__Group_2_12__4
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__JsonThingDescription__Group_2_12__3__Impl
+rule__JsonThing__Group_2_12__3__Impl
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 (
-	{ before(grammarAccess.getJsonThingDescriptionAccess().getTitlesAssignment_2_12_3()); }
-	(rule__JsonThingDescription__TitlesAssignment_2_12_3)
-	{ after(grammarAccess.getJsonThingDescriptionAccess().getTitlesAssignment_2_12_3()); }
+	{ before(grammarAccess.getJsonThingAccess().getTitlesAssignment_2_12_3()); }
+	(rule__JsonThing__TitlesAssignment_2_12_3)
+	{ after(grammarAccess.getJsonThingAccess().getTitlesAssignment_2_12_3()); }
 )
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__JsonThingDescription__Group_2_12__4
+rule__JsonThing__Group_2_12__4
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
-	rule__JsonThingDescription__Group_2_12__4__Impl
-	rule__JsonThingDescription__Group_2_12__5
+	rule__JsonThing__Group_2_12__4__Impl
+	rule__JsonThing__Group_2_12__5
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__JsonThingDescription__Group_2_12__4__Impl
+rule__JsonThing__Group_2_12__4__Impl
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 (
-	{ before(grammarAccess.getJsonThingDescriptionAccess().getGroup_2_12_4()); }
-	(rule__JsonThingDescription__Group_2_12_4__0)*
-	{ after(grammarAccess.getJsonThingDescriptionAccess().getGroup_2_12_4()); }
+	{ before(grammarAccess.getJsonThingAccess().getGroup_2_12_4()); }
+	(rule__JsonThing__Group_2_12_4__0)*
+	{ after(grammarAccess.getJsonThingAccess().getGroup_2_12_4()); }
 )
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__JsonThingDescription__Group_2_12__5
+rule__JsonThing__Group_2_12__5
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
-	rule__JsonThingDescription__Group_2_12__5__Impl
-	rule__JsonThingDescription__Group_2_12__6
+	rule__JsonThing__Group_2_12__5__Impl
+	rule__JsonThing__Group_2_12__6
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__JsonThingDescription__Group_2_12__5__Impl
+rule__JsonThing__Group_2_12__5__Impl
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 (
-	{ before(grammarAccess.getJsonThingDescriptionAccess().getRightCurlyBracketKeyword_2_12_5()); }
+	{ before(grammarAccess.getJsonThingAccess().getRightCurlyBracketKeyword_2_12_5()); }
 	'}'
-	{ after(grammarAccess.getJsonThingDescriptionAccess().getRightCurlyBracketKeyword_2_12_5()); }
+	{ after(grammarAccess.getJsonThingAccess().getRightCurlyBracketKeyword_2_12_5()); }
 )
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__JsonThingDescription__Group_2_12__6
+rule__JsonThing__Group_2_12__6
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
-	rule__JsonThingDescription__Group_2_12__6__Impl
+	rule__JsonThing__Group_2_12__6__Impl
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__JsonThingDescription__Group_2_12__6__Impl
+rule__JsonThing__Group_2_12__6__Impl
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 (
-	{ before(grammarAccess.getJsonThingDescriptionAccess().getCommaKeyword_2_12_6()); }
+	{ before(grammarAccess.getJsonThingAccess().getCommaKeyword_2_12_6()); }
 	(',')?
-	{ after(grammarAccess.getJsonThingDescriptionAccess().getCommaKeyword_2_12_6()); }
+	{ after(grammarAccess.getJsonThingAccess().getCommaKeyword_2_12_6()); }
 )
 ;
 finally {
@@ -3717,53 +3717,53 @@ finally {
 }
 
 
-rule__JsonThingDescription__Group_2_12_4__0
+rule__JsonThing__Group_2_12_4__0
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
-	rule__JsonThingDescription__Group_2_12_4__0__Impl
-	rule__JsonThingDescription__Group_2_12_4__1
+	rule__JsonThing__Group_2_12_4__0__Impl
+	rule__JsonThing__Group_2_12_4__1
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__JsonThingDescription__Group_2_12_4__0__Impl
+rule__JsonThing__Group_2_12_4__0__Impl
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 (
-	{ before(grammarAccess.getJsonThingDescriptionAccess().getCommaKeyword_2_12_4_0()); }
+	{ before(grammarAccess.getJsonThingAccess().getCommaKeyword_2_12_4_0()); }
 	','
-	{ after(grammarAccess.getJsonThingDescriptionAccess().getCommaKeyword_2_12_4_0()); }
+	{ after(grammarAccess.getJsonThingAccess().getCommaKeyword_2_12_4_0()); }
 )
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__JsonThingDescription__Group_2_12_4__1
+rule__JsonThing__Group_2_12_4__1
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
-	rule__JsonThingDescription__Group_2_12_4__1__Impl
+	rule__JsonThing__Group_2_12_4__1__Impl
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__JsonThingDescription__Group_2_12_4__1__Impl
+rule__JsonThing__Group_2_12_4__1__Impl
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 (
-	{ before(grammarAccess.getJsonThingDescriptionAccess().getTitlesAssignment_2_12_4_1()); }
-	(rule__JsonThingDescription__TitlesAssignment_2_12_4_1)
-	{ after(grammarAccess.getJsonThingDescriptionAccess().getTitlesAssignment_2_12_4_1()); }
+	{ before(grammarAccess.getJsonThingAccess().getTitlesAssignment_2_12_4_1()); }
+	(rule__JsonThing__TitlesAssignment_2_12_4_1)
+	{ after(grammarAccess.getJsonThingAccess().getTitlesAssignment_2_12_4_1()); }
 )
 ;
 finally {
@@ -3771,188 +3771,188 @@ finally {
 }
 
 
-rule__JsonThingDescription__Group_2_13__0
+rule__JsonThing__Group_2_13__0
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
-	rule__JsonThingDescription__Group_2_13__0__Impl
-	rule__JsonThingDescription__Group_2_13__1
+	rule__JsonThing__Group_2_13__0__Impl
+	rule__JsonThing__Group_2_13__1
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__JsonThingDescription__Group_2_13__0__Impl
+rule__JsonThing__Group_2_13__0__Impl
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 (
-	{ before(grammarAccess.getJsonThingDescriptionAccess().getDescriptionsKeyword_2_13_0()); }
+	{ before(grammarAccess.getJsonThingAccess().getDescriptionsKeyword_2_13_0()); }
 	'"descriptions"'
-	{ after(grammarAccess.getJsonThingDescriptionAccess().getDescriptionsKeyword_2_13_0()); }
+	{ after(grammarAccess.getJsonThingAccess().getDescriptionsKeyword_2_13_0()); }
 )
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__JsonThingDescription__Group_2_13__1
+rule__JsonThing__Group_2_13__1
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
-	rule__JsonThingDescription__Group_2_13__1__Impl
-	rule__JsonThingDescription__Group_2_13__2
+	rule__JsonThing__Group_2_13__1__Impl
+	rule__JsonThing__Group_2_13__2
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__JsonThingDescription__Group_2_13__1__Impl
+rule__JsonThing__Group_2_13__1__Impl
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 (
-	{ before(grammarAccess.getJsonThingDescriptionAccess().getColonKeyword_2_13_1()); }
+	{ before(grammarAccess.getJsonThingAccess().getColonKeyword_2_13_1()); }
 	':'
-	{ after(grammarAccess.getJsonThingDescriptionAccess().getColonKeyword_2_13_1()); }
+	{ after(grammarAccess.getJsonThingAccess().getColonKeyword_2_13_1()); }
 )
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__JsonThingDescription__Group_2_13__2
+rule__JsonThing__Group_2_13__2
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
-	rule__JsonThingDescription__Group_2_13__2__Impl
-	rule__JsonThingDescription__Group_2_13__3
+	rule__JsonThing__Group_2_13__2__Impl
+	rule__JsonThing__Group_2_13__3
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__JsonThingDescription__Group_2_13__2__Impl
+rule__JsonThing__Group_2_13__2__Impl
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 (
-	{ before(grammarAccess.getJsonThingDescriptionAccess().getLeftCurlyBracketKeyword_2_13_2()); }
+	{ before(grammarAccess.getJsonThingAccess().getLeftCurlyBracketKeyword_2_13_2()); }
 	'{'
-	{ after(grammarAccess.getJsonThingDescriptionAccess().getLeftCurlyBracketKeyword_2_13_2()); }
+	{ after(grammarAccess.getJsonThingAccess().getLeftCurlyBracketKeyword_2_13_2()); }
 )
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__JsonThingDescription__Group_2_13__3
+rule__JsonThing__Group_2_13__3
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
-	rule__JsonThingDescription__Group_2_13__3__Impl
-	rule__JsonThingDescription__Group_2_13__4
+	rule__JsonThing__Group_2_13__3__Impl
+	rule__JsonThing__Group_2_13__4
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__JsonThingDescription__Group_2_13__3__Impl
+rule__JsonThing__Group_2_13__3__Impl
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 (
-	{ before(grammarAccess.getJsonThingDescriptionAccess().getDescriptionsAssignment_2_13_3()); }
-	(rule__JsonThingDescription__DescriptionsAssignment_2_13_3)
-	{ after(grammarAccess.getJsonThingDescriptionAccess().getDescriptionsAssignment_2_13_3()); }
+	{ before(grammarAccess.getJsonThingAccess().getDescriptionsAssignment_2_13_3()); }
+	(rule__JsonThing__DescriptionsAssignment_2_13_3)
+	{ after(grammarAccess.getJsonThingAccess().getDescriptionsAssignment_2_13_3()); }
 )
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__JsonThingDescription__Group_2_13__4
+rule__JsonThing__Group_2_13__4
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
-	rule__JsonThingDescription__Group_2_13__4__Impl
-	rule__JsonThingDescription__Group_2_13__5
+	rule__JsonThing__Group_2_13__4__Impl
+	rule__JsonThing__Group_2_13__5
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__JsonThingDescription__Group_2_13__4__Impl
+rule__JsonThing__Group_2_13__4__Impl
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 (
-	{ before(grammarAccess.getJsonThingDescriptionAccess().getGroup_2_13_4()); }
-	(rule__JsonThingDescription__Group_2_13_4__0)*
-	{ after(grammarAccess.getJsonThingDescriptionAccess().getGroup_2_13_4()); }
+	{ before(grammarAccess.getJsonThingAccess().getGroup_2_13_4()); }
+	(rule__JsonThing__Group_2_13_4__0)*
+	{ after(grammarAccess.getJsonThingAccess().getGroup_2_13_4()); }
 )
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__JsonThingDescription__Group_2_13__5
+rule__JsonThing__Group_2_13__5
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
-	rule__JsonThingDescription__Group_2_13__5__Impl
-	rule__JsonThingDescription__Group_2_13__6
+	rule__JsonThing__Group_2_13__5__Impl
+	rule__JsonThing__Group_2_13__6
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__JsonThingDescription__Group_2_13__5__Impl
+rule__JsonThing__Group_2_13__5__Impl
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 (
-	{ before(grammarAccess.getJsonThingDescriptionAccess().getRightCurlyBracketKeyword_2_13_5()); }
+	{ before(grammarAccess.getJsonThingAccess().getRightCurlyBracketKeyword_2_13_5()); }
 	'}'
-	{ after(grammarAccess.getJsonThingDescriptionAccess().getRightCurlyBracketKeyword_2_13_5()); }
+	{ after(grammarAccess.getJsonThingAccess().getRightCurlyBracketKeyword_2_13_5()); }
 )
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__JsonThingDescription__Group_2_13__6
+rule__JsonThing__Group_2_13__6
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
-	rule__JsonThingDescription__Group_2_13__6__Impl
+	rule__JsonThing__Group_2_13__6__Impl
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__JsonThingDescription__Group_2_13__6__Impl
+rule__JsonThing__Group_2_13__6__Impl
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 (
-	{ before(grammarAccess.getJsonThingDescriptionAccess().getCommaKeyword_2_13_6()); }
+	{ before(grammarAccess.getJsonThingAccess().getCommaKeyword_2_13_6()); }
 	(',')?
-	{ after(grammarAccess.getJsonThingDescriptionAccess().getCommaKeyword_2_13_6()); }
+	{ after(grammarAccess.getJsonThingAccess().getCommaKeyword_2_13_6()); }
 )
 ;
 finally {
@@ -3960,53 +3960,53 @@ finally {
 }
 
 
-rule__JsonThingDescription__Group_2_13_4__0
+rule__JsonThing__Group_2_13_4__0
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
-	rule__JsonThingDescription__Group_2_13_4__0__Impl
-	rule__JsonThingDescription__Group_2_13_4__1
+	rule__JsonThing__Group_2_13_4__0__Impl
+	rule__JsonThing__Group_2_13_4__1
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__JsonThingDescription__Group_2_13_4__0__Impl
+rule__JsonThing__Group_2_13_4__0__Impl
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 (
-	{ before(grammarAccess.getJsonThingDescriptionAccess().getCommaKeyword_2_13_4_0()); }
+	{ before(grammarAccess.getJsonThingAccess().getCommaKeyword_2_13_4_0()); }
 	','
-	{ after(grammarAccess.getJsonThingDescriptionAccess().getCommaKeyword_2_13_4_0()); }
+	{ after(grammarAccess.getJsonThingAccess().getCommaKeyword_2_13_4_0()); }
 )
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__JsonThingDescription__Group_2_13_4__1
+rule__JsonThing__Group_2_13_4__1
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
-	rule__JsonThingDescription__Group_2_13_4__1__Impl
+	rule__JsonThing__Group_2_13_4__1__Impl
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__JsonThingDescription__Group_2_13_4__1__Impl
+rule__JsonThing__Group_2_13_4__1__Impl
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 (
-	{ before(grammarAccess.getJsonThingDescriptionAccess().getDescriptionsAssignment_2_13_4_1()); }
-	(rule__JsonThingDescription__DescriptionsAssignment_2_13_4_1)
-	{ after(grammarAccess.getJsonThingDescriptionAccess().getDescriptionsAssignment_2_13_4_1()); }
+	{ before(grammarAccess.getJsonThingAccess().getDescriptionsAssignment_2_13_4_1()); }
+	(rule__JsonThing__DescriptionsAssignment_2_13_4_1)
+	{ after(grammarAccess.getJsonThingAccess().getDescriptionsAssignment_2_13_4_1()); }
 )
 ;
 finally {
@@ -4014,107 +4014,107 @@ finally {
 }
 
 
-rule__JsonThingDescription__Group_2_14__0
+rule__JsonThing__Group_2_14__0
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
-	rule__JsonThingDescription__Group_2_14__0__Impl
-	rule__JsonThingDescription__Group_2_14__1
+	rule__JsonThing__Group_2_14__0__Impl
+	rule__JsonThing__Group_2_14__1
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__JsonThingDescription__Group_2_14__0__Impl
+rule__JsonThing__Group_2_14__0__Impl
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 (
-	{ before(grammarAccess.getJsonThingDescriptionAccess().getVersionKeyword_2_14_0()); }
+	{ before(grammarAccess.getJsonThingAccess().getVersionKeyword_2_14_0()); }
 	'"version"'
-	{ after(grammarAccess.getJsonThingDescriptionAccess().getVersionKeyword_2_14_0()); }
+	{ after(grammarAccess.getJsonThingAccess().getVersionKeyword_2_14_0()); }
 )
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__JsonThingDescription__Group_2_14__1
+rule__JsonThing__Group_2_14__1
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
-	rule__JsonThingDescription__Group_2_14__1__Impl
-	rule__JsonThingDescription__Group_2_14__2
+	rule__JsonThing__Group_2_14__1__Impl
+	rule__JsonThing__Group_2_14__2
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__JsonThingDescription__Group_2_14__1__Impl
+rule__JsonThing__Group_2_14__1__Impl
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 (
-	{ before(grammarAccess.getJsonThingDescriptionAccess().getColonKeyword_2_14_1()); }
+	{ before(grammarAccess.getJsonThingAccess().getColonKeyword_2_14_1()); }
 	':'
-	{ after(grammarAccess.getJsonThingDescriptionAccess().getColonKeyword_2_14_1()); }
+	{ after(grammarAccess.getJsonThingAccess().getColonKeyword_2_14_1()); }
 )
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__JsonThingDescription__Group_2_14__2
+rule__JsonThing__Group_2_14__2
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
-	rule__JsonThingDescription__Group_2_14__2__Impl
-	rule__JsonThingDescription__Group_2_14__3
+	rule__JsonThing__Group_2_14__2__Impl
+	rule__JsonThing__Group_2_14__3
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__JsonThingDescription__Group_2_14__2__Impl
+rule__JsonThing__Group_2_14__2__Impl
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 (
-	{ before(grammarAccess.getJsonThingDescriptionAccess().getVersionAssignment_2_14_2()); }
-	(rule__JsonThingDescription__VersionAssignment_2_14_2)
-	{ after(grammarAccess.getJsonThingDescriptionAccess().getVersionAssignment_2_14_2()); }
+	{ before(grammarAccess.getJsonThingAccess().getVersionAssignment_2_14_2()); }
+	(rule__JsonThing__VersionAssignment_2_14_2)
+	{ after(grammarAccess.getJsonThingAccess().getVersionAssignment_2_14_2()); }
 )
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__JsonThingDescription__Group_2_14__3
+rule__JsonThing__Group_2_14__3
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
-	rule__JsonThingDescription__Group_2_14__3__Impl
+	rule__JsonThing__Group_2_14__3__Impl
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__JsonThingDescription__Group_2_14__3__Impl
+rule__JsonThing__Group_2_14__3__Impl
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 (
-	{ before(grammarAccess.getJsonThingDescriptionAccess().getCommaKeyword_2_14_3()); }
+	{ before(grammarAccess.getJsonThingAccess().getCommaKeyword_2_14_3()); }
 	(',')?
-	{ after(grammarAccess.getJsonThingDescriptionAccess().getCommaKeyword_2_14_3()); }
+	{ after(grammarAccess.getJsonThingAccess().getCommaKeyword_2_14_3()); }
 )
 ;
 finally {
@@ -4122,188 +4122,188 @@ finally {
 }
 
 
-rule__JsonThingDescription__Group_2_15__0
+rule__JsonThing__Group_2_15__0
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
-	rule__JsonThingDescription__Group_2_15__0__Impl
-	rule__JsonThingDescription__Group_2_15__1
+	rule__JsonThing__Group_2_15__0__Impl
+	rule__JsonThing__Group_2_15__1
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__JsonThingDescription__Group_2_15__0__Impl
+rule__JsonThing__Group_2_15__0__Impl
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 (
-	{ before(grammarAccess.getJsonThingDescriptionAccess().getPropertiesKeyword_2_15_0()); }
+	{ before(grammarAccess.getJsonThingAccess().getPropertiesKeyword_2_15_0()); }
 	'"properties"'
-	{ after(grammarAccess.getJsonThingDescriptionAccess().getPropertiesKeyword_2_15_0()); }
+	{ after(grammarAccess.getJsonThingAccess().getPropertiesKeyword_2_15_0()); }
 )
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__JsonThingDescription__Group_2_15__1
+rule__JsonThing__Group_2_15__1
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
-	rule__JsonThingDescription__Group_2_15__1__Impl
-	rule__JsonThingDescription__Group_2_15__2
+	rule__JsonThing__Group_2_15__1__Impl
+	rule__JsonThing__Group_2_15__2
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__JsonThingDescription__Group_2_15__1__Impl
+rule__JsonThing__Group_2_15__1__Impl
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 (
-	{ before(grammarAccess.getJsonThingDescriptionAccess().getColonKeyword_2_15_1()); }
+	{ before(grammarAccess.getJsonThingAccess().getColonKeyword_2_15_1()); }
 	':'
-	{ after(grammarAccess.getJsonThingDescriptionAccess().getColonKeyword_2_15_1()); }
+	{ after(grammarAccess.getJsonThingAccess().getColonKeyword_2_15_1()); }
 )
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__JsonThingDescription__Group_2_15__2
+rule__JsonThing__Group_2_15__2
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
-	rule__JsonThingDescription__Group_2_15__2__Impl
-	rule__JsonThingDescription__Group_2_15__3
+	rule__JsonThing__Group_2_15__2__Impl
+	rule__JsonThing__Group_2_15__3
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__JsonThingDescription__Group_2_15__2__Impl
+rule__JsonThing__Group_2_15__2__Impl
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 (
-	{ before(grammarAccess.getJsonThingDescriptionAccess().getLeftCurlyBracketKeyword_2_15_2()); }
+	{ before(grammarAccess.getJsonThingAccess().getLeftCurlyBracketKeyword_2_15_2()); }
 	'{'
-	{ after(grammarAccess.getJsonThingDescriptionAccess().getLeftCurlyBracketKeyword_2_15_2()); }
+	{ after(grammarAccess.getJsonThingAccess().getLeftCurlyBracketKeyword_2_15_2()); }
 )
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__JsonThingDescription__Group_2_15__3
+rule__JsonThing__Group_2_15__3
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
-	rule__JsonThingDescription__Group_2_15__3__Impl
-	rule__JsonThingDescription__Group_2_15__4
+	rule__JsonThing__Group_2_15__3__Impl
+	rule__JsonThing__Group_2_15__4
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__JsonThingDescription__Group_2_15__3__Impl
+rule__JsonThing__Group_2_15__3__Impl
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 (
-	{ before(grammarAccess.getJsonThingDescriptionAccess().getPropertiesAssignment_2_15_3()); }
-	(rule__JsonThingDescription__PropertiesAssignment_2_15_3)
-	{ after(grammarAccess.getJsonThingDescriptionAccess().getPropertiesAssignment_2_15_3()); }
+	{ before(grammarAccess.getJsonThingAccess().getPropertiesAssignment_2_15_3()); }
+	(rule__JsonThing__PropertiesAssignment_2_15_3)
+	{ after(grammarAccess.getJsonThingAccess().getPropertiesAssignment_2_15_3()); }
 )
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__JsonThingDescription__Group_2_15__4
+rule__JsonThing__Group_2_15__4
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
-	rule__JsonThingDescription__Group_2_15__4__Impl
-	rule__JsonThingDescription__Group_2_15__5
+	rule__JsonThing__Group_2_15__4__Impl
+	rule__JsonThing__Group_2_15__5
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__JsonThingDescription__Group_2_15__4__Impl
+rule__JsonThing__Group_2_15__4__Impl
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 (
-	{ before(grammarAccess.getJsonThingDescriptionAccess().getGroup_2_15_4()); }
-	(rule__JsonThingDescription__Group_2_15_4__0)*
-	{ after(grammarAccess.getJsonThingDescriptionAccess().getGroup_2_15_4()); }
+	{ before(grammarAccess.getJsonThingAccess().getGroup_2_15_4()); }
+	(rule__JsonThing__Group_2_15_4__0)*
+	{ after(grammarAccess.getJsonThingAccess().getGroup_2_15_4()); }
 )
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__JsonThingDescription__Group_2_15__5
+rule__JsonThing__Group_2_15__5
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
-	rule__JsonThingDescription__Group_2_15__5__Impl
-	rule__JsonThingDescription__Group_2_15__6
+	rule__JsonThing__Group_2_15__5__Impl
+	rule__JsonThing__Group_2_15__6
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__JsonThingDescription__Group_2_15__5__Impl
+rule__JsonThing__Group_2_15__5__Impl
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 (
-	{ before(grammarAccess.getJsonThingDescriptionAccess().getRightCurlyBracketKeyword_2_15_5()); }
+	{ before(grammarAccess.getJsonThingAccess().getRightCurlyBracketKeyword_2_15_5()); }
 	'}'
-	{ after(grammarAccess.getJsonThingDescriptionAccess().getRightCurlyBracketKeyword_2_15_5()); }
+	{ after(grammarAccess.getJsonThingAccess().getRightCurlyBracketKeyword_2_15_5()); }
 )
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__JsonThingDescription__Group_2_15__6
+rule__JsonThing__Group_2_15__6
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
-	rule__JsonThingDescription__Group_2_15__6__Impl
+	rule__JsonThing__Group_2_15__6__Impl
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__JsonThingDescription__Group_2_15__6__Impl
+rule__JsonThing__Group_2_15__6__Impl
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 (
-	{ before(grammarAccess.getJsonThingDescriptionAccess().getCommaKeyword_2_15_6()); }
+	{ before(grammarAccess.getJsonThingAccess().getCommaKeyword_2_15_6()); }
 	(',')?
-	{ after(grammarAccess.getJsonThingDescriptionAccess().getCommaKeyword_2_15_6()); }
+	{ after(grammarAccess.getJsonThingAccess().getCommaKeyword_2_15_6()); }
 )
 ;
 finally {
@@ -4311,53 +4311,53 @@ finally {
 }
 
 
-rule__JsonThingDescription__Group_2_15_4__0
+rule__JsonThing__Group_2_15_4__0
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
-	rule__JsonThingDescription__Group_2_15_4__0__Impl
-	rule__JsonThingDescription__Group_2_15_4__1
+	rule__JsonThing__Group_2_15_4__0__Impl
+	rule__JsonThing__Group_2_15_4__1
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__JsonThingDescription__Group_2_15_4__0__Impl
+rule__JsonThing__Group_2_15_4__0__Impl
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 (
-	{ before(grammarAccess.getJsonThingDescriptionAccess().getCommaKeyword_2_15_4_0()); }
+	{ before(grammarAccess.getJsonThingAccess().getCommaKeyword_2_15_4_0()); }
 	','
-	{ after(grammarAccess.getJsonThingDescriptionAccess().getCommaKeyword_2_15_4_0()); }
+	{ after(grammarAccess.getJsonThingAccess().getCommaKeyword_2_15_4_0()); }
 )
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__JsonThingDescription__Group_2_15_4__1
+rule__JsonThing__Group_2_15_4__1
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
-	rule__JsonThingDescription__Group_2_15_4__1__Impl
+	rule__JsonThing__Group_2_15_4__1__Impl
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__JsonThingDescription__Group_2_15_4__1__Impl
+rule__JsonThing__Group_2_15_4__1__Impl
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 (
-	{ before(grammarAccess.getJsonThingDescriptionAccess().getPropertiesAssignment_2_15_4_1()); }
-	(rule__JsonThingDescription__PropertiesAssignment_2_15_4_1)
-	{ after(grammarAccess.getJsonThingDescriptionAccess().getPropertiesAssignment_2_15_4_1()); }
+	{ before(grammarAccess.getJsonThingAccess().getPropertiesAssignment_2_15_4_1()); }
+	(rule__JsonThing__PropertiesAssignment_2_15_4_1)
+	{ after(grammarAccess.getJsonThingAccess().getPropertiesAssignment_2_15_4_1()); }
 )
 ;
 finally {
@@ -4365,188 +4365,188 @@ finally {
 }
 
 
-rule__JsonThingDescription__Group_2_16__0
+rule__JsonThing__Group_2_16__0
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
-	rule__JsonThingDescription__Group_2_16__0__Impl
-	rule__JsonThingDescription__Group_2_16__1
+	rule__JsonThing__Group_2_16__0__Impl
+	rule__JsonThing__Group_2_16__1
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__JsonThingDescription__Group_2_16__0__Impl
+rule__JsonThing__Group_2_16__0__Impl
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 (
-	{ before(grammarAccess.getJsonThingDescriptionAccess().getActionsKeyword_2_16_0()); }
+	{ before(grammarAccess.getJsonThingAccess().getActionsKeyword_2_16_0()); }
 	'"actions"'
-	{ after(grammarAccess.getJsonThingDescriptionAccess().getActionsKeyword_2_16_0()); }
+	{ after(grammarAccess.getJsonThingAccess().getActionsKeyword_2_16_0()); }
 )
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__JsonThingDescription__Group_2_16__1
+rule__JsonThing__Group_2_16__1
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
-	rule__JsonThingDescription__Group_2_16__1__Impl
-	rule__JsonThingDescription__Group_2_16__2
+	rule__JsonThing__Group_2_16__1__Impl
+	rule__JsonThing__Group_2_16__2
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__JsonThingDescription__Group_2_16__1__Impl
+rule__JsonThing__Group_2_16__1__Impl
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 (
-	{ before(grammarAccess.getJsonThingDescriptionAccess().getColonKeyword_2_16_1()); }
+	{ before(grammarAccess.getJsonThingAccess().getColonKeyword_2_16_1()); }
 	':'
-	{ after(grammarAccess.getJsonThingDescriptionAccess().getColonKeyword_2_16_1()); }
+	{ after(grammarAccess.getJsonThingAccess().getColonKeyword_2_16_1()); }
 )
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__JsonThingDescription__Group_2_16__2
+rule__JsonThing__Group_2_16__2
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
-	rule__JsonThingDescription__Group_2_16__2__Impl
-	rule__JsonThingDescription__Group_2_16__3
+	rule__JsonThing__Group_2_16__2__Impl
+	rule__JsonThing__Group_2_16__3
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__JsonThingDescription__Group_2_16__2__Impl
+rule__JsonThing__Group_2_16__2__Impl
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 (
-	{ before(grammarAccess.getJsonThingDescriptionAccess().getLeftCurlyBracketKeyword_2_16_2()); }
+	{ before(grammarAccess.getJsonThingAccess().getLeftCurlyBracketKeyword_2_16_2()); }
 	'{'
-	{ after(grammarAccess.getJsonThingDescriptionAccess().getLeftCurlyBracketKeyword_2_16_2()); }
+	{ after(grammarAccess.getJsonThingAccess().getLeftCurlyBracketKeyword_2_16_2()); }
 )
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__JsonThingDescription__Group_2_16__3
+rule__JsonThing__Group_2_16__3
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
-	rule__JsonThingDescription__Group_2_16__3__Impl
-	rule__JsonThingDescription__Group_2_16__4
+	rule__JsonThing__Group_2_16__3__Impl
+	rule__JsonThing__Group_2_16__4
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__JsonThingDescription__Group_2_16__3__Impl
+rule__JsonThing__Group_2_16__3__Impl
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 (
-	{ before(grammarAccess.getJsonThingDescriptionAccess().getActionsAssignment_2_16_3()); }
-	(rule__JsonThingDescription__ActionsAssignment_2_16_3)
-	{ after(grammarAccess.getJsonThingDescriptionAccess().getActionsAssignment_2_16_3()); }
+	{ before(grammarAccess.getJsonThingAccess().getActionsAssignment_2_16_3()); }
+	(rule__JsonThing__ActionsAssignment_2_16_3)
+	{ after(grammarAccess.getJsonThingAccess().getActionsAssignment_2_16_3()); }
 )
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__JsonThingDescription__Group_2_16__4
+rule__JsonThing__Group_2_16__4
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
-	rule__JsonThingDescription__Group_2_16__4__Impl
-	rule__JsonThingDescription__Group_2_16__5
+	rule__JsonThing__Group_2_16__4__Impl
+	rule__JsonThing__Group_2_16__5
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__JsonThingDescription__Group_2_16__4__Impl
+rule__JsonThing__Group_2_16__4__Impl
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 (
-	{ before(grammarAccess.getJsonThingDescriptionAccess().getGroup_2_16_4()); }
-	(rule__JsonThingDescription__Group_2_16_4__0)*
-	{ after(grammarAccess.getJsonThingDescriptionAccess().getGroup_2_16_4()); }
+	{ before(grammarAccess.getJsonThingAccess().getGroup_2_16_4()); }
+	(rule__JsonThing__Group_2_16_4__0)*
+	{ after(grammarAccess.getJsonThingAccess().getGroup_2_16_4()); }
 )
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__JsonThingDescription__Group_2_16__5
+rule__JsonThing__Group_2_16__5
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
-	rule__JsonThingDescription__Group_2_16__5__Impl
-	rule__JsonThingDescription__Group_2_16__6
+	rule__JsonThing__Group_2_16__5__Impl
+	rule__JsonThing__Group_2_16__6
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__JsonThingDescription__Group_2_16__5__Impl
+rule__JsonThing__Group_2_16__5__Impl
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 (
-	{ before(grammarAccess.getJsonThingDescriptionAccess().getRightCurlyBracketKeyword_2_16_5()); }
+	{ before(grammarAccess.getJsonThingAccess().getRightCurlyBracketKeyword_2_16_5()); }
 	'}'
-	{ after(grammarAccess.getJsonThingDescriptionAccess().getRightCurlyBracketKeyword_2_16_5()); }
+	{ after(grammarAccess.getJsonThingAccess().getRightCurlyBracketKeyword_2_16_5()); }
 )
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__JsonThingDescription__Group_2_16__6
+rule__JsonThing__Group_2_16__6
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
-	rule__JsonThingDescription__Group_2_16__6__Impl
+	rule__JsonThing__Group_2_16__6__Impl
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__JsonThingDescription__Group_2_16__6__Impl
+rule__JsonThing__Group_2_16__6__Impl
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 (
-	{ before(grammarAccess.getJsonThingDescriptionAccess().getCommaKeyword_2_16_6()); }
+	{ before(grammarAccess.getJsonThingAccess().getCommaKeyword_2_16_6()); }
 	(',')?
-	{ after(grammarAccess.getJsonThingDescriptionAccess().getCommaKeyword_2_16_6()); }
+	{ after(grammarAccess.getJsonThingAccess().getCommaKeyword_2_16_6()); }
 )
 ;
 finally {
@@ -4554,53 +4554,53 @@ finally {
 }
 
 
-rule__JsonThingDescription__Group_2_16_4__0
+rule__JsonThing__Group_2_16_4__0
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
-	rule__JsonThingDescription__Group_2_16_4__0__Impl
-	rule__JsonThingDescription__Group_2_16_4__1
+	rule__JsonThing__Group_2_16_4__0__Impl
+	rule__JsonThing__Group_2_16_4__1
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__JsonThingDescription__Group_2_16_4__0__Impl
+rule__JsonThing__Group_2_16_4__0__Impl
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 (
-	{ before(grammarAccess.getJsonThingDescriptionAccess().getCommaKeyword_2_16_4_0()); }
+	{ before(grammarAccess.getJsonThingAccess().getCommaKeyword_2_16_4_0()); }
 	','
-	{ after(grammarAccess.getJsonThingDescriptionAccess().getCommaKeyword_2_16_4_0()); }
+	{ after(grammarAccess.getJsonThingAccess().getCommaKeyword_2_16_4_0()); }
 )
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__JsonThingDescription__Group_2_16_4__1
+rule__JsonThing__Group_2_16_4__1
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
-	rule__JsonThingDescription__Group_2_16_4__1__Impl
+	rule__JsonThing__Group_2_16_4__1__Impl
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__JsonThingDescription__Group_2_16_4__1__Impl
+rule__JsonThing__Group_2_16_4__1__Impl
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 (
-	{ before(grammarAccess.getJsonThingDescriptionAccess().getActionsAssignment_2_16_4_1()); }
-	(rule__JsonThingDescription__ActionsAssignment_2_16_4_1)
-	{ after(grammarAccess.getJsonThingDescriptionAccess().getActionsAssignment_2_16_4_1()); }
+	{ before(grammarAccess.getJsonThingAccess().getActionsAssignment_2_16_4_1()); }
+	(rule__JsonThing__ActionsAssignment_2_16_4_1)
+	{ after(grammarAccess.getJsonThingAccess().getActionsAssignment_2_16_4_1()); }
 )
 ;
 finally {
@@ -4608,188 +4608,188 @@ finally {
 }
 
 
-rule__JsonThingDescription__Group_2_17__0
+rule__JsonThing__Group_2_17__0
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
-	rule__JsonThingDescription__Group_2_17__0__Impl
-	rule__JsonThingDescription__Group_2_17__1
+	rule__JsonThing__Group_2_17__0__Impl
+	rule__JsonThing__Group_2_17__1
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__JsonThingDescription__Group_2_17__0__Impl
+rule__JsonThing__Group_2_17__0__Impl
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 (
-	{ before(grammarAccess.getJsonThingDescriptionAccess().getEventsKeyword_2_17_0()); }
+	{ before(grammarAccess.getJsonThingAccess().getEventsKeyword_2_17_0()); }
 	'"events"'
-	{ after(grammarAccess.getJsonThingDescriptionAccess().getEventsKeyword_2_17_0()); }
+	{ after(grammarAccess.getJsonThingAccess().getEventsKeyword_2_17_0()); }
 )
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__JsonThingDescription__Group_2_17__1
+rule__JsonThing__Group_2_17__1
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
-	rule__JsonThingDescription__Group_2_17__1__Impl
-	rule__JsonThingDescription__Group_2_17__2
+	rule__JsonThing__Group_2_17__1__Impl
+	rule__JsonThing__Group_2_17__2
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__JsonThingDescription__Group_2_17__1__Impl
+rule__JsonThing__Group_2_17__1__Impl
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 (
-	{ before(grammarAccess.getJsonThingDescriptionAccess().getColonKeyword_2_17_1()); }
+	{ before(grammarAccess.getJsonThingAccess().getColonKeyword_2_17_1()); }
 	':'
-	{ after(grammarAccess.getJsonThingDescriptionAccess().getColonKeyword_2_17_1()); }
+	{ after(grammarAccess.getJsonThingAccess().getColonKeyword_2_17_1()); }
 )
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__JsonThingDescription__Group_2_17__2
+rule__JsonThing__Group_2_17__2
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
-	rule__JsonThingDescription__Group_2_17__2__Impl
-	rule__JsonThingDescription__Group_2_17__3
+	rule__JsonThing__Group_2_17__2__Impl
+	rule__JsonThing__Group_2_17__3
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__JsonThingDescription__Group_2_17__2__Impl
+rule__JsonThing__Group_2_17__2__Impl
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 (
-	{ before(grammarAccess.getJsonThingDescriptionAccess().getLeftCurlyBracketKeyword_2_17_2()); }
+	{ before(grammarAccess.getJsonThingAccess().getLeftCurlyBracketKeyword_2_17_2()); }
 	'{'
-	{ after(grammarAccess.getJsonThingDescriptionAccess().getLeftCurlyBracketKeyword_2_17_2()); }
+	{ after(grammarAccess.getJsonThingAccess().getLeftCurlyBracketKeyword_2_17_2()); }
 )
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__JsonThingDescription__Group_2_17__3
+rule__JsonThing__Group_2_17__3
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
-	rule__JsonThingDescription__Group_2_17__3__Impl
-	rule__JsonThingDescription__Group_2_17__4
+	rule__JsonThing__Group_2_17__3__Impl
+	rule__JsonThing__Group_2_17__4
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__JsonThingDescription__Group_2_17__3__Impl
+rule__JsonThing__Group_2_17__3__Impl
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 (
-	{ before(grammarAccess.getJsonThingDescriptionAccess().getEventsAssignment_2_17_3()); }
-	(rule__JsonThingDescription__EventsAssignment_2_17_3)
-	{ after(grammarAccess.getJsonThingDescriptionAccess().getEventsAssignment_2_17_3()); }
+	{ before(grammarAccess.getJsonThingAccess().getEventsAssignment_2_17_3()); }
+	(rule__JsonThing__EventsAssignment_2_17_3)
+	{ after(grammarAccess.getJsonThingAccess().getEventsAssignment_2_17_3()); }
 )
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__JsonThingDescription__Group_2_17__4
+rule__JsonThing__Group_2_17__4
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
-	rule__JsonThingDescription__Group_2_17__4__Impl
-	rule__JsonThingDescription__Group_2_17__5
+	rule__JsonThing__Group_2_17__4__Impl
+	rule__JsonThing__Group_2_17__5
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__JsonThingDescription__Group_2_17__4__Impl
+rule__JsonThing__Group_2_17__4__Impl
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 (
-	{ before(grammarAccess.getJsonThingDescriptionAccess().getGroup_2_17_4()); }
-	(rule__JsonThingDescription__Group_2_17_4__0)*
-	{ after(grammarAccess.getJsonThingDescriptionAccess().getGroup_2_17_4()); }
+	{ before(grammarAccess.getJsonThingAccess().getGroup_2_17_4()); }
+	(rule__JsonThing__Group_2_17_4__0)*
+	{ after(grammarAccess.getJsonThingAccess().getGroup_2_17_4()); }
 )
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__JsonThingDescription__Group_2_17__5
+rule__JsonThing__Group_2_17__5
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
-	rule__JsonThingDescription__Group_2_17__5__Impl
-	rule__JsonThingDescription__Group_2_17__6
+	rule__JsonThing__Group_2_17__5__Impl
+	rule__JsonThing__Group_2_17__6
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__JsonThingDescription__Group_2_17__5__Impl
+rule__JsonThing__Group_2_17__5__Impl
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 (
-	{ before(grammarAccess.getJsonThingDescriptionAccess().getRightCurlyBracketKeyword_2_17_5()); }
+	{ before(grammarAccess.getJsonThingAccess().getRightCurlyBracketKeyword_2_17_5()); }
 	'}'
-	{ after(grammarAccess.getJsonThingDescriptionAccess().getRightCurlyBracketKeyword_2_17_5()); }
+	{ after(grammarAccess.getJsonThingAccess().getRightCurlyBracketKeyword_2_17_5()); }
 )
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__JsonThingDescription__Group_2_17__6
+rule__JsonThing__Group_2_17__6
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
-	rule__JsonThingDescription__Group_2_17__6__Impl
+	rule__JsonThing__Group_2_17__6__Impl
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__JsonThingDescription__Group_2_17__6__Impl
+rule__JsonThing__Group_2_17__6__Impl
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 (
-	{ before(grammarAccess.getJsonThingDescriptionAccess().getCommaKeyword_2_17_6()); }
+	{ before(grammarAccess.getJsonThingAccess().getCommaKeyword_2_17_6()); }
 	(',')?
-	{ after(grammarAccess.getJsonThingDescriptionAccess().getCommaKeyword_2_17_6()); }
+	{ after(grammarAccess.getJsonThingAccess().getCommaKeyword_2_17_6()); }
 )
 ;
 finally {
@@ -4797,53 +4797,53 @@ finally {
 }
 
 
-rule__JsonThingDescription__Group_2_17_4__0
+rule__JsonThing__Group_2_17_4__0
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
-	rule__JsonThingDescription__Group_2_17_4__0__Impl
-	rule__JsonThingDescription__Group_2_17_4__1
+	rule__JsonThing__Group_2_17_4__0__Impl
+	rule__JsonThing__Group_2_17_4__1
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__JsonThingDescription__Group_2_17_4__0__Impl
+rule__JsonThing__Group_2_17_4__0__Impl
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 (
-	{ before(grammarAccess.getJsonThingDescriptionAccess().getCommaKeyword_2_17_4_0()); }
+	{ before(grammarAccess.getJsonThingAccess().getCommaKeyword_2_17_4_0()); }
 	','
-	{ after(grammarAccess.getJsonThingDescriptionAccess().getCommaKeyword_2_17_4_0()); }
+	{ after(grammarAccess.getJsonThingAccess().getCommaKeyword_2_17_4_0()); }
 )
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__JsonThingDescription__Group_2_17_4__1
+rule__JsonThing__Group_2_17_4__1
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
-	rule__JsonThingDescription__Group_2_17_4__1__Impl
+	rule__JsonThing__Group_2_17_4__1__Impl
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__JsonThingDescription__Group_2_17_4__1__Impl
+rule__JsonThing__Group_2_17_4__1__Impl
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 (
-	{ before(grammarAccess.getJsonThingDescriptionAccess().getEventsAssignment_2_17_4_1()); }
-	(rule__JsonThingDescription__EventsAssignment_2_17_4_1)
-	{ after(grammarAccess.getJsonThingDescriptionAccess().getEventsAssignment_2_17_4_1()); }
+	{ before(grammarAccess.getJsonThingAccess().getEventsAssignment_2_17_4_1()); }
+	(rule__JsonThing__EventsAssignment_2_17_4_1)
+	{ after(grammarAccess.getJsonThingAccess().getEventsAssignment_2_17_4_1()); }
 )
 ;
 finally {
@@ -4851,188 +4851,188 @@ finally {
 }
 
 
-rule__JsonThingDescription__Group_2_18__0
+rule__JsonThing__Group_2_18__0
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
-	rule__JsonThingDescription__Group_2_18__0__Impl
-	rule__JsonThingDescription__Group_2_18__1
+	rule__JsonThing__Group_2_18__0__Impl
+	rule__JsonThing__Group_2_18__1
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__JsonThingDescription__Group_2_18__0__Impl
+rule__JsonThing__Group_2_18__0__Impl
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 (
-	{ before(grammarAccess.getJsonThingDescriptionAccess().getSecurityDefinitionsKeyword_2_18_0()); }
+	{ before(grammarAccess.getJsonThingAccess().getSecurityDefinitionsKeyword_2_18_0()); }
 	'"securityDefinitions"'
-	{ after(grammarAccess.getJsonThingDescriptionAccess().getSecurityDefinitionsKeyword_2_18_0()); }
+	{ after(grammarAccess.getJsonThingAccess().getSecurityDefinitionsKeyword_2_18_0()); }
 )
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__JsonThingDescription__Group_2_18__1
+rule__JsonThing__Group_2_18__1
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
-	rule__JsonThingDescription__Group_2_18__1__Impl
-	rule__JsonThingDescription__Group_2_18__2
+	rule__JsonThing__Group_2_18__1__Impl
+	rule__JsonThing__Group_2_18__2
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__JsonThingDescription__Group_2_18__1__Impl
+rule__JsonThing__Group_2_18__1__Impl
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 (
-	{ before(grammarAccess.getJsonThingDescriptionAccess().getColonKeyword_2_18_1()); }
+	{ before(grammarAccess.getJsonThingAccess().getColonKeyword_2_18_1()); }
 	':'
-	{ after(grammarAccess.getJsonThingDescriptionAccess().getColonKeyword_2_18_1()); }
+	{ after(grammarAccess.getJsonThingAccess().getColonKeyword_2_18_1()); }
 )
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__JsonThingDescription__Group_2_18__2
+rule__JsonThing__Group_2_18__2
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
-	rule__JsonThingDescription__Group_2_18__2__Impl
-	rule__JsonThingDescription__Group_2_18__3
+	rule__JsonThing__Group_2_18__2__Impl
+	rule__JsonThing__Group_2_18__3
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__JsonThingDescription__Group_2_18__2__Impl
+rule__JsonThing__Group_2_18__2__Impl
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 (
-	{ before(grammarAccess.getJsonThingDescriptionAccess().getLeftCurlyBracketKeyword_2_18_2()); }
+	{ before(grammarAccess.getJsonThingAccess().getLeftCurlyBracketKeyword_2_18_2()); }
 	'{'
-	{ after(grammarAccess.getJsonThingDescriptionAccess().getLeftCurlyBracketKeyword_2_18_2()); }
+	{ after(grammarAccess.getJsonThingAccess().getLeftCurlyBracketKeyword_2_18_2()); }
 )
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__JsonThingDescription__Group_2_18__3
+rule__JsonThing__Group_2_18__3
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
-	rule__JsonThingDescription__Group_2_18__3__Impl
-	rule__JsonThingDescription__Group_2_18__4
+	rule__JsonThing__Group_2_18__3__Impl
+	rule__JsonThing__Group_2_18__4
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__JsonThingDescription__Group_2_18__3__Impl
+rule__JsonThing__Group_2_18__3__Impl
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 (
-	{ before(grammarAccess.getJsonThingDescriptionAccess().getSecurityDefinitionsAssignment_2_18_3()); }
-	(rule__JsonThingDescription__SecurityDefinitionsAssignment_2_18_3)
-	{ after(grammarAccess.getJsonThingDescriptionAccess().getSecurityDefinitionsAssignment_2_18_3()); }
+	{ before(grammarAccess.getJsonThingAccess().getSecurityDefinitionsAssignment_2_18_3()); }
+	(rule__JsonThing__SecurityDefinitionsAssignment_2_18_3)
+	{ after(grammarAccess.getJsonThingAccess().getSecurityDefinitionsAssignment_2_18_3()); }
 )
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__JsonThingDescription__Group_2_18__4
+rule__JsonThing__Group_2_18__4
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
-	rule__JsonThingDescription__Group_2_18__4__Impl
-	rule__JsonThingDescription__Group_2_18__5
+	rule__JsonThing__Group_2_18__4__Impl
+	rule__JsonThing__Group_2_18__5
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__JsonThingDescription__Group_2_18__4__Impl
+rule__JsonThing__Group_2_18__4__Impl
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 (
-	{ before(grammarAccess.getJsonThingDescriptionAccess().getGroup_2_18_4()); }
-	(rule__JsonThingDescription__Group_2_18_4__0)*
-	{ after(grammarAccess.getJsonThingDescriptionAccess().getGroup_2_18_4()); }
+	{ before(grammarAccess.getJsonThingAccess().getGroup_2_18_4()); }
+	(rule__JsonThing__Group_2_18_4__0)*
+	{ after(grammarAccess.getJsonThingAccess().getGroup_2_18_4()); }
 )
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__JsonThingDescription__Group_2_18__5
+rule__JsonThing__Group_2_18__5
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
-	rule__JsonThingDescription__Group_2_18__5__Impl
-	rule__JsonThingDescription__Group_2_18__6
+	rule__JsonThing__Group_2_18__5__Impl
+	rule__JsonThing__Group_2_18__6
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__JsonThingDescription__Group_2_18__5__Impl
+rule__JsonThing__Group_2_18__5__Impl
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 (
-	{ before(grammarAccess.getJsonThingDescriptionAccess().getRightCurlyBracketKeyword_2_18_5()); }
+	{ before(grammarAccess.getJsonThingAccess().getRightCurlyBracketKeyword_2_18_5()); }
 	'}'
-	{ after(grammarAccess.getJsonThingDescriptionAccess().getRightCurlyBracketKeyword_2_18_5()); }
+	{ after(grammarAccess.getJsonThingAccess().getRightCurlyBracketKeyword_2_18_5()); }
 )
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__JsonThingDescription__Group_2_18__6
+rule__JsonThing__Group_2_18__6
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
-	rule__JsonThingDescription__Group_2_18__6__Impl
+	rule__JsonThing__Group_2_18__6__Impl
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__JsonThingDescription__Group_2_18__6__Impl
+rule__JsonThing__Group_2_18__6__Impl
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 (
-	{ before(grammarAccess.getJsonThingDescriptionAccess().getCommaKeyword_2_18_6()); }
+	{ before(grammarAccess.getJsonThingAccess().getCommaKeyword_2_18_6()); }
 	(',')?
-	{ after(grammarAccess.getJsonThingDescriptionAccess().getCommaKeyword_2_18_6()); }
+	{ after(grammarAccess.getJsonThingAccess().getCommaKeyword_2_18_6()); }
 )
 ;
 finally {
@@ -5040,53 +5040,53 @@ finally {
 }
 
 
-rule__JsonThingDescription__Group_2_18_4__0
+rule__JsonThing__Group_2_18_4__0
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
-	rule__JsonThingDescription__Group_2_18_4__0__Impl
-	rule__JsonThingDescription__Group_2_18_4__1
+	rule__JsonThing__Group_2_18_4__0__Impl
+	rule__JsonThing__Group_2_18_4__1
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__JsonThingDescription__Group_2_18_4__0__Impl
+rule__JsonThing__Group_2_18_4__0__Impl
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 (
-	{ before(grammarAccess.getJsonThingDescriptionAccess().getCommaKeyword_2_18_4_0()); }
+	{ before(grammarAccess.getJsonThingAccess().getCommaKeyword_2_18_4_0()); }
 	','
-	{ after(grammarAccess.getJsonThingDescriptionAccess().getCommaKeyword_2_18_4_0()); }
+	{ after(grammarAccess.getJsonThingAccess().getCommaKeyword_2_18_4_0()); }
 )
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__JsonThingDescription__Group_2_18_4__1
+rule__JsonThing__Group_2_18_4__1
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
-	rule__JsonThingDescription__Group_2_18_4__1__Impl
+	rule__JsonThing__Group_2_18_4__1__Impl
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__JsonThingDescription__Group_2_18_4__1__Impl
+rule__JsonThing__Group_2_18_4__1__Impl
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 (
-	{ before(grammarAccess.getJsonThingDescriptionAccess().getSecurityDefinitionsAssignment_2_18_4_1()); }
-	(rule__JsonThingDescription__SecurityDefinitionsAssignment_2_18_4_1)
-	{ after(grammarAccess.getJsonThingDescriptionAccess().getSecurityDefinitionsAssignment_2_18_4_1()); }
+	{ before(grammarAccess.getJsonThingAccess().getSecurityDefinitionsAssignment_2_18_4_1()); }
+	(rule__JsonThing__SecurityDefinitionsAssignment_2_18_4_1)
+	{ after(grammarAccess.getJsonThingAccess().getSecurityDefinitionsAssignment_2_18_4_1()); }
 )
 ;
 finally {
@@ -18756,21 +18756,21 @@ finally {
 }
 
 
-rule__JsonThingDescription__UnorderedGroup_2
+rule__JsonThing__UnorderedGroup_2
 	@init {
 		int stackSize = keepStackSize();
-		getUnorderedGroupHelper().enter(grammarAccess.getJsonThingDescriptionAccess().getUnorderedGroup_2());
+		getUnorderedGroupHelper().enter(grammarAccess.getJsonThingAccess().getUnorderedGroup_2());
 	}
 :
-	rule__JsonThingDescription__UnorderedGroup_2__0
-	{getUnorderedGroupHelper().canLeave(grammarAccess.getJsonThingDescriptionAccess().getUnorderedGroup_2())}?
+	rule__JsonThing__UnorderedGroup_2__0
+	{getUnorderedGroupHelper().canLeave(grammarAccess.getJsonThingAccess().getUnorderedGroup_2())}?
 ;
 finally {
-	getUnorderedGroupHelper().leave(grammarAccess.getJsonThingDescriptionAccess().getUnorderedGroup_2());
+	getUnorderedGroupHelper().leave(grammarAccess.getJsonThingAccess().getUnorderedGroup_2());
 	restoreStackSize(stackSize);
 }
 
-rule__JsonThingDescription__UnorderedGroup_2__Impl
+rule__JsonThing__UnorderedGroup_2__Impl
 	@init {
 		int stackSize = keepStackSize();
 		boolean selected = false;
@@ -18778,287 +18778,287 @@ rule__JsonThingDescription__UnorderedGroup_2__Impl
 :
 		(
 		( 
-			{getUnorderedGroupHelper().canSelect(grammarAccess.getJsonThingDescriptionAccess().getUnorderedGroup_2(), 0)}?=>(
+			{getUnorderedGroupHelper().canSelect(grammarAccess.getJsonThingAccess().getUnorderedGroup_2(), 0)}?=>(
 				{
-					getUnorderedGroupHelper().select(grammarAccess.getJsonThingDescriptionAccess().getUnorderedGroup_2(), 0);
+					getUnorderedGroupHelper().select(grammarAccess.getJsonThingAccess().getUnorderedGroup_2(), 0);
 				}
 				{
 					selected = true;
 				}
 				(
-					{ before(grammarAccess.getJsonThingDescriptionAccess().getGroup_2_0()); }
-					(rule__JsonThingDescription__Group_2_0__0)
-					{ after(grammarAccess.getJsonThingDescriptionAccess().getGroup_2_0()); }
+					{ before(grammarAccess.getJsonThingAccess().getGroup_2_0()); }
+					(rule__JsonThing__Group_2_0__0)
+					{ after(grammarAccess.getJsonThingAccess().getGroup_2_0()); }
 				)
 			)
 		)|
 		( 
-			{getUnorderedGroupHelper().canSelect(grammarAccess.getJsonThingDescriptionAccess().getUnorderedGroup_2(), 1)}?=>(
+			{getUnorderedGroupHelper().canSelect(grammarAccess.getJsonThingAccess().getUnorderedGroup_2(), 1)}?=>(
 				{
-					getUnorderedGroupHelper().select(grammarAccess.getJsonThingDescriptionAccess().getUnorderedGroup_2(), 1);
+					getUnorderedGroupHelper().select(grammarAccess.getJsonThingAccess().getUnorderedGroup_2(), 1);
 				}
 				{
 					selected = true;
 				}
 				(
-					{ before(grammarAccess.getJsonThingDescriptionAccess().getGroup_2_1()); }
-					(rule__JsonThingDescription__Group_2_1__0)
-					{ after(grammarAccess.getJsonThingDescriptionAccess().getGroup_2_1()); }
+					{ before(grammarAccess.getJsonThingAccess().getGroup_2_1()); }
+					(rule__JsonThing__Group_2_1__0)
+					{ after(grammarAccess.getJsonThingAccess().getGroup_2_1()); }
 				)
 			)
 		)|
 		( 
-			{getUnorderedGroupHelper().canSelect(grammarAccess.getJsonThingDescriptionAccess().getUnorderedGroup_2(), 2)}?=>(
+			{getUnorderedGroupHelper().canSelect(grammarAccess.getJsonThingAccess().getUnorderedGroup_2(), 2)}?=>(
 				{
-					getUnorderedGroupHelper().select(grammarAccess.getJsonThingDescriptionAccess().getUnorderedGroup_2(), 2);
+					getUnorderedGroupHelper().select(grammarAccess.getJsonThingAccess().getUnorderedGroup_2(), 2);
 				}
 				{
 					selected = true;
 				}
 				(
-					{ before(grammarAccess.getJsonThingDescriptionAccess().getGroup_2_2()); }
-					(rule__JsonThingDescription__Group_2_2__0)
-					{ after(grammarAccess.getJsonThingDescriptionAccess().getGroup_2_2()); }
+					{ before(grammarAccess.getJsonThingAccess().getGroup_2_2()); }
+					(rule__JsonThing__Group_2_2__0)
+					{ after(grammarAccess.getJsonThingAccess().getGroup_2_2()); }
 				)
 			)
 		)|
 		( 
-			{getUnorderedGroupHelper().canSelect(grammarAccess.getJsonThingDescriptionAccess().getUnorderedGroup_2(), 3)}?=>(
+			{getUnorderedGroupHelper().canSelect(grammarAccess.getJsonThingAccess().getUnorderedGroup_2(), 3)}?=>(
 				{
-					getUnorderedGroupHelper().select(grammarAccess.getJsonThingDescriptionAccess().getUnorderedGroup_2(), 3);
+					getUnorderedGroupHelper().select(grammarAccess.getJsonThingAccess().getUnorderedGroup_2(), 3);
 				}
 				{
 					selected = true;
 				}
 				(
-					{ before(grammarAccess.getJsonThingDescriptionAccess().getGroup_2_3()); }
-					(rule__JsonThingDescription__Group_2_3__0)
-					{ after(grammarAccess.getJsonThingDescriptionAccess().getGroup_2_3()); }
+					{ before(grammarAccess.getJsonThingAccess().getGroup_2_3()); }
+					(rule__JsonThing__Group_2_3__0)
+					{ after(grammarAccess.getJsonThingAccess().getGroup_2_3()); }
 				)
 			)
 		)|
 		( 
-			{getUnorderedGroupHelper().canSelect(grammarAccess.getJsonThingDescriptionAccess().getUnorderedGroup_2(), 4)}?=>(
+			{getUnorderedGroupHelper().canSelect(grammarAccess.getJsonThingAccess().getUnorderedGroup_2(), 4)}?=>(
 				{
-					getUnorderedGroupHelper().select(grammarAccess.getJsonThingDescriptionAccess().getUnorderedGroup_2(), 4);
+					getUnorderedGroupHelper().select(grammarAccess.getJsonThingAccess().getUnorderedGroup_2(), 4);
 				}
 				{
 					selected = true;
 				}
 				(
-					{ before(grammarAccess.getJsonThingDescriptionAccess().getGroup_2_4()); }
-					(rule__JsonThingDescription__Group_2_4__0)
-					{ after(grammarAccess.getJsonThingDescriptionAccess().getGroup_2_4()); }
+					{ before(grammarAccess.getJsonThingAccess().getGroup_2_4()); }
+					(rule__JsonThing__Group_2_4__0)
+					{ after(grammarAccess.getJsonThingAccess().getGroup_2_4()); }
 				)
 			)
 		)|
 		( 
-			{getUnorderedGroupHelper().canSelect(grammarAccess.getJsonThingDescriptionAccess().getUnorderedGroup_2(), 5)}?=>(
+			{getUnorderedGroupHelper().canSelect(grammarAccess.getJsonThingAccess().getUnorderedGroup_2(), 5)}?=>(
 				{
-					getUnorderedGroupHelper().select(grammarAccess.getJsonThingDescriptionAccess().getUnorderedGroup_2(), 5);
+					getUnorderedGroupHelper().select(grammarAccess.getJsonThingAccess().getUnorderedGroup_2(), 5);
 				}
 				{
 					selected = true;
 				}
 				(
-					{ before(grammarAccess.getJsonThingDescriptionAccess().getGroup_2_5()); }
-					(rule__JsonThingDescription__Group_2_5__0)
-					{ after(grammarAccess.getJsonThingDescriptionAccess().getGroup_2_5()); }
+					{ before(grammarAccess.getJsonThingAccess().getGroup_2_5()); }
+					(rule__JsonThing__Group_2_5__0)
+					{ after(grammarAccess.getJsonThingAccess().getGroup_2_5()); }
 				)
 			)
 		)|
 		( 
-			{getUnorderedGroupHelper().canSelect(grammarAccess.getJsonThingDescriptionAccess().getUnorderedGroup_2(), 6)}?=>(
+			{getUnorderedGroupHelper().canSelect(grammarAccess.getJsonThingAccess().getUnorderedGroup_2(), 6)}?=>(
 				{
-					getUnorderedGroupHelper().select(grammarAccess.getJsonThingDescriptionAccess().getUnorderedGroup_2(), 6);
+					getUnorderedGroupHelper().select(grammarAccess.getJsonThingAccess().getUnorderedGroup_2(), 6);
 				}
 				{
 					selected = true;
 				}
 				(
-					{ before(grammarAccess.getJsonThingDescriptionAccess().getGroup_2_6()); }
-					(rule__JsonThingDescription__Group_2_6__0)
-					{ after(grammarAccess.getJsonThingDescriptionAccess().getGroup_2_6()); }
+					{ before(grammarAccess.getJsonThingAccess().getGroup_2_6()); }
+					(rule__JsonThing__Group_2_6__0)
+					{ after(grammarAccess.getJsonThingAccess().getGroup_2_6()); }
 				)
 			)
 		)|
 		( 
-			{getUnorderedGroupHelper().canSelect(grammarAccess.getJsonThingDescriptionAccess().getUnorderedGroup_2(), 7)}?=>(
+			{getUnorderedGroupHelper().canSelect(grammarAccess.getJsonThingAccess().getUnorderedGroup_2(), 7)}?=>(
 				{
-					getUnorderedGroupHelper().select(grammarAccess.getJsonThingDescriptionAccess().getUnorderedGroup_2(), 7);
+					getUnorderedGroupHelper().select(grammarAccess.getJsonThingAccess().getUnorderedGroup_2(), 7);
 				}
 				{
 					selected = true;
 				}
 				(
-					{ before(grammarAccess.getJsonThingDescriptionAccess().getGroup_2_7()); }
-					(rule__JsonThingDescription__Group_2_7__0)
-					{ after(grammarAccess.getJsonThingDescriptionAccess().getGroup_2_7()); }
+					{ before(grammarAccess.getJsonThingAccess().getGroup_2_7()); }
+					(rule__JsonThing__Group_2_7__0)
+					{ after(grammarAccess.getJsonThingAccess().getGroup_2_7()); }
 				)
 			)
 		)|
 		( 
-			{getUnorderedGroupHelper().canSelect(grammarAccess.getJsonThingDescriptionAccess().getUnorderedGroup_2(), 8)}?=>(
+			{getUnorderedGroupHelper().canSelect(grammarAccess.getJsonThingAccess().getUnorderedGroup_2(), 8)}?=>(
 				{
-					getUnorderedGroupHelper().select(grammarAccess.getJsonThingDescriptionAccess().getUnorderedGroup_2(), 8);
+					getUnorderedGroupHelper().select(grammarAccess.getJsonThingAccess().getUnorderedGroup_2(), 8);
 				}
 				{
 					selected = true;
 				}
 				(
-					{ before(grammarAccess.getJsonThingDescriptionAccess().getGroup_2_8()); }
-					(rule__JsonThingDescription__Group_2_8__0)
-					{ after(grammarAccess.getJsonThingDescriptionAccess().getGroup_2_8()); }
+					{ before(grammarAccess.getJsonThingAccess().getGroup_2_8()); }
+					(rule__JsonThing__Group_2_8__0)
+					{ after(grammarAccess.getJsonThingAccess().getGroup_2_8()); }
 				)
 			)
 		)|
 		( 
-			{getUnorderedGroupHelper().canSelect(grammarAccess.getJsonThingDescriptionAccess().getUnorderedGroup_2(), 9)}?=>(
+			{getUnorderedGroupHelper().canSelect(grammarAccess.getJsonThingAccess().getUnorderedGroup_2(), 9)}?=>(
 				{
-					getUnorderedGroupHelper().select(grammarAccess.getJsonThingDescriptionAccess().getUnorderedGroup_2(), 9);
+					getUnorderedGroupHelper().select(grammarAccess.getJsonThingAccess().getUnorderedGroup_2(), 9);
 				}
 				{
 					selected = true;
 				}
 				(
-					{ before(grammarAccess.getJsonThingDescriptionAccess().getGroup_2_9()); }
-					(rule__JsonThingDescription__Group_2_9__0)
-					{ after(grammarAccess.getJsonThingDescriptionAccess().getGroup_2_9()); }
+					{ before(grammarAccess.getJsonThingAccess().getGroup_2_9()); }
+					(rule__JsonThing__Group_2_9__0)
+					{ after(grammarAccess.getJsonThingAccess().getGroup_2_9()); }
 				)
 			)
 		)|
 		( 
-			{getUnorderedGroupHelper().canSelect(grammarAccess.getJsonThingDescriptionAccess().getUnorderedGroup_2(), 10)}?=>(
+			{getUnorderedGroupHelper().canSelect(grammarAccess.getJsonThingAccess().getUnorderedGroup_2(), 10)}?=>(
 				{
-					getUnorderedGroupHelper().select(grammarAccess.getJsonThingDescriptionAccess().getUnorderedGroup_2(), 10);
+					getUnorderedGroupHelper().select(grammarAccess.getJsonThingAccess().getUnorderedGroup_2(), 10);
 				}
 				{
 					selected = true;
 				}
 				(
-					{ before(grammarAccess.getJsonThingDescriptionAccess().getGroup_2_10()); }
-					(rule__JsonThingDescription__Group_2_10__0)
-					{ after(grammarAccess.getJsonThingDescriptionAccess().getGroup_2_10()); }
+					{ before(grammarAccess.getJsonThingAccess().getGroup_2_10()); }
+					(rule__JsonThing__Group_2_10__0)
+					{ after(grammarAccess.getJsonThingAccess().getGroup_2_10()); }
 				)
 			)
 		)|
 		( 
-			{getUnorderedGroupHelper().canSelect(grammarAccess.getJsonThingDescriptionAccess().getUnorderedGroup_2(), 11)}?=>(
+			{getUnorderedGroupHelper().canSelect(grammarAccess.getJsonThingAccess().getUnorderedGroup_2(), 11)}?=>(
 				{
-					getUnorderedGroupHelper().select(grammarAccess.getJsonThingDescriptionAccess().getUnorderedGroup_2(), 11);
+					getUnorderedGroupHelper().select(grammarAccess.getJsonThingAccess().getUnorderedGroup_2(), 11);
 				}
 				{
 					selected = true;
 				}
 				(
-					{ before(grammarAccess.getJsonThingDescriptionAccess().getGroup_2_11()); }
-					(rule__JsonThingDescription__Group_2_11__0)
-					{ after(grammarAccess.getJsonThingDescriptionAccess().getGroup_2_11()); }
+					{ before(grammarAccess.getJsonThingAccess().getGroup_2_11()); }
+					(rule__JsonThing__Group_2_11__0)
+					{ after(grammarAccess.getJsonThingAccess().getGroup_2_11()); }
 				)
 			)
 		)|
 		( 
-			{getUnorderedGroupHelper().canSelect(grammarAccess.getJsonThingDescriptionAccess().getUnorderedGroup_2(), 12)}?=>(
+			{getUnorderedGroupHelper().canSelect(grammarAccess.getJsonThingAccess().getUnorderedGroup_2(), 12)}?=>(
 				{
-					getUnorderedGroupHelper().select(grammarAccess.getJsonThingDescriptionAccess().getUnorderedGroup_2(), 12);
+					getUnorderedGroupHelper().select(grammarAccess.getJsonThingAccess().getUnorderedGroup_2(), 12);
 				}
 				{
 					selected = true;
 				}
 				(
-					{ before(grammarAccess.getJsonThingDescriptionAccess().getGroup_2_12()); }
-					(rule__JsonThingDescription__Group_2_12__0)
-					{ after(grammarAccess.getJsonThingDescriptionAccess().getGroup_2_12()); }
+					{ before(grammarAccess.getJsonThingAccess().getGroup_2_12()); }
+					(rule__JsonThing__Group_2_12__0)
+					{ after(grammarAccess.getJsonThingAccess().getGroup_2_12()); }
 				)
 			)
 		)|
 		( 
-			{getUnorderedGroupHelper().canSelect(grammarAccess.getJsonThingDescriptionAccess().getUnorderedGroup_2(), 13)}?=>(
+			{getUnorderedGroupHelper().canSelect(grammarAccess.getJsonThingAccess().getUnorderedGroup_2(), 13)}?=>(
 				{
-					getUnorderedGroupHelper().select(grammarAccess.getJsonThingDescriptionAccess().getUnorderedGroup_2(), 13);
+					getUnorderedGroupHelper().select(grammarAccess.getJsonThingAccess().getUnorderedGroup_2(), 13);
 				}
 				{
 					selected = true;
 				}
 				(
-					{ before(grammarAccess.getJsonThingDescriptionAccess().getGroup_2_13()); }
-					(rule__JsonThingDescription__Group_2_13__0)
-					{ after(grammarAccess.getJsonThingDescriptionAccess().getGroup_2_13()); }
+					{ before(grammarAccess.getJsonThingAccess().getGroup_2_13()); }
+					(rule__JsonThing__Group_2_13__0)
+					{ after(grammarAccess.getJsonThingAccess().getGroup_2_13()); }
 				)
 			)
 		)|
 		( 
-			{getUnorderedGroupHelper().canSelect(grammarAccess.getJsonThingDescriptionAccess().getUnorderedGroup_2(), 14)}?=>(
+			{getUnorderedGroupHelper().canSelect(grammarAccess.getJsonThingAccess().getUnorderedGroup_2(), 14)}?=>(
 				{
-					getUnorderedGroupHelper().select(grammarAccess.getJsonThingDescriptionAccess().getUnorderedGroup_2(), 14);
+					getUnorderedGroupHelper().select(grammarAccess.getJsonThingAccess().getUnorderedGroup_2(), 14);
 				}
 				{
 					selected = true;
 				}
 				(
-					{ before(grammarAccess.getJsonThingDescriptionAccess().getGroup_2_14()); }
-					(rule__JsonThingDescription__Group_2_14__0)
-					{ after(grammarAccess.getJsonThingDescriptionAccess().getGroup_2_14()); }
+					{ before(grammarAccess.getJsonThingAccess().getGroup_2_14()); }
+					(rule__JsonThing__Group_2_14__0)
+					{ after(grammarAccess.getJsonThingAccess().getGroup_2_14()); }
 				)
 			)
 		)|
 		( 
-			{getUnorderedGroupHelper().canSelect(grammarAccess.getJsonThingDescriptionAccess().getUnorderedGroup_2(), 15)}?=>(
+			{getUnorderedGroupHelper().canSelect(grammarAccess.getJsonThingAccess().getUnorderedGroup_2(), 15)}?=>(
 				{
-					getUnorderedGroupHelper().select(grammarAccess.getJsonThingDescriptionAccess().getUnorderedGroup_2(), 15);
+					getUnorderedGroupHelper().select(grammarAccess.getJsonThingAccess().getUnorderedGroup_2(), 15);
 				}
 				{
 					selected = true;
 				}
 				(
-					{ before(grammarAccess.getJsonThingDescriptionAccess().getGroup_2_15()); }
-					(rule__JsonThingDescription__Group_2_15__0)
-					{ after(grammarAccess.getJsonThingDescriptionAccess().getGroup_2_15()); }
+					{ before(grammarAccess.getJsonThingAccess().getGroup_2_15()); }
+					(rule__JsonThing__Group_2_15__0)
+					{ after(grammarAccess.getJsonThingAccess().getGroup_2_15()); }
 				)
 			)
 		)|
 		( 
-			{getUnorderedGroupHelper().canSelect(grammarAccess.getJsonThingDescriptionAccess().getUnorderedGroup_2(), 16)}?=>(
+			{getUnorderedGroupHelper().canSelect(grammarAccess.getJsonThingAccess().getUnorderedGroup_2(), 16)}?=>(
 				{
-					getUnorderedGroupHelper().select(grammarAccess.getJsonThingDescriptionAccess().getUnorderedGroup_2(), 16);
+					getUnorderedGroupHelper().select(grammarAccess.getJsonThingAccess().getUnorderedGroup_2(), 16);
 				}
 				{
 					selected = true;
 				}
 				(
-					{ before(grammarAccess.getJsonThingDescriptionAccess().getGroup_2_16()); }
-					(rule__JsonThingDescription__Group_2_16__0)
-					{ after(grammarAccess.getJsonThingDescriptionAccess().getGroup_2_16()); }
+					{ before(grammarAccess.getJsonThingAccess().getGroup_2_16()); }
+					(rule__JsonThing__Group_2_16__0)
+					{ after(grammarAccess.getJsonThingAccess().getGroup_2_16()); }
 				)
 			)
 		)|
 		( 
-			{getUnorderedGroupHelper().canSelect(grammarAccess.getJsonThingDescriptionAccess().getUnorderedGroup_2(), 17)}?=>(
+			{getUnorderedGroupHelper().canSelect(grammarAccess.getJsonThingAccess().getUnorderedGroup_2(), 17)}?=>(
 				{
-					getUnorderedGroupHelper().select(grammarAccess.getJsonThingDescriptionAccess().getUnorderedGroup_2(), 17);
+					getUnorderedGroupHelper().select(grammarAccess.getJsonThingAccess().getUnorderedGroup_2(), 17);
 				}
 				{
 					selected = true;
 				}
 				(
-					{ before(grammarAccess.getJsonThingDescriptionAccess().getGroup_2_17()); }
-					(rule__JsonThingDescription__Group_2_17__0)
-					{ after(grammarAccess.getJsonThingDescriptionAccess().getGroup_2_17()); }
+					{ before(grammarAccess.getJsonThingAccess().getGroup_2_17()); }
+					(rule__JsonThing__Group_2_17__0)
+					{ after(grammarAccess.getJsonThingAccess().getGroup_2_17()); }
 				)
 			)
 		)|
 		( 
-			{getUnorderedGroupHelper().canSelect(grammarAccess.getJsonThingDescriptionAccess().getUnorderedGroup_2(), 18)}?=>(
+			{getUnorderedGroupHelper().canSelect(grammarAccess.getJsonThingAccess().getUnorderedGroup_2(), 18)}?=>(
 				{
-					getUnorderedGroupHelper().select(grammarAccess.getJsonThingDescriptionAccess().getUnorderedGroup_2(), 18);
+					getUnorderedGroupHelper().select(grammarAccess.getJsonThingAccess().getUnorderedGroup_2(), 18);
 				}
 				{
 					selected = true;
 				}
 				(
-					{ before(grammarAccess.getJsonThingDescriptionAccess().getGroup_2_18()); }
-					(rule__JsonThingDescription__Group_2_18__0)
-					{ after(grammarAccess.getJsonThingDescriptionAccess().getGroup_2_18()); }
+					{ before(grammarAccess.getJsonThingAccess().getGroup_2_18()); }
+					(rule__JsonThing__Group_2_18__0)
+					{ after(grammarAccess.getJsonThingAccess().getGroup_2_18()); }
 				)
 			)
 		)
@@ -19066,232 +19066,232 @@ rule__JsonThingDescription__UnorderedGroup_2__Impl
 ;
 finally {
 	if (selected)
-		getUnorderedGroupHelper().returnFromSelection(grammarAccess.getJsonThingDescriptionAccess().getUnorderedGroup_2());
+		getUnorderedGroupHelper().returnFromSelection(grammarAccess.getJsonThingAccess().getUnorderedGroup_2());
 	restoreStackSize(stackSize);
 }
 
-rule__JsonThingDescription__UnorderedGroup_2__0
+rule__JsonThing__UnorderedGroup_2__0
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
-	rule__JsonThingDescription__UnorderedGroup_2__Impl
-	rule__JsonThingDescription__UnorderedGroup_2__1?
+	rule__JsonThing__UnorderedGroup_2__Impl
+	rule__JsonThing__UnorderedGroup_2__1?
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__JsonThingDescription__UnorderedGroup_2__1
+rule__JsonThing__UnorderedGroup_2__1
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
-	rule__JsonThingDescription__UnorderedGroup_2__Impl
-	rule__JsonThingDescription__UnorderedGroup_2__2?
+	rule__JsonThing__UnorderedGroup_2__Impl
+	rule__JsonThing__UnorderedGroup_2__2?
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__JsonThingDescription__UnorderedGroup_2__2
+rule__JsonThing__UnorderedGroup_2__2
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
-	rule__JsonThingDescription__UnorderedGroup_2__Impl
-	rule__JsonThingDescription__UnorderedGroup_2__3?
+	rule__JsonThing__UnorderedGroup_2__Impl
+	rule__JsonThing__UnorderedGroup_2__3?
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__JsonThingDescription__UnorderedGroup_2__3
+rule__JsonThing__UnorderedGroup_2__3
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
-	rule__JsonThingDescription__UnorderedGroup_2__Impl
-	rule__JsonThingDescription__UnorderedGroup_2__4?
+	rule__JsonThing__UnorderedGroup_2__Impl
+	rule__JsonThing__UnorderedGroup_2__4?
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__JsonThingDescription__UnorderedGroup_2__4
+rule__JsonThing__UnorderedGroup_2__4
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
-	rule__JsonThingDescription__UnorderedGroup_2__Impl
-	rule__JsonThingDescription__UnorderedGroup_2__5?
+	rule__JsonThing__UnorderedGroup_2__Impl
+	rule__JsonThing__UnorderedGroup_2__5?
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__JsonThingDescription__UnorderedGroup_2__5
+rule__JsonThing__UnorderedGroup_2__5
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
-	rule__JsonThingDescription__UnorderedGroup_2__Impl
-	rule__JsonThingDescription__UnorderedGroup_2__6?
+	rule__JsonThing__UnorderedGroup_2__Impl
+	rule__JsonThing__UnorderedGroup_2__6?
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__JsonThingDescription__UnorderedGroup_2__6
+rule__JsonThing__UnorderedGroup_2__6
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
-	rule__JsonThingDescription__UnorderedGroup_2__Impl
-	rule__JsonThingDescription__UnorderedGroup_2__7?
+	rule__JsonThing__UnorderedGroup_2__Impl
+	rule__JsonThing__UnorderedGroup_2__7?
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__JsonThingDescription__UnorderedGroup_2__7
+rule__JsonThing__UnorderedGroup_2__7
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
-	rule__JsonThingDescription__UnorderedGroup_2__Impl
-	rule__JsonThingDescription__UnorderedGroup_2__8?
+	rule__JsonThing__UnorderedGroup_2__Impl
+	rule__JsonThing__UnorderedGroup_2__8?
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__JsonThingDescription__UnorderedGroup_2__8
+rule__JsonThing__UnorderedGroup_2__8
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
-	rule__JsonThingDescription__UnorderedGroup_2__Impl
-	rule__JsonThingDescription__UnorderedGroup_2__9?
+	rule__JsonThing__UnorderedGroup_2__Impl
+	rule__JsonThing__UnorderedGroup_2__9?
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__JsonThingDescription__UnorderedGroup_2__9
+rule__JsonThing__UnorderedGroup_2__9
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
-	rule__JsonThingDescription__UnorderedGroup_2__Impl
-	rule__JsonThingDescription__UnorderedGroup_2__10?
+	rule__JsonThing__UnorderedGroup_2__Impl
+	rule__JsonThing__UnorderedGroup_2__10?
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__JsonThingDescription__UnorderedGroup_2__10
+rule__JsonThing__UnorderedGroup_2__10
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
-	rule__JsonThingDescription__UnorderedGroup_2__Impl
-	rule__JsonThingDescription__UnorderedGroup_2__11?
+	rule__JsonThing__UnorderedGroup_2__Impl
+	rule__JsonThing__UnorderedGroup_2__11?
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__JsonThingDescription__UnorderedGroup_2__11
+rule__JsonThing__UnorderedGroup_2__11
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
-	rule__JsonThingDescription__UnorderedGroup_2__Impl
-	rule__JsonThingDescription__UnorderedGroup_2__12?
+	rule__JsonThing__UnorderedGroup_2__Impl
+	rule__JsonThing__UnorderedGroup_2__12?
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__JsonThingDescription__UnorderedGroup_2__12
+rule__JsonThing__UnorderedGroup_2__12
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
-	rule__JsonThingDescription__UnorderedGroup_2__Impl
-	rule__JsonThingDescription__UnorderedGroup_2__13?
+	rule__JsonThing__UnorderedGroup_2__Impl
+	rule__JsonThing__UnorderedGroup_2__13?
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__JsonThingDescription__UnorderedGroup_2__13
+rule__JsonThing__UnorderedGroup_2__13
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
-	rule__JsonThingDescription__UnorderedGroup_2__Impl
-	rule__JsonThingDescription__UnorderedGroup_2__14?
+	rule__JsonThing__UnorderedGroup_2__Impl
+	rule__JsonThing__UnorderedGroup_2__14?
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__JsonThingDescription__UnorderedGroup_2__14
+rule__JsonThing__UnorderedGroup_2__14
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
-	rule__JsonThingDescription__UnorderedGroup_2__Impl
-	rule__JsonThingDescription__UnorderedGroup_2__15?
+	rule__JsonThing__UnorderedGroup_2__Impl
+	rule__JsonThing__UnorderedGroup_2__15?
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__JsonThingDescription__UnorderedGroup_2__15
+rule__JsonThing__UnorderedGroup_2__15
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
-	rule__JsonThingDescription__UnorderedGroup_2__Impl
-	rule__JsonThingDescription__UnorderedGroup_2__16?
+	rule__JsonThing__UnorderedGroup_2__Impl
+	rule__JsonThing__UnorderedGroup_2__16?
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__JsonThingDescription__UnorderedGroup_2__16
+rule__JsonThing__UnorderedGroup_2__16
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
-	rule__JsonThingDescription__UnorderedGroup_2__Impl
-	rule__JsonThingDescription__UnorderedGroup_2__17?
+	rule__JsonThing__UnorderedGroup_2__Impl
+	rule__JsonThing__UnorderedGroup_2__17?
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__JsonThingDescription__UnorderedGroup_2__17
+rule__JsonThing__UnorderedGroup_2__17
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
-	rule__JsonThingDescription__UnorderedGroup_2__Impl
-	rule__JsonThingDescription__UnorderedGroup_2__18?
+	rule__JsonThing__UnorderedGroup_2__Impl
+	rule__JsonThing__UnorderedGroup_2__18?
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__JsonThingDescription__UnorderedGroup_2__18
+rule__JsonThing__UnorderedGroup_2__18
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
-	rule__JsonThingDescription__UnorderedGroup_2__Impl
+	rule__JsonThing__UnorderedGroup_2__Impl
 ;
 finally {
 	restoreStackSize(stackSize);
@@ -21362,495 +21362,495 @@ finally {
 }
 
 
-rule__JsonThingDescription__Ld_contextAssignment_2_0_2_0
+rule__JsonThing__Ld_contextAssignment_2_0_2_0
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 	(
-		{ before(grammarAccess.getJsonThingDescriptionAccess().getLd_contextAnyStringParserRuleCall_2_0_2_0_0()); }
+		{ before(grammarAccess.getJsonThingAccess().getLd_contextAnyStringParserRuleCall_2_0_2_0_0()); }
 		ruleAnyString
-		{ after(grammarAccess.getJsonThingDescriptionAccess().getLd_contextAnyStringParserRuleCall_2_0_2_0_0()); }
+		{ after(grammarAccess.getJsonThingAccess().getLd_contextAnyStringParserRuleCall_2_0_2_0_0()); }
 	)
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__JsonThingDescription__Ld_contextAssignment_2_0_2_1_1_0
+rule__JsonThing__Ld_contextAssignment_2_0_2_1_1_0
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 	(
-		{ before(grammarAccess.getJsonThingDescriptionAccess().getLd_contextAnyStringParserRuleCall_2_0_2_1_1_0_0()); }
+		{ before(grammarAccess.getJsonThingAccess().getLd_contextAnyStringParserRuleCall_2_0_2_1_1_0_0()); }
 		ruleAnyString
-		{ after(grammarAccess.getJsonThingDescriptionAccess().getLd_contextAnyStringParserRuleCall_2_0_2_1_1_0_0()); }
+		{ after(grammarAccess.getJsonThingAccess().getLd_contextAnyStringParserRuleCall_2_0_2_1_1_0_0()); }
 	)
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__JsonThingDescription__Ld_contextAssignment_2_0_2_1_2_1_0
+rule__JsonThing__Ld_contextAssignment_2_0_2_1_2_1_0
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 	(
-		{ before(grammarAccess.getJsonThingDescriptionAccess().getLd_contextAnyStringParserRuleCall_2_0_2_1_2_1_0_0()); }
+		{ before(grammarAccess.getJsonThingAccess().getLd_contextAnyStringParserRuleCall_2_0_2_1_2_1_0_0()); }
 		ruleAnyString
-		{ after(grammarAccess.getJsonThingDescriptionAccess().getLd_contextAnyStringParserRuleCall_2_0_2_1_2_1_0_0()); }
+		{ after(grammarAccess.getJsonThingAccess().getLd_contextAnyStringParserRuleCall_2_0_2_1_2_1_0_0()); }
 	)
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__JsonThingDescription__Ld_typeAssignment_2_1_2_0
+rule__JsonThing__Ld_typeAssignment_2_1_2_0
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 	(
-		{ before(grammarAccess.getJsonThingDescriptionAccess().getLd_typeAnyStringParserRuleCall_2_1_2_0_0()); }
+		{ before(grammarAccess.getJsonThingAccess().getLd_typeAnyStringParserRuleCall_2_1_2_0_0()); }
 		ruleAnyString
-		{ after(grammarAccess.getJsonThingDescriptionAccess().getLd_typeAnyStringParserRuleCall_2_1_2_0_0()); }
+		{ after(grammarAccess.getJsonThingAccess().getLd_typeAnyStringParserRuleCall_2_1_2_0_0()); }
 	)
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__JsonThingDescription__Ld_typeAssignment_2_1_2_1_1
+rule__JsonThing__Ld_typeAssignment_2_1_2_1_1
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 	(
-		{ before(grammarAccess.getJsonThingDescriptionAccess().getLd_typeAnyStringParserRuleCall_2_1_2_1_1_0()); }
+		{ before(grammarAccess.getJsonThingAccess().getLd_typeAnyStringParserRuleCall_2_1_2_1_1_0()); }
 		ruleAnyString
-		{ after(grammarAccess.getJsonThingDescriptionAccess().getLd_typeAnyStringParserRuleCall_2_1_2_1_1_0()); }
+		{ after(grammarAccess.getJsonThingAccess().getLd_typeAnyStringParserRuleCall_2_1_2_1_1_0()); }
 	)
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__JsonThingDescription__Ld_typeAssignment_2_1_2_1_2_1
+rule__JsonThing__Ld_typeAssignment_2_1_2_1_2_1
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 	(
-		{ before(grammarAccess.getJsonThingDescriptionAccess().getLd_typeAnyStringParserRuleCall_2_1_2_1_2_1_0()); }
+		{ before(grammarAccess.getJsonThingAccess().getLd_typeAnyStringParserRuleCall_2_1_2_1_2_1_0()); }
 		ruleAnyString
-		{ after(grammarAccess.getJsonThingDescriptionAccess().getLd_typeAnyStringParserRuleCall_2_1_2_1_2_1_0()); }
+		{ after(grammarAccess.getJsonThingAccess().getLd_typeAnyStringParserRuleCall_2_1_2_1_2_1_0()); }
 	)
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__JsonThingDescription__IdAssignment_2_2_2
+rule__JsonThing__IdAssignment_2_2_2
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 	(
-		{ before(grammarAccess.getJsonThingDescriptionAccess().getIdAnyStringParserRuleCall_2_2_2_0()); }
+		{ before(grammarAccess.getJsonThingAccess().getIdAnyStringParserRuleCall_2_2_2_0()); }
 		ruleAnyString
-		{ after(grammarAccess.getJsonThingDescriptionAccess().getIdAnyStringParserRuleCall_2_2_2_0()); }
+		{ after(grammarAccess.getJsonThingAccess().getIdAnyStringParserRuleCall_2_2_2_0()); }
 	)
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__JsonThingDescription__TitleAssignment_2_3_2
+rule__JsonThing__TitleAssignment_2_3_2
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 	(
-		{ before(grammarAccess.getJsonThingDescriptionAccess().getTitleAnyStringParserRuleCall_2_3_2_0()); }
+		{ before(grammarAccess.getJsonThingAccess().getTitleAnyStringParserRuleCall_2_3_2_0()); }
 		ruleAnyString
-		{ after(grammarAccess.getJsonThingDescriptionAccess().getTitleAnyStringParserRuleCall_2_3_2_0()); }
+		{ after(grammarAccess.getJsonThingAccess().getTitleAnyStringParserRuleCall_2_3_2_0()); }
 	)
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__JsonThingDescription__DescriptionAssignment_2_4_2
+rule__JsonThing__DescriptionAssignment_2_4_2
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 	(
-		{ before(grammarAccess.getJsonThingDescriptionAccess().getDescriptionAnyStringParserRuleCall_2_4_2_0()); }
+		{ before(grammarAccess.getJsonThingAccess().getDescriptionAnyStringParserRuleCall_2_4_2_0()); }
 		ruleAnyString
-		{ after(grammarAccess.getJsonThingDescriptionAccess().getDescriptionAnyStringParserRuleCall_2_4_2_0()); }
+		{ after(grammarAccess.getJsonThingAccess().getDescriptionAnyStringParserRuleCall_2_4_2_0()); }
 	)
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__JsonThingDescription__CreatedAssignment_2_5_2
+rule__JsonThing__CreatedAssignment_2_5_2
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 	(
-		{ before(grammarAccess.getJsonThingDescriptionAccess().getCreatedAnyStringParserRuleCall_2_5_2_0()); }
+		{ before(grammarAccess.getJsonThingAccess().getCreatedAnyStringParserRuleCall_2_5_2_0()); }
 		ruleAnyString
-		{ after(grammarAccess.getJsonThingDescriptionAccess().getCreatedAnyStringParserRuleCall_2_5_2_0()); }
+		{ after(grammarAccess.getJsonThingAccess().getCreatedAnyStringParserRuleCall_2_5_2_0()); }
 	)
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__JsonThingDescription__ModifiedAssignment_2_6_2
+rule__JsonThing__ModifiedAssignment_2_6_2
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 	(
-		{ before(grammarAccess.getJsonThingDescriptionAccess().getModifiedAnyStringParserRuleCall_2_6_2_0()); }
+		{ before(grammarAccess.getJsonThingAccess().getModifiedAnyStringParserRuleCall_2_6_2_0()); }
 		ruleAnyString
-		{ after(grammarAccess.getJsonThingDescriptionAccess().getModifiedAnyStringParserRuleCall_2_6_2_0()); }
+		{ after(grammarAccess.getJsonThingAccess().getModifiedAnyStringParserRuleCall_2_6_2_0()); }
 	)
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__JsonThingDescription__SupportAssignment_2_7_2
+rule__JsonThing__SupportAssignment_2_7_2
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 	(
-		{ before(grammarAccess.getJsonThingDescriptionAccess().getSupportAnyStringParserRuleCall_2_7_2_0()); }
+		{ before(grammarAccess.getJsonThingAccess().getSupportAnyStringParserRuleCall_2_7_2_0()); }
 		ruleAnyString
-		{ after(grammarAccess.getJsonThingDescriptionAccess().getSupportAnyStringParserRuleCall_2_7_2_0()); }
+		{ after(grammarAccess.getJsonThingAccess().getSupportAnyStringParserRuleCall_2_7_2_0()); }
 	)
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__JsonThingDescription__BaseAssignment_2_8_2
+rule__JsonThing__BaseAssignment_2_8_2
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 	(
-		{ before(grammarAccess.getJsonThingDescriptionAccess().getBaseAnyStringParserRuleCall_2_8_2_0()); }
+		{ before(grammarAccess.getJsonThingAccess().getBaseAnyStringParserRuleCall_2_8_2_0()); }
 		ruleAnyString
-		{ after(grammarAccess.getJsonThingDescriptionAccess().getBaseAnyStringParserRuleCall_2_8_2_0()); }
+		{ after(grammarAccess.getJsonThingAccess().getBaseAnyStringParserRuleCall_2_8_2_0()); }
 	)
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__JsonThingDescription__SecurityAssignment_2_9_2_0
+rule__JsonThing__SecurityAssignment_2_9_2_0
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 	(
-		{ before(grammarAccess.getJsonThingDescriptionAccess().getSecurityAnyStringParserRuleCall_2_9_2_0_0()); }
+		{ before(grammarAccess.getJsonThingAccess().getSecurityAnyStringParserRuleCall_2_9_2_0_0()); }
 		ruleAnyString
-		{ after(grammarAccess.getJsonThingDescriptionAccess().getSecurityAnyStringParserRuleCall_2_9_2_0_0()); }
+		{ after(grammarAccess.getJsonThingAccess().getSecurityAnyStringParserRuleCall_2_9_2_0_0()); }
 	)
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__JsonThingDescription__SecurityAssignment_2_9_2_1_1
+rule__JsonThing__SecurityAssignment_2_9_2_1_1
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 	(
-		{ before(grammarAccess.getJsonThingDescriptionAccess().getSecurityAnyStringParserRuleCall_2_9_2_1_1_0()); }
+		{ before(grammarAccess.getJsonThingAccess().getSecurityAnyStringParserRuleCall_2_9_2_1_1_0()); }
 		ruleAnyString
-		{ after(grammarAccess.getJsonThingDescriptionAccess().getSecurityAnyStringParserRuleCall_2_9_2_1_1_0()); }
+		{ after(grammarAccess.getJsonThingAccess().getSecurityAnyStringParserRuleCall_2_9_2_1_1_0()); }
 	)
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__JsonThingDescription__SecurityAssignment_2_9_2_1_2_1
+rule__JsonThing__SecurityAssignment_2_9_2_1_2_1
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 	(
-		{ before(grammarAccess.getJsonThingDescriptionAccess().getSecurityAnyStringParserRuleCall_2_9_2_1_2_1_0()); }
+		{ before(grammarAccess.getJsonThingAccess().getSecurityAnyStringParserRuleCall_2_9_2_1_2_1_0()); }
 		ruleAnyString
-		{ after(grammarAccess.getJsonThingDescriptionAccess().getSecurityAnyStringParserRuleCall_2_9_2_1_2_1_0()); }
+		{ after(grammarAccess.getJsonThingAccess().getSecurityAnyStringParserRuleCall_2_9_2_1_2_1_0()); }
 	)
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__JsonThingDescription__FormsAssignment_2_10_3
+rule__JsonThing__FormsAssignment_2_10_3
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 	(
-		{ before(grammarAccess.getJsonThingDescriptionAccess().getFormsJsonFormParserRuleCall_2_10_3_0()); }
+		{ before(grammarAccess.getJsonThingAccess().getFormsJsonFormParserRuleCall_2_10_3_0()); }
 		ruleJsonForm
-		{ after(grammarAccess.getJsonThingDescriptionAccess().getFormsJsonFormParserRuleCall_2_10_3_0()); }
+		{ after(grammarAccess.getJsonThingAccess().getFormsJsonFormParserRuleCall_2_10_3_0()); }
 	)
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__JsonThingDescription__FormsAssignment_2_10_4_1
+rule__JsonThing__FormsAssignment_2_10_4_1
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 	(
-		{ before(grammarAccess.getJsonThingDescriptionAccess().getFormsJsonFormParserRuleCall_2_10_4_1_0()); }
+		{ before(grammarAccess.getJsonThingAccess().getFormsJsonFormParserRuleCall_2_10_4_1_0()); }
 		ruleJsonForm
-		{ after(grammarAccess.getJsonThingDescriptionAccess().getFormsJsonFormParserRuleCall_2_10_4_1_0()); }
+		{ after(grammarAccess.getJsonThingAccess().getFormsJsonFormParserRuleCall_2_10_4_1_0()); }
 	)
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__JsonThingDescription__LinksAssignment_2_11_3
+rule__JsonThing__LinksAssignment_2_11_3
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 	(
-		{ before(grammarAccess.getJsonThingDescriptionAccess().getLinksJsonLinkParserRuleCall_2_11_3_0()); }
+		{ before(grammarAccess.getJsonThingAccess().getLinksJsonLinkParserRuleCall_2_11_3_0()); }
 		ruleJsonLink
-		{ after(grammarAccess.getJsonThingDescriptionAccess().getLinksJsonLinkParserRuleCall_2_11_3_0()); }
+		{ after(grammarAccess.getJsonThingAccess().getLinksJsonLinkParserRuleCall_2_11_3_0()); }
 	)
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__JsonThingDescription__LinksAssignment_2_11_4_1
+rule__JsonThing__LinksAssignment_2_11_4_1
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 	(
-		{ before(grammarAccess.getJsonThingDescriptionAccess().getLinksJsonLinkParserRuleCall_2_11_4_1_0()); }
+		{ before(grammarAccess.getJsonThingAccess().getLinksJsonLinkParserRuleCall_2_11_4_1_0()); }
 		ruleJsonLink
-		{ after(grammarAccess.getJsonThingDescriptionAccess().getLinksJsonLinkParserRuleCall_2_11_4_1_0()); }
+		{ after(grammarAccess.getJsonThingAccess().getLinksJsonLinkParserRuleCall_2_11_4_1_0()); }
 	)
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__JsonThingDescription__TitlesAssignment_2_12_3
+rule__JsonThing__TitlesAssignment_2_12_3
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 	(
-		{ before(grammarAccess.getJsonThingDescriptionAccess().getTitlesJsonMultiLanguageEntryParserRuleCall_2_12_3_0()); }
+		{ before(grammarAccess.getJsonThingAccess().getTitlesJsonMultiLanguageEntryParserRuleCall_2_12_3_0()); }
 		ruleJsonMultiLanguageEntry
-		{ after(grammarAccess.getJsonThingDescriptionAccess().getTitlesJsonMultiLanguageEntryParserRuleCall_2_12_3_0()); }
+		{ after(grammarAccess.getJsonThingAccess().getTitlesJsonMultiLanguageEntryParserRuleCall_2_12_3_0()); }
 	)
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__JsonThingDescription__TitlesAssignment_2_12_4_1
+rule__JsonThing__TitlesAssignment_2_12_4_1
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 	(
-		{ before(grammarAccess.getJsonThingDescriptionAccess().getTitlesJsonMultiLanguageEntryParserRuleCall_2_12_4_1_0()); }
+		{ before(grammarAccess.getJsonThingAccess().getTitlesJsonMultiLanguageEntryParserRuleCall_2_12_4_1_0()); }
 		ruleJsonMultiLanguageEntry
-		{ after(grammarAccess.getJsonThingDescriptionAccess().getTitlesJsonMultiLanguageEntryParserRuleCall_2_12_4_1_0()); }
+		{ after(grammarAccess.getJsonThingAccess().getTitlesJsonMultiLanguageEntryParserRuleCall_2_12_4_1_0()); }
 	)
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__JsonThingDescription__DescriptionsAssignment_2_13_3
+rule__JsonThing__DescriptionsAssignment_2_13_3
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 	(
-		{ before(grammarAccess.getJsonThingDescriptionAccess().getDescriptionsJsonMultiLanguageEntryParserRuleCall_2_13_3_0()); }
+		{ before(grammarAccess.getJsonThingAccess().getDescriptionsJsonMultiLanguageEntryParserRuleCall_2_13_3_0()); }
 		ruleJsonMultiLanguageEntry
-		{ after(grammarAccess.getJsonThingDescriptionAccess().getDescriptionsJsonMultiLanguageEntryParserRuleCall_2_13_3_0()); }
+		{ after(grammarAccess.getJsonThingAccess().getDescriptionsJsonMultiLanguageEntryParserRuleCall_2_13_3_0()); }
 	)
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__JsonThingDescription__DescriptionsAssignment_2_13_4_1
+rule__JsonThing__DescriptionsAssignment_2_13_4_1
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 	(
-		{ before(grammarAccess.getJsonThingDescriptionAccess().getDescriptionsJsonMultiLanguageEntryParserRuleCall_2_13_4_1_0()); }
+		{ before(grammarAccess.getJsonThingAccess().getDescriptionsJsonMultiLanguageEntryParserRuleCall_2_13_4_1_0()); }
 		ruleJsonMultiLanguageEntry
-		{ after(grammarAccess.getJsonThingDescriptionAccess().getDescriptionsJsonMultiLanguageEntryParserRuleCall_2_13_4_1_0()); }
+		{ after(grammarAccess.getJsonThingAccess().getDescriptionsJsonMultiLanguageEntryParserRuleCall_2_13_4_1_0()); }
 	)
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__JsonThingDescription__VersionAssignment_2_14_2
+rule__JsonThing__VersionAssignment_2_14_2
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 	(
-		{ before(grammarAccess.getJsonThingDescriptionAccess().getVersionJsonVersionInfoParserRuleCall_2_14_2_0()); }
+		{ before(grammarAccess.getJsonThingAccess().getVersionJsonVersionInfoParserRuleCall_2_14_2_0()); }
 		ruleJsonVersionInfo
-		{ after(grammarAccess.getJsonThingDescriptionAccess().getVersionJsonVersionInfoParserRuleCall_2_14_2_0()); }
+		{ after(grammarAccess.getJsonThingAccess().getVersionJsonVersionInfoParserRuleCall_2_14_2_0()); }
 	)
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__JsonThingDescription__PropertiesAssignment_2_15_3
+rule__JsonThing__PropertiesAssignment_2_15_3
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 	(
-		{ before(grammarAccess.getJsonThingDescriptionAccess().getPropertiesJsonPropertyAffordanceParserRuleCall_2_15_3_0()); }
+		{ before(grammarAccess.getJsonThingAccess().getPropertiesJsonPropertyAffordanceParserRuleCall_2_15_3_0()); }
 		ruleJsonPropertyAffordance
-		{ after(grammarAccess.getJsonThingDescriptionAccess().getPropertiesJsonPropertyAffordanceParserRuleCall_2_15_3_0()); }
+		{ after(grammarAccess.getJsonThingAccess().getPropertiesJsonPropertyAffordanceParserRuleCall_2_15_3_0()); }
 	)
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__JsonThingDescription__PropertiesAssignment_2_15_4_1
+rule__JsonThing__PropertiesAssignment_2_15_4_1
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 	(
-		{ before(grammarAccess.getJsonThingDescriptionAccess().getPropertiesJsonPropertyAffordanceParserRuleCall_2_15_4_1_0()); }
+		{ before(grammarAccess.getJsonThingAccess().getPropertiesJsonPropertyAffordanceParserRuleCall_2_15_4_1_0()); }
 		ruleJsonPropertyAffordance
-		{ after(grammarAccess.getJsonThingDescriptionAccess().getPropertiesJsonPropertyAffordanceParserRuleCall_2_15_4_1_0()); }
+		{ after(grammarAccess.getJsonThingAccess().getPropertiesJsonPropertyAffordanceParserRuleCall_2_15_4_1_0()); }
 	)
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__JsonThingDescription__ActionsAssignment_2_16_3
+rule__JsonThing__ActionsAssignment_2_16_3
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 	(
-		{ before(grammarAccess.getJsonThingDescriptionAccess().getActionsJsonActionAffordanceParserRuleCall_2_16_3_0()); }
+		{ before(grammarAccess.getJsonThingAccess().getActionsJsonActionAffordanceParserRuleCall_2_16_3_0()); }
 		ruleJsonActionAffordance
-		{ after(grammarAccess.getJsonThingDescriptionAccess().getActionsJsonActionAffordanceParserRuleCall_2_16_3_0()); }
+		{ after(grammarAccess.getJsonThingAccess().getActionsJsonActionAffordanceParserRuleCall_2_16_3_0()); }
 	)
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__JsonThingDescription__ActionsAssignment_2_16_4_1
+rule__JsonThing__ActionsAssignment_2_16_4_1
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 	(
-		{ before(grammarAccess.getJsonThingDescriptionAccess().getActionsJsonActionAffordanceParserRuleCall_2_16_4_1_0()); }
+		{ before(grammarAccess.getJsonThingAccess().getActionsJsonActionAffordanceParserRuleCall_2_16_4_1_0()); }
 		ruleJsonActionAffordance
-		{ after(grammarAccess.getJsonThingDescriptionAccess().getActionsJsonActionAffordanceParserRuleCall_2_16_4_1_0()); }
+		{ after(grammarAccess.getJsonThingAccess().getActionsJsonActionAffordanceParserRuleCall_2_16_4_1_0()); }
 	)
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__JsonThingDescription__EventsAssignment_2_17_3
+rule__JsonThing__EventsAssignment_2_17_3
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 	(
-		{ before(grammarAccess.getJsonThingDescriptionAccess().getEventsJsonEventAffordanceParserRuleCall_2_17_3_0()); }
+		{ before(grammarAccess.getJsonThingAccess().getEventsJsonEventAffordanceParserRuleCall_2_17_3_0()); }
 		ruleJsonEventAffordance
-		{ after(grammarAccess.getJsonThingDescriptionAccess().getEventsJsonEventAffordanceParserRuleCall_2_17_3_0()); }
+		{ after(grammarAccess.getJsonThingAccess().getEventsJsonEventAffordanceParserRuleCall_2_17_3_0()); }
 	)
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__JsonThingDescription__EventsAssignment_2_17_4_1
+rule__JsonThing__EventsAssignment_2_17_4_1
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 	(
-		{ before(grammarAccess.getJsonThingDescriptionAccess().getEventsJsonEventAffordanceParserRuleCall_2_17_4_1_0()); }
+		{ before(grammarAccess.getJsonThingAccess().getEventsJsonEventAffordanceParserRuleCall_2_17_4_1_0()); }
 		ruleJsonEventAffordance
-		{ after(grammarAccess.getJsonThingDescriptionAccess().getEventsJsonEventAffordanceParserRuleCall_2_17_4_1_0()); }
+		{ after(grammarAccess.getJsonThingAccess().getEventsJsonEventAffordanceParserRuleCall_2_17_4_1_0()); }
 	)
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__JsonThingDescription__SecurityDefinitionsAssignment_2_18_3
+rule__JsonThing__SecurityDefinitionsAssignment_2_18_3
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 	(
-		{ before(grammarAccess.getJsonThingDescriptionAccess().getSecurityDefinitionsJsonSecuritySchemeParserRuleCall_2_18_3_0()); }
+		{ before(grammarAccess.getJsonThingAccess().getSecurityDefinitionsJsonSecuritySchemeParserRuleCall_2_18_3_0()); }
 		ruleJsonSecurityScheme
-		{ after(grammarAccess.getJsonThingDescriptionAccess().getSecurityDefinitionsJsonSecuritySchemeParserRuleCall_2_18_3_0()); }
+		{ after(grammarAccess.getJsonThingAccess().getSecurityDefinitionsJsonSecuritySchemeParserRuleCall_2_18_3_0()); }
 	)
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__JsonThingDescription__SecurityDefinitionsAssignment_2_18_4_1
+rule__JsonThing__SecurityDefinitionsAssignment_2_18_4_1
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 	(
-		{ before(grammarAccess.getJsonThingDescriptionAccess().getSecurityDefinitionsJsonSecuritySchemeParserRuleCall_2_18_4_1_0()); }
+		{ before(grammarAccess.getJsonThingAccess().getSecurityDefinitionsJsonSecuritySchemeParserRuleCall_2_18_4_1_0()); }
 		ruleJsonSecurityScheme
-		{ after(grammarAccess.getJsonThingDescriptionAccess().getSecurityDefinitionsJsonSecuritySchemeParserRuleCall_2_18_4_1_0()); }
+		{ after(grammarAccess.getJsonThingAccess().getSecurityDefinitionsJsonSecuritySchemeParserRuleCall_2_18_4_1_0()); }
 	)
 ;
 finally {

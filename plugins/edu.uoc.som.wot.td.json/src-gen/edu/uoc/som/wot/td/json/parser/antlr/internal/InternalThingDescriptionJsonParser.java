@@ -126,7 +126,7 @@ public class InternalThingDescriptionJsonParser extends AbstractInternalAntlrPar
 
         @Override
         protected String getFirstRuleName() {
-        	return "JsonThingDescription";
+        	return "JsonThing";
        	}
 
        	@Override
@@ -137,25 +137,25 @@ public class InternalThingDescriptionJsonParser extends AbstractInternalAntlrPar
 
 
 
-    // $ANTLR start "entryRuleJsonThingDescription"
-    // InternalThingDescriptionJson.g:65:1: entryRuleJsonThingDescription returns [EObject current=null] : iv_ruleJsonThingDescription= ruleJsonThingDescription EOF ;
-    public final EObject entryRuleJsonThingDescription() throws RecognitionException {
+    // $ANTLR start "entryRuleJsonThing"
+    // InternalThingDescriptionJson.g:65:1: entryRuleJsonThing returns [EObject current=null] : iv_ruleJsonThing= ruleJsonThing EOF ;
+    public final EObject entryRuleJsonThing() throws RecognitionException {
         EObject current = null;
 
-        EObject iv_ruleJsonThingDescription = null;
+        EObject iv_ruleJsonThing = null;
 
 
         try {
-            // InternalThingDescriptionJson.g:65:61: (iv_ruleJsonThingDescription= ruleJsonThingDescription EOF )
-            // InternalThingDescriptionJson.g:66:2: iv_ruleJsonThingDescription= ruleJsonThingDescription EOF
+            // InternalThingDescriptionJson.g:65:50: (iv_ruleJsonThing= ruleJsonThing EOF )
+            // InternalThingDescriptionJson.g:66:2: iv_ruleJsonThing= ruleJsonThing EOF
             {
-             newCompositeNode(grammarAccess.getJsonThingDescriptionRule()); 
+             newCompositeNode(grammarAccess.getJsonThingRule()); 
             pushFollow(FOLLOW_1);
-            iv_ruleJsonThingDescription=ruleJsonThingDescription();
+            iv_ruleJsonThing=ruleJsonThing();
 
             state._fsp--;
 
-             current =iv_ruleJsonThingDescription; 
+             current =iv_ruleJsonThing; 
             match(input,EOF,FOLLOW_2); 
 
             }
@@ -170,12 +170,12 @@ public class InternalThingDescriptionJsonParser extends AbstractInternalAntlrPar
         }
         return current;
     }
-    // $ANTLR end "entryRuleJsonThingDescription"
+    // $ANTLR end "entryRuleJsonThing"
 
 
-    // $ANTLR start "ruleJsonThingDescription"
-    // InternalThingDescriptionJson.g:72:1: ruleJsonThingDescription returns [EObject current=null] : ( () otherlv_1= '{' ( ( ( ( ({...}? => ( ({...}? => (otherlv_3= '\"@context\"' otherlv_4= ':' ( ( (lv_ld_context_5_0= ruleAnyString ) ) | (otherlv_6= '[' ( ( (lv_ld_context_7_0= ruleAnyString ) ) | ruleJsonGenericExpression ) (otherlv_9= ',' ( ( (lv_ld_context_10_0= ruleAnyString ) ) | ruleJsonGenericExpression ) )* otherlv_12= ']' ) ) (otherlv_13= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_14= '\"@type\"' otherlv_15= ':' ( ( (lv_ld_type_16_0= ruleAnyString ) ) | (otherlv_17= '[' ( (lv_ld_type_18_0= ruleAnyString ) ) (otherlv_19= ',' ( (lv_ld_type_20_0= ruleAnyString ) ) )* otherlv_21= ']' ) ) (otherlv_22= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_23= '\"id\"' otherlv_24= ':' ( (lv_id_25_0= ruleAnyString ) ) (otherlv_26= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_27= '\"title\"' otherlv_28= ':' ( (lv_title_29_0= ruleAnyString ) ) (otherlv_30= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_31= '\"description\"' otherlv_32= ':' ( (lv_description_33_0= ruleAnyString ) ) (otherlv_34= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_35= '\"created\"' otherlv_36= ':' ( (lv_created_37_0= ruleAnyString ) ) (otherlv_38= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_39= '\"modified\"' otherlv_40= ':' ( (lv_modified_41_0= ruleAnyString ) ) (otherlv_42= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_43= '\"support\"' otherlv_44= ':' ( (lv_support_45_0= ruleAnyString ) ) (otherlv_46= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_47= '\"base\"' otherlv_48= ':' ( (lv_base_49_0= ruleAnyString ) ) (otherlv_50= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_51= '\"security\"' otherlv_52= ':' ( ( (lv_security_53_0= ruleAnyString ) ) | (otherlv_54= '[' ( (lv_security_55_0= ruleAnyString ) ) (otherlv_56= ',' ( (lv_security_57_0= ruleAnyString ) ) )* otherlv_58= ']' ) ) (otherlv_59= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_60= '\"forms\"' otherlv_61= ':' otherlv_62= '{' ( (lv_forms_63_0= ruleJsonForm ) ) (otherlv_64= ',' ( (lv_forms_65_0= ruleJsonForm ) ) )* otherlv_66= '}' (otherlv_67= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_68= '\"links\"' otherlv_69= ':' otherlv_70= '{' ( (lv_links_71_0= ruleJsonLink ) ) (otherlv_72= ',' ( (lv_links_73_0= ruleJsonLink ) ) )* otherlv_74= '}' (otherlv_75= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_76= '\"titles\"' otherlv_77= ':' otherlv_78= '{' ( (lv_titles_79_0= ruleJsonMultiLanguageEntry ) ) (otherlv_80= ',' ( (lv_titles_81_0= ruleJsonMultiLanguageEntry ) ) )* otherlv_82= '}' (otherlv_83= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_84= '\"descriptions\"' otherlv_85= ':' otherlv_86= '{' ( (lv_descriptions_87_0= ruleJsonMultiLanguageEntry ) ) (otherlv_88= ',' ( (lv_descriptions_89_0= ruleJsonMultiLanguageEntry ) ) )* otherlv_90= '}' (otherlv_91= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_92= '\"version\"' otherlv_93= ':' ( (lv_version_94_0= ruleJsonVersionInfo ) ) (otherlv_95= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_96= '\"properties\"' otherlv_97= ':' otherlv_98= '{' ( (lv_properties_99_0= ruleJsonPropertyAffordance ) ) (otherlv_100= ',' ( (lv_properties_101_0= ruleJsonPropertyAffordance ) ) )* otherlv_102= '}' (otherlv_103= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_104= '\"actions\"' otherlv_105= ':' otherlv_106= '{' ( (lv_actions_107_0= ruleJsonActionAffordance ) ) (otherlv_108= ',' ( (lv_actions_109_0= ruleJsonActionAffordance ) ) )* otherlv_110= '}' (otherlv_111= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_112= '\"events\"' otherlv_113= ':' otherlv_114= '{' ( (lv_events_115_0= ruleJsonEventAffordance ) ) (otherlv_116= ',' ( (lv_events_117_0= ruleJsonEventAffordance ) ) )* otherlv_118= '}' (otherlv_119= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_120= '\"securityDefinitions\"' otherlv_121= ':' otherlv_122= '{' ( (lv_securityDefinitions_123_0= ruleJsonSecurityScheme ) ) (otherlv_124= ',' ( (lv_securityDefinitions_125_0= ruleJsonSecurityScheme ) ) )* otherlv_126= '}' (otherlv_127= ',' )? ) ) ) ) )+ {...}?) ) ) otherlv_128= '}' ) ;
-    public final EObject ruleJsonThingDescription() throws RecognitionException {
+    // $ANTLR start "ruleJsonThing"
+    // InternalThingDescriptionJson.g:72:1: ruleJsonThing returns [EObject current=null] : ( () otherlv_1= '{' ( ( ( ( ({...}? => ( ({...}? => (otherlv_3= '\"@context\"' otherlv_4= ':' ( ( (lv_ld_context_5_0= ruleAnyString ) ) | (otherlv_6= '[' ( ( (lv_ld_context_7_0= ruleAnyString ) ) | ruleJsonGenericExpression ) (otherlv_9= ',' ( ( (lv_ld_context_10_0= ruleAnyString ) ) | ruleJsonGenericExpression ) )* otherlv_12= ']' ) ) (otherlv_13= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_14= '\"@type\"' otherlv_15= ':' ( ( (lv_ld_type_16_0= ruleAnyString ) ) | (otherlv_17= '[' ( (lv_ld_type_18_0= ruleAnyString ) ) (otherlv_19= ',' ( (lv_ld_type_20_0= ruleAnyString ) ) )* otherlv_21= ']' ) ) (otherlv_22= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_23= '\"id\"' otherlv_24= ':' ( (lv_id_25_0= ruleAnyString ) ) (otherlv_26= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_27= '\"title\"' otherlv_28= ':' ( (lv_title_29_0= ruleAnyString ) ) (otherlv_30= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_31= '\"description\"' otherlv_32= ':' ( (lv_description_33_0= ruleAnyString ) ) (otherlv_34= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_35= '\"created\"' otherlv_36= ':' ( (lv_created_37_0= ruleAnyString ) ) (otherlv_38= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_39= '\"modified\"' otherlv_40= ':' ( (lv_modified_41_0= ruleAnyString ) ) (otherlv_42= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_43= '\"support\"' otherlv_44= ':' ( (lv_support_45_0= ruleAnyString ) ) (otherlv_46= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_47= '\"base\"' otherlv_48= ':' ( (lv_base_49_0= ruleAnyString ) ) (otherlv_50= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_51= '\"security\"' otherlv_52= ':' ( ( (lv_security_53_0= ruleAnyString ) ) | (otherlv_54= '[' ( (lv_security_55_0= ruleAnyString ) ) (otherlv_56= ',' ( (lv_security_57_0= ruleAnyString ) ) )* otherlv_58= ']' ) ) (otherlv_59= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_60= '\"forms\"' otherlv_61= ':' otherlv_62= '{' ( (lv_forms_63_0= ruleJsonForm ) ) (otherlv_64= ',' ( (lv_forms_65_0= ruleJsonForm ) ) )* otherlv_66= '}' (otherlv_67= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_68= '\"links\"' otherlv_69= ':' otherlv_70= '{' ( (lv_links_71_0= ruleJsonLink ) ) (otherlv_72= ',' ( (lv_links_73_0= ruleJsonLink ) ) )* otherlv_74= '}' (otherlv_75= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_76= '\"titles\"' otherlv_77= ':' otherlv_78= '{' ( (lv_titles_79_0= ruleJsonMultiLanguageEntry ) ) (otherlv_80= ',' ( (lv_titles_81_0= ruleJsonMultiLanguageEntry ) ) )* otherlv_82= '}' (otherlv_83= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_84= '\"descriptions\"' otherlv_85= ':' otherlv_86= '{' ( (lv_descriptions_87_0= ruleJsonMultiLanguageEntry ) ) (otherlv_88= ',' ( (lv_descriptions_89_0= ruleJsonMultiLanguageEntry ) ) )* otherlv_90= '}' (otherlv_91= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_92= '\"version\"' otherlv_93= ':' ( (lv_version_94_0= ruleJsonVersionInfo ) ) (otherlv_95= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_96= '\"properties\"' otherlv_97= ':' otherlv_98= '{' ( (lv_properties_99_0= ruleJsonPropertyAffordance ) ) (otherlv_100= ',' ( (lv_properties_101_0= ruleJsonPropertyAffordance ) ) )* otherlv_102= '}' (otherlv_103= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_104= '\"actions\"' otherlv_105= ':' otherlv_106= '{' ( (lv_actions_107_0= ruleJsonActionAffordance ) ) (otherlv_108= ',' ( (lv_actions_109_0= ruleJsonActionAffordance ) ) )* otherlv_110= '}' (otherlv_111= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_112= '\"events\"' otherlv_113= ':' otherlv_114= '{' ( (lv_events_115_0= ruleJsonEventAffordance ) ) (otherlv_116= ',' ( (lv_events_117_0= ruleJsonEventAffordance ) ) )* otherlv_118= '}' (otherlv_119= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_120= '\"securityDefinitions\"' otherlv_121= ':' otherlv_122= '{' ( (lv_securityDefinitions_123_0= ruleJsonSecurityScheme ) ) (otherlv_124= ',' ( (lv_securityDefinitions_125_0= ruleJsonSecurityScheme ) ) )* otherlv_126= '}' (otherlv_127= ',' )? ) ) ) ) )+ {...}?) ) ) otherlv_128= '}' ) ;
+    public final EObject ruleJsonThing() throws RecognitionException {
         EObject current = null;
 
         Token otherlv_1=null;
@@ -352,7 +352,7 @@ public class InternalThingDescriptionJsonParser extends AbstractInternalAntlrPar
             {
 
             				current = forceCreateModelElement(
-            					grammarAccess.getJsonThingDescriptionAccess().getJsonThingDescriptionAction_0(),
+            					grammarAccess.getJsonThingAccess().getJsonThingAction_0(),
             					current);
             			
 
@@ -360,7 +360,7 @@ public class InternalThingDescriptionJsonParser extends AbstractInternalAntlrPar
 
             otherlv_1=(Token)match(input,7,FOLLOW_3); 
 
-            			newLeafNode(otherlv_1, grammarAccess.getJsonThingDescriptionAccess().getLeftCurlyBracketKeyword_1());
+            			newLeafNode(otherlv_1, grammarAccess.getJsonThingAccess().getLeftCurlyBracketKeyword_1());
             		
             // InternalThingDescriptionJson.g:91:3: ( ( ( ( ({...}? => ( ({...}? => (otherlv_3= '\"@context\"' otherlv_4= ':' ( ( (lv_ld_context_5_0= ruleAnyString ) ) | (otherlv_6= '[' ( ( (lv_ld_context_7_0= ruleAnyString ) ) | ruleJsonGenericExpression ) (otherlv_9= ',' ( ( (lv_ld_context_10_0= ruleAnyString ) ) | ruleJsonGenericExpression ) )* otherlv_12= ']' ) ) (otherlv_13= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_14= '\"@type\"' otherlv_15= ':' ( ( (lv_ld_type_16_0= ruleAnyString ) ) | (otherlv_17= '[' ( (lv_ld_type_18_0= ruleAnyString ) ) (otherlv_19= ',' ( (lv_ld_type_20_0= ruleAnyString ) ) )* otherlv_21= ']' ) ) (otherlv_22= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_23= '\"id\"' otherlv_24= ':' ( (lv_id_25_0= ruleAnyString ) ) (otherlv_26= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_27= '\"title\"' otherlv_28= ':' ( (lv_title_29_0= ruleAnyString ) ) (otherlv_30= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_31= '\"description\"' otherlv_32= ':' ( (lv_description_33_0= ruleAnyString ) ) (otherlv_34= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_35= '\"created\"' otherlv_36= ':' ( (lv_created_37_0= ruleAnyString ) ) (otherlv_38= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_39= '\"modified\"' otherlv_40= ':' ( (lv_modified_41_0= ruleAnyString ) ) (otherlv_42= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_43= '\"support\"' otherlv_44= ':' ( (lv_support_45_0= ruleAnyString ) ) (otherlv_46= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_47= '\"base\"' otherlv_48= ':' ( (lv_base_49_0= ruleAnyString ) ) (otherlv_50= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_51= '\"security\"' otherlv_52= ':' ( ( (lv_security_53_0= ruleAnyString ) ) | (otherlv_54= '[' ( (lv_security_55_0= ruleAnyString ) ) (otherlv_56= ',' ( (lv_security_57_0= ruleAnyString ) ) )* otherlv_58= ']' ) ) (otherlv_59= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_60= '\"forms\"' otherlv_61= ':' otherlv_62= '{' ( (lv_forms_63_0= ruleJsonForm ) ) (otherlv_64= ',' ( (lv_forms_65_0= ruleJsonForm ) ) )* otherlv_66= '}' (otherlv_67= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_68= '\"links\"' otherlv_69= ':' otherlv_70= '{' ( (lv_links_71_0= ruleJsonLink ) ) (otherlv_72= ',' ( (lv_links_73_0= ruleJsonLink ) ) )* otherlv_74= '}' (otherlv_75= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_76= '\"titles\"' otherlv_77= ':' otherlv_78= '{' ( (lv_titles_79_0= ruleJsonMultiLanguageEntry ) ) (otherlv_80= ',' ( (lv_titles_81_0= ruleJsonMultiLanguageEntry ) ) )* otherlv_82= '}' (otherlv_83= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_84= '\"descriptions\"' otherlv_85= ':' otherlv_86= '{' ( (lv_descriptions_87_0= ruleJsonMultiLanguageEntry ) ) (otherlv_88= ',' ( (lv_descriptions_89_0= ruleJsonMultiLanguageEntry ) ) )* otherlv_90= '}' (otherlv_91= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_92= '\"version\"' otherlv_93= ':' ( (lv_version_94_0= ruleJsonVersionInfo ) ) (otherlv_95= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_96= '\"properties\"' otherlv_97= ':' otherlv_98= '{' ( (lv_properties_99_0= ruleJsonPropertyAffordance ) ) (otherlv_100= ',' ( (lv_properties_101_0= ruleJsonPropertyAffordance ) ) )* otherlv_102= '}' (otherlv_103= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_104= '\"actions\"' otherlv_105= ':' otherlv_106= '{' ( (lv_actions_107_0= ruleJsonActionAffordance ) ) (otherlv_108= ',' ( (lv_actions_109_0= ruleJsonActionAffordance ) ) )* otherlv_110= '}' (otherlv_111= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_112= '\"events\"' otherlv_113= ':' otherlv_114= '{' ( (lv_events_115_0= ruleJsonEventAffordance ) ) (otherlv_116= ',' ( (lv_events_117_0= ruleJsonEventAffordance ) ) )* otherlv_118= '}' (otherlv_119= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_120= '\"securityDefinitions\"' otherlv_121= ':' otherlv_122= '{' ( (lv_securityDefinitions_123_0= ruleJsonSecurityScheme ) ) (otherlv_124= ',' ( (lv_securityDefinitions_125_0= ruleJsonSecurityScheme ) ) )* otherlv_126= '}' (otherlv_127= ',' )? ) ) ) ) )+ {...}?) ) )
             // InternalThingDescriptionJson.g:92:4: ( ( ( ({...}? => ( ({...}? => (otherlv_3= '\"@context\"' otherlv_4= ':' ( ( (lv_ld_context_5_0= ruleAnyString ) ) | (otherlv_6= '[' ( ( (lv_ld_context_7_0= ruleAnyString ) ) | ruleJsonGenericExpression ) (otherlv_9= ',' ( ( (lv_ld_context_10_0= ruleAnyString ) ) | ruleJsonGenericExpression ) )* otherlv_12= ']' ) ) (otherlv_13= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_14= '\"@type\"' otherlv_15= ':' ( ( (lv_ld_type_16_0= ruleAnyString ) ) | (otherlv_17= '[' ( (lv_ld_type_18_0= ruleAnyString ) ) (otherlv_19= ',' ( (lv_ld_type_20_0= ruleAnyString ) ) )* otherlv_21= ']' ) ) (otherlv_22= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_23= '\"id\"' otherlv_24= ':' ( (lv_id_25_0= ruleAnyString ) ) (otherlv_26= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_27= '\"title\"' otherlv_28= ':' ( (lv_title_29_0= ruleAnyString ) ) (otherlv_30= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_31= '\"description\"' otherlv_32= ':' ( (lv_description_33_0= ruleAnyString ) ) (otherlv_34= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_35= '\"created\"' otherlv_36= ':' ( (lv_created_37_0= ruleAnyString ) ) (otherlv_38= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_39= '\"modified\"' otherlv_40= ':' ( (lv_modified_41_0= ruleAnyString ) ) (otherlv_42= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_43= '\"support\"' otherlv_44= ':' ( (lv_support_45_0= ruleAnyString ) ) (otherlv_46= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_47= '\"base\"' otherlv_48= ':' ( (lv_base_49_0= ruleAnyString ) ) (otherlv_50= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_51= '\"security\"' otherlv_52= ':' ( ( (lv_security_53_0= ruleAnyString ) ) | (otherlv_54= '[' ( (lv_security_55_0= ruleAnyString ) ) (otherlv_56= ',' ( (lv_security_57_0= ruleAnyString ) ) )* otherlv_58= ']' ) ) (otherlv_59= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_60= '\"forms\"' otherlv_61= ':' otherlv_62= '{' ( (lv_forms_63_0= ruleJsonForm ) ) (otherlv_64= ',' ( (lv_forms_65_0= ruleJsonForm ) ) )* otherlv_66= '}' (otherlv_67= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_68= '\"links\"' otherlv_69= ':' otherlv_70= '{' ( (lv_links_71_0= ruleJsonLink ) ) (otherlv_72= ',' ( (lv_links_73_0= ruleJsonLink ) ) )* otherlv_74= '}' (otherlv_75= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_76= '\"titles\"' otherlv_77= ':' otherlv_78= '{' ( (lv_titles_79_0= ruleJsonMultiLanguageEntry ) ) (otherlv_80= ',' ( (lv_titles_81_0= ruleJsonMultiLanguageEntry ) ) )* otherlv_82= '}' (otherlv_83= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_84= '\"descriptions\"' otherlv_85= ':' otherlv_86= '{' ( (lv_descriptions_87_0= ruleJsonMultiLanguageEntry ) ) (otherlv_88= ',' ( (lv_descriptions_89_0= ruleJsonMultiLanguageEntry ) ) )* otherlv_90= '}' (otherlv_91= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_92= '\"version\"' otherlv_93= ':' ( (lv_version_94_0= ruleJsonVersionInfo ) ) (otherlv_95= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_96= '\"properties\"' otherlv_97= ':' otherlv_98= '{' ( (lv_properties_99_0= ruleJsonPropertyAffordance ) ) (otherlv_100= ',' ( (lv_properties_101_0= ruleJsonPropertyAffordance ) ) )* otherlv_102= '}' (otherlv_103= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_104= '\"actions\"' otherlv_105= ':' otherlv_106= '{' ( (lv_actions_107_0= ruleJsonActionAffordance ) ) (otherlv_108= ',' ( (lv_actions_109_0= ruleJsonActionAffordance ) ) )* otherlv_110= '}' (otherlv_111= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_112= '\"events\"' otherlv_113= ':' otherlv_114= '{' ( (lv_events_115_0= ruleJsonEventAffordance ) ) (otherlv_116= ',' ( (lv_events_117_0= ruleJsonEventAffordance ) ) )* otherlv_118= '}' (otherlv_119= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_120= '\"securityDefinitions\"' otherlv_121= ':' otherlv_122= '{' ( (lv_securityDefinitions_123_0= ruleJsonSecurityScheme ) ) (otherlv_124= ',' ( (lv_securityDefinitions_125_0= ruleJsonSecurityScheme ) ) )* otherlv_126= '}' (otherlv_127= ',' )? ) ) ) ) )+ {...}?) )
@@ -369,7 +369,7 @@ public class InternalThingDescriptionJsonParser extends AbstractInternalAntlrPar
             // InternalThingDescriptionJson.g:93:5: ( ( ({...}? => ( ({...}? => (otherlv_3= '\"@context\"' otherlv_4= ':' ( ( (lv_ld_context_5_0= ruleAnyString ) ) | (otherlv_6= '[' ( ( (lv_ld_context_7_0= ruleAnyString ) ) | ruleJsonGenericExpression ) (otherlv_9= ',' ( ( (lv_ld_context_10_0= ruleAnyString ) ) | ruleJsonGenericExpression ) )* otherlv_12= ']' ) ) (otherlv_13= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_14= '\"@type\"' otherlv_15= ':' ( ( (lv_ld_type_16_0= ruleAnyString ) ) | (otherlv_17= '[' ( (lv_ld_type_18_0= ruleAnyString ) ) (otherlv_19= ',' ( (lv_ld_type_20_0= ruleAnyString ) ) )* otherlv_21= ']' ) ) (otherlv_22= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_23= '\"id\"' otherlv_24= ':' ( (lv_id_25_0= ruleAnyString ) ) (otherlv_26= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_27= '\"title\"' otherlv_28= ':' ( (lv_title_29_0= ruleAnyString ) ) (otherlv_30= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_31= '\"description\"' otherlv_32= ':' ( (lv_description_33_0= ruleAnyString ) ) (otherlv_34= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_35= '\"created\"' otherlv_36= ':' ( (lv_created_37_0= ruleAnyString ) ) (otherlv_38= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_39= '\"modified\"' otherlv_40= ':' ( (lv_modified_41_0= ruleAnyString ) ) (otherlv_42= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_43= '\"support\"' otherlv_44= ':' ( (lv_support_45_0= ruleAnyString ) ) (otherlv_46= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_47= '\"base\"' otherlv_48= ':' ( (lv_base_49_0= ruleAnyString ) ) (otherlv_50= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_51= '\"security\"' otherlv_52= ':' ( ( (lv_security_53_0= ruleAnyString ) ) | (otherlv_54= '[' ( (lv_security_55_0= ruleAnyString ) ) (otherlv_56= ',' ( (lv_security_57_0= ruleAnyString ) ) )* otherlv_58= ']' ) ) (otherlv_59= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_60= '\"forms\"' otherlv_61= ':' otherlv_62= '{' ( (lv_forms_63_0= ruleJsonForm ) ) (otherlv_64= ',' ( (lv_forms_65_0= ruleJsonForm ) ) )* otherlv_66= '}' (otherlv_67= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_68= '\"links\"' otherlv_69= ':' otherlv_70= '{' ( (lv_links_71_0= ruleJsonLink ) ) (otherlv_72= ',' ( (lv_links_73_0= ruleJsonLink ) ) )* otherlv_74= '}' (otherlv_75= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_76= '\"titles\"' otherlv_77= ':' otherlv_78= '{' ( (lv_titles_79_0= ruleJsonMultiLanguageEntry ) ) (otherlv_80= ',' ( (lv_titles_81_0= ruleJsonMultiLanguageEntry ) ) )* otherlv_82= '}' (otherlv_83= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_84= '\"descriptions\"' otherlv_85= ':' otherlv_86= '{' ( (lv_descriptions_87_0= ruleJsonMultiLanguageEntry ) ) (otherlv_88= ',' ( (lv_descriptions_89_0= ruleJsonMultiLanguageEntry ) ) )* otherlv_90= '}' (otherlv_91= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_92= '\"version\"' otherlv_93= ':' ( (lv_version_94_0= ruleJsonVersionInfo ) ) (otherlv_95= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_96= '\"properties\"' otherlv_97= ':' otherlv_98= '{' ( (lv_properties_99_0= ruleJsonPropertyAffordance ) ) (otherlv_100= ',' ( (lv_properties_101_0= ruleJsonPropertyAffordance ) ) )* otherlv_102= '}' (otherlv_103= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_104= '\"actions\"' otherlv_105= ':' otherlv_106= '{' ( (lv_actions_107_0= ruleJsonActionAffordance ) ) (otherlv_108= ',' ( (lv_actions_109_0= ruleJsonActionAffordance ) ) )* otherlv_110= '}' (otherlv_111= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_112= '\"events\"' otherlv_113= ':' otherlv_114= '{' ( (lv_events_115_0= ruleJsonEventAffordance ) ) (otherlv_116= ',' ( (lv_events_117_0= ruleJsonEventAffordance ) ) )* otherlv_118= '}' (otherlv_119= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_120= '\"securityDefinitions\"' otherlv_121= ':' otherlv_122= '{' ( (lv_securityDefinitions_123_0= ruleJsonSecurityScheme ) ) (otherlv_124= ',' ( (lv_securityDefinitions_125_0= ruleJsonSecurityScheme ) ) )* otherlv_126= '}' (otherlv_127= ',' )? ) ) ) ) )+ {...}?)
             {
              
-            				  getUnorderedGroupHelper().enter(grammarAccess.getJsonThingDescriptionAccess().getUnorderedGroup_2());
+            				  getUnorderedGroupHelper().enter(grammarAccess.getJsonThingAccess().getUnorderedGroup_2());
             				
             // InternalThingDescriptionJson.g:96:5: ( ( ({...}? => ( ({...}? => (otherlv_3= '\"@context\"' otherlv_4= ':' ( ( (lv_ld_context_5_0= ruleAnyString ) ) | (otherlv_6= '[' ( ( (lv_ld_context_7_0= ruleAnyString ) ) | ruleJsonGenericExpression ) (otherlv_9= ',' ( ( (lv_ld_context_10_0= ruleAnyString ) ) | ruleJsonGenericExpression ) )* otherlv_12= ']' ) ) (otherlv_13= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_14= '\"@type\"' otherlv_15= ':' ( ( (lv_ld_type_16_0= ruleAnyString ) ) | (otherlv_17= '[' ( (lv_ld_type_18_0= ruleAnyString ) ) (otherlv_19= ',' ( (lv_ld_type_20_0= ruleAnyString ) ) )* otherlv_21= ']' ) ) (otherlv_22= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_23= '\"id\"' otherlv_24= ':' ( (lv_id_25_0= ruleAnyString ) ) (otherlv_26= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_27= '\"title\"' otherlv_28= ':' ( (lv_title_29_0= ruleAnyString ) ) (otherlv_30= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_31= '\"description\"' otherlv_32= ':' ( (lv_description_33_0= ruleAnyString ) ) (otherlv_34= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_35= '\"created\"' otherlv_36= ':' ( (lv_created_37_0= ruleAnyString ) ) (otherlv_38= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_39= '\"modified\"' otherlv_40= ':' ( (lv_modified_41_0= ruleAnyString ) ) (otherlv_42= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_43= '\"support\"' otherlv_44= ':' ( (lv_support_45_0= ruleAnyString ) ) (otherlv_46= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_47= '\"base\"' otherlv_48= ':' ( (lv_base_49_0= ruleAnyString ) ) (otherlv_50= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_51= '\"security\"' otherlv_52= ':' ( ( (lv_security_53_0= ruleAnyString ) ) | (otherlv_54= '[' ( (lv_security_55_0= ruleAnyString ) ) (otherlv_56= ',' ( (lv_security_57_0= ruleAnyString ) ) )* otherlv_58= ']' ) ) (otherlv_59= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_60= '\"forms\"' otherlv_61= ':' otherlv_62= '{' ( (lv_forms_63_0= ruleJsonForm ) ) (otherlv_64= ',' ( (lv_forms_65_0= ruleJsonForm ) ) )* otherlv_66= '}' (otherlv_67= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_68= '\"links\"' otherlv_69= ':' otherlv_70= '{' ( (lv_links_71_0= ruleJsonLink ) ) (otherlv_72= ',' ( (lv_links_73_0= ruleJsonLink ) ) )* otherlv_74= '}' (otherlv_75= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_76= '\"titles\"' otherlv_77= ':' otherlv_78= '{' ( (lv_titles_79_0= ruleJsonMultiLanguageEntry ) ) (otherlv_80= ',' ( (lv_titles_81_0= ruleJsonMultiLanguageEntry ) ) )* otherlv_82= '}' (otherlv_83= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_84= '\"descriptions\"' otherlv_85= ':' otherlv_86= '{' ( (lv_descriptions_87_0= ruleJsonMultiLanguageEntry ) ) (otherlv_88= ',' ( (lv_descriptions_89_0= ruleJsonMultiLanguageEntry ) ) )* otherlv_90= '}' (otherlv_91= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_92= '\"version\"' otherlv_93= ':' ( (lv_version_94_0= ruleJsonVersionInfo ) ) (otherlv_95= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_96= '\"properties\"' otherlv_97= ':' otherlv_98= '{' ( (lv_properties_99_0= ruleJsonPropertyAffordance ) ) (otherlv_100= ',' ( (lv_properties_101_0= ruleJsonPropertyAffordance ) ) )* otherlv_102= '}' (otherlv_103= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_104= '\"actions\"' otherlv_105= ':' otherlv_106= '{' ( (lv_actions_107_0= ruleJsonActionAffordance ) ) (otherlv_108= ',' ( (lv_actions_109_0= ruleJsonActionAffordance ) ) )* otherlv_110= '}' (otherlv_111= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_112= '\"events\"' otherlv_113= ':' otherlv_114= '{' ( (lv_events_115_0= ruleJsonEventAffordance ) ) (otherlv_116= ',' ( (lv_events_117_0= ruleJsonEventAffordance ) ) )* otherlv_118= '}' (otherlv_119= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_120= '\"securityDefinitions\"' otherlv_121= ':' otherlv_122= '{' ( (lv_securityDefinitions_123_0= ruleJsonSecurityScheme ) ) (otherlv_124= ',' ( (lv_securityDefinitions_125_0= ruleJsonSecurityScheme ) ) )* otherlv_126= '}' (otherlv_127= ',' )? ) ) ) ) )+ {...}?)
             // InternalThingDescriptionJson.g:97:6: ( ({...}? => ( ({...}? => (otherlv_3= '\"@context\"' otherlv_4= ':' ( ( (lv_ld_context_5_0= ruleAnyString ) ) | (otherlv_6= '[' ( ( (lv_ld_context_7_0= ruleAnyString ) ) | ruleJsonGenericExpression ) (otherlv_9= ',' ( ( (lv_ld_context_10_0= ruleAnyString ) ) | ruleJsonGenericExpression ) )* otherlv_12= ']' ) ) (otherlv_13= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_14= '\"@type\"' otherlv_15= ':' ( ( (lv_ld_type_16_0= ruleAnyString ) ) | (otherlv_17= '[' ( (lv_ld_type_18_0= ruleAnyString ) ) (otherlv_19= ',' ( (lv_ld_type_20_0= ruleAnyString ) ) )* otherlv_21= ']' ) ) (otherlv_22= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_23= '\"id\"' otherlv_24= ':' ( (lv_id_25_0= ruleAnyString ) ) (otherlv_26= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_27= '\"title\"' otherlv_28= ':' ( (lv_title_29_0= ruleAnyString ) ) (otherlv_30= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_31= '\"description\"' otherlv_32= ':' ( (lv_description_33_0= ruleAnyString ) ) (otherlv_34= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_35= '\"created\"' otherlv_36= ':' ( (lv_created_37_0= ruleAnyString ) ) (otherlv_38= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_39= '\"modified\"' otherlv_40= ':' ( (lv_modified_41_0= ruleAnyString ) ) (otherlv_42= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_43= '\"support\"' otherlv_44= ':' ( (lv_support_45_0= ruleAnyString ) ) (otherlv_46= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_47= '\"base\"' otherlv_48= ':' ( (lv_base_49_0= ruleAnyString ) ) (otherlv_50= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_51= '\"security\"' otherlv_52= ':' ( ( (lv_security_53_0= ruleAnyString ) ) | (otherlv_54= '[' ( (lv_security_55_0= ruleAnyString ) ) (otherlv_56= ',' ( (lv_security_57_0= ruleAnyString ) ) )* otherlv_58= ']' ) ) (otherlv_59= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_60= '\"forms\"' otherlv_61= ':' otherlv_62= '{' ( (lv_forms_63_0= ruleJsonForm ) ) (otherlv_64= ',' ( (lv_forms_65_0= ruleJsonForm ) ) )* otherlv_66= '}' (otherlv_67= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_68= '\"links\"' otherlv_69= ':' otherlv_70= '{' ( (lv_links_71_0= ruleJsonLink ) ) (otherlv_72= ',' ( (lv_links_73_0= ruleJsonLink ) ) )* otherlv_74= '}' (otherlv_75= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_76= '\"titles\"' otherlv_77= ':' otherlv_78= '{' ( (lv_titles_79_0= ruleJsonMultiLanguageEntry ) ) (otherlv_80= ',' ( (lv_titles_81_0= ruleJsonMultiLanguageEntry ) ) )* otherlv_82= '}' (otherlv_83= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_84= '\"descriptions\"' otherlv_85= ':' otherlv_86= '{' ( (lv_descriptions_87_0= ruleJsonMultiLanguageEntry ) ) (otherlv_88= ',' ( (lv_descriptions_89_0= ruleJsonMultiLanguageEntry ) ) )* otherlv_90= '}' (otherlv_91= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_92= '\"version\"' otherlv_93= ':' ( (lv_version_94_0= ruleJsonVersionInfo ) ) (otherlv_95= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_96= '\"properties\"' otherlv_97= ':' otherlv_98= '{' ( (lv_properties_99_0= ruleJsonPropertyAffordance ) ) (otherlv_100= ',' ( (lv_properties_101_0= ruleJsonPropertyAffordance ) ) )* otherlv_102= '}' (otherlv_103= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_104= '\"actions\"' otherlv_105= ':' otherlv_106= '{' ( (lv_actions_107_0= ruleJsonActionAffordance ) ) (otherlv_108= ',' ( (lv_actions_109_0= ruleJsonActionAffordance ) ) )* otherlv_110= '}' (otherlv_111= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_112= '\"events\"' otherlv_113= ':' otherlv_114= '{' ( (lv_events_115_0= ruleJsonEventAffordance ) ) (otherlv_116= ',' ( (lv_events_117_0= ruleJsonEventAffordance ) ) )* otherlv_118= '}' (otherlv_119= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_120= '\"securityDefinitions\"' otherlv_121= ':' otherlv_122= '{' ( (lv_securityDefinitions_123_0= ruleJsonSecurityScheme ) ) (otherlv_124= ',' ( (lv_securityDefinitions_125_0= ruleJsonSecurityScheme ) ) )* otherlv_126= '}' (otherlv_127= ',' )? ) ) ) ) )+ {...}?
@@ -387,31 +387,31 @@ public class InternalThingDescriptionJsonParser extends AbstractInternalAntlrPar
             	    // InternalThingDescriptionJson.g:98:4: ({...}? => ( ({...}? => (otherlv_3= '\"@context\"' otherlv_4= ':' ( ( (lv_ld_context_5_0= ruleAnyString ) ) | (otherlv_6= '[' ( ( (lv_ld_context_7_0= ruleAnyString ) ) | ruleJsonGenericExpression ) (otherlv_9= ',' ( ( (lv_ld_context_10_0= ruleAnyString ) ) | ruleJsonGenericExpression ) )* otherlv_12= ']' ) ) (otherlv_13= ',' )? ) ) ) )
             	    // InternalThingDescriptionJson.g:99:5: {...}? => ( ({...}? => (otherlv_3= '\"@context\"' otherlv_4= ':' ( ( (lv_ld_context_5_0= ruleAnyString ) ) | (otherlv_6= '[' ( ( (lv_ld_context_7_0= ruleAnyString ) ) | ruleJsonGenericExpression ) (otherlv_9= ',' ( ( (lv_ld_context_10_0= ruleAnyString ) ) | ruleJsonGenericExpression ) )* otherlv_12= ']' ) ) (otherlv_13= ',' )? ) ) )
             	    {
-            	    if ( ! getUnorderedGroupHelper().canSelect(grammarAccess.getJsonThingDescriptionAccess().getUnorderedGroup_2(), 0) ) {
-            	        throw new FailedPredicateException(input, "ruleJsonThingDescription", "getUnorderedGroupHelper().canSelect(grammarAccess.getJsonThingDescriptionAccess().getUnorderedGroup_2(), 0)");
+            	    if ( ! getUnorderedGroupHelper().canSelect(grammarAccess.getJsonThingAccess().getUnorderedGroup_2(), 0) ) {
+            	        throw new FailedPredicateException(input, "ruleJsonThing", "getUnorderedGroupHelper().canSelect(grammarAccess.getJsonThingAccess().getUnorderedGroup_2(), 0)");
             	    }
-            	    // InternalThingDescriptionJson.g:99:117: ( ({...}? => (otherlv_3= '\"@context\"' otherlv_4= ':' ( ( (lv_ld_context_5_0= ruleAnyString ) ) | (otherlv_6= '[' ( ( (lv_ld_context_7_0= ruleAnyString ) ) | ruleJsonGenericExpression ) (otherlv_9= ',' ( ( (lv_ld_context_10_0= ruleAnyString ) ) | ruleJsonGenericExpression ) )* otherlv_12= ']' ) ) (otherlv_13= ',' )? ) ) )
+            	    // InternalThingDescriptionJson.g:99:106: ( ({...}? => (otherlv_3= '\"@context\"' otherlv_4= ':' ( ( (lv_ld_context_5_0= ruleAnyString ) ) | (otherlv_6= '[' ( ( (lv_ld_context_7_0= ruleAnyString ) ) | ruleJsonGenericExpression ) (otherlv_9= ',' ( ( (lv_ld_context_10_0= ruleAnyString ) ) | ruleJsonGenericExpression ) )* otherlv_12= ']' ) ) (otherlv_13= ',' )? ) ) )
             	    // InternalThingDescriptionJson.g:100:6: ({...}? => (otherlv_3= '\"@context\"' otherlv_4= ':' ( ( (lv_ld_context_5_0= ruleAnyString ) ) | (otherlv_6= '[' ( ( (lv_ld_context_7_0= ruleAnyString ) ) | ruleJsonGenericExpression ) (otherlv_9= ',' ( ( (lv_ld_context_10_0= ruleAnyString ) ) | ruleJsonGenericExpression ) )* otherlv_12= ']' ) ) (otherlv_13= ',' )? ) )
             	    {
 
-            	    						getUnorderedGroupHelper().select(grammarAccess.getJsonThingDescriptionAccess().getUnorderedGroup_2(), 0);
+            	    						getUnorderedGroupHelper().select(grammarAccess.getJsonThingAccess().getUnorderedGroup_2(), 0);
             	    					
             	    // InternalThingDescriptionJson.g:103:9: ({...}? => (otherlv_3= '\"@context\"' otherlv_4= ':' ( ( (lv_ld_context_5_0= ruleAnyString ) ) | (otherlv_6= '[' ( ( (lv_ld_context_7_0= ruleAnyString ) ) | ruleJsonGenericExpression ) (otherlv_9= ',' ( ( (lv_ld_context_10_0= ruleAnyString ) ) | ruleJsonGenericExpression ) )* otherlv_12= ']' ) ) (otherlv_13= ',' )? ) )
             	    // InternalThingDescriptionJson.g:103:10: {...}? => (otherlv_3= '\"@context\"' otherlv_4= ':' ( ( (lv_ld_context_5_0= ruleAnyString ) ) | (otherlv_6= '[' ( ( (lv_ld_context_7_0= ruleAnyString ) ) | ruleJsonGenericExpression ) (otherlv_9= ',' ( ( (lv_ld_context_10_0= ruleAnyString ) ) | ruleJsonGenericExpression ) )* otherlv_12= ']' ) ) (otherlv_13= ',' )? )
             	    {
             	    if ( !((true)) ) {
-            	        throw new FailedPredicateException(input, "ruleJsonThingDescription", "true");
+            	        throw new FailedPredicateException(input, "ruleJsonThing", "true");
             	    }
             	    // InternalThingDescriptionJson.g:103:19: (otherlv_3= '\"@context\"' otherlv_4= ':' ( ( (lv_ld_context_5_0= ruleAnyString ) ) | (otherlv_6= '[' ( ( (lv_ld_context_7_0= ruleAnyString ) ) | ruleJsonGenericExpression ) (otherlv_9= ',' ( ( (lv_ld_context_10_0= ruleAnyString ) ) | ruleJsonGenericExpression ) )* otherlv_12= ']' ) ) (otherlv_13= ',' )? )
             	    // InternalThingDescriptionJson.g:103:20: otherlv_3= '\"@context\"' otherlv_4= ':' ( ( (lv_ld_context_5_0= ruleAnyString ) ) | (otherlv_6= '[' ( ( (lv_ld_context_7_0= ruleAnyString ) ) | ruleJsonGenericExpression ) (otherlv_9= ',' ( ( (lv_ld_context_10_0= ruleAnyString ) ) | ruleJsonGenericExpression ) )* otherlv_12= ']' ) ) (otherlv_13= ',' )?
             	    {
             	    otherlv_3=(Token)match(input,8,FOLLOW_4); 
 
-            	    									newLeafNode(otherlv_3, grammarAccess.getJsonThingDescriptionAccess().getContextKeyword_2_0_0());
+            	    									newLeafNode(otherlv_3, grammarAccess.getJsonThingAccess().getContextKeyword_2_0_0());
             	    								
             	    otherlv_4=(Token)match(input,9,FOLLOW_5); 
 
-            	    									newLeafNode(otherlv_4, grammarAccess.getJsonThingDescriptionAccess().getColonKeyword_2_0_1());
+            	    									newLeafNode(otherlv_4, grammarAccess.getJsonThingAccess().getColonKeyword_2_0_1());
             	    								
             	    // InternalThingDescriptionJson.g:111:9: ( ( (lv_ld_context_5_0= ruleAnyString ) ) | (otherlv_6= '[' ( ( (lv_ld_context_7_0= ruleAnyString ) ) | ruleJsonGenericExpression ) (otherlv_9= ',' ( ( (lv_ld_context_10_0= ruleAnyString ) ) | ruleJsonGenericExpression ) )* otherlv_12= ']' ) )
             	    int alt4=2;
@@ -440,7 +440,7 @@ public class InternalThingDescriptionJsonParser extends AbstractInternalAntlrPar
             	            // InternalThingDescriptionJson.g:114:12: lv_ld_context_5_0= ruleAnyString
             	            {
 
-            	            												newCompositeNode(grammarAccess.getJsonThingDescriptionAccess().getLd_contextAnyStringParserRuleCall_2_0_2_0_0());
+            	            												newCompositeNode(grammarAccess.getJsonThingAccess().getLd_contextAnyStringParserRuleCall_2_0_2_0_0());
             	            											
             	            pushFollow(FOLLOW_6);
             	            lv_ld_context_5_0=ruleAnyString();
@@ -449,7 +449,7 @@ public class InternalThingDescriptionJsonParser extends AbstractInternalAntlrPar
 
 
             	            												if (current==null) {
-            	            													current = createModelElementForParent(grammarAccess.getJsonThingDescriptionRule());
+            	            													current = createModelElementForParent(grammarAccess.getJsonThingRule());
             	            												}
             	            												add(
             	            													current,
@@ -475,7 +475,7 @@ public class InternalThingDescriptionJsonParser extends AbstractInternalAntlrPar
             	            {
             	            otherlv_6=(Token)match(input,10,FOLLOW_7); 
 
-            	            											newLeafNode(otherlv_6, grammarAccess.getJsonThingDescriptionAccess().getLeftSquareBracketKeyword_2_0_2_1_0());
+            	            											newLeafNode(otherlv_6, grammarAccess.getJsonThingAccess().getLeftSquareBracketKeyword_2_0_2_1_0());
             	            										
             	            // InternalThingDescriptionJson.g:137:11: ( ( (lv_ld_context_7_0= ruleAnyString ) ) | ruleJsonGenericExpression )
             	            int alt1=2;
@@ -491,7 +491,7 @@ public class InternalThingDescriptionJsonParser extends AbstractInternalAntlrPar
             	                    // InternalThingDescriptionJson.g:140:14: lv_ld_context_7_0= ruleAnyString
             	                    {
 
-            	                    														newCompositeNode(grammarAccess.getJsonThingDescriptionAccess().getLd_contextAnyStringParserRuleCall_2_0_2_1_1_0_0());
+            	                    														newCompositeNode(grammarAccess.getJsonThingAccess().getLd_contextAnyStringParserRuleCall_2_0_2_1_1_0_0());
             	                    													
             	                    pushFollow(FOLLOW_8);
             	                    lv_ld_context_7_0=ruleAnyString();
@@ -500,7 +500,7 @@ public class InternalThingDescriptionJsonParser extends AbstractInternalAntlrPar
 
 
             	                    														if (current==null) {
-            	                    															current = createModelElementForParent(grammarAccess.getJsonThingDescriptionRule());
+            	                    															current = createModelElementForParent(grammarAccess.getJsonThingRule());
             	                    														}
             	                    														add(
             	                    															current,
@@ -522,7 +522,7 @@ public class InternalThingDescriptionJsonParser extends AbstractInternalAntlrPar
             	                    // InternalThingDescriptionJson.g:158:12: ruleJsonGenericExpression
             	                    {
 
-            	                    												newCompositeNode(grammarAccess.getJsonThingDescriptionAccess().getJsonGenericExpressionParserRuleCall_2_0_2_1_1_1());
+            	                    												newCompositeNode(grammarAccess.getJsonThingAccess().getJsonGenericExpressionParserRuleCall_2_0_2_1_1_1());
             	                    											
             	                    pushFollow(FOLLOW_8);
             	                    ruleJsonGenericExpression();
@@ -555,7 +555,7 @@ public class InternalThingDescriptionJsonParser extends AbstractInternalAntlrPar
             	            	    {
             	            	    otherlv_9=(Token)match(input,11,FOLLOW_7); 
 
-            	            	    												newLeafNode(otherlv_9, grammarAccess.getJsonThingDescriptionAccess().getCommaKeyword_2_0_2_1_2_0());
+            	            	    												newLeafNode(otherlv_9, grammarAccess.getJsonThingAccess().getCommaKeyword_2_0_2_1_2_0());
             	            	    											
             	            	    // InternalThingDescriptionJson.g:171:12: ( ( (lv_ld_context_10_0= ruleAnyString ) ) | ruleJsonGenericExpression )
             	            	    int alt2=2;
@@ -571,7 +571,7 @@ public class InternalThingDescriptionJsonParser extends AbstractInternalAntlrPar
             	            	            // InternalThingDescriptionJson.g:174:15: lv_ld_context_10_0= ruleAnyString
             	            	            {
 
-            	            	            															newCompositeNode(grammarAccess.getJsonThingDescriptionAccess().getLd_contextAnyStringParserRuleCall_2_0_2_1_2_1_0_0());
+            	            	            															newCompositeNode(grammarAccess.getJsonThingAccess().getLd_contextAnyStringParserRuleCall_2_0_2_1_2_1_0_0());
             	            	            														
             	            	            pushFollow(FOLLOW_8);
             	            	            lv_ld_context_10_0=ruleAnyString();
@@ -580,7 +580,7 @@ public class InternalThingDescriptionJsonParser extends AbstractInternalAntlrPar
 
 
             	            	            															if (current==null) {
-            	            	            																current = createModelElementForParent(grammarAccess.getJsonThingDescriptionRule());
+            	            	            																current = createModelElementForParent(grammarAccess.getJsonThingRule());
             	            	            															}
             	            	            															add(
             	            	            																current,
@@ -602,7 +602,7 @@ public class InternalThingDescriptionJsonParser extends AbstractInternalAntlrPar
             	            	            // InternalThingDescriptionJson.g:192:13: ruleJsonGenericExpression
             	            	            {
 
-            	            	            													newCompositeNode(grammarAccess.getJsonThingDescriptionAccess().getJsonGenericExpressionParserRuleCall_2_0_2_1_2_1_1());
+            	            	            													newCompositeNode(grammarAccess.getJsonThingAccess().getJsonGenericExpressionParserRuleCall_2_0_2_1_2_1_1());
             	            	            												
             	            	            pushFollow(FOLLOW_8);
             	            	            ruleJsonGenericExpression();
@@ -629,7 +629,7 @@ public class InternalThingDescriptionJsonParser extends AbstractInternalAntlrPar
 
             	            otherlv_12=(Token)match(input,12,FOLLOW_6); 
 
-            	            											newLeafNode(otherlv_12, grammarAccess.getJsonThingDescriptionAccess().getRightSquareBracketKeyword_2_0_2_1_3());
+            	            											newLeafNode(otherlv_12, grammarAccess.getJsonThingAccess().getRightSquareBracketKeyword_2_0_2_1_3());
             	            										
 
             	            }
@@ -653,7 +653,7 @@ public class InternalThingDescriptionJsonParser extends AbstractInternalAntlrPar
             	            {
             	            otherlv_13=(Token)match(input,11,FOLLOW_9); 
 
-            	            										newLeafNode(otherlv_13, grammarAccess.getJsonThingDescriptionAccess().getCommaKeyword_2_0_3());
+            	            										newLeafNode(otherlv_13, grammarAccess.getJsonThingAccess().getCommaKeyword_2_0_3());
             	            									
 
             	            }
@@ -668,7 +668,7 @@ public class InternalThingDescriptionJsonParser extends AbstractInternalAntlrPar
             	    }
 
             	     
-            	    						getUnorderedGroupHelper().returnFromSelection(grammarAccess.getJsonThingDescriptionAccess().getUnorderedGroup_2());
+            	    						getUnorderedGroupHelper().returnFromSelection(grammarAccess.getJsonThingAccess().getUnorderedGroup_2());
             	    					
 
             	    }
@@ -685,31 +685,31 @@ public class InternalThingDescriptionJsonParser extends AbstractInternalAntlrPar
             	    // InternalThingDescriptionJson.g:219:4: ({...}? => ( ({...}? => (otherlv_14= '\"@type\"' otherlv_15= ':' ( ( (lv_ld_type_16_0= ruleAnyString ) ) | (otherlv_17= '[' ( (lv_ld_type_18_0= ruleAnyString ) ) (otherlv_19= ',' ( (lv_ld_type_20_0= ruleAnyString ) ) )* otherlv_21= ']' ) ) (otherlv_22= ',' )? ) ) ) )
             	    // InternalThingDescriptionJson.g:220:5: {...}? => ( ({...}? => (otherlv_14= '\"@type\"' otherlv_15= ':' ( ( (lv_ld_type_16_0= ruleAnyString ) ) | (otherlv_17= '[' ( (lv_ld_type_18_0= ruleAnyString ) ) (otherlv_19= ',' ( (lv_ld_type_20_0= ruleAnyString ) ) )* otherlv_21= ']' ) ) (otherlv_22= ',' )? ) ) )
             	    {
-            	    if ( ! getUnorderedGroupHelper().canSelect(grammarAccess.getJsonThingDescriptionAccess().getUnorderedGroup_2(), 1) ) {
-            	        throw new FailedPredicateException(input, "ruleJsonThingDescription", "getUnorderedGroupHelper().canSelect(grammarAccess.getJsonThingDescriptionAccess().getUnorderedGroup_2(), 1)");
+            	    if ( ! getUnorderedGroupHelper().canSelect(grammarAccess.getJsonThingAccess().getUnorderedGroup_2(), 1) ) {
+            	        throw new FailedPredicateException(input, "ruleJsonThing", "getUnorderedGroupHelper().canSelect(grammarAccess.getJsonThingAccess().getUnorderedGroup_2(), 1)");
             	    }
-            	    // InternalThingDescriptionJson.g:220:117: ( ({...}? => (otherlv_14= '\"@type\"' otherlv_15= ':' ( ( (lv_ld_type_16_0= ruleAnyString ) ) | (otherlv_17= '[' ( (lv_ld_type_18_0= ruleAnyString ) ) (otherlv_19= ',' ( (lv_ld_type_20_0= ruleAnyString ) ) )* otherlv_21= ']' ) ) (otherlv_22= ',' )? ) ) )
+            	    // InternalThingDescriptionJson.g:220:106: ( ({...}? => (otherlv_14= '\"@type\"' otherlv_15= ':' ( ( (lv_ld_type_16_0= ruleAnyString ) ) | (otherlv_17= '[' ( (lv_ld_type_18_0= ruleAnyString ) ) (otherlv_19= ',' ( (lv_ld_type_20_0= ruleAnyString ) ) )* otherlv_21= ']' ) ) (otherlv_22= ',' )? ) ) )
             	    // InternalThingDescriptionJson.g:221:6: ({...}? => (otherlv_14= '\"@type\"' otherlv_15= ':' ( ( (lv_ld_type_16_0= ruleAnyString ) ) | (otherlv_17= '[' ( (lv_ld_type_18_0= ruleAnyString ) ) (otherlv_19= ',' ( (lv_ld_type_20_0= ruleAnyString ) ) )* otherlv_21= ']' ) ) (otherlv_22= ',' )? ) )
             	    {
 
-            	    						getUnorderedGroupHelper().select(grammarAccess.getJsonThingDescriptionAccess().getUnorderedGroup_2(), 1);
+            	    						getUnorderedGroupHelper().select(grammarAccess.getJsonThingAccess().getUnorderedGroup_2(), 1);
             	    					
             	    // InternalThingDescriptionJson.g:224:9: ({...}? => (otherlv_14= '\"@type\"' otherlv_15= ':' ( ( (lv_ld_type_16_0= ruleAnyString ) ) | (otherlv_17= '[' ( (lv_ld_type_18_0= ruleAnyString ) ) (otherlv_19= ',' ( (lv_ld_type_20_0= ruleAnyString ) ) )* otherlv_21= ']' ) ) (otherlv_22= ',' )? ) )
             	    // InternalThingDescriptionJson.g:224:10: {...}? => (otherlv_14= '\"@type\"' otherlv_15= ':' ( ( (lv_ld_type_16_0= ruleAnyString ) ) | (otherlv_17= '[' ( (lv_ld_type_18_0= ruleAnyString ) ) (otherlv_19= ',' ( (lv_ld_type_20_0= ruleAnyString ) ) )* otherlv_21= ']' ) ) (otherlv_22= ',' )? )
             	    {
             	    if ( !((true)) ) {
-            	        throw new FailedPredicateException(input, "ruleJsonThingDescription", "true");
+            	        throw new FailedPredicateException(input, "ruleJsonThing", "true");
             	    }
             	    // InternalThingDescriptionJson.g:224:19: (otherlv_14= '\"@type\"' otherlv_15= ':' ( ( (lv_ld_type_16_0= ruleAnyString ) ) | (otherlv_17= '[' ( (lv_ld_type_18_0= ruleAnyString ) ) (otherlv_19= ',' ( (lv_ld_type_20_0= ruleAnyString ) ) )* otherlv_21= ']' ) ) (otherlv_22= ',' )? )
             	    // InternalThingDescriptionJson.g:224:20: otherlv_14= '\"@type\"' otherlv_15= ':' ( ( (lv_ld_type_16_0= ruleAnyString ) ) | (otherlv_17= '[' ( (lv_ld_type_18_0= ruleAnyString ) ) (otherlv_19= ',' ( (lv_ld_type_20_0= ruleAnyString ) ) )* otherlv_21= ']' ) ) (otherlv_22= ',' )?
             	    {
             	    otherlv_14=(Token)match(input,13,FOLLOW_4); 
 
-            	    									newLeafNode(otherlv_14, grammarAccess.getJsonThingDescriptionAccess().getTypeKeyword_2_1_0());
+            	    									newLeafNode(otherlv_14, grammarAccess.getJsonThingAccess().getTypeKeyword_2_1_0());
             	    								
             	    otherlv_15=(Token)match(input,9,FOLLOW_5); 
 
-            	    									newLeafNode(otherlv_15, grammarAccess.getJsonThingDescriptionAccess().getColonKeyword_2_1_1());
+            	    									newLeafNode(otherlv_15, grammarAccess.getJsonThingAccess().getColonKeyword_2_1_1());
             	    								
             	    // InternalThingDescriptionJson.g:232:9: ( ( (lv_ld_type_16_0= ruleAnyString ) ) | (otherlv_17= '[' ( (lv_ld_type_18_0= ruleAnyString ) ) (otherlv_19= ',' ( (lv_ld_type_20_0= ruleAnyString ) ) )* otherlv_21= ']' ) )
             	    int alt7=2;
@@ -738,7 +738,7 @@ public class InternalThingDescriptionJsonParser extends AbstractInternalAntlrPar
             	            // InternalThingDescriptionJson.g:235:12: lv_ld_type_16_0= ruleAnyString
             	            {
 
-            	            												newCompositeNode(grammarAccess.getJsonThingDescriptionAccess().getLd_typeAnyStringParserRuleCall_2_1_2_0_0());
+            	            												newCompositeNode(grammarAccess.getJsonThingAccess().getLd_typeAnyStringParserRuleCall_2_1_2_0_0());
             	            											
             	            pushFollow(FOLLOW_6);
             	            lv_ld_type_16_0=ruleAnyString();
@@ -747,7 +747,7 @@ public class InternalThingDescriptionJsonParser extends AbstractInternalAntlrPar
 
 
             	            												if (current==null) {
-            	            													current = createModelElementForParent(grammarAccess.getJsonThingDescriptionRule());
+            	            													current = createModelElementForParent(grammarAccess.getJsonThingRule());
             	            												}
             	            												add(
             	            													current,
@@ -773,7 +773,7 @@ public class InternalThingDescriptionJsonParser extends AbstractInternalAntlrPar
             	            {
             	            otherlv_17=(Token)match(input,10,FOLLOW_10); 
 
-            	            											newLeafNode(otherlv_17, grammarAccess.getJsonThingDescriptionAccess().getLeftSquareBracketKeyword_2_1_2_1_0());
+            	            											newLeafNode(otherlv_17, grammarAccess.getJsonThingAccess().getLeftSquareBracketKeyword_2_1_2_1_0());
             	            										
             	            // InternalThingDescriptionJson.g:258:11: ( (lv_ld_type_18_0= ruleAnyString ) )
             	            // InternalThingDescriptionJson.g:259:12: (lv_ld_type_18_0= ruleAnyString )
@@ -782,7 +782,7 @@ public class InternalThingDescriptionJsonParser extends AbstractInternalAntlrPar
             	            // InternalThingDescriptionJson.g:260:13: lv_ld_type_18_0= ruleAnyString
             	            {
 
-            	            													newCompositeNode(grammarAccess.getJsonThingDescriptionAccess().getLd_typeAnyStringParserRuleCall_2_1_2_1_1_0());
+            	            													newCompositeNode(grammarAccess.getJsonThingAccess().getLd_typeAnyStringParserRuleCall_2_1_2_1_1_0());
             	            												
             	            pushFollow(FOLLOW_8);
             	            lv_ld_type_18_0=ruleAnyString();
@@ -791,7 +791,7 @@ public class InternalThingDescriptionJsonParser extends AbstractInternalAntlrPar
 
 
             	            													if (current==null) {
-            	            														current = createModelElementForParent(grammarAccess.getJsonThingDescriptionRule());
+            	            														current = createModelElementForParent(grammarAccess.getJsonThingRule());
             	            													}
             	            													add(
             	            														current,
@@ -823,7 +823,7 @@ public class InternalThingDescriptionJsonParser extends AbstractInternalAntlrPar
             	            	    {
             	            	    otherlv_19=(Token)match(input,11,FOLLOW_10); 
 
-            	            	    												newLeafNode(otherlv_19, grammarAccess.getJsonThingDescriptionAccess().getCommaKeyword_2_1_2_1_2_0());
+            	            	    												newLeafNode(otherlv_19, grammarAccess.getJsonThingAccess().getCommaKeyword_2_1_2_1_2_0());
             	            	    											
             	            	    // InternalThingDescriptionJson.g:282:12: ( (lv_ld_type_20_0= ruleAnyString ) )
             	            	    // InternalThingDescriptionJson.g:283:13: (lv_ld_type_20_0= ruleAnyString )
@@ -832,7 +832,7 @@ public class InternalThingDescriptionJsonParser extends AbstractInternalAntlrPar
             	            	    // InternalThingDescriptionJson.g:284:14: lv_ld_type_20_0= ruleAnyString
             	            	    {
 
-            	            	    														newCompositeNode(grammarAccess.getJsonThingDescriptionAccess().getLd_typeAnyStringParserRuleCall_2_1_2_1_2_1_0());
+            	            	    														newCompositeNode(grammarAccess.getJsonThingAccess().getLd_typeAnyStringParserRuleCall_2_1_2_1_2_1_0());
             	            	    													
             	            	    pushFollow(FOLLOW_8);
             	            	    lv_ld_type_20_0=ruleAnyString();
@@ -841,7 +841,7 @@ public class InternalThingDescriptionJsonParser extends AbstractInternalAntlrPar
 
 
             	            	    														if (current==null) {
-            	            	    															current = createModelElementForParent(grammarAccess.getJsonThingDescriptionRule());
+            	            	    															current = createModelElementForParent(grammarAccess.getJsonThingRule());
             	            	    														}
             	            	    														add(
             	            	    															current,
@@ -867,7 +867,7 @@ public class InternalThingDescriptionJsonParser extends AbstractInternalAntlrPar
 
             	            otherlv_21=(Token)match(input,12,FOLLOW_6); 
 
-            	            											newLeafNode(otherlv_21, grammarAccess.getJsonThingDescriptionAccess().getRightSquareBracketKeyword_2_1_2_1_3());
+            	            											newLeafNode(otherlv_21, grammarAccess.getJsonThingAccess().getRightSquareBracketKeyword_2_1_2_1_3());
             	            										
 
             	            }
@@ -891,7 +891,7 @@ public class InternalThingDescriptionJsonParser extends AbstractInternalAntlrPar
             	            {
             	            otherlv_22=(Token)match(input,11,FOLLOW_9); 
 
-            	            										newLeafNode(otherlv_22, grammarAccess.getJsonThingDescriptionAccess().getCommaKeyword_2_1_3());
+            	            										newLeafNode(otherlv_22, grammarAccess.getJsonThingAccess().getCommaKeyword_2_1_3());
             	            									
 
             	            }
@@ -906,7 +906,7 @@ public class InternalThingDescriptionJsonParser extends AbstractInternalAntlrPar
             	    }
 
             	     
-            	    						getUnorderedGroupHelper().returnFromSelection(grammarAccess.getJsonThingDescriptionAccess().getUnorderedGroup_2());
+            	    						getUnorderedGroupHelper().returnFromSelection(grammarAccess.getJsonThingAccess().getUnorderedGroup_2());
             	    					
 
             	    }
@@ -923,31 +923,31 @@ public class InternalThingDescriptionJsonParser extends AbstractInternalAntlrPar
             	    // InternalThingDescriptionJson.g:320:4: ({...}? => ( ({...}? => (otherlv_23= '\"id\"' otherlv_24= ':' ( (lv_id_25_0= ruleAnyString ) ) (otherlv_26= ',' )? ) ) ) )
             	    // InternalThingDescriptionJson.g:321:5: {...}? => ( ({...}? => (otherlv_23= '\"id\"' otherlv_24= ':' ( (lv_id_25_0= ruleAnyString ) ) (otherlv_26= ',' )? ) ) )
             	    {
-            	    if ( ! getUnorderedGroupHelper().canSelect(grammarAccess.getJsonThingDescriptionAccess().getUnorderedGroup_2(), 2) ) {
-            	        throw new FailedPredicateException(input, "ruleJsonThingDescription", "getUnorderedGroupHelper().canSelect(grammarAccess.getJsonThingDescriptionAccess().getUnorderedGroup_2(), 2)");
+            	    if ( ! getUnorderedGroupHelper().canSelect(grammarAccess.getJsonThingAccess().getUnorderedGroup_2(), 2) ) {
+            	        throw new FailedPredicateException(input, "ruleJsonThing", "getUnorderedGroupHelper().canSelect(grammarAccess.getJsonThingAccess().getUnorderedGroup_2(), 2)");
             	    }
-            	    // InternalThingDescriptionJson.g:321:117: ( ({...}? => (otherlv_23= '\"id\"' otherlv_24= ':' ( (lv_id_25_0= ruleAnyString ) ) (otherlv_26= ',' )? ) ) )
+            	    // InternalThingDescriptionJson.g:321:106: ( ({...}? => (otherlv_23= '\"id\"' otherlv_24= ':' ( (lv_id_25_0= ruleAnyString ) ) (otherlv_26= ',' )? ) ) )
             	    // InternalThingDescriptionJson.g:322:6: ({...}? => (otherlv_23= '\"id\"' otherlv_24= ':' ( (lv_id_25_0= ruleAnyString ) ) (otherlv_26= ',' )? ) )
             	    {
 
-            	    						getUnorderedGroupHelper().select(grammarAccess.getJsonThingDescriptionAccess().getUnorderedGroup_2(), 2);
+            	    						getUnorderedGroupHelper().select(grammarAccess.getJsonThingAccess().getUnorderedGroup_2(), 2);
             	    					
             	    // InternalThingDescriptionJson.g:325:9: ({...}? => (otherlv_23= '\"id\"' otherlv_24= ':' ( (lv_id_25_0= ruleAnyString ) ) (otherlv_26= ',' )? ) )
             	    // InternalThingDescriptionJson.g:325:10: {...}? => (otherlv_23= '\"id\"' otherlv_24= ':' ( (lv_id_25_0= ruleAnyString ) ) (otherlv_26= ',' )? )
             	    {
             	    if ( !((true)) ) {
-            	        throw new FailedPredicateException(input, "ruleJsonThingDescription", "true");
+            	        throw new FailedPredicateException(input, "ruleJsonThing", "true");
             	    }
             	    // InternalThingDescriptionJson.g:325:19: (otherlv_23= '\"id\"' otherlv_24= ':' ( (lv_id_25_0= ruleAnyString ) ) (otherlv_26= ',' )? )
             	    // InternalThingDescriptionJson.g:325:20: otherlv_23= '\"id\"' otherlv_24= ':' ( (lv_id_25_0= ruleAnyString ) ) (otherlv_26= ',' )?
             	    {
             	    otherlv_23=(Token)match(input,14,FOLLOW_4); 
 
-            	    									newLeafNode(otherlv_23, grammarAccess.getJsonThingDescriptionAccess().getIdKeyword_2_2_0());
+            	    									newLeafNode(otherlv_23, grammarAccess.getJsonThingAccess().getIdKeyword_2_2_0());
             	    								
             	    otherlv_24=(Token)match(input,9,FOLLOW_10); 
 
-            	    									newLeafNode(otherlv_24, grammarAccess.getJsonThingDescriptionAccess().getColonKeyword_2_2_1());
+            	    									newLeafNode(otherlv_24, grammarAccess.getJsonThingAccess().getColonKeyword_2_2_1());
             	    								
             	    // InternalThingDescriptionJson.g:333:9: ( (lv_id_25_0= ruleAnyString ) )
             	    // InternalThingDescriptionJson.g:334:10: (lv_id_25_0= ruleAnyString )
@@ -956,7 +956,7 @@ public class InternalThingDescriptionJsonParser extends AbstractInternalAntlrPar
             	    // InternalThingDescriptionJson.g:335:11: lv_id_25_0= ruleAnyString
             	    {
 
-            	    											newCompositeNode(grammarAccess.getJsonThingDescriptionAccess().getIdAnyStringParserRuleCall_2_2_2_0());
+            	    											newCompositeNode(grammarAccess.getJsonThingAccess().getIdAnyStringParserRuleCall_2_2_2_0());
             	    										
             	    pushFollow(FOLLOW_6);
             	    lv_id_25_0=ruleAnyString();
@@ -965,7 +965,7 @@ public class InternalThingDescriptionJsonParser extends AbstractInternalAntlrPar
 
 
             	    											if (current==null) {
-            	    												current = createModelElementForParent(grammarAccess.getJsonThingDescriptionRule());
+            	    												current = createModelElementForParent(grammarAccess.getJsonThingRule());
             	    											}
             	    											set(
             	    												current,
@@ -993,7 +993,7 @@ public class InternalThingDescriptionJsonParser extends AbstractInternalAntlrPar
             	            {
             	            otherlv_26=(Token)match(input,11,FOLLOW_9); 
 
-            	            										newLeafNode(otherlv_26, grammarAccess.getJsonThingDescriptionAccess().getCommaKeyword_2_2_3());
+            	            										newLeafNode(otherlv_26, grammarAccess.getJsonThingAccess().getCommaKeyword_2_2_3());
             	            									
 
             	            }
@@ -1008,7 +1008,7 @@ public class InternalThingDescriptionJsonParser extends AbstractInternalAntlrPar
             	    }
 
             	     
-            	    						getUnorderedGroupHelper().returnFromSelection(grammarAccess.getJsonThingDescriptionAccess().getUnorderedGroup_2());
+            	    						getUnorderedGroupHelper().returnFromSelection(grammarAccess.getJsonThingAccess().getUnorderedGroup_2());
             	    					
 
             	    }
@@ -1025,31 +1025,31 @@ public class InternalThingDescriptionJsonParser extends AbstractInternalAntlrPar
             	    // InternalThingDescriptionJson.g:364:4: ({...}? => ( ({...}? => (otherlv_27= '\"title\"' otherlv_28= ':' ( (lv_title_29_0= ruleAnyString ) ) (otherlv_30= ',' )? ) ) ) )
             	    // InternalThingDescriptionJson.g:365:5: {...}? => ( ({...}? => (otherlv_27= '\"title\"' otherlv_28= ':' ( (lv_title_29_0= ruleAnyString ) ) (otherlv_30= ',' )? ) ) )
             	    {
-            	    if ( ! getUnorderedGroupHelper().canSelect(grammarAccess.getJsonThingDescriptionAccess().getUnorderedGroup_2(), 3) ) {
-            	        throw new FailedPredicateException(input, "ruleJsonThingDescription", "getUnorderedGroupHelper().canSelect(grammarAccess.getJsonThingDescriptionAccess().getUnorderedGroup_2(), 3)");
+            	    if ( ! getUnorderedGroupHelper().canSelect(grammarAccess.getJsonThingAccess().getUnorderedGroup_2(), 3) ) {
+            	        throw new FailedPredicateException(input, "ruleJsonThing", "getUnorderedGroupHelper().canSelect(grammarAccess.getJsonThingAccess().getUnorderedGroup_2(), 3)");
             	    }
-            	    // InternalThingDescriptionJson.g:365:117: ( ({...}? => (otherlv_27= '\"title\"' otherlv_28= ':' ( (lv_title_29_0= ruleAnyString ) ) (otherlv_30= ',' )? ) ) )
+            	    // InternalThingDescriptionJson.g:365:106: ( ({...}? => (otherlv_27= '\"title\"' otherlv_28= ':' ( (lv_title_29_0= ruleAnyString ) ) (otherlv_30= ',' )? ) ) )
             	    // InternalThingDescriptionJson.g:366:6: ({...}? => (otherlv_27= '\"title\"' otherlv_28= ':' ( (lv_title_29_0= ruleAnyString ) ) (otherlv_30= ',' )? ) )
             	    {
 
-            	    						getUnorderedGroupHelper().select(grammarAccess.getJsonThingDescriptionAccess().getUnorderedGroup_2(), 3);
+            	    						getUnorderedGroupHelper().select(grammarAccess.getJsonThingAccess().getUnorderedGroup_2(), 3);
             	    					
             	    // InternalThingDescriptionJson.g:369:9: ({...}? => (otherlv_27= '\"title\"' otherlv_28= ':' ( (lv_title_29_0= ruleAnyString ) ) (otherlv_30= ',' )? ) )
             	    // InternalThingDescriptionJson.g:369:10: {...}? => (otherlv_27= '\"title\"' otherlv_28= ':' ( (lv_title_29_0= ruleAnyString ) ) (otherlv_30= ',' )? )
             	    {
             	    if ( !((true)) ) {
-            	        throw new FailedPredicateException(input, "ruleJsonThingDescription", "true");
+            	        throw new FailedPredicateException(input, "ruleJsonThing", "true");
             	    }
             	    // InternalThingDescriptionJson.g:369:19: (otherlv_27= '\"title\"' otherlv_28= ':' ( (lv_title_29_0= ruleAnyString ) ) (otherlv_30= ',' )? )
             	    // InternalThingDescriptionJson.g:369:20: otherlv_27= '\"title\"' otherlv_28= ':' ( (lv_title_29_0= ruleAnyString ) ) (otherlv_30= ',' )?
             	    {
             	    otherlv_27=(Token)match(input,15,FOLLOW_4); 
 
-            	    									newLeafNode(otherlv_27, grammarAccess.getJsonThingDescriptionAccess().getTitleKeyword_2_3_0());
+            	    									newLeafNode(otherlv_27, grammarAccess.getJsonThingAccess().getTitleKeyword_2_3_0());
             	    								
             	    otherlv_28=(Token)match(input,9,FOLLOW_10); 
 
-            	    									newLeafNode(otherlv_28, grammarAccess.getJsonThingDescriptionAccess().getColonKeyword_2_3_1());
+            	    									newLeafNode(otherlv_28, grammarAccess.getJsonThingAccess().getColonKeyword_2_3_1());
             	    								
             	    // InternalThingDescriptionJson.g:377:9: ( (lv_title_29_0= ruleAnyString ) )
             	    // InternalThingDescriptionJson.g:378:10: (lv_title_29_0= ruleAnyString )
@@ -1058,7 +1058,7 @@ public class InternalThingDescriptionJsonParser extends AbstractInternalAntlrPar
             	    // InternalThingDescriptionJson.g:379:11: lv_title_29_0= ruleAnyString
             	    {
 
-            	    											newCompositeNode(grammarAccess.getJsonThingDescriptionAccess().getTitleAnyStringParserRuleCall_2_3_2_0());
+            	    											newCompositeNode(grammarAccess.getJsonThingAccess().getTitleAnyStringParserRuleCall_2_3_2_0());
             	    										
             	    pushFollow(FOLLOW_6);
             	    lv_title_29_0=ruleAnyString();
@@ -1067,7 +1067,7 @@ public class InternalThingDescriptionJsonParser extends AbstractInternalAntlrPar
 
 
             	    											if (current==null) {
-            	    												current = createModelElementForParent(grammarAccess.getJsonThingDescriptionRule());
+            	    												current = createModelElementForParent(grammarAccess.getJsonThingRule());
             	    											}
             	    											set(
             	    												current,
@@ -1095,7 +1095,7 @@ public class InternalThingDescriptionJsonParser extends AbstractInternalAntlrPar
             	            {
             	            otherlv_30=(Token)match(input,11,FOLLOW_9); 
 
-            	            										newLeafNode(otherlv_30, grammarAccess.getJsonThingDescriptionAccess().getCommaKeyword_2_3_3());
+            	            										newLeafNode(otherlv_30, grammarAccess.getJsonThingAccess().getCommaKeyword_2_3_3());
             	            									
 
             	            }
@@ -1110,7 +1110,7 @@ public class InternalThingDescriptionJsonParser extends AbstractInternalAntlrPar
             	    }
 
             	     
-            	    						getUnorderedGroupHelper().returnFromSelection(grammarAccess.getJsonThingDescriptionAccess().getUnorderedGroup_2());
+            	    						getUnorderedGroupHelper().returnFromSelection(grammarAccess.getJsonThingAccess().getUnorderedGroup_2());
             	    					
 
             	    }
@@ -1127,31 +1127,31 @@ public class InternalThingDescriptionJsonParser extends AbstractInternalAntlrPar
             	    // InternalThingDescriptionJson.g:408:4: ({...}? => ( ({...}? => (otherlv_31= '\"description\"' otherlv_32= ':' ( (lv_description_33_0= ruleAnyString ) ) (otherlv_34= ',' )? ) ) ) )
             	    // InternalThingDescriptionJson.g:409:5: {...}? => ( ({...}? => (otherlv_31= '\"description\"' otherlv_32= ':' ( (lv_description_33_0= ruleAnyString ) ) (otherlv_34= ',' )? ) ) )
             	    {
-            	    if ( ! getUnorderedGroupHelper().canSelect(grammarAccess.getJsonThingDescriptionAccess().getUnorderedGroup_2(), 4) ) {
-            	        throw new FailedPredicateException(input, "ruleJsonThingDescription", "getUnorderedGroupHelper().canSelect(grammarAccess.getJsonThingDescriptionAccess().getUnorderedGroup_2(), 4)");
+            	    if ( ! getUnorderedGroupHelper().canSelect(grammarAccess.getJsonThingAccess().getUnorderedGroup_2(), 4) ) {
+            	        throw new FailedPredicateException(input, "ruleJsonThing", "getUnorderedGroupHelper().canSelect(grammarAccess.getJsonThingAccess().getUnorderedGroup_2(), 4)");
             	    }
-            	    // InternalThingDescriptionJson.g:409:117: ( ({...}? => (otherlv_31= '\"description\"' otherlv_32= ':' ( (lv_description_33_0= ruleAnyString ) ) (otherlv_34= ',' )? ) ) )
+            	    // InternalThingDescriptionJson.g:409:106: ( ({...}? => (otherlv_31= '\"description\"' otherlv_32= ':' ( (lv_description_33_0= ruleAnyString ) ) (otherlv_34= ',' )? ) ) )
             	    // InternalThingDescriptionJson.g:410:6: ({...}? => (otherlv_31= '\"description\"' otherlv_32= ':' ( (lv_description_33_0= ruleAnyString ) ) (otherlv_34= ',' )? ) )
             	    {
 
-            	    						getUnorderedGroupHelper().select(grammarAccess.getJsonThingDescriptionAccess().getUnorderedGroup_2(), 4);
+            	    						getUnorderedGroupHelper().select(grammarAccess.getJsonThingAccess().getUnorderedGroup_2(), 4);
             	    					
             	    // InternalThingDescriptionJson.g:413:9: ({...}? => (otherlv_31= '\"description\"' otherlv_32= ':' ( (lv_description_33_0= ruleAnyString ) ) (otherlv_34= ',' )? ) )
             	    // InternalThingDescriptionJson.g:413:10: {...}? => (otherlv_31= '\"description\"' otherlv_32= ':' ( (lv_description_33_0= ruleAnyString ) ) (otherlv_34= ',' )? )
             	    {
             	    if ( !((true)) ) {
-            	        throw new FailedPredicateException(input, "ruleJsonThingDescription", "true");
+            	        throw new FailedPredicateException(input, "ruleJsonThing", "true");
             	    }
             	    // InternalThingDescriptionJson.g:413:19: (otherlv_31= '\"description\"' otherlv_32= ':' ( (lv_description_33_0= ruleAnyString ) ) (otherlv_34= ',' )? )
             	    // InternalThingDescriptionJson.g:413:20: otherlv_31= '\"description\"' otherlv_32= ':' ( (lv_description_33_0= ruleAnyString ) ) (otherlv_34= ',' )?
             	    {
             	    otherlv_31=(Token)match(input,16,FOLLOW_4); 
 
-            	    									newLeafNode(otherlv_31, grammarAccess.getJsonThingDescriptionAccess().getDescriptionKeyword_2_4_0());
+            	    									newLeafNode(otherlv_31, grammarAccess.getJsonThingAccess().getDescriptionKeyword_2_4_0());
             	    								
             	    otherlv_32=(Token)match(input,9,FOLLOW_10); 
 
-            	    									newLeafNode(otherlv_32, grammarAccess.getJsonThingDescriptionAccess().getColonKeyword_2_4_1());
+            	    									newLeafNode(otherlv_32, grammarAccess.getJsonThingAccess().getColonKeyword_2_4_1());
             	    								
             	    // InternalThingDescriptionJson.g:421:9: ( (lv_description_33_0= ruleAnyString ) )
             	    // InternalThingDescriptionJson.g:422:10: (lv_description_33_0= ruleAnyString )
@@ -1160,7 +1160,7 @@ public class InternalThingDescriptionJsonParser extends AbstractInternalAntlrPar
             	    // InternalThingDescriptionJson.g:423:11: lv_description_33_0= ruleAnyString
             	    {
 
-            	    											newCompositeNode(grammarAccess.getJsonThingDescriptionAccess().getDescriptionAnyStringParserRuleCall_2_4_2_0());
+            	    											newCompositeNode(grammarAccess.getJsonThingAccess().getDescriptionAnyStringParserRuleCall_2_4_2_0());
             	    										
             	    pushFollow(FOLLOW_6);
             	    lv_description_33_0=ruleAnyString();
@@ -1169,7 +1169,7 @@ public class InternalThingDescriptionJsonParser extends AbstractInternalAntlrPar
 
 
             	    											if (current==null) {
-            	    												current = createModelElementForParent(grammarAccess.getJsonThingDescriptionRule());
+            	    												current = createModelElementForParent(grammarAccess.getJsonThingRule());
             	    											}
             	    											set(
             	    												current,
@@ -1197,7 +1197,7 @@ public class InternalThingDescriptionJsonParser extends AbstractInternalAntlrPar
             	            {
             	            otherlv_34=(Token)match(input,11,FOLLOW_9); 
 
-            	            										newLeafNode(otherlv_34, grammarAccess.getJsonThingDescriptionAccess().getCommaKeyword_2_4_3());
+            	            										newLeafNode(otherlv_34, grammarAccess.getJsonThingAccess().getCommaKeyword_2_4_3());
             	            									
 
             	            }
@@ -1212,7 +1212,7 @@ public class InternalThingDescriptionJsonParser extends AbstractInternalAntlrPar
             	    }
 
             	     
-            	    						getUnorderedGroupHelper().returnFromSelection(grammarAccess.getJsonThingDescriptionAccess().getUnorderedGroup_2());
+            	    						getUnorderedGroupHelper().returnFromSelection(grammarAccess.getJsonThingAccess().getUnorderedGroup_2());
             	    					
 
             	    }
@@ -1229,31 +1229,31 @@ public class InternalThingDescriptionJsonParser extends AbstractInternalAntlrPar
             	    // InternalThingDescriptionJson.g:452:4: ({...}? => ( ({...}? => (otherlv_35= '\"created\"' otherlv_36= ':' ( (lv_created_37_0= ruleAnyString ) ) (otherlv_38= ',' )? ) ) ) )
             	    // InternalThingDescriptionJson.g:453:5: {...}? => ( ({...}? => (otherlv_35= '\"created\"' otherlv_36= ':' ( (lv_created_37_0= ruleAnyString ) ) (otherlv_38= ',' )? ) ) )
             	    {
-            	    if ( ! getUnorderedGroupHelper().canSelect(grammarAccess.getJsonThingDescriptionAccess().getUnorderedGroup_2(), 5) ) {
-            	        throw new FailedPredicateException(input, "ruleJsonThingDescription", "getUnorderedGroupHelper().canSelect(grammarAccess.getJsonThingDescriptionAccess().getUnorderedGroup_2(), 5)");
+            	    if ( ! getUnorderedGroupHelper().canSelect(grammarAccess.getJsonThingAccess().getUnorderedGroup_2(), 5) ) {
+            	        throw new FailedPredicateException(input, "ruleJsonThing", "getUnorderedGroupHelper().canSelect(grammarAccess.getJsonThingAccess().getUnorderedGroup_2(), 5)");
             	    }
-            	    // InternalThingDescriptionJson.g:453:117: ( ({...}? => (otherlv_35= '\"created\"' otherlv_36= ':' ( (lv_created_37_0= ruleAnyString ) ) (otherlv_38= ',' )? ) ) )
+            	    // InternalThingDescriptionJson.g:453:106: ( ({...}? => (otherlv_35= '\"created\"' otherlv_36= ':' ( (lv_created_37_0= ruleAnyString ) ) (otherlv_38= ',' )? ) ) )
             	    // InternalThingDescriptionJson.g:454:6: ({...}? => (otherlv_35= '\"created\"' otherlv_36= ':' ( (lv_created_37_0= ruleAnyString ) ) (otherlv_38= ',' )? ) )
             	    {
 
-            	    						getUnorderedGroupHelper().select(grammarAccess.getJsonThingDescriptionAccess().getUnorderedGroup_2(), 5);
+            	    						getUnorderedGroupHelper().select(grammarAccess.getJsonThingAccess().getUnorderedGroup_2(), 5);
             	    					
             	    // InternalThingDescriptionJson.g:457:9: ({...}? => (otherlv_35= '\"created\"' otherlv_36= ':' ( (lv_created_37_0= ruleAnyString ) ) (otherlv_38= ',' )? ) )
             	    // InternalThingDescriptionJson.g:457:10: {...}? => (otherlv_35= '\"created\"' otherlv_36= ':' ( (lv_created_37_0= ruleAnyString ) ) (otherlv_38= ',' )? )
             	    {
             	    if ( !((true)) ) {
-            	        throw new FailedPredicateException(input, "ruleJsonThingDescription", "true");
+            	        throw new FailedPredicateException(input, "ruleJsonThing", "true");
             	    }
             	    // InternalThingDescriptionJson.g:457:19: (otherlv_35= '\"created\"' otherlv_36= ':' ( (lv_created_37_0= ruleAnyString ) ) (otherlv_38= ',' )? )
             	    // InternalThingDescriptionJson.g:457:20: otherlv_35= '\"created\"' otherlv_36= ':' ( (lv_created_37_0= ruleAnyString ) ) (otherlv_38= ',' )?
             	    {
             	    otherlv_35=(Token)match(input,17,FOLLOW_4); 
 
-            	    									newLeafNode(otherlv_35, grammarAccess.getJsonThingDescriptionAccess().getCreatedKeyword_2_5_0());
+            	    									newLeafNode(otherlv_35, grammarAccess.getJsonThingAccess().getCreatedKeyword_2_5_0());
             	    								
             	    otherlv_36=(Token)match(input,9,FOLLOW_10); 
 
-            	    									newLeafNode(otherlv_36, grammarAccess.getJsonThingDescriptionAccess().getColonKeyword_2_5_1());
+            	    									newLeafNode(otherlv_36, grammarAccess.getJsonThingAccess().getColonKeyword_2_5_1());
             	    								
             	    // InternalThingDescriptionJson.g:465:9: ( (lv_created_37_0= ruleAnyString ) )
             	    // InternalThingDescriptionJson.g:466:10: (lv_created_37_0= ruleAnyString )
@@ -1262,7 +1262,7 @@ public class InternalThingDescriptionJsonParser extends AbstractInternalAntlrPar
             	    // InternalThingDescriptionJson.g:467:11: lv_created_37_0= ruleAnyString
             	    {
 
-            	    											newCompositeNode(grammarAccess.getJsonThingDescriptionAccess().getCreatedAnyStringParserRuleCall_2_5_2_0());
+            	    											newCompositeNode(grammarAccess.getJsonThingAccess().getCreatedAnyStringParserRuleCall_2_5_2_0());
             	    										
             	    pushFollow(FOLLOW_6);
             	    lv_created_37_0=ruleAnyString();
@@ -1271,7 +1271,7 @@ public class InternalThingDescriptionJsonParser extends AbstractInternalAntlrPar
 
 
             	    											if (current==null) {
-            	    												current = createModelElementForParent(grammarAccess.getJsonThingDescriptionRule());
+            	    												current = createModelElementForParent(grammarAccess.getJsonThingRule());
             	    											}
             	    											set(
             	    												current,
@@ -1299,7 +1299,7 @@ public class InternalThingDescriptionJsonParser extends AbstractInternalAntlrPar
             	            {
             	            otherlv_38=(Token)match(input,11,FOLLOW_9); 
 
-            	            										newLeafNode(otherlv_38, grammarAccess.getJsonThingDescriptionAccess().getCommaKeyword_2_5_3());
+            	            										newLeafNode(otherlv_38, grammarAccess.getJsonThingAccess().getCommaKeyword_2_5_3());
             	            									
 
             	            }
@@ -1314,7 +1314,7 @@ public class InternalThingDescriptionJsonParser extends AbstractInternalAntlrPar
             	    }
 
             	     
-            	    						getUnorderedGroupHelper().returnFromSelection(grammarAccess.getJsonThingDescriptionAccess().getUnorderedGroup_2());
+            	    						getUnorderedGroupHelper().returnFromSelection(grammarAccess.getJsonThingAccess().getUnorderedGroup_2());
             	    					
 
             	    }
@@ -1331,31 +1331,31 @@ public class InternalThingDescriptionJsonParser extends AbstractInternalAntlrPar
             	    // InternalThingDescriptionJson.g:496:4: ({...}? => ( ({...}? => (otherlv_39= '\"modified\"' otherlv_40= ':' ( (lv_modified_41_0= ruleAnyString ) ) (otherlv_42= ',' )? ) ) ) )
             	    // InternalThingDescriptionJson.g:497:5: {...}? => ( ({...}? => (otherlv_39= '\"modified\"' otherlv_40= ':' ( (lv_modified_41_0= ruleAnyString ) ) (otherlv_42= ',' )? ) ) )
             	    {
-            	    if ( ! getUnorderedGroupHelper().canSelect(grammarAccess.getJsonThingDescriptionAccess().getUnorderedGroup_2(), 6) ) {
-            	        throw new FailedPredicateException(input, "ruleJsonThingDescription", "getUnorderedGroupHelper().canSelect(grammarAccess.getJsonThingDescriptionAccess().getUnorderedGroup_2(), 6)");
+            	    if ( ! getUnorderedGroupHelper().canSelect(grammarAccess.getJsonThingAccess().getUnorderedGroup_2(), 6) ) {
+            	        throw new FailedPredicateException(input, "ruleJsonThing", "getUnorderedGroupHelper().canSelect(grammarAccess.getJsonThingAccess().getUnorderedGroup_2(), 6)");
             	    }
-            	    // InternalThingDescriptionJson.g:497:117: ( ({...}? => (otherlv_39= '\"modified\"' otherlv_40= ':' ( (lv_modified_41_0= ruleAnyString ) ) (otherlv_42= ',' )? ) ) )
+            	    // InternalThingDescriptionJson.g:497:106: ( ({...}? => (otherlv_39= '\"modified\"' otherlv_40= ':' ( (lv_modified_41_0= ruleAnyString ) ) (otherlv_42= ',' )? ) ) )
             	    // InternalThingDescriptionJson.g:498:6: ({...}? => (otherlv_39= '\"modified\"' otherlv_40= ':' ( (lv_modified_41_0= ruleAnyString ) ) (otherlv_42= ',' )? ) )
             	    {
 
-            	    						getUnorderedGroupHelper().select(grammarAccess.getJsonThingDescriptionAccess().getUnorderedGroup_2(), 6);
+            	    						getUnorderedGroupHelper().select(grammarAccess.getJsonThingAccess().getUnorderedGroup_2(), 6);
             	    					
             	    // InternalThingDescriptionJson.g:501:9: ({...}? => (otherlv_39= '\"modified\"' otherlv_40= ':' ( (lv_modified_41_0= ruleAnyString ) ) (otherlv_42= ',' )? ) )
             	    // InternalThingDescriptionJson.g:501:10: {...}? => (otherlv_39= '\"modified\"' otherlv_40= ':' ( (lv_modified_41_0= ruleAnyString ) ) (otherlv_42= ',' )? )
             	    {
             	    if ( !((true)) ) {
-            	        throw new FailedPredicateException(input, "ruleJsonThingDescription", "true");
+            	        throw new FailedPredicateException(input, "ruleJsonThing", "true");
             	    }
             	    // InternalThingDescriptionJson.g:501:19: (otherlv_39= '\"modified\"' otherlv_40= ':' ( (lv_modified_41_0= ruleAnyString ) ) (otherlv_42= ',' )? )
             	    // InternalThingDescriptionJson.g:501:20: otherlv_39= '\"modified\"' otherlv_40= ':' ( (lv_modified_41_0= ruleAnyString ) ) (otherlv_42= ',' )?
             	    {
             	    otherlv_39=(Token)match(input,18,FOLLOW_4); 
 
-            	    									newLeafNode(otherlv_39, grammarAccess.getJsonThingDescriptionAccess().getModifiedKeyword_2_6_0());
+            	    									newLeafNode(otherlv_39, grammarAccess.getJsonThingAccess().getModifiedKeyword_2_6_0());
             	    								
             	    otherlv_40=(Token)match(input,9,FOLLOW_10); 
 
-            	    									newLeafNode(otherlv_40, grammarAccess.getJsonThingDescriptionAccess().getColonKeyword_2_6_1());
+            	    									newLeafNode(otherlv_40, grammarAccess.getJsonThingAccess().getColonKeyword_2_6_1());
             	    								
             	    // InternalThingDescriptionJson.g:509:9: ( (lv_modified_41_0= ruleAnyString ) )
             	    // InternalThingDescriptionJson.g:510:10: (lv_modified_41_0= ruleAnyString )
@@ -1364,7 +1364,7 @@ public class InternalThingDescriptionJsonParser extends AbstractInternalAntlrPar
             	    // InternalThingDescriptionJson.g:511:11: lv_modified_41_0= ruleAnyString
             	    {
 
-            	    											newCompositeNode(grammarAccess.getJsonThingDescriptionAccess().getModifiedAnyStringParserRuleCall_2_6_2_0());
+            	    											newCompositeNode(grammarAccess.getJsonThingAccess().getModifiedAnyStringParserRuleCall_2_6_2_0());
             	    										
             	    pushFollow(FOLLOW_6);
             	    lv_modified_41_0=ruleAnyString();
@@ -1373,7 +1373,7 @@ public class InternalThingDescriptionJsonParser extends AbstractInternalAntlrPar
 
 
             	    											if (current==null) {
-            	    												current = createModelElementForParent(grammarAccess.getJsonThingDescriptionRule());
+            	    												current = createModelElementForParent(grammarAccess.getJsonThingRule());
             	    											}
             	    											set(
             	    												current,
@@ -1401,7 +1401,7 @@ public class InternalThingDescriptionJsonParser extends AbstractInternalAntlrPar
             	            {
             	            otherlv_42=(Token)match(input,11,FOLLOW_9); 
 
-            	            										newLeafNode(otherlv_42, grammarAccess.getJsonThingDescriptionAccess().getCommaKeyword_2_6_3());
+            	            										newLeafNode(otherlv_42, grammarAccess.getJsonThingAccess().getCommaKeyword_2_6_3());
             	            									
 
             	            }
@@ -1416,7 +1416,7 @@ public class InternalThingDescriptionJsonParser extends AbstractInternalAntlrPar
             	    }
 
             	     
-            	    						getUnorderedGroupHelper().returnFromSelection(grammarAccess.getJsonThingDescriptionAccess().getUnorderedGroup_2());
+            	    						getUnorderedGroupHelper().returnFromSelection(grammarAccess.getJsonThingAccess().getUnorderedGroup_2());
             	    					
 
             	    }
@@ -1433,31 +1433,31 @@ public class InternalThingDescriptionJsonParser extends AbstractInternalAntlrPar
             	    // InternalThingDescriptionJson.g:540:4: ({...}? => ( ({...}? => (otherlv_43= '\"support\"' otherlv_44= ':' ( (lv_support_45_0= ruleAnyString ) ) (otherlv_46= ',' )? ) ) ) )
             	    // InternalThingDescriptionJson.g:541:5: {...}? => ( ({...}? => (otherlv_43= '\"support\"' otherlv_44= ':' ( (lv_support_45_0= ruleAnyString ) ) (otherlv_46= ',' )? ) ) )
             	    {
-            	    if ( ! getUnorderedGroupHelper().canSelect(grammarAccess.getJsonThingDescriptionAccess().getUnorderedGroup_2(), 7) ) {
-            	        throw new FailedPredicateException(input, "ruleJsonThingDescription", "getUnorderedGroupHelper().canSelect(grammarAccess.getJsonThingDescriptionAccess().getUnorderedGroup_2(), 7)");
+            	    if ( ! getUnorderedGroupHelper().canSelect(grammarAccess.getJsonThingAccess().getUnorderedGroup_2(), 7) ) {
+            	        throw new FailedPredicateException(input, "ruleJsonThing", "getUnorderedGroupHelper().canSelect(grammarAccess.getJsonThingAccess().getUnorderedGroup_2(), 7)");
             	    }
-            	    // InternalThingDescriptionJson.g:541:117: ( ({...}? => (otherlv_43= '\"support\"' otherlv_44= ':' ( (lv_support_45_0= ruleAnyString ) ) (otherlv_46= ',' )? ) ) )
+            	    // InternalThingDescriptionJson.g:541:106: ( ({...}? => (otherlv_43= '\"support\"' otherlv_44= ':' ( (lv_support_45_0= ruleAnyString ) ) (otherlv_46= ',' )? ) ) )
             	    // InternalThingDescriptionJson.g:542:6: ({...}? => (otherlv_43= '\"support\"' otherlv_44= ':' ( (lv_support_45_0= ruleAnyString ) ) (otherlv_46= ',' )? ) )
             	    {
 
-            	    						getUnorderedGroupHelper().select(grammarAccess.getJsonThingDescriptionAccess().getUnorderedGroup_2(), 7);
+            	    						getUnorderedGroupHelper().select(grammarAccess.getJsonThingAccess().getUnorderedGroup_2(), 7);
             	    					
             	    // InternalThingDescriptionJson.g:545:9: ({...}? => (otherlv_43= '\"support\"' otherlv_44= ':' ( (lv_support_45_0= ruleAnyString ) ) (otherlv_46= ',' )? ) )
             	    // InternalThingDescriptionJson.g:545:10: {...}? => (otherlv_43= '\"support\"' otherlv_44= ':' ( (lv_support_45_0= ruleAnyString ) ) (otherlv_46= ',' )? )
             	    {
             	    if ( !((true)) ) {
-            	        throw new FailedPredicateException(input, "ruleJsonThingDescription", "true");
+            	        throw new FailedPredicateException(input, "ruleJsonThing", "true");
             	    }
             	    // InternalThingDescriptionJson.g:545:19: (otherlv_43= '\"support\"' otherlv_44= ':' ( (lv_support_45_0= ruleAnyString ) ) (otherlv_46= ',' )? )
             	    // InternalThingDescriptionJson.g:545:20: otherlv_43= '\"support\"' otherlv_44= ':' ( (lv_support_45_0= ruleAnyString ) ) (otherlv_46= ',' )?
             	    {
             	    otherlv_43=(Token)match(input,19,FOLLOW_4); 
 
-            	    									newLeafNode(otherlv_43, grammarAccess.getJsonThingDescriptionAccess().getSupportKeyword_2_7_0());
+            	    									newLeafNode(otherlv_43, grammarAccess.getJsonThingAccess().getSupportKeyword_2_7_0());
             	    								
             	    otherlv_44=(Token)match(input,9,FOLLOW_10); 
 
-            	    									newLeafNode(otherlv_44, grammarAccess.getJsonThingDescriptionAccess().getColonKeyword_2_7_1());
+            	    									newLeafNode(otherlv_44, grammarAccess.getJsonThingAccess().getColonKeyword_2_7_1());
             	    								
             	    // InternalThingDescriptionJson.g:553:9: ( (lv_support_45_0= ruleAnyString ) )
             	    // InternalThingDescriptionJson.g:554:10: (lv_support_45_0= ruleAnyString )
@@ -1466,7 +1466,7 @@ public class InternalThingDescriptionJsonParser extends AbstractInternalAntlrPar
             	    // InternalThingDescriptionJson.g:555:11: lv_support_45_0= ruleAnyString
             	    {
 
-            	    											newCompositeNode(grammarAccess.getJsonThingDescriptionAccess().getSupportAnyStringParserRuleCall_2_7_2_0());
+            	    											newCompositeNode(grammarAccess.getJsonThingAccess().getSupportAnyStringParserRuleCall_2_7_2_0());
             	    										
             	    pushFollow(FOLLOW_6);
             	    lv_support_45_0=ruleAnyString();
@@ -1475,7 +1475,7 @@ public class InternalThingDescriptionJsonParser extends AbstractInternalAntlrPar
 
 
             	    											if (current==null) {
-            	    												current = createModelElementForParent(grammarAccess.getJsonThingDescriptionRule());
+            	    												current = createModelElementForParent(grammarAccess.getJsonThingRule());
             	    											}
             	    											set(
             	    												current,
@@ -1503,7 +1503,7 @@ public class InternalThingDescriptionJsonParser extends AbstractInternalAntlrPar
             	            {
             	            otherlv_46=(Token)match(input,11,FOLLOW_9); 
 
-            	            										newLeafNode(otherlv_46, grammarAccess.getJsonThingDescriptionAccess().getCommaKeyword_2_7_3());
+            	            										newLeafNode(otherlv_46, grammarAccess.getJsonThingAccess().getCommaKeyword_2_7_3());
             	            									
 
             	            }
@@ -1518,7 +1518,7 @@ public class InternalThingDescriptionJsonParser extends AbstractInternalAntlrPar
             	    }
 
             	     
-            	    						getUnorderedGroupHelper().returnFromSelection(grammarAccess.getJsonThingDescriptionAccess().getUnorderedGroup_2());
+            	    						getUnorderedGroupHelper().returnFromSelection(grammarAccess.getJsonThingAccess().getUnorderedGroup_2());
             	    					
 
             	    }
@@ -1535,31 +1535,31 @@ public class InternalThingDescriptionJsonParser extends AbstractInternalAntlrPar
             	    // InternalThingDescriptionJson.g:584:4: ({...}? => ( ({...}? => (otherlv_47= '\"base\"' otherlv_48= ':' ( (lv_base_49_0= ruleAnyString ) ) (otherlv_50= ',' )? ) ) ) )
             	    // InternalThingDescriptionJson.g:585:5: {...}? => ( ({...}? => (otherlv_47= '\"base\"' otherlv_48= ':' ( (lv_base_49_0= ruleAnyString ) ) (otherlv_50= ',' )? ) ) )
             	    {
-            	    if ( ! getUnorderedGroupHelper().canSelect(grammarAccess.getJsonThingDescriptionAccess().getUnorderedGroup_2(), 8) ) {
-            	        throw new FailedPredicateException(input, "ruleJsonThingDescription", "getUnorderedGroupHelper().canSelect(grammarAccess.getJsonThingDescriptionAccess().getUnorderedGroup_2(), 8)");
+            	    if ( ! getUnorderedGroupHelper().canSelect(grammarAccess.getJsonThingAccess().getUnorderedGroup_2(), 8) ) {
+            	        throw new FailedPredicateException(input, "ruleJsonThing", "getUnorderedGroupHelper().canSelect(grammarAccess.getJsonThingAccess().getUnorderedGroup_2(), 8)");
             	    }
-            	    // InternalThingDescriptionJson.g:585:117: ( ({...}? => (otherlv_47= '\"base\"' otherlv_48= ':' ( (lv_base_49_0= ruleAnyString ) ) (otherlv_50= ',' )? ) ) )
+            	    // InternalThingDescriptionJson.g:585:106: ( ({...}? => (otherlv_47= '\"base\"' otherlv_48= ':' ( (lv_base_49_0= ruleAnyString ) ) (otherlv_50= ',' )? ) ) )
             	    // InternalThingDescriptionJson.g:586:6: ({...}? => (otherlv_47= '\"base\"' otherlv_48= ':' ( (lv_base_49_0= ruleAnyString ) ) (otherlv_50= ',' )? ) )
             	    {
 
-            	    						getUnorderedGroupHelper().select(grammarAccess.getJsonThingDescriptionAccess().getUnorderedGroup_2(), 8);
+            	    						getUnorderedGroupHelper().select(grammarAccess.getJsonThingAccess().getUnorderedGroup_2(), 8);
             	    					
             	    // InternalThingDescriptionJson.g:589:9: ({...}? => (otherlv_47= '\"base\"' otherlv_48= ':' ( (lv_base_49_0= ruleAnyString ) ) (otherlv_50= ',' )? ) )
             	    // InternalThingDescriptionJson.g:589:10: {...}? => (otherlv_47= '\"base\"' otherlv_48= ':' ( (lv_base_49_0= ruleAnyString ) ) (otherlv_50= ',' )? )
             	    {
             	    if ( !((true)) ) {
-            	        throw new FailedPredicateException(input, "ruleJsonThingDescription", "true");
+            	        throw new FailedPredicateException(input, "ruleJsonThing", "true");
             	    }
             	    // InternalThingDescriptionJson.g:589:19: (otherlv_47= '\"base\"' otherlv_48= ':' ( (lv_base_49_0= ruleAnyString ) ) (otherlv_50= ',' )? )
             	    // InternalThingDescriptionJson.g:589:20: otherlv_47= '\"base\"' otherlv_48= ':' ( (lv_base_49_0= ruleAnyString ) ) (otherlv_50= ',' )?
             	    {
             	    otherlv_47=(Token)match(input,20,FOLLOW_4); 
 
-            	    									newLeafNode(otherlv_47, grammarAccess.getJsonThingDescriptionAccess().getBaseKeyword_2_8_0());
+            	    									newLeafNode(otherlv_47, grammarAccess.getJsonThingAccess().getBaseKeyword_2_8_0());
             	    								
             	    otherlv_48=(Token)match(input,9,FOLLOW_10); 
 
-            	    									newLeafNode(otherlv_48, grammarAccess.getJsonThingDescriptionAccess().getColonKeyword_2_8_1());
+            	    									newLeafNode(otherlv_48, grammarAccess.getJsonThingAccess().getColonKeyword_2_8_1());
             	    								
             	    // InternalThingDescriptionJson.g:597:9: ( (lv_base_49_0= ruleAnyString ) )
             	    // InternalThingDescriptionJson.g:598:10: (lv_base_49_0= ruleAnyString )
@@ -1568,7 +1568,7 @@ public class InternalThingDescriptionJsonParser extends AbstractInternalAntlrPar
             	    // InternalThingDescriptionJson.g:599:11: lv_base_49_0= ruleAnyString
             	    {
 
-            	    											newCompositeNode(grammarAccess.getJsonThingDescriptionAccess().getBaseAnyStringParserRuleCall_2_8_2_0());
+            	    											newCompositeNode(grammarAccess.getJsonThingAccess().getBaseAnyStringParserRuleCall_2_8_2_0());
             	    										
             	    pushFollow(FOLLOW_6);
             	    lv_base_49_0=ruleAnyString();
@@ -1577,7 +1577,7 @@ public class InternalThingDescriptionJsonParser extends AbstractInternalAntlrPar
 
 
             	    											if (current==null) {
-            	    												current = createModelElementForParent(grammarAccess.getJsonThingDescriptionRule());
+            	    												current = createModelElementForParent(grammarAccess.getJsonThingRule());
             	    											}
             	    											set(
             	    												current,
@@ -1605,7 +1605,7 @@ public class InternalThingDescriptionJsonParser extends AbstractInternalAntlrPar
             	            {
             	            otherlv_50=(Token)match(input,11,FOLLOW_9); 
 
-            	            										newLeafNode(otherlv_50, grammarAccess.getJsonThingDescriptionAccess().getCommaKeyword_2_8_3());
+            	            										newLeafNode(otherlv_50, grammarAccess.getJsonThingAccess().getCommaKeyword_2_8_3());
             	            									
 
             	            }
@@ -1620,7 +1620,7 @@ public class InternalThingDescriptionJsonParser extends AbstractInternalAntlrPar
             	    }
 
             	     
-            	    						getUnorderedGroupHelper().returnFromSelection(grammarAccess.getJsonThingDescriptionAccess().getUnorderedGroup_2());
+            	    						getUnorderedGroupHelper().returnFromSelection(grammarAccess.getJsonThingAccess().getUnorderedGroup_2());
             	    					
 
             	    }
@@ -1637,31 +1637,31 @@ public class InternalThingDescriptionJsonParser extends AbstractInternalAntlrPar
             	    // InternalThingDescriptionJson.g:628:4: ({...}? => ( ({...}? => (otherlv_51= '\"security\"' otherlv_52= ':' ( ( (lv_security_53_0= ruleAnyString ) ) | (otherlv_54= '[' ( (lv_security_55_0= ruleAnyString ) ) (otherlv_56= ',' ( (lv_security_57_0= ruleAnyString ) ) )* otherlv_58= ']' ) ) (otherlv_59= ',' )? ) ) ) )
             	    // InternalThingDescriptionJson.g:629:5: {...}? => ( ({...}? => (otherlv_51= '\"security\"' otherlv_52= ':' ( ( (lv_security_53_0= ruleAnyString ) ) | (otherlv_54= '[' ( (lv_security_55_0= ruleAnyString ) ) (otherlv_56= ',' ( (lv_security_57_0= ruleAnyString ) ) )* otherlv_58= ']' ) ) (otherlv_59= ',' )? ) ) )
             	    {
-            	    if ( ! getUnorderedGroupHelper().canSelect(grammarAccess.getJsonThingDescriptionAccess().getUnorderedGroup_2(), 9) ) {
-            	        throw new FailedPredicateException(input, "ruleJsonThingDescription", "getUnorderedGroupHelper().canSelect(grammarAccess.getJsonThingDescriptionAccess().getUnorderedGroup_2(), 9)");
+            	    if ( ! getUnorderedGroupHelper().canSelect(grammarAccess.getJsonThingAccess().getUnorderedGroup_2(), 9) ) {
+            	        throw new FailedPredicateException(input, "ruleJsonThing", "getUnorderedGroupHelper().canSelect(grammarAccess.getJsonThingAccess().getUnorderedGroup_2(), 9)");
             	    }
-            	    // InternalThingDescriptionJson.g:629:117: ( ({...}? => (otherlv_51= '\"security\"' otherlv_52= ':' ( ( (lv_security_53_0= ruleAnyString ) ) | (otherlv_54= '[' ( (lv_security_55_0= ruleAnyString ) ) (otherlv_56= ',' ( (lv_security_57_0= ruleAnyString ) ) )* otherlv_58= ']' ) ) (otherlv_59= ',' )? ) ) )
+            	    // InternalThingDescriptionJson.g:629:106: ( ({...}? => (otherlv_51= '\"security\"' otherlv_52= ':' ( ( (lv_security_53_0= ruleAnyString ) ) | (otherlv_54= '[' ( (lv_security_55_0= ruleAnyString ) ) (otherlv_56= ',' ( (lv_security_57_0= ruleAnyString ) ) )* otherlv_58= ']' ) ) (otherlv_59= ',' )? ) ) )
             	    // InternalThingDescriptionJson.g:630:6: ({...}? => (otherlv_51= '\"security\"' otherlv_52= ':' ( ( (lv_security_53_0= ruleAnyString ) ) | (otherlv_54= '[' ( (lv_security_55_0= ruleAnyString ) ) (otherlv_56= ',' ( (lv_security_57_0= ruleAnyString ) ) )* otherlv_58= ']' ) ) (otherlv_59= ',' )? ) )
             	    {
 
-            	    						getUnorderedGroupHelper().select(grammarAccess.getJsonThingDescriptionAccess().getUnorderedGroup_2(), 9);
+            	    						getUnorderedGroupHelper().select(grammarAccess.getJsonThingAccess().getUnorderedGroup_2(), 9);
             	    					
             	    // InternalThingDescriptionJson.g:633:9: ({...}? => (otherlv_51= '\"security\"' otherlv_52= ':' ( ( (lv_security_53_0= ruleAnyString ) ) | (otherlv_54= '[' ( (lv_security_55_0= ruleAnyString ) ) (otherlv_56= ',' ( (lv_security_57_0= ruleAnyString ) ) )* otherlv_58= ']' ) ) (otherlv_59= ',' )? ) )
             	    // InternalThingDescriptionJson.g:633:10: {...}? => (otherlv_51= '\"security\"' otherlv_52= ':' ( ( (lv_security_53_0= ruleAnyString ) ) | (otherlv_54= '[' ( (lv_security_55_0= ruleAnyString ) ) (otherlv_56= ',' ( (lv_security_57_0= ruleAnyString ) ) )* otherlv_58= ']' ) ) (otherlv_59= ',' )? )
             	    {
             	    if ( !((true)) ) {
-            	        throw new FailedPredicateException(input, "ruleJsonThingDescription", "true");
+            	        throw new FailedPredicateException(input, "ruleJsonThing", "true");
             	    }
             	    // InternalThingDescriptionJson.g:633:19: (otherlv_51= '\"security\"' otherlv_52= ':' ( ( (lv_security_53_0= ruleAnyString ) ) | (otherlv_54= '[' ( (lv_security_55_0= ruleAnyString ) ) (otherlv_56= ',' ( (lv_security_57_0= ruleAnyString ) ) )* otherlv_58= ']' ) ) (otherlv_59= ',' )? )
             	    // InternalThingDescriptionJson.g:633:20: otherlv_51= '\"security\"' otherlv_52= ':' ( ( (lv_security_53_0= ruleAnyString ) ) | (otherlv_54= '[' ( (lv_security_55_0= ruleAnyString ) ) (otherlv_56= ',' ( (lv_security_57_0= ruleAnyString ) ) )* otherlv_58= ']' ) ) (otherlv_59= ',' )?
             	    {
             	    otherlv_51=(Token)match(input,21,FOLLOW_4); 
 
-            	    									newLeafNode(otherlv_51, grammarAccess.getJsonThingDescriptionAccess().getSecurityKeyword_2_9_0());
+            	    									newLeafNode(otherlv_51, grammarAccess.getJsonThingAccess().getSecurityKeyword_2_9_0());
             	    								
             	    otherlv_52=(Token)match(input,9,FOLLOW_5); 
 
-            	    									newLeafNode(otherlv_52, grammarAccess.getJsonThingDescriptionAccess().getColonKeyword_2_9_1());
+            	    									newLeafNode(otherlv_52, grammarAccess.getJsonThingAccess().getColonKeyword_2_9_1());
             	    								
             	    // InternalThingDescriptionJson.g:641:9: ( ( (lv_security_53_0= ruleAnyString ) ) | (otherlv_54= '[' ( (lv_security_55_0= ruleAnyString ) ) (otherlv_56= ',' ( (lv_security_57_0= ruleAnyString ) ) )* otherlv_58= ']' ) )
             	    int alt17=2;
@@ -1690,7 +1690,7 @@ public class InternalThingDescriptionJsonParser extends AbstractInternalAntlrPar
             	            // InternalThingDescriptionJson.g:644:12: lv_security_53_0= ruleAnyString
             	            {
 
-            	            												newCompositeNode(grammarAccess.getJsonThingDescriptionAccess().getSecurityAnyStringParserRuleCall_2_9_2_0_0());
+            	            												newCompositeNode(grammarAccess.getJsonThingAccess().getSecurityAnyStringParserRuleCall_2_9_2_0_0());
             	            											
             	            pushFollow(FOLLOW_6);
             	            lv_security_53_0=ruleAnyString();
@@ -1699,7 +1699,7 @@ public class InternalThingDescriptionJsonParser extends AbstractInternalAntlrPar
 
 
             	            												if (current==null) {
-            	            													current = createModelElementForParent(grammarAccess.getJsonThingDescriptionRule());
+            	            													current = createModelElementForParent(grammarAccess.getJsonThingRule());
             	            												}
             	            												add(
             	            													current,
@@ -1725,7 +1725,7 @@ public class InternalThingDescriptionJsonParser extends AbstractInternalAntlrPar
             	            {
             	            otherlv_54=(Token)match(input,10,FOLLOW_10); 
 
-            	            											newLeafNode(otherlv_54, grammarAccess.getJsonThingDescriptionAccess().getLeftSquareBracketKeyword_2_9_2_1_0());
+            	            											newLeafNode(otherlv_54, grammarAccess.getJsonThingAccess().getLeftSquareBracketKeyword_2_9_2_1_0());
             	            										
             	            // InternalThingDescriptionJson.g:667:11: ( (lv_security_55_0= ruleAnyString ) )
             	            // InternalThingDescriptionJson.g:668:12: (lv_security_55_0= ruleAnyString )
@@ -1734,7 +1734,7 @@ public class InternalThingDescriptionJsonParser extends AbstractInternalAntlrPar
             	            // InternalThingDescriptionJson.g:669:13: lv_security_55_0= ruleAnyString
             	            {
 
-            	            													newCompositeNode(grammarAccess.getJsonThingDescriptionAccess().getSecurityAnyStringParserRuleCall_2_9_2_1_1_0());
+            	            													newCompositeNode(grammarAccess.getJsonThingAccess().getSecurityAnyStringParserRuleCall_2_9_2_1_1_0());
             	            												
             	            pushFollow(FOLLOW_8);
             	            lv_security_55_0=ruleAnyString();
@@ -1743,7 +1743,7 @@ public class InternalThingDescriptionJsonParser extends AbstractInternalAntlrPar
 
 
             	            													if (current==null) {
-            	            														current = createModelElementForParent(grammarAccess.getJsonThingDescriptionRule());
+            	            														current = createModelElementForParent(grammarAccess.getJsonThingRule());
             	            													}
             	            													add(
             	            														current,
@@ -1775,7 +1775,7 @@ public class InternalThingDescriptionJsonParser extends AbstractInternalAntlrPar
             	            	    {
             	            	    otherlv_56=(Token)match(input,11,FOLLOW_10); 
 
-            	            	    												newLeafNode(otherlv_56, grammarAccess.getJsonThingDescriptionAccess().getCommaKeyword_2_9_2_1_2_0());
+            	            	    												newLeafNode(otherlv_56, grammarAccess.getJsonThingAccess().getCommaKeyword_2_9_2_1_2_0());
             	            	    											
             	            	    // InternalThingDescriptionJson.g:691:12: ( (lv_security_57_0= ruleAnyString ) )
             	            	    // InternalThingDescriptionJson.g:692:13: (lv_security_57_0= ruleAnyString )
@@ -1784,7 +1784,7 @@ public class InternalThingDescriptionJsonParser extends AbstractInternalAntlrPar
             	            	    // InternalThingDescriptionJson.g:693:14: lv_security_57_0= ruleAnyString
             	            	    {
 
-            	            	    														newCompositeNode(grammarAccess.getJsonThingDescriptionAccess().getSecurityAnyStringParserRuleCall_2_9_2_1_2_1_0());
+            	            	    														newCompositeNode(grammarAccess.getJsonThingAccess().getSecurityAnyStringParserRuleCall_2_9_2_1_2_1_0());
             	            	    													
             	            	    pushFollow(FOLLOW_8);
             	            	    lv_security_57_0=ruleAnyString();
@@ -1793,7 +1793,7 @@ public class InternalThingDescriptionJsonParser extends AbstractInternalAntlrPar
 
 
             	            	    														if (current==null) {
-            	            	    															current = createModelElementForParent(grammarAccess.getJsonThingDescriptionRule());
+            	            	    															current = createModelElementForParent(grammarAccess.getJsonThingRule());
             	            	    														}
             	            	    														add(
             	            	    															current,
@@ -1819,7 +1819,7 @@ public class InternalThingDescriptionJsonParser extends AbstractInternalAntlrPar
 
             	            otherlv_58=(Token)match(input,12,FOLLOW_6); 
 
-            	            											newLeafNode(otherlv_58, grammarAccess.getJsonThingDescriptionAccess().getRightSquareBracketKeyword_2_9_2_1_3());
+            	            											newLeafNode(otherlv_58, grammarAccess.getJsonThingAccess().getRightSquareBracketKeyword_2_9_2_1_3());
             	            										
 
             	            }
@@ -1843,7 +1843,7 @@ public class InternalThingDescriptionJsonParser extends AbstractInternalAntlrPar
             	            {
             	            otherlv_59=(Token)match(input,11,FOLLOW_9); 
 
-            	            										newLeafNode(otherlv_59, grammarAccess.getJsonThingDescriptionAccess().getCommaKeyword_2_9_3());
+            	            										newLeafNode(otherlv_59, grammarAccess.getJsonThingAccess().getCommaKeyword_2_9_3());
             	            									
 
             	            }
@@ -1858,7 +1858,7 @@ public class InternalThingDescriptionJsonParser extends AbstractInternalAntlrPar
             	    }
 
             	     
-            	    						getUnorderedGroupHelper().returnFromSelection(grammarAccess.getJsonThingDescriptionAccess().getUnorderedGroup_2());
+            	    						getUnorderedGroupHelper().returnFromSelection(grammarAccess.getJsonThingAccess().getUnorderedGroup_2());
             	    					
 
             	    }
@@ -1875,35 +1875,35 @@ public class InternalThingDescriptionJsonParser extends AbstractInternalAntlrPar
             	    // InternalThingDescriptionJson.g:729:4: ({...}? => ( ({...}? => (otherlv_60= '\"forms\"' otherlv_61= ':' otherlv_62= '{' ( (lv_forms_63_0= ruleJsonForm ) ) (otherlv_64= ',' ( (lv_forms_65_0= ruleJsonForm ) ) )* otherlv_66= '}' (otherlv_67= ',' )? ) ) ) )
             	    // InternalThingDescriptionJson.g:730:5: {...}? => ( ({...}? => (otherlv_60= '\"forms\"' otherlv_61= ':' otherlv_62= '{' ( (lv_forms_63_0= ruleJsonForm ) ) (otherlv_64= ',' ( (lv_forms_65_0= ruleJsonForm ) ) )* otherlv_66= '}' (otherlv_67= ',' )? ) ) )
             	    {
-            	    if ( ! getUnorderedGroupHelper().canSelect(grammarAccess.getJsonThingDescriptionAccess().getUnorderedGroup_2(), 10) ) {
-            	        throw new FailedPredicateException(input, "ruleJsonThingDescription", "getUnorderedGroupHelper().canSelect(grammarAccess.getJsonThingDescriptionAccess().getUnorderedGroup_2(), 10)");
+            	    if ( ! getUnorderedGroupHelper().canSelect(grammarAccess.getJsonThingAccess().getUnorderedGroup_2(), 10) ) {
+            	        throw new FailedPredicateException(input, "ruleJsonThing", "getUnorderedGroupHelper().canSelect(grammarAccess.getJsonThingAccess().getUnorderedGroup_2(), 10)");
             	    }
-            	    // InternalThingDescriptionJson.g:730:118: ( ({...}? => (otherlv_60= '\"forms\"' otherlv_61= ':' otherlv_62= '{' ( (lv_forms_63_0= ruleJsonForm ) ) (otherlv_64= ',' ( (lv_forms_65_0= ruleJsonForm ) ) )* otherlv_66= '}' (otherlv_67= ',' )? ) ) )
+            	    // InternalThingDescriptionJson.g:730:107: ( ({...}? => (otherlv_60= '\"forms\"' otherlv_61= ':' otherlv_62= '{' ( (lv_forms_63_0= ruleJsonForm ) ) (otherlv_64= ',' ( (lv_forms_65_0= ruleJsonForm ) ) )* otherlv_66= '}' (otherlv_67= ',' )? ) ) )
             	    // InternalThingDescriptionJson.g:731:6: ({...}? => (otherlv_60= '\"forms\"' otherlv_61= ':' otherlv_62= '{' ( (lv_forms_63_0= ruleJsonForm ) ) (otherlv_64= ',' ( (lv_forms_65_0= ruleJsonForm ) ) )* otherlv_66= '}' (otherlv_67= ',' )? ) )
             	    {
 
-            	    						getUnorderedGroupHelper().select(grammarAccess.getJsonThingDescriptionAccess().getUnorderedGroup_2(), 10);
+            	    						getUnorderedGroupHelper().select(grammarAccess.getJsonThingAccess().getUnorderedGroup_2(), 10);
             	    					
             	    // InternalThingDescriptionJson.g:734:9: ({...}? => (otherlv_60= '\"forms\"' otherlv_61= ':' otherlv_62= '{' ( (lv_forms_63_0= ruleJsonForm ) ) (otherlv_64= ',' ( (lv_forms_65_0= ruleJsonForm ) ) )* otherlv_66= '}' (otherlv_67= ',' )? ) )
             	    // InternalThingDescriptionJson.g:734:10: {...}? => (otherlv_60= '\"forms\"' otherlv_61= ':' otherlv_62= '{' ( (lv_forms_63_0= ruleJsonForm ) ) (otherlv_64= ',' ( (lv_forms_65_0= ruleJsonForm ) ) )* otherlv_66= '}' (otherlv_67= ',' )? )
             	    {
             	    if ( !((true)) ) {
-            	        throw new FailedPredicateException(input, "ruleJsonThingDescription", "true");
+            	        throw new FailedPredicateException(input, "ruleJsonThing", "true");
             	    }
             	    // InternalThingDescriptionJson.g:734:19: (otherlv_60= '\"forms\"' otherlv_61= ':' otherlv_62= '{' ( (lv_forms_63_0= ruleJsonForm ) ) (otherlv_64= ',' ( (lv_forms_65_0= ruleJsonForm ) ) )* otherlv_66= '}' (otherlv_67= ',' )? )
             	    // InternalThingDescriptionJson.g:734:20: otherlv_60= '\"forms\"' otherlv_61= ':' otherlv_62= '{' ( (lv_forms_63_0= ruleJsonForm ) ) (otherlv_64= ',' ( (lv_forms_65_0= ruleJsonForm ) ) )* otherlv_66= '}' (otherlv_67= ',' )?
             	    {
             	    otherlv_60=(Token)match(input,22,FOLLOW_4); 
 
-            	    									newLeafNode(otherlv_60, grammarAccess.getJsonThingDescriptionAccess().getFormsKeyword_2_10_0());
+            	    									newLeafNode(otherlv_60, grammarAccess.getJsonThingAccess().getFormsKeyword_2_10_0());
             	    								
             	    otherlv_61=(Token)match(input,9,FOLLOW_11); 
 
-            	    									newLeafNode(otherlv_61, grammarAccess.getJsonThingDescriptionAccess().getColonKeyword_2_10_1());
+            	    									newLeafNode(otherlv_61, grammarAccess.getJsonThingAccess().getColonKeyword_2_10_1());
             	    								
             	    otherlv_62=(Token)match(input,7,FOLLOW_11); 
 
-            	    									newLeafNode(otherlv_62, grammarAccess.getJsonThingDescriptionAccess().getLeftCurlyBracketKeyword_2_10_2());
+            	    									newLeafNode(otherlv_62, grammarAccess.getJsonThingAccess().getLeftCurlyBracketKeyword_2_10_2());
             	    								
             	    // InternalThingDescriptionJson.g:746:9: ( (lv_forms_63_0= ruleJsonForm ) )
             	    // InternalThingDescriptionJson.g:747:10: (lv_forms_63_0= ruleJsonForm )
@@ -1912,7 +1912,7 @@ public class InternalThingDescriptionJsonParser extends AbstractInternalAntlrPar
             	    // InternalThingDescriptionJson.g:748:11: lv_forms_63_0= ruleJsonForm
             	    {
 
-            	    											newCompositeNode(grammarAccess.getJsonThingDescriptionAccess().getFormsJsonFormParserRuleCall_2_10_3_0());
+            	    											newCompositeNode(grammarAccess.getJsonThingAccess().getFormsJsonFormParserRuleCall_2_10_3_0());
             	    										
             	    pushFollow(FOLLOW_12);
             	    lv_forms_63_0=ruleJsonForm();
@@ -1921,7 +1921,7 @@ public class InternalThingDescriptionJsonParser extends AbstractInternalAntlrPar
 
 
             	    											if (current==null) {
-            	    												current = createModelElementForParent(grammarAccess.getJsonThingDescriptionRule());
+            	    												current = createModelElementForParent(grammarAccess.getJsonThingRule());
             	    											}
             	    											add(
             	    												current,
@@ -1953,7 +1953,7 @@ public class InternalThingDescriptionJsonParser extends AbstractInternalAntlrPar
             	    	    {
             	    	    otherlv_64=(Token)match(input,11,FOLLOW_11); 
 
-            	    	    										newLeafNode(otherlv_64, grammarAccess.getJsonThingDescriptionAccess().getCommaKeyword_2_10_4_0());
+            	    	    										newLeafNode(otherlv_64, grammarAccess.getJsonThingAccess().getCommaKeyword_2_10_4_0());
             	    	    									
             	    	    // InternalThingDescriptionJson.g:770:10: ( (lv_forms_65_0= ruleJsonForm ) )
             	    	    // InternalThingDescriptionJson.g:771:11: (lv_forms_65_0= ruleJsonForm )
@@ -1962,7 +1962,7 @@ public class InternalThingDescriptionJsonParser extends AbstractInternalAntlrPar
             	    	    // InternalThingDescriptionJson.g:772:12: lv_forms_65_0= ruleJsonForm
             	    	    {
 
-            	    	    												newCompositeNode(grammarAccess.getJsonThingDescriptionAccess().getFormsJsonFormParserRuleCall_2_10_4_1_0());
+            	    	    												newCompositeNode(grammarAccess.getJsonThingAccess().getFormsJsonFormParserRuleCall_2_10_4_1_0());
             	    	    											
             	    	    pushFollow(FOLLOW_12);
             	    	    lv_forms_65_0=ruleJsonForm();
@@ -1971,7 +1971,7 @@ public class InternalThingDescriptionJsonParser extends AbstractInternalAntlrPar
 
 
             	    	    												if (current==null) {
-            	    	    													current = createModelElementForParent(grammarAccess.getJsonThingDescriptionRule());
+            	    	    													current = createModelElementForParent(grammarAccess.getJsonThingRule());
             	    	    												}
             	    	    												add(
             	    	    													current,
@@ -1997,7 +1997,7 @@ public class InternalThingDescriptionJsonParser extends AbstractInternalAntlrPar
 
             	    otherlv_66=(Token)match(input,23,FOLLOW_6); 
 
-            	    									newLeafNode(otherlv_66, grammarAccess.getJsonThingDescriptionAccess().getRightCurlyBracketKeyword_2_10_5());
+            	    									newLeafNode(otherlv_66, grammarAccess.getJsonThingAccess().getRightCurlyBracketKeyword_2_10_5());
             	    								
             	    // InternalThingDescriptionJson.g:794:9: (otherlv_67= ',' )?
             	    int alt20=2;
@@ -2012,7 +2012,7 @@ public class InternalThingDescriptionJsonParser extends AbstractInternalAntlrPar
             	            {
             	            otherlv_67=(Token)match(input,11,FOLLOW_9); 
 
-            	            										newLeafNode(otherlv_67, grammarAccess.getJsonThingDescriptionAccess().getCommaKeyword_2_10_6());
+            	            										newLeafNode(otherlv_67, grammarAccess.getJsonThingAccess().getCommaKeyword_2_10_6());
             	            									
 
             	            }
@@ -2027,7 +2027,7 @@ public class InternalThingDescriptionJsonParser extends AbstractInternalAntlrPar
             	    }
 
             	     
-            	    						getUnorderedGroupHelper().returnFromSelection(grammarAccess.getJsonThingDescriptionAccess().getUnorderedGroup_2());
+            	    						getUnorderedGroupHelper().returnFromSelection(grammarAccess.getJsonThingAccess().getUnorderedGroup_2());
             	    					
 
             	    }
@@ -2044,35 +2044,35 @@ public class InternalThingDescriptionJsonParser extends AbstractInternalAntlrPar
             	    // InternalThingDescriptionJson.g:806:4: ({...}? => ( ({...}? => (otherlv_68= '\"links\"' otherlv_69= ':' otherlv_70= '{' ( (lv_links_71_0= ruleJsonLink ) ) (otherlv_72= ',' ( (lv_links_73_0= ruleJsonLink ) ) )* otherlv_74= '}' (otherlv_75= ',' )? ) ) ) )
             	    // InternalThingDescriptionJson.g:807:5: {...}? => ( ({...}? => (otherlv_68= '\"links\"' otherlv_69= ':' otherlv_70= '{' ( (lv_links_71_0= ruleJsonLink ) ) (otherlv_72= ',' ( (lv_links_73_0= ruleJsonLink ) ) )* otherlv_74= '}' (otherlv_75= ',' )? ) ) )
             	    {
-            	    if ( ! getUnorderedGroupHelper().canSelect(grammarAccess.getJsonThingDescriptionAccess().getUnorderedGroup_2(), 11) ) {
-            	        throw new FailedPredicateException(input, "ruleJsonThingDescription", "getUnorderedGroupHelper().canSelect(grammarAccess.getJsonThingDescriptionAccess().getUnorderedGroup_2(), 11)");
+            	    if ( ! getUnorderedGroupHelper().canSelect(grammarAccess.getJsonThingAccess().getUnorderedGroup_2(), 11) ) {
+            	        throw new FailedPredicateException(input, "ruleJsonThing", "getUnorderedGroupHelper().canSelect(grammarAccess.getJsonThingAccess().getUnorderedGroup_2(), 11)");
             	    }
-            	    // InternalThingDescriptionJson.g:807:118: ( ({...}? => (otherlv_68= '\"links\"' otherlv_69= ':' otherlv_70= '{' ( (lv_links_71_0= ruleJsonLink ) ) (otherlv_72= ',' ( (lv_links_73_0= ruleJsonLink ) ) )* otherlv_74= '}' (otherlv_75= ',' )? ) ) )
+            	    // InternalThingDescriptionJson.g:807:107: ( ({...}? => (otherlv_68= '\"links\"' otherlv_69= ':' otherlv_70= '{' ( (lv_links_71_0= ruleJsonLink ) ) (otherlv_72= ',' ( (lv_links_73_0= ruleJsonLink ) ) )* otherlv_74= '}' (otherlv_75= ',' )? ) ) )
             	    // InternalThingDescriptionJson.g:808:6: ({...}? => (otherlv_68= '\"links\"' otherlv_69= ':' otherlv_70= '{' ( (lv_links_71_0= ruleJsonLink ) ) (otherlv_72= ',' ( (lv_links_73_0= ruleJsonLink ) ) )* otherlv_74= '}' (otherlv_75= ',' )? ) )
             	    {
 
-            	    						getUnorderedGroupHelper().select(grammarAccess.getJsonThingDescriptionAccess().getUnorderedGroup_2(), 11);
+            	    						getUnorderedGroupHelper().select(grammarAccess.getJsonThingAccess().getUnorderedGroup_2(), 11);
             	    					
             	    // InternalThingDescriptionJson.g:811:9: ({...}? => (otherlv_68= '\"links\"' otherlv_69= ':' otherlv_70= '{' ( (lv_links_71_0= ruleJsonLink ) ) (otherlv_72= ',' ( (lv_links_73_0= ruleJsonLink ) ) )* otherlv_74= '}' (otherlv_75= ',' )? ) )
             	    // InternalThingDescriptionJson.g:811:10: {...}? => (otherlv_68= '\"links\"' otherlv_69= ':' otherlv_70= '{' ( (lv_links_71_0= ruleJsonLink ) ) (otherlv_72= ',' ( (lv_links_73_0= ruleJsonLink ) ) )* otherlv_74= '}' (otherlv_75= ',' )? )
             	    {
             	    if ( !((true)) ) {
-            	        throw new FailedPredicateException(input, "ruleJsonThingDescription", "true");
+            	        throw new FailedPredicateException(input, "ruleJsonThing", "true");
             	    }
             	    // InternalThingDescriptionJson.g:811:19: (otherlv_68= '\"links\"' otherlv_69= ':' otherlv_70= '{' ( (lv_links_71_0= ruleJsonLink ) ) (otherlv_72= ',' ( (lv_links_73_0= ruleJsonLink ) ) )* otherlv_74= '}' (otherlv_75= ',' )? )
             	    // InternalThingDescriptionJson.g:811:20: otherlv_68= '\"links\"' otherlv_69= ':' otherlv_70= '{' ( (lv_links_71_0= ruleJsonLink ) ) (otherlv_72= ',' ( (lv_links_73_0= ruleJsonLink ) ) )* otherlv_74= '}' (otherlv_75= ',' )?
             	    {
             	    otherlv_68=(Token)match(input,24,FOLLOW_4); 
 
-            	    									newLeafNode(otherlv_68, grammarAccess.getJsonThingDescriptionAccess().getLinksKeyword_2_11_0());
+            	    									newLeafNode(otherlv_68, grammarAccess.getJsonThingAccess().getLinksKeyword_2_11_0());
             	    								
             	    otherlv_69=(Token)match(input,9,FOLLOW_11); 
 
-            	    									newLeafNode(otherlv_69, grammarAccess.getJsonThingDescriptionAccess().getColonKeyword_2_11_1());
+            	    									newLeafNode(otherlv_69, grammarAccess.getJsonThingAccess().getColonKeyword_2_11_1());
             	    								
             	    otherlv_70=(Token)match(input,7,FOLLOW_11); 
 
-            	    									newLeafNode(otherlv_70, grammarAccess.getJsonThingDescriptionAccess().getLeftCurlyBracketKeyword_2_11_2());
+            	    									newLeafNode(otherlv_70, grammarAccess.getJsonThingAccess().getLeftCurlyBracketKeyword_2_11_2());
             	    								
             	    // InternalThingDescriptionJson.g:823:9: ( (lv_links_71_0= ruleJsonLink ) )
             	    // InternalThingDescriptionJson.g:824:10: (lv_links_71_0= ruleJsonLink )
@@ -2081,7 +2081,7 @@ public class InternalThingDescriptionJsonParser extends AbstractInternalAntlrPar
             	    // InternalThingDescriptionJson.g:825:11: lv_links_71_0= ruleJsonLink
             	    {
 
-            	    											newCompositeNode(grammarAccess.getJsonThingDescriptionAccess().getLinksJsonLinkParserRuleCall_2_11_3_0());
+            	    											newCompositeNode(grammarAccess.getJsonThingAccess().getLinksJsonLinkParserRuleCall_2_11_3_0());
             	    										
             	    pushFollow(FOLLOW_12);
             	    lv_links_71_0=ruleJsonLink();
@@ -2090,7 +2090,7 @@ public class InternalThingDescriptionJsonParser extends AbstractInternalAntlrPar
 
 
             	    											if (current==null) {
-            	    												current = createModelElementForParent(grammarAccess.getJsonThingDescriptionRule());
+            	    												current = createModelElementForParent(grammarAccess.getJsonThingRule());
             	    											}
             	    											add(
             	    												current,
@@ -2122,7 +2122,7 @@ public class InternalThingDescriptionJsonParser extends AbstractInternalAntlrPar
             	    	    {
             	    	    otherlv_72=(Token)match(input,11,FOLLOW_11); 
 
-            	    	    										newLeafNode(otherlv_72, grammarAccess.getJsonThingDescriptionAccess().getCommaKeyword_2_11_4_0());
+            	    	    										newLeafNode(otherlv_72, grammarAccess.getJsonThingAccess().getCommaKeyword_2_11_4_0());
             	    	    									
             	    	    // InternalThingDescriptionJson.g:847:10: ( (lv_links_73_0= ruleJsonLink ) )
             	    	    // InternalThingDescriptionJson.g:848:11: (lv_links_73_0= ruleJsonLink )
@@ -2131,7 +2131,7 @@ public class InternalThingDescriptionJsonParser extends AbstractInternalAntlrPar
             	    	    // InternalThingDescriptionJson.g:849:12: lv_links_73_0= ruleJsonLink
             	    	    {
 
-            	    	    												newCompositeNode(grammarAccess.getJsonThingDescriptionAccess().getLinksJsonLinkParserRuleCall_2_11_4_1_0());
+            	    	    												newCompositeNode(grammarAccess.getJsonThingAccess().getLinksJsonLinkParserRuleCall_2_11_4_1_0());
             	    	    											
             	    	    pushFollow(FOLLOW_12);
             	    	    lv_links_73_0=ruleJsonLink();
@@ -2140,7 +2140,7 @@ public class InternalThingDescriptionJsonParser extends AbstractInternalAntlrPar
 
 
             	    	    												if (current==null) {
-            	    	    													current = createModelElementForParent(grammarAccess.getJsonThingDescriptionRule());
+            	    	    													current = createModelElementForParent(grammarAccess.getJsonThingRule());
             	    	    												}
             	    	    												add(
             	    	    													current,
@@ -2166,7 +2166,7 @@ public class InternalThingDescriptionJsonParser extends AbstractInternalAntlrPar
 
             	    otherlv_74=(Token)match(input,23,FOLLOW_6); 
 
-            	    									newLeafNode(otherlv_74, grammarAccess.getJsonThingDescriptionAccess().getRightCurlyBracketKeyword_2_11_5());
+            	    									newLeafNode(otherlv_74, grammarAccess.getJsonThingAccess().getRightCurlyBracketKeyword_2_11_5());
             	    								
             	    // InternalThingDescriptionJson.g:871:9: (otherlv_75= ',' )?
             	    int alt22=2;
@@ -2181,7 +2181,7 @@ public class InternalThingDescriptionJsonParser extends AbstractInternalAntlrPar
             	            {
             	            otherlv_75=(Token)match(input,11,FOLLOW_9); 
 
-            	            										newLeafNode(otherlv_75, grammarAccess.getJsonThingDescriptionAccess().getCommaKeyword_2_11_6());
+            	            										newLeafNode(otherlv_75, grammarAccess.getJsonThingAccess().getCommaKeyword_2_11_6());
             	            									
 
             	            }
@@ -2196,7 +2196,7 @@ public class InternalThingDescriptionJsonParser extends AbstractInternalAntlrPar
             	    }
 
             	     
-            	    						getUnorderedGroupHelper().returnFromSelection(grammarAccess.getJsonThingDescriptionAccess().getUnorderedGroup_2());
+            	    						getUnorderedGroupHelper().returnFromSelection(grammarAccess.getJsonThingAccess().getUnorderedGroup_2());
             	    					
 
             	    }
@@ -2213,35 +2213,35 @@ public class InternalThingDescriptionJsonParser extends AbstractInternalAntlrPar
             	    // InternalThingDescriptionJson.g:883:4: ({...}? => ( ({...}? => (otherlv_76= '\"titles\"' otherlv_77= ':' otherlv_78= '{' ( (lv_titles_79_0= ruleJsonMultiLanguageEntry ) ) (otherlv_80= ',' ( (lv_titles_81_0= ruleJsonMultiLanguageEntry ) ) )* otherlv_82= '}' (otherlv_83= ',' )? ) ) ) )
             	    // InternalThingDescriptionJson.g:884:5: {...}? => ( ({...}? => (otherlv_76= '\"titles\"' otherlv_77= ':' otherlv_78= '{' ( (lv_titles_79_0= ruleJsonMultiLanguageEntry ) ) (otherlv_80= ',' ( (lv_titles_81_0= ruleJsonMultiLanguageEntry ) ) )* otherlv_82= '}' (otherlv_83= ',' )? ) ) )
             	    {
-            	    if ( ! getUnorderedGroupHelper().canSelect(grammarAccess.getJsonThingDescriptionAccess().getUnorderedGroup_2(), 12) ) {
-            	        throw new FailedPredicateException(input, "ruleJsonThingDescription", "getUnorderedGroupHelper().canSelect(grammarAccess.getJsonThingDescriptionAccess().getUnorderedGroup_2(), 12)");
+            	    if ( ! getUnorderedGroupHelper().canSelect(grammarAccess.getJsonThingAccess().getUnorderedGroup_2(), 12) ) {
+            	        throw new FailedPredicateException(input, "ruleJsonThing", "getUnorderedGroupHelper().canSelect(grammarAccess.getJsonThingAccess().getUnorderedGroup_2(), 12)");
             	    }
-            	    // InternalThingDescriptionJson.g:884:118: ( ({...}? => (otherlv_76= '\"titles\"' otherlv_77= ':' otherlv_78= '{' ( (lv_titles_79_0= ruleJsonMultiLanguageEntry ) ) (otherlv_80= ',' ( (lv_titles_81_0= ruleJsonMultiLanguageEntry ) ) )* otherlv_82= '}' (otherlv_83= ',' )? ) ) )
+            	    // InternalThingDescriptionJson.g:884:107: ( ({...}? => (otherlv_76= '\"titles\"' otherlv_77= ':' otherlv_78= '{' ( (lv_titles_79_0= ruleJsonMultiLanguageEntry ) ) (otherlv_80= ',' ( (lv_titles_81_0= ruleJsonMultiLanguageEntry ) ) )* otherlv_82= '}' (otherlv_83= ',' )? ) ) )
             	    // InternalThingDescriptionJson.g:885:6: ({...}? => (otherlv_76= '\"titles\"' otherlv_77= ':' otherlv_78= '{' ( (lv_titles_79_0= ruleJsonMultiLanguageEntry ) ) (otherlv_80= ',' ( (lv_titles_81_0= ruleJsonMultiLanguageEntry ) ) )* otherlv_82= '}' (otherlv_83= ',' )? ) )
             	    {
 
-            	    						getUnorderedGroupHelper().select(grammarAccess.getJsonThingDescriptionAccess().getUnorderedGroup_2(), 12);
+            	    						getUnorderedGroupHelper().select(grammarAccess.getJsonThingAccess().getUnorderedGroup_2(), 12);
             	    					
             	    // InternalThingDescriptionJson.g:888:9: ({...}? => (otherlv_76= '\"titles\"' otherlv_77= ':' otherlv_78= '{' ( (lv_titles_79_0= ruleJsonMultiLanguageEntry ) ) (otherlv_80= ',' ( (lv_titles_81_0= ruleJsonMultiLanguageEntry ) ) )* otherlv_82= '}' (otherlv_83= ',' )? ) )
             	    // InternalThingDescriptionJson.g:888:10: {...}? => (otherlv_76= '\"titles\"' otherlv_77= ':' otherlv_78= '{' ( (lv_titles_79_0= ruleJsonMultiLanguageEntry ) ) (otherlv_80= ',' ( (lv_titles_81_0= ruleJsonMultiLanguageEntry ) ) )* otherlv_82= '}' (otherlv_83= ',' )? )
             	    {
             	    if ( !((true)) ) {
-            	        throw new FailedPredicateException(input, "ruleJsonThingDescription", "true");
+            	        throw new FailedPredicateException(input, "ruleJsonThing", "true");
             	    }
             	    // InternalThingDescriptionJson.g:888:19: (otherlv_76= '\"titles\"' otherlv_77= ':' otherlv_78= '{' ( (lv_titles_79_0= ruleJsonMultiLanguageEntry ) ) (otherlv_80= ',' ( (lv_titles_81_0= ruleJsonMultiLanguageEntry ) ) )* otherlv_82= '}' (otherlv_83= ',' )? )
             	    // InternalThingDescriptionJson.g:888:20: otherlv_76= '\"titles\"' otherlv_77= ':' otherlv_78= '{' ( (lv_titles_79_0= ruleJsonMultiLanguageEntry ) ) (otherlv_80= ',' ( (lv_titles_81_0= ruleJsonMultiLanguageEntry ) ) )* otherlv_82= '}' (otherlv_83= ',' )?
             	    {
             	    otherlv_76=(Token)match(input,25,FOLLOW_4); 
 
-            	    									newLeafNode(otherlv_76, grammarAccess.getJsonThingDescriptionAccess().getTitlesKeyword_2_12_0());
+            	    									newLeafNode(otherlv_76, grammarAccess.getJsonThingAccess().getTitlesKeyword_2_12_0());
             	    								
             	    otherlv_77=(Token)match(input,9,FOLLOW_11); 
 
-            	    									newLeafNode(otherlv_77, grammarAccess.getJsonThingDescriptionAccess().getColonKeyword_2_12_1());
+            	    									newLeafNode(otherlv_77, grammarAccess.getJsonThingAccess().getColonKeyword_2_12_1());
             	    								
             	    otherlv_78=(Token)match(input,7,FOLLOW_10); 
 
-            	    									newLeafNode(otherlv_78, grammarAccess.getJsonThingDescriptionAccess().getLeftCurlyBracketKeyword_2_12_2());
+            	    									newLeafNode(otherlv_78, grammarAccess.getJsonThingAccess().getLeftCurlyBracketKeyword_2_12_2());
             	    								
             	    // InternalThingDescriptionJson.g:900:9: ( (lv_titles_79_0= ruleJsonMultiLanguageEntry ) )
             	    // InternalThingDescriptionJson.g:901:10: (lv_titles_79_0= ruleJsonMultiLanguageEntry )
@@ -2250,7 +2250,7 @@ public class InternalThingDescriptionJsonParser extends AbstractInternalAntlrPar
             	    // InternalThingDescriptionJson.g:902:11: lv_titles_79_0= ruleJsonMultiLanguageEntry
             	    {
 
-            	    											newCompositeNode(grammarAccess.getJsonThingDescriptionAccess().getTitlesJsonMultiLanguageEntryParserRuleCall_2_12_3_0());
+            	    											newCompositeNode(grammarAccess.getJsonThingAccess().getTitlesJsonMultiLanguageEntryParserRuleCall_2_12_3_0());
             	    										
             	    pushFollow(FOLLOW_12);
             	    lv_titles_79_0=ruleJsonMultiLanguageEntry();
@@ -2259,7 +2259,7 @@ public class InternalThingDescriptionJsonParser extends AbstractInternalAntlrPar
 
 
             	    											if (current==null) {
-            	    												current = createModelElementForParent(grammarAccess.getJsonThingDescriptionRule());
+            	    												current = createModelElementForParent(grammarAccess.getJsonThingRule());
             	    											}
             	    											add(
             	    												current,
@@ -2291,7 +2291,7 @@ public class InternalThingDescriptionJsonParser extends AbstractInternalAntlrPar
             	    	    {
             	    	    otherlv_80=(Token)match(input,11,FOLLOW_10); 
 
-            	    	    										newLeafNode(otherlv_80, grammarAccess.getJsonThingDescriptionAccess().getCommaKeyword_2_12_4_0());
+            	    	    										newLeafNode(otherlv_80, grammarAccess.getJsonThingAccess().getCommaKeyword_2_12_4_0());
             	    	    									
             	    	    // InternalThingDescriptionJson.g:924:10: ( (lv_titles_81_0= ruleJsonMultiLanguageEntry ) )
             	    	    // InternalThingDescriptionJson.g:925:11: (lv_titles_81_0= ruleJsonMultiLanguageEntry )
@@ -2300,7 +2300,7 @@ public class InternalThingDescriptionJsonParser extends AbstractInternalAntlrPar
             	    	    // InternalThingDescriptionJson.g:926:12: lv_titles_81_0= ruleJsonMultiLanguageEntry
             	    	    {
 
-            	    	    												newCompositeNode(grammarAccess.getJsonThingDescriptionAccess().getTitlesJsonMultiLanguageEntryParserRuleCall_2_12_4_1_0());
+            	    	    												newCompositeNode(grammarAccess.getJsonThingAccess().getTitlesJsonMultiLanguageEntryParserRuleCall_2_12_4_1_0());
             	    	    											
             	    	    pushFollow(FOLLOW_12);
             	    	    lv_titles_81_0=ruleJsonMultiLanguageEntry();
@@ -2309,7 +2309,7 @@ public class InternalThingDescriptionJsonParser extends AbstractInternalAntlrPar
 
 
             	    	    												if (current==null) {
-            	    	    													current = createModelElementForParent(grammarAccess.getJsonThingDescriptionRule());
+            	    	    													current = createModelElementForParent(grammarAccess.getJsonThingRule());
             	    	    												}
             	    	    												add(
             	    	    													current,
@@ -2335,7 +2335,7 @@ public class InternalThingDescriptionJsonParser extends AbstractInternalAntlrPar
 
             	    otherlv_82=(Token)match(input,23,FOLLOW_6); 
 
-            	    									newLeafNode(otherlv_82, grammarAccess.getJsonThingDescriptionAccess().getRightCurlyBracketKeyword_2_12_5());
+            	    									newLeafNode(otherlv_82, grammarAccess.getJsonThingAccess().getRightCurlyBracketKeyword_2_12_5());
             	    								
             	    // InternalThingDescriptionJson.g:948:9: (otherlv_83= ',' )?
             	    int alt24=2;
@@ -2350,7 +2350,7 @@ public class InternalThingDescriptionJsonParser extends AbstractInternalAntlrPar
             	            {
             	            otherlv_83=(Token)match(input,11,FOLLOW_9); 
 
-            	            										newLeafNode(otherlv_83, grammarAccess.getJsonThingDescriptionAccess().getCommaKeyword_2_12_6());
+            	            										newLeafNode(otherlv_83, grammarAccess.getJsonThingAccess().getCommaKeyword_2_12_6());
             	            									
 
             	            }
@@ -2365,7 +2365,7 @@ public class InternalThingDescriptionJsonParser extends AbstractInternalAntlrPar
             	    }
 
             	     
-            	    						getUnorderedGroupHelper().returnFromSelection(grammarAccess.getJsonThingDescriptionAccess().getUnorderedGroup_2());
+            	    						getUnorderedGroupHelper().returnFromSelection(grammarAccess.getJsonThingAccess().getUnorderedGroup_2());
             	    					
 
             	    }
@@ -2382,35 +2382,35 @@ public class InternalThingDescriptionJsonParser extends AbstractInternalAntlrPar
             	    // InternalThingDescriptionJson.g:960:4: ({...}? => ( ({...}? => (otherlv_84= '\"descriptions\"' otherlv_85= ':' otherlv_86= '{' ( (lv_descriptions_87_0= ruleJsonMultiLanguageEntry ) ) (otherlv_88= ',' ( (lv_descriptions_89_0= ruleJsonMultiLanguageEntry ) ) )* otherlv_90= '}' (otherlv_91= ',' )? ) ) ) )
             	    // InternalThingDescriptionJson.g:961:5: {...}? => ( ({...}? => (otherlv_84= '\"descriptions\"' otherlv_85= ':' otherlv_86= '{' ( (lv_descriptions_87_0= ruleJsonMultiLanguageEntry ) ) (otherlv_88= ',' ( (lv_descriptions_89_0= ruleJsonMultiLanguageEntry ) ) )* otherlv_90= '}' (otherlv_91= ',' )? ) ) )
             	    {
-            	    if ( ! getUnorderedGroupHelper().canSelect(grammarAccess.getJsonThingDescriptionAccess().getUnorderedGroup_2(), 13) ) {
-            	        throw new FailedPredicateException(input, "ruleJsonThingDescription", "getUnorderedGroupHelper().canSelect(grammarAccess.getJsonThingDescriptionAccess().getUnorderedGroup_2(), 13)");
+            	    if ( ! getUnorderedGroupHelper().canSelect(grammarAccess.getJsonThingAccess().getUnorderedGroup_2(), 13) ) {
+            	        throw new FailedPredicateException(input, "ruleJsonThing", "getUnorderedGroupHelper().canSelect(grammarAccess.getJsonThingAccess().getUnorderedGroup_2(), 13)");
             	    }
-            	    // InternalThingDescriptionJson.g:961:118: ( ({...}? => (otherlv_84= '\"descriptions\"' otherlv_85= ':' otherlv_86= '{' ( (lv_descriptions_87_0= ruleJsonMultiLanguageEntry ) ) (otherlv_88= ',' ( (lv_descriptions_89_0= ruleJsonMultiLanguageEntry ) ) )* otherlv_90= '}' (otherlv_91= ',' )? ) ) )
+            	    // InternalThingDescriptionJson.g:961:107: ( ({...}? => (otherlv_84= '\"descriptions\"' otherlv_85= ':' otherlv_86= '{' ( (lv_descriptions_87_0= ruleJsonMultiLanguageEntry ) ) (otherlv_88= ',' ( (lv_descriptions_89_0= ruleJsonMultiLanguageEntry ) ) )* otherlv_90= '}' (otherlv_91= ',' )? ) ) )
             	    // InternalThingDescriptionJson.g:962:6: ({...}? => (otherlv_84= '\"descriptions\"' otherlv_85= ':' otherlv_86= '{' ( (lv_descriptions_87_0= ruleJsonMultiLanguageEntry ) ) (otherlv_88= ',' ( (lv_descriptions_89_0= ruleJsonMultiLanguageEntry ) ) )* otherlv_90= '}' (otherlv_91= ',' )? ) )
             	    {
 
-            	    						getUnorderedGroupHelper().select(grammarAccess.getJsonThingDescriptionAccess().getUnorderedGroup_2(), 13);
+            	    						getUnorderedGroupHelper().select(grammarAccess.getJsonThingAccess().getUnorderedGroup_2(), 13);
             	    					
             	    // InternalThingDescriptionJson.g:965:9: ({...}? => (otherlv_84= '\"descriptions\"' otherlv_85= ':' otherlv_86= '{' ( (lv_descriptions_87_0= ruleJsonMultiLanguageEntry ) ) (otherlv_88= ',' ( (lv_descriptions_89_0= ruleJsonMultiLanguageEntry ) ) )* otherlv_90= '}' (otherlv_91= ',' )? ) )
             	    // InternalThingDescriptionJson.g:965:10: {...}? => (otherlv_84= '\"descriptions\"' otherlv_85= ':' otherlv_86= '{' ( (lv_descriptions_87_0= ruleJsonMultiLanguageEntry ) ) (otherlv_88= ',' ( (lv_descriptions_89_0= ruleJsonMultiLanguageEntry ) ) )* otherlv_90= '}' (otherlv_91= ',' )? )
             	    {
             	    if ( !((true)) ) {
-            	        throw new FailedPredicateException(input, "ruleJsonThingDescription", "true");
+            	        throw new FailedPredicateException(input, "ruleJsonThing", "true");
             	    }
             	    // InternalThingDescriptionJson.g:965:19: (otherlv_84= '\"descriptions\"' otherlv_85= ':' otherlv_86= '{' ( (lv_descriptions_87_0= ruleJsonMultiLanguageEntry ) ) (otherlv_88= ',' ( (lv_descriptions_89_0= ruleJsonMultiLanguageEntry ) ) )* otherlv_90= '}' (otherlv_91= ',' )? )
             	    // InternalThingDescriptionJson.g:965:20: otherlv_84= '\"descriptions\"' otherlv_85= ':' otherlv_86= '{' ( (lv_descriptions_87_0= ruleJsonMultiLanguageEntry ) ) (otherlv_88= ',' ( (lv_descriptions_89_0= ruleJsonMultiLanguageEntry ) ) )* otherlv_90= '}' (otherlv_91= ',' )?
             	    {
             	    otherlv_84=(Token)match(input,26,FOLLOW_4); 
 
-            	    									newLeafNode(otherlv_84, grammarAccess.getJsonThingDescriptionAccess().getDescriptionsKeyword_2_13_0());
+            	    									newLeafNode(otherlv_84, grammarAccess.getJsonThingAccess().getDescriptionsKeyword_2_13_0());
             	    								
             	    otherlv_85=(Token)match(input,9,FOLLOW_11); 
 
-            	    									newLeafNode(otherlv_85, grammarAccess.getJsonThingDescriptionAccess().getColonKeyword_2_13_1());
+            	    									newLeafNode(otherlv_85, grammarAccess.getJsonThingAccess().getColonKeyword_2_13_1());
             	    								
             	    otherlv_86=(Token)match(input,7,FOLLOW_10); 
 
-            	    									newLeafNode(otherlv_86, grammarAccess.getJsonThingDescriptionAccess().getLeftCurlyBracketKeyword_2_13_2());
+            	    									newLeafNode(otherlv_86, grammarAccess.getJsonThingAccess().getLeftCurlyBracketKeyword_2_13_2());
             	    								
             	    // InternalThingDescriptionJson.g:977:9: ( (lv_descriptions_87_0= ruleJsonMultiLanguageEntry ) )
             	    // InternalThingDescriptionJson.g:978:10: (lv_descriptions_87_0= ruleJsonMultiLanguageEntry )
@@ -2419,7 +2419,7 @@ public class InternalThingDescriptionJsonParser extends AbstractInternalAntlrPar
             	    // InternalThingDescriptionJson.g:979:11: lv_descriptions_87_0= ruleJsonMultiLanguageEntry
             	    {
 
-            	    											newCompositeNode(grammarAccess.getJsonThingDescriptionAccess().getDescriptionsJsonMultiLanguageEntryParserRuleCall_2_13_3_0());
+            	    											newCompositeNode(grammarAccess.getJsonThingAccess().getDescriptionsJsonMultiLanguageEntryParserRuleCall_2_13_3_0());
             	    										
             	    pushFollow(FOLLOW_12);
             	    lv_descriptions_87_0=ruleJsonMultiLanguageEntry();
@@ -2428,7 +2428,7 @@ public class InternalThingDescriptionJsonParser extends AbstractInternalAntlrPar
 
 
             	    											if (current==null) {
-            	    												current = createModelElementForParent(grammarAccess.getJsonThingDescriptionRule());
+            	    												current = createModelElementForParent(grammarAccess.getJsonThingRule());
             	    											}
             	    											add(
             	    												current,
@@ -2460,7 +2460,7 @@ public class InternalThingDescriptionJsonParser extends AbstractInternalAntlrPar
             	    	    {
             	    	    otherlv_88=(Token)match(input,11,FOLLOW_10); 
 
-            	    	    										newLeafNode(otherlv_88, grammarAccess.getJsonThingDescriptionAccess().getCommaKeyword_2_13_4_0());
+            	    	    										newLeafNode(otherlv_88, grammarAccess.getJsonThingAccess().getCommaKeyword_2_13_4_0());
             	    	    									
             	    	    // InternalThingDescriptionJson.g:1001:10: ( (lv_descriptions_89_0= ruleJsonMultiLanguageEntry ) )
             	    	    // InternalThingDescriptionJson.g:1002:11: (lv_descriptions_89_0= ruleJsonMultiLanguageEntry )
@@ -2469,7 +2469,7 @@ public class InternalThingDescriptionJsonParser extends AbstractInternalAntlrPar
             	    	    // InternalThingDescriptionJson.g:1003:12: lv_descriptions_89_0= ruleJsonMultiLanguageEntry
             	    	    {
 
-            	    	    												newCompositeNode(grammarAccess.getJsonThingDescriptionAccess().getDescriptionsJsonMultiLanguageEntryParserRuleCall_2_13_4_1_0());
+            	    	    												newCompositeNode(grammarAccess.getJsonThingAccess().getDescriptionsJsonMultiLanguageEntryParserRuleCall_2_13_4_1_0());
             	    	    											
             	    	    pushFollow(FOLLOW_12);
             	    	    lv_descriptions_89_0=ruleJsonMultiLanguageEntry();
@@ -2478,7 +2478,7 @@ public class InternalThingDescriptionJsonParser extends AbstractInternalAntlrPar
 
 
             	    	    												if (current==null) {
-            	    	    													current = createModelElementForParent(grammarAccess.getJsonThingDescriptionRule());
+            	    	    													current = createModelElementForParent(grammarAccess.getJsonThingRule());
             	    	    												}
             	    	    												add(
             	    	    													current,
@@ -2504,7 +2504,7 @@ public class InternalThingDescriptionJsonParser extends AbstractInternalAntlrPar
 
             	    otherlv_90=(Token)match(input,23,FOLLOW_6); 
 
-            	    									newLeafNode(otherlv_90, grammarAccess.getJsonThingDescriptionAccess().getRightCurlyBracketKeyword_2_13_5());
+            	    									newLeafNode(otherlv_90, grammarAccess.getJsonThingAccess().getRightCurlyBracketKeyword_2_13_5());
             	    								
             	    // InternalThingDescriptionJson.g:1025:9: (otherlv_91= ',' )?
             	    int alt26=2;
@@ -2519,7 +2519,7 @@ public class InternalThingDescriptionJsonParser extends AbstractInternalAntlrPar
             	            {
             	            otherlv_91=(Token)match(input,11,FOLLOW_9); 
 
-            	            										newLeafNode(otherlv_91, grammarAccess.getJsonThingDescriptionAccess().getCommaKeyword_2_13_6());
+            	            										newLeafNode(otherlv_91, grammarAccess.getJsonThingAccess().getCommaKeyword_2_13_6());
             	            									
 
             	            }
@@ -2534,7 +2534,7 @@ public class InternalThingDescriptionJsonParser extends AbstractInternalAntlrPar
             	    }
 
             	     
-            	    						getUnorderedGroupHelper().returnFromSelection(grammarAccess.getJsonThingDescriptionAccess().getUnorderedGroup_2());
+            	    						getUnorderedGroupHelper().returnFromSelection(grammarAccess.getJsonThingAccess().getUnorderedGroup_2());
             	    					
 
             	    }
@@ -2551,31 +2551,31 @@ public class InternalThingDescriptionJsonParser extends AbstractInternalAntlrPar
             	    // InternalThingDescriptionJson.g:1037:4: ({...}? => ( ({...}? => (otherlv_92= '\"version\"' otherlv_93= ':' ( (lv_version_94_0= ruleJsonVersionInfo ) ) (otherlv_95= ',' )? ) ) ) )
             	    // InternalThingDescriptionJson.g:1038:5: {...}? => ( ({...}? => (otherlv_92= '\"version\"' otherlv_93= ':' ( (lv_version_94_0= ruleJsonVersionInfo ) ) (otherlv_95= ',' )? ) ) )
             	    {
-            	    if ( ! getUnorderedGroupHelper().canSelect(grammarAccess.getJsonThingDescriptionAccess().getUnorderedGroup_2(), 14) ) {
-            	        throw new FailedPredicateException(input, "ruleJsonThingDescription", "getUnorderedGroupHelper().canSelect(grammarAccess.getJsonThingDescriptionAccess().getUnorderedGroup_2(), 14)");
+            	    if ( ! getUnorderedGroupHelper().canSelect(grammarAccess.getJsonThingAccess().getUnorderedGroup_2(), 14) ) {
+            	        throw new FailedPredicateException(input, "ruleJsonThing", "getUnorderedGroupHelper().canSelect(grammarAccess.getJsonThingAccess().getUnorderedGroup_2(), 14)");
             	    }
-            	    // InternalThingDescriptionJson.g:1038:118: ( ({...}? => (otherlv_92= '\"version\"' otherlv_93= ':' ( (lv_version_94_0= ruleJsonVersionInfo ) ) (otherlv_95= ',' )? ) ) )
+            	    // InternalThingDescriptionJson.g:1038:107: ( ({...}? => (otherlv_92= '\"version\"' otherlv_93= ':' ( (lv_version_94_0= ruleJsonVersionInfo ) ) (otherlv_95= ',' )? ) ) )
             	    // InternalThingDescriptionJson.g:1039:6: ({...}? => (otherlv_92= '\"version\"' otherlv_93= ':' ( (lv_version_94_0= ruleJsonVersionInfo ) ) (otherlv_95= ',' )? ) )
             	    {
 
-            	    						getUnorderedGroupHelper().select(grammarAccess.getJsonThingDescriptionAccess().getUnorderedGroup_2(), 14);
+            	    						getUnorderedGroupHelper().select(grammarAccess.getJsonThingAccess().getUnorderedGroup_2(), 14);
             	    					
             	    // InternalThingDescriptionJson.g:1042:9: ({...}? => (otherlv_92= '\"version\"' otherlv_93= ':' ( (lv_version_94_0= ruleJsonVersionInfo ) ) (otherlv_95= ',' )? ) )
             	    // InternalThingDescriptionJson.g:1042:10: {...}? => (otherlv_92= '\"version\"' otherlv_93= ':' ( (lv_version_94_0= ruleJsonVersionInfo ) ) (otherlv_95= ',' )? )
             	    {
             	    if ( !((true)) ) {
-            	        throw new FailedPredicateException(input, "ruleJsonThingDescription", "true");
+            	        throw new FailedPredicateException(input, "ruleJsonThing", "true");
             	    }
             	    // InternalThingDescriptionJson.g:1042:19: (otherlv_92= '\"version\"' otherlv_93= ':' ( (lv_version_94_0= ruleJsonVersionInfo ) ) (otherlv_95= ',' )? )
             	    // InternalThingDescriptionJson.g:1042:20: otherlv_92= '\"version\"' otherlv_93= ':' ( (lv_version_94_0= ruleJsonVersionInfo ) ) (otherlv_95= ',' )?
             	    {
             	    otherlv_92=(Token)match(input,27,FOLLOW_4); 
 
-            	    									newLeafNode(otherlv_92, grammarAccess.getJsonThingDescriptionAccess().getVersionKeyword_2_14_0());
+            	    									newLeafNode(otherlv_92, grammarAccess.getJsonThingAccess().getVersionKeyword_2_14_0());
             	    								
             	    otherlv_93=(Token)match(input,9,FOLLOW_11); 
 
-            	    									newLeafNode(otherlv_93, grammarAccess.getJsonThingDescriptionAccess().getColonKeyword_2_14_1());
+            	    									newLeafNode(otherlv_93, grammarAccess.getJsonThingAccess().getColonKeyword_2_14_1());
             	    								
             	    // InternalThingDescriptionJson.g:1050:9: ( (lv_version_94_0= ruleJsonVersionInfo ) )
             	    // InternalThingDescriptionJson.g:1051:10: (lv_version_94_0= ruleJsonVersionInfo )
@@ -2584,7 +2584,7 @@ public class InternalThingDescriptionJsonParser extends AbstractInternalAntlrPar
             	    // InternalThingDescriptionJson.g:1052:11: lv_version_94_0= ruleJsonVersionInfo
             	    {
 
-            	    											newCompositeNode(grammarAccess.getJsonThingDescriptionAccess().getVersionJsonVersionInfoParserRuleCall_2_14_2_0());
+            	    											newCompositeNode(grammarAccess.getJsonThingAccess().getVersionJsonVersionInfoParserRuleCall_2_14_2_0());
             	    										
             	    pushFollow(FOLLOW_6);
             	    lv_version_94_0=ruleJsonVersionInfo();
@@ -2593,7 +2593,7 @@ public class InternalThingDescriptionJsonParser extends AbstractInternalAntlrPar
 
 
             	    											if (current==null) {
-            	    												current = createModelElementForParent(grammarAccess.getJsonThingDescriptionRule());
+            	    												current = createModelElementForParent(grammarAccess.getJsonThingRule());
             	    											}
             	    											set(
             	    												current,
@@ -2621,7 +2621,7 @@ public class InternalThingDescriptionJsonParser extends AbstractInternalAntlrPar
             	            {
             	            otherlv_95=(Token)match(input,11,FOLLOW_9); 
 
-            	            										newLeafNode(otherlv_95, grammarAccess.getJsonThingDescriptionAccess().getCommaKeyword_2_14_3());
+            	            										newLeafNode(otherlv_95, grammarAccess.getJsonThingAccess().getCommaKeyword_2_14_3());
             	            									
 
             	            }
@@ -2636,7 +2636,7 @@ public class InternalThingDescriptionJsonParser extends AbstractInternalAntlrPar
             	    }
 
             	     
-            	    						getUnorderedGroupHelper().returnFromSelection(grammarAccess.getJsonThingDescriptionAccess().getUnorderedGroup_2());
+            	    						getUnorderedGroupHelper().returnFromSelection(grammarAccess.getJsonThingAccess().getUnorderedGroup_2());
             	    					
 
             	    }
@@ -2653,35 +2653,35 @@ public class InternalThingDescriptionJsonParser extends AbstractInternalAntlrPar
             	    // InternalThingDescriptionJson.g:1081:4: ({...}? => ( ({...}? => (otherlv_96= '\"properties\"' otherlv_97= ':' otherlv_98= '{' ( (lv_properties_99_0= ruleJsonPropertyAffordance ) ) (otherlv_100= ',' ( (lv_properties_101_0= ruleJsonPropertyAffordance ) ) )* otherlv_102= '}' (otherlv_103= ',' )? ) ) ) )
             	    // InternalThingDescriptionJson.g:1082:5: {...}? => ( ({...}? => (otherlv_96= '\"properties\"' otherlv_97= ':' otherlv_98= '{' ( (lv_properties_99_0= ruleJsonPropertyAffordance ) ) (otherlv_100= ',' ( (lv_properties_101_0= ruleJsonPropertyAffordance ) ) )* otherlv_102= '}' (otherlv_103= ',' )? ) ) )
             	    {
-            	    if ( ! getUnorderedGroupHelper().canSelect(grammarAccess.getJsonThingDescriptionAccess().getUnorderedGroup_2(), 15) ) {
-            	        throw new FailedPredicateException(input, "ruleJsonThingDescription", "getUnorderedGroupHelper().canSelect(grammarAccess.getJsonThingDescriptionAccess().getUnorderedGroup_2(), 15)");
+            	    if ( ! getUnorderedGroupHelper().canSelect(grammarAccess.getJsonThingAccess().getUnorderedGroup_2(), 15) ) {
+            	        throw new FailedPredicateException(input, "ruleJsonThing", "getUnorderedGroupHelper().canSelect(grammarAccess.getJsonThingAccess().getUnorderedGroup_2(), 15)");
             	    }
-            	    // InternalThingDescriptionJson.g:1082:118: ( ({...}? => (otherlv_96= '\"properties\"' otherlv_97= ':' otherlv_98= '{' ( (lv_properties_99_0= ruleJsonPropertyAffordance ) ) (otherlv_100= ',' ( (lv_properties_101_0= ruleJsonPropertyAffordance ) ) )* otherlv_102= '}' (otherlv_103= ',' )? ) ) )
+            	    // InternalThingDescriptionJson.g:1082:107: ( ({...}? => (otherlv_96= '\"properties\"' otherlv_97= ':' otherlv_98= '{' ( (lv_properties_99_0= ruleJsonPropertyAffordance ) ) (otherlv_100= ',' ( (lv_properties_101_0= ruleJsonPropertyAffordance ) ) )* otherlv_102= '}' (otherlv_103= ',' )? ) ) )
             	    // InternalThingDescriptionJson.g:1083:6: ({...}? => (otherlv_96= '\"properties\"' otherlv_97= ':' otherlv_98= '{' ( (lv_properties_99_0= ruleJsonPropertyAffordance ) ) (otherlv_100= ',' ( (lv_properties_101_0= ruleJsonPropertyAffordance ) ) )* otherlv_102= '}' (otherlv_103= ',' )? ) )
             	    {
 
-            	    						getUnorderedGroupHelper().select(grammarAccess.getJsonThingDescriptionAccess().getUnorderedGroup_2(), 15);
+            	    						getUnorderedGroupHelper().select(grammarAccess.getJsonThingAccess().getUnorderedGroup_2(), 15);
             	    					
             	    // InternalThingDescriptionJson.g:1086:9: ({...}? => (otherlv_96= '\"properties\"' otherlv_97= ':' otherlv_98= '{' ( (lv_properties_99_0= ruleJsonPropertyAffordance ) ) (otherlv_100= ',' ( (lv_properties_101_0= ruleJsonPropertyAffordance ) ) )* otherlv_102= '}' (otherlv_103= ',' )? ) )
             	    // InternalThingDescriptionJson.g:1086:10: {...}? => (otherlv_96= '\"properties\"' otherlv_97= ':' otherlv_98= '{' ( (lv_properties_99_0= ruleJsonPropertyAffordance ) ) (otherlv_100= ',' ( (lv_properties_101_0= ruleJsonPropertyAffordance ) ) )* otherlv_102= '}' (otherlv_103= ',' )? )
             	    {
             	    if ( !((true)) ) {
-            	        throw new FailedPredicateException(input, "ruleJsonThingDescription", "true");
+            	        throw new FailedPredicateException(input, "ruleJsonThing", "true");
             	    }
             	    // InternalThingDescriptionJson.g:1086:19: (otherlv_96= '\"properties\"' otherlv_97= ':' otherlv_98= '{' ( (lv_properties_99_0= ruleJsonPropertyAffordance ) ) (otherlv_100= ',' ( (lv_properties_101_0= ruleJsonPropertyAffordance ) ) )* otherlv_102= '}' (otherlv_103= ',' )? )
             	    // InternalThingDescriptionJson.g:1086:20: otherlv_96= '\"properties\"' otherlv_97= ':' otherlv_98= '{' ( (lv_properties_99_0= ruleJsonPropertyAffordance ) ) (otherlv_100= ',' ( (lv_properties_101_0= ruleJsonPropertyAffordance ) ) )* otherlv_102= '}' (otherlv_103= ',' )?
             	    {
             	    otherlv_96=(Token)match(input,28,FOLLOW_4); 
 
-            	    									newLeafNode(otherlv_96, grammarAccess.getJsonThingDescriptionAccess().getPropertiesKeyword_2_15_0());
+            	    									newLeafNode(otherlv_96, grammarAccess.getJsonThingAccess().getPropertiesKeyword_2_15_0());
             	    								
             	    otherlv_97=(Token)match(input,9,FOLLOW_11); 
 
-            	    									newLeafNode(otherlv_97, grammarAccess.getJsonThingDescriptionAccess().getColonKeyword_2_15_1());
+            	    									newLeafNode(otherlv_97, grammarAccess.getJsonThingAccess().getColonKeyword_2_15_1());
             	    								
             	    otherlv_98=(Token)match(input,7,FOLLOW_10); 
 
-            	    									newLeafNode(otherlv_98, grammarAccess.getJsonThingDescriptionAccess().getLeftCurlyBracketKeyword_2_15_2());
+            	    									newLeafNode(otherlv_98, grammarAccess.getJsonThingAccess().getLeftCurlyBracketKeyword_2_15_2());
             	    								
             	    // InternalThingDescriptionJson.g:1098:9: ( (lv_properties_99_0= ruleJsonPropertyAffordance ) )
             	    // InternalThingDescriptionJson.g:1099:10: (lv_properties_99_0= ruleJsonPropertyAffordance )
@@ -2690,7 +2690,7 @@ public class InternalThingDescriptionJsonParser extends AbstractInternalAntlrPar
             	    // InternalThingDescriptionJson.g:1100:11: lv_properties_99_0= ruleJsonPropertyAffordance
             	    {
 
-            	    											newCompositeNode(grammarAccess.getJsonThingDescriptionAccess().getPropertiesJsonPropertyAffordanceParserRuleCall_2_15_3_0());
+            	    											newCompositeNode(grammarAccess.getJsonThingAccess().getPropertiesJsonPropertyAffordanceParserRuleCall_2_15_3_0());
             	    										
             	    pushFollow(FOLLOW_12);
             	    lv_properties_99_0=ruleJsonPropertyAffordance();
@@ -2699,7 +2699,7 @@ public class InternalThingDescriptionJsonParser extends AbstractInternalAntlrPar
 
 
             	    											if (current==null) {
-            	    												current = createModelElementForParent(grammarAccess.getJsonThingDescriptionRule());
+            	    												current = createModelElementForParent(grammarAccess.getJsonThingRule());
             	    											}
             	    											add(
             	    												current,
@@ -2731,7 +2731,7 @@ public class InternalThingDescriptionJsonParser extends AbstractInternalAntlrPar
             	    	    {
             	    	    otherlv_100=(Token)match(input,11,FOLLOW_10); 
 
-            	    	    										newLeafNode(otherlv_100, grammarAccess.getJsonThingDescriptionAccess().getCommaKeyword_2_15_4_0());
+            	    	    										newLeafNode(otherlv_100, grammarAccess.getJsonThingAccess().getCommaKeyword_2_15_4_0());
             	    	    									
             	    	    // InternalThingDescriptionJson.g:1122:10: ( (lv_properties_101_0= ruleJsonPropertyAffordance ) )
             	    	    // InternalThingDescriptionJson.g:1123:11: (lv_properties_101_0= ruleJsonPropertyAffordance )
@@ -2740,7 +2740,7 @@ public class InternalThingDescriptionJsonParser extends AbstractInternalAntlrPar
             	    	    // InternalThingDescriptionJson.g:1124:12: lv_properties_101_0= ruleJsonPropertyAffordance
             	    	    {
 
-            	    	    												newCompositeNode(grammarAccess.getJsonThingDescriptionAccess().getPropertiesJsonPropertyAffordanceParserRuleCall_2_15_4_1_0());
+            	    	    												newCompositeNode(grammarAccess.getJsonThingAccess().getPropertiesJsonPropertyAffordanceParserRuleCall_2_15_4_1_0());
             	    	    											
             	    	    pushFollow(FOLLOW_12);
             	    	    lv_properties_101_0=ruleJsonPropertyAffordance();
@@ -2749,7 +2749,7 @@ public class InternalThingDescriptionJsonParser extends AbstractInternalAntlrPar
 
 
             	    	    												if (current==null) {
-            	    	    													current = createModelElementForParent(grammarAccess.getJsonThingDescriptionRule());
+            	    	    													current = createModelElementForParent(grammarAccess.getJsonThingRule());
             	    	    												}
             	    	    												add(
             	    	    													current,
@@ -2775,7 +2775,7 @@ public class InternalThingDescriptionJsonParser extends AbstractInternalAntlrPar
 
             	    otherlv_102=(Token)match(input,23,FOLLOW_6); 
 
-            	    									newLeafNode(otherlv_102, grammarAccess.getJsonThingDescriptionAccess().getRightCurlyBracketKeyword_2_15_5());
+            	    									newLeafNode(otherlv_102, grammarAccess.getJsonThingAccess().getRightCurlyBracketKeyword_2_15_5());
             	    								
             	    // InternalThingDescriptionJson.g:1146:9: (otherlv_103= ',' )?
             	    int alt29=2;
@@ -2790,7 +2790,7 @@ public class InternalThingDescriptionJsonParser extends AbstractInternalAntlrPar
             	            {
             	            otherlv_103=(Token)match(input,11,FOLLOW_9); 
 
-            	            										newLeafNode(otherlv_103, grammarAccess.getJsonThingDescriptionAccess().getCommaKeyword_2_15_6());
+            	            										newLeafNode(otherlv_103, grammarAccess.getJsonThingAccess().getCommaKeyword_2_15_6());
             	            									
 
             	            }
@@ -2805,7 +2805,7 @@ public class InternalThingDescriptionJsonParser extends AbstractInternalAntlrPar
             	    }
 
             	     
-            	    						getUnorderedGroupHelper().returnFromSelection(grammarAccess.getJsonThingDescriptionAccess().getUnorderedGroup_2());
+            	    						getUnorderedGroupHelper().returnFromSelection(grammarAccess.getJsonThingAccess().getUnorderedGroup_2());
             	    					
 
             	    }
@@ -2822,35 +2822,35 @@ public class InternalThingDescriptionJsonParser extends AbstractInternalAntlrPar
             	    // InternalThingDescriptionJson.g:1158:4: ({...}? => ( ({...}? => (otherlv_104= '\"actions\"' otherlv_105= ':' otherlv_106= '{' ( (lv_actions_107_0= ruleJsonActionAffordance ) ) (otherlv_108= ',' ( (lv_actions_109_0= ruleJsonActionAffordance ) ) )* otherlv_110= '}' (otherlv_111= ',' )? ) ) ) )
             	    // InternalThingDescriptionJson.g:1159:5: {...}? => ( ({...}? => (otherlv_104= '\"actions\"' otherlv_105= ':' otherlv_106= '{' ( (lv_actions_107_0= ruleJsonActionAffordance ) ) (otherlv_108= ',' ( (lv_actions_109_0= ruleJsonActionAffordance ) ) )* otherlv_110= '}' (otherlv_111= ',' )? ) ) )
             	    {
-            	    if ( ! getUnorderedGroupHelper().canSelect(grammarAccess.getJsonThingDescriptionAccess().getUnorderedGroup_2(), 16) ) {
-            	        throw new FailedPredicateException(input, "ruleJsonThingDescription", "getUnorderedGroupHelper().canSelect(grammarAccess.getJsonThingDescriptionAccess().getUnorderedGroup_2(), 16)");
+            	    if ( ! getUnorderedGroupHelper().canSelect(grammarAccess.getJsonThingAccess().getUnorderedGroup_2(), 16) ) {
+            	        throw new FailedPredicateException(input, "ruleJsonThing", "getUnorderedGroupHelper().canSelect(grammarAccess.getJsonThingAccess().getUnorderedGroup_2(), 16)");
             	    }
-            	    // InternalThingDescriptionJson.g:1159:118: ( ({...}? => (otherlv_104= '\"actions\"' otherlv_105= ':' otherlv_106= '{' ( (lv_actions_107_0= ruleJsonActionAffordance ) ) (otherlv_108= ',' ( (lv_actions_109_0= ruleJsonActionAffordance ) ) )* otherlv_110= '}' (otherlv_111= ',' )? ) ) )
+            	    // InternalThingDescriptionJson.g:1159:107: ( ({...}? => (otherlv_104= '\"actions\"' otherlv_105= ':' otherlv_106= '{' ( (lv_actions_107_0= ruleJsonActionAffordance ) ) (otherlv_108= ',' ( (lv_actions_109_0= ruleJsonActionAffordance ) ) )* otherlv_110= '}' (otherlv_111= ',' )? ) ) )
             	    // InternalThingDescriptionJson.g:1160:6: ({...}? => (otherlv_104= '\"actions\"' otherlv_105= ':' otherlv_106= '{' ( (lv_actions_107_0= ruleJsonActionAffordance ) ) (otherlv_108= ',' ( (lv_actions_109_0= ruleJsonActionAffordance ) ) )* otherlv_110= '}' (otherlv_111= ',' )? ) )
             	    {
 
-            	    						getUnorderedGroupHelper().select(grammarAccess.getJsonThingDescriptionAccess().getUnorderedGroup_2(), 16);
+            	    						getUnorderedGroupHelper().select(grammarAccess.getJsonThingAccess().getUnorderedGroup_2(), 16);
             	    					
             	    // InternalThingDescriptionJson.g:1163:9: ({...}? => (otherlv_104= '\"actions\"' otherlv_105= ':' otherlv_106= '{' ( (lv_actions_107_0= ruleJsonActionAffordance ) ) (otherlv_108= ',' ( (lv_actions_109_0= ruleJsonActionAffordance ) ) )* otherlv_110= '}' (otherlv_111= ',' )? ) )
             	    // InternalThingDescriptionJson.g:1163:10: {...}? => (otherlv_104= '\"actions\"' otherlv_105= ':' otherlv_106= '{' ( (lv_actions_107_0= ruleJsonActionAffordance ) ) (otherlv_108= ',' ( (lv_actions_109_0= ruleJsonActionAffordance ) ) )* otherlv_110= '}' (otherlv_111= ',' )? )
             	    {
             	    if ( !((true)) ) {
-            	        throw new FailedPredicateException(input, "ruleJsonThingDescription", "true");
+            	        throw new FailedPredicateException(input, "ruleJsonThing", "true");
             	    }
             	    // InternalThingDescriptionJson.g:1163:19: (otherlv_104= '\"actions\"' otherlv_105= ':' otherlv_106= '{' ( (lv_actions_107_0= ruleJsonActionAffordance ) ) (otherlv_108= ',' ( (lv_actions_109_0= ruleJsonActionAffordance ) ) )* otherlv_110= '}' (otherlv_111= ',' )? )
             	    // InternalThingDescriptionJson.g:1163:20: otherlv_104= '\"actions\"' otherlv_105= ':' otherlv_106= '{' ( (lv_actions_107_0= ruleJsonActionAffordance ) ) (otherlv_108= ',' ( (lv_actions_109_0= ruleJsonActionAffordance ) ) )* otherlv_110= '}' (otherlv_111= ',' )?
             	    {
             	    otherlv_104=(Token)match(input,29,FOLLOW_4); 
 
-            	    									newLeafNode(otherlv_104, grammarAccess.getJsonThingDescriptionAccess().getActionsKeyword_2_16_0());
+            	    									newLeafNode(otherlv_104, grammarAccess.getJsonThingAccess().getActionsKeyword_2_16_0());
             	    								
             	    otherlv_105=(Token)match(input,9,FOLLOW_11); 
 
-            	    									newLeafNode(otherlv_105, grammarAccess.getJsonThingDescriptionAccess().getColonKeyword_2_16_1());
+            	    									newLeafNode(otherlv_105, grammarAccess.getJsonThingAccess().getColonKeyword_2_16_1());
             	    								
             	    otherlv_106=(Token)match(input,7,FOLLOW_10); 
 
-            	    									newLeafNode(otherlv_106, grammarAccess.getJsonThingDescriptionAccess().getLeftCurlyBracketKeyword_2_16_2());
+            	    									newLeafNode(otherlv_106, grammarAccess.getJsonThingAccess().getLeftCurlyBracketKeyword_2_16_2());
             	    								
             	    // InternalThingDescriptionJson.g:1175:9: ( (lv_actions_107_0= ruleJsonActionAffordance ) )
             	    // InternalThingDescriptionJson.g:1176:10: (lv_actions_107_0= ruleJsonActionAffordance )
@@ -2859,7 +2859,7 @@ public class InternalThingDescriptionJsonParser extends AbstractInternalAntlrPar
             	    // InternalThingDescriptionJson.g:1177:11: lv_actions_107_0= ruleJsonActionAffordance
             	    {
 
-            	    											newCompositeNode(grammarAccess.getJsonThingDescriptionAccess().getActionsJsonActionAffordanceParserRuleCall_2_16_3_0());
+            	    											newCompositeNode(grammarAccess.getJsonThingAccess().getActionsJsonActionAffordanceParserRuleCall_2_16_3_0());
             	    										
             	    pushFollow(FOLLOW_12);
             	    lv_actions_107_0=ruleJsonActionAffordance();
@@ -2868,7 +2868,7 @@ public class InternalThingDescriptionJsonParser extends AbstractInternalAntlrPar
 
 
             	    											if (current==null) {
-            	    												current = createModelElementForParent(grammarAccess.getJsonThingDescriptionRule());
+            	    												current = createModelElementForParent(grammarAccess.getJsonThingRule());
             	    											}
             	    											add(
             	    												current,
@@ -2900,7 +2900,7 @@ public class InternalThingDescriptionJsonParser extends AbstractInternalAntlrPar
             	    	    {
             	    	    otherlv_108=(Token)match(input,11,FOLLOW_10); 
 
-            	    	    										newLeafNode(otherlv_108, grammarAccess.getJsonThingDescriptionAccess().getCommaKeyword_2_16_4_0());
+            	    	    										newLeafNode(otherlv_108, grammarAccess.getJsonThingAccess().getCommaKeyword_2_16_4_0());
             	    	    									
             	    	    // InternalThingDescriptionJson.g:1199:10: ( (lv_actions_109_0= ruleJsonActionAffordance ) )
             	    	    // InternalThingDescriptionJson.g:1200:11: (lv_actions_109_0= ruleJsonActionAffordance )
@@ -2909,7 +2909,7 @@ public class InternalThingDescriptionJsonParser extends AbstractInternalAntlrPar
             	    	    // InternalThingDescriptionJson.g:1201:12: lv_actions_109_0= ruleJsonActionAffordance
             	    	    {
 
-            	    	    												newCompositeNode(grammarAccess.getJsonThingDescriptionAccess().getActionsJsonActionAffordanceParserRuleCall_2_16_4_1_0());
+            	    	    												newCompositeNode(grammarAccess.getJsonThingAccess().getActionsJsonActionAffordanceParserRuleCall_2_16_4_1_0());
             	    	    											
             	    	    pushFollow(FOLLOW_12);
             	    	    lv_actions_109_0=ruleJsonActionAffordance();
@@ -2918,7 +2918,7 @@ public class InternalThingDescriptionJsonParser extends AbstractInternalAntlrPar
 
 
             	    	    												if (current==null) {
-            	    	    													current = createModelElementForParent(grammarAccess.getJsonThingDescriptionRule());
+            	    	    													current = createModelElementForParent(grammarAccess.getJsonThingRule());
             	    	    												}
             	    	    												add(
             	    	    													current,
@@ -2944,7 +2944,7 @@ public class InternalThingDescriptionJsonParser extends AbstractInternalAntlrPar
 
             	    otherlv_110=(Token)match(input,23,FOLLOW_6); 
 
-            	    									newLeafNode(otherlv_110, grammarAccess.getJsonThingDescriptionAccess().getRightCurlyBracketKeyword_2_16_5());
+            	    									newLeafNode(otherlv_110, grammarAccess.getJsonThingAccess().getRightCurlyBracketKeyword_2_16_5());
             	    								
             	    // InternalThingDescriptionJson.g:1223:9: (otherlv_111= ',' )?
             	    int alt31=2;
@@ -2959,7 +2959,7 @@ public class InternalThingDescriptionJsonParser extends AbstractInternalAntlrPar
             	            {
             	            otherlv_111=(Token)match(input,11,FOLLOW_9); 
 
-            	            										newLeafNode(otherlv_111, grammarAccess.getJsonThingDescriptionAccess().getCommaKeyword_2_16_6());
+            	            										newLeafNode(otherlv_111, grammarAccess.getJsonThingAccess().getCommaKeyword_2_16_6());
             	            									
 
             	            }
@@ -2974,7 +2974,7 @@ public class InternalThingDescriptionJsonParser extends AbstractInternalAntlrPar
             	    }
 
             	     
-            	    						getUnorderedGroupHelper().returnFromSelection(grammarAccess.getJsonThingDescriptionAccess().getUnorderedGroup_2());
+            	    						getUnorderedGroupHelper().returnFromSelection(grammarAccess.getJsonThingAccess().getUnorderedGroup_2());
             	    					
 
             	    }
@@ -2991,35 +2991,35 @@ public class InternalThingDescriptionJsonParser extends AbstractInternalAntlrPar
             	    // InternalThingDescriptionJson.g:1235:4: ({...}? => ( ({...}? => (otherlv_112= '\"events\"' otherlv_113= ':' otherlv_114= '{' ( (lv_events_115_0= ruleJsonEventAffordance ) ) (otherlv_116= ',' ( (lv_events_117_0= ruleJsonEventAffordance ) ) )* otherlv_118= '}' (otherlv_119= ',' )? ) ) ) )
             	    // InternalThingDescriptionJson.g:1236:5: {...}? => ( ({...}? => (otherlv_112= '\"events\"' otherlv_113= ':' otherlv_114= '{' ( (lv_events_115_0= ruleJsonEventAffordance ) ) (otherlv_116= ',' ( (lv_events_117_0= ruleJsonEventAffordance ) ) )* otherlv_118= '}' (otherlv_119= ',' )? ) ) )
             	    {
-            	    if ( ! getUnorderedGroupHelper().canSelect(grammarAccess.getJsonThingDescriptionAccess().getUnorderedGroup_2(), 17) ) {
-            	        throw new FailedPredicateException(input, "ruleJsonThingDescription", "getUnorderedGroupHelper().canSelect(grammarAccess.getJsonThingDescriptionAccess().getUnorderedGroup_2(), 17)");
+            	    if ( ! getUnorderedGroupHelper().canSelect(grammarAccess.getJsonThingAccess().getUnorderedGroup_2(), 17) ) {
+            	        throw new FailedPredicateException(input, "ruleJsonThing", "getUnorderedGroupHelper().canSelect(grammarAccess.getJsonThingAccess().getUnorderedGroup_2(), 17)");
             	    }
-            	    // InternalThingDescriptionJson.g:1236:118: ( ({...}? => (otherlv_112= '\"events\"' otherlv_113= ':' otherlv_114= '{' ( (lv_events_115_0= ruleJsonEventAffordance ) ) (otherlv_116= ',' ( (lv_events_117_0= ruleJsonEventAffordance ) ) )* otherlv_118= '}' (otherlv_119= ',' )? ) ) )
+            	    // InternalThingDescriptionJson.g:1236:107: ( ({...}? => (otherlv_112= '\"events\"' otherlv_113= ':' otherlv_114= '{' ( (lv_events_115_0= ruleJsonEventAffordance ) ) (otherlv_116= ',' ( (lv_events_117_0= ruleJsonEventAffordance ) ) )* otherlv_118= '}' (otherlv_119= ',' )? ) ) )
             	    // InternalThingDescriptionJson.g:1237:6: ({...}? => (otherlv_112= '\"events\"' otherlv_113= ':' otherlv_114= '{' ( (lv_events_115_0= ruleJsonEventAffordance ) ) (otherlv_116= ',' ( (lv_events_117_0= ruleJsonEventAffordance ) ) )* otherlv_118= '}' (otherlv_119= ',' )? ) )
             	    {
 
-            	    						getUnorderedGroupHelper().select(grammarAccess.getJsonThingDescriptionAccess().getUnorderedGroup_2(), 17);
+            	    						getUnorderedGroupHelper().select(grammarAccess.getJsonThingAccess().getUnorderedGroup_2(), 17);
             	    					
             	    // InternalThingDescriptionJson.g:1240:9: ({...}? => (otherlv_112= '\"events\"' otherlv_113= ':' otherlv_114= '{' ( (lv_events_115_0= ruleJsonEventAffordance ) ) (otherlv_116= ',' ( (lv_events_117_0= ruleJsonEventAffordance ) ) )* otherlv_118= '}' (otherlv_119= ',' )? ) )
             	    // InternalThingDescriptionJson.g:1240:10: {...}? => (otherlv_112= '\"events\"' otherlv_113= ':' otherlv_114= '{' ( (lv_events_115_0= ruleJsonEventAffordance ) ) (otherlv_116= ',' ( (lv_events_117_0= ruleJsonEventAffordance ) ) )* otherlv_118= '}' (otherlv_119= ',' )? )
             	    {
             	    if ( !((true)) ) {
-            	        throw new FailedPredicateException(input, "ruleJsonThingDescription", "true");
+            	        throw new FailedPredicateException(input, "ruleJsonThing", "true");
             	    }
             	    // InternalThingDescriptionJson.g:1240:19: (otherlv_112= '\"events\"' otherlv_113= ':' otherlv_114= '{' ( (lv_events_115_0= ruleJsonEventAffordance ) ) (otherlv_116= ',' ( (lv_events_117_0= ruleJsonEventAffordance ) ) )* otherlv_118= '}' (otherlv_119= ',' )? )
             	    // InternalThingDescriptionJson.g:1240:20: otherlv_112= '\"events\"' otherlv_113= ':' otherlv_114= '{' ( (lv_events_115_0= ruleJsonEventAffordance ) ) (otherlv_116= ',' ( (lv_events_117_0= ruleJsonEventAffordance ) ) )* otherlv_118= '}' (otherlv_119= ',' )?
             	    {
             	    otherlv_112=(Token)match(input,30,FOLLOW_4); 
 
-            	    									newLeafNode(otherlv_112, grammarAccess.getJsonThingDescriptionAccess().getEventsKeyword_2_17_0());
+            	    									newLeafNode(otherlv_112, grammarAccess.getJsonThingAccess().getEventsKeyword_2_17_0());
             	    								
             	    otherlv_113=(Token)match(input,9,FOLLOW_11); 
 
-            	    									newLeafNode(otherlv_113, grammarAccess.getJsonThingDescriptionAccess().getColonKeyword_2_17_1());
+            	    									newLeafNode(otherlv_113, grammarAccess.getJsonThingAccess().getColonKeyword_2_17_1());
             	    								
             	    otherlv_114=(Token)match(input,7,FOLLOW_10); 
 
-            	    									newLeafNode(otherlv_114, grammarAccess.getJsonThingDescriptionAccess().getLeftCurlyBracketKeyword_2_17_2());
+            	    									newLeafNode(otherlv_114, grammarAccess.getJsonThingAccess().getLeftCurlyBracketKeyword_2_17_2());
             	    								
             	    // InternalThingDescriptionJson.g:1252:9: ( (lv_events_115_0= ruleJsonEventAffordance ) )
             	    // InternalThingDescriptionJson.g:1253:10: (lv_events_115_0= ruleJsonEventAffordance )
@@ -3028,7 +3028,7 @@ public class InternalThingDescriptionJsonParser extends AbstractInternalAntlrPar
             	    // InternalThingDescriptionJson.g:1254:11: lv_events_115_0= ruleJsonEventAffordance
             	    {
 
-            	    											newCompositeNode(grammarAccess.getJsonThingDescriptionAccess().getEventsJsonEventAffordanceParserRuleCall_2_17_3_0());
+            	    											newCompositeNode(grammarAccess.getJsonThingAccess().getEventsJsonEventAffordanceParserRuleCall_2_17_3_0());
             	    										
             	    pushFollow(FOLLOW_12);
             	    lv_events_115_0=ruleJsonEventAffordance();
@@ -3037,7 +3037,7 @@ public class InternalThingDescriptionJsonParser extends AbstractInternalAntlrPar
 
 
             	    											if (current==null) {
-            	    												current = createModelElementForParent(grammarAccess.getJsonThingDescriptionRule());
+            	    												current = createModelElementForParent(grammarAccess.getJsonThingRule());
             	    											}
             	    											add(
             	    												current,
@@ -3069,7 +3069,7 @@ public class InternalThingDescriptionJsonParser extends AbstractInternalAntlrPar
             	    	    {
             	    	    otherlv_116=(Token)match(input,11,FOLLOW_10); 
 
-            	    	    										newLeafNode(otherlv_116, grammarAccess.getJsonThingDescriptionAccess().getCommaKeyword_2_17_4_0());
+            	    	    										newLeafNode(otherlv_116, grammarAccess.getJsonThingAccess().getCommaKeyword_2_17_4_0());
             	    	    									
             	    	    // InternalThingDescriptionJson.g:1276:10: ( (lv_events_117_0= ruleJsonEventAffordance ) )
             	    	    // InternalThingDescriptionJson.g:1277:11: (lv_events_117_0= ruleJsonEventAffordance )
@@ -3078,7 +3078,7 @@ public class InternalThingDescriptionJsonParser extends AbstractInternalAntlrPar
             	    	    // InternalThingDescriptionJson.g:1278:12: lv_events_117_0= ruleJsonEventAffordance
             	    	    {
 
-            	    	    												newCompositeNode(grammarAccess.getJsonThingDescriptionAccess().getEventsJsonEventAffordanceParserRuleCall_2_17_4_1_0());
+            	    	    												newCompositeNode(grammarAccess.getJsonThingAccess().getEventsJsonEventAffordanceParserRuleCall_2_17_4_1_0());
             	    	    											
             	    	    pushFollow(FOLLOW_12);
             	    	    lv_events_117_0=ruleJsonEventAffordance();
@@ -3087,7 +3087,7 @@ public class InternalThingDescriptionJsonParser extends AbstractInternalAntlrPar
 
 
             	    	    												if (current==null) {
-            	    	    													current = createModelElementForParent(grammarAccess.getJsonThingDescriptionRule());
+            	    	    													current = createModelElementForParent(grammarAccess.getJsonThingRule());
             	    	    												}
             	    	    												add(
             	    	    													current,
@@ -3113,7 +3113,7 @@ public class InternalThingDescriptionJsonParser extends AbstractInternalAntlrPar
 
             	    otherlv_118=(Token)match(input,23,FOLLOW_6); 
 
-            	    									newLeafNode(otherlv_118, grammarAccess.getJsonThingDescriptionAccess().getRightCurlyBracketKeyword_2_17_5());
+            	    									newLeafNode(otherlv_118, grammarAccess.getJsonThingAccess().getRightCurlyBracketKeyword_2_17_5());
             	    								
             	    // InternalThingDescriptionJson.g:1300:9: (otherlv_119= ',' )?
             	    int alt33=2;
@@ -3128,7 +3128,7 @@ public class InternalThingDescriptionJsonParser extends AbstractInternalAntlrPar
             	            {
             	            otherlv_119=(Token)match(input,11,FOLLOW_9); 
 
-            	            										newLeafNode(otherlv_119, grammarAccess.getJsonThingDescriptionAccess().getCommaKeyword_2_17_6());
+            	            										newLeafNode(otherlv_119, grammarAccess.getJsonThingAccess().getCommaKeyword_2_17_6());
             	            									
 
             	            }
@@ -3143,7 +3143,7 @@ public class InternalThingDescriptionJsonParser extends AbstractInternalAntlrPar
             	    }
 
             	     
-            	    						getUnorderedGroupHelper().returnFromSelection(grammarAccess.getJsonThingDescriptionAccess().getUnorderedGroup_2());
+            	    						getUnorderedGroupHelper().returnFromSelection(grammarAccess.getJsonThingAccess().getUnorderedGroup_2());
             	    					
 
             	    }
@@ -3160,35 +3160,35 @@ public class InternalThingDescriptionJsonParser extends AbstractInternalAntlrPar
             	    // InternalThingDescriptionJson.g:1312:4: ({...}? => ( ({...}? => (otherlv_120= '\"securityDefinitions\"' otherlv_121= ':' otherlv_122= '{' ( (lv_securityDefinitions_123_0= ruleJsonSecurityScheme ) ) (otherlv_124= ',' ( (lv_securityDefinitions_125_0= ruleJsonSecurityScheme ) ) )* otherlv_126= '}' (otherlv_127= ',' )? ) ) ) )
             	    // InternalThingDescriptionJson.g:1313:5: {...}? => ( ({...}? => (otherlv_120= '\"securityDefinitions\"' otherlv_121= ':' otherlv_122= '{' ( (lv_securityDefinitions_123_0= ruleJsonSecurityScheme ) ) (otherlv_124= ',' ( (lv_securityDefinitions_125_0= ruleJsonSecurityScheme ) ) )* otherlv_126= '}' (otherlv_127= ',' )? ) ) )
             	    {
-            	    if ( ! getUnorderedGroupHelper().canSelect(grammarAccess.getJsonThingDescriptionAccess().getUnorderedGroup_2(), 18) ) {
-            	        throw new FailedPredicateException(input, "ruleJsonThingDescription", "getUnorderedGroupHelper().canSelect(grammarAccess.getJsonThingDescriptionAccess().getUnorderedGroup_2(), 18)");
+            	    if ( ! getUnorderedGroupHelper().canSelect(grammarAccess.getJsonThingAccess().getUnorderedGroup_2(), 18) ) {
+            	        throw new FailedPredicateException(input, "ruleJsonThing", "getUnorderedGroupHelper().canSelect(grammarAccess.getJsonThingAccess().getUnorderedGroup_2(), 18)");
             	    }
-            	    // InternalThingDescriptionJson.g:1313:118: ( ({...}? => (otherlv_120= '\"securityDefinitions\"' otherlv_121= ':' otherlv_122= '{' ( (lv_securityDefinitions_123_0= ruleJsonSecurityScheme ) ) (otherlv_124= ',' ( (lv_securityDefinitions_125_0= ruleJsonSecurityScheme ) ) )* otherlv_126= '}' (otherlv_127= ',' )? ) ) )
+            	    // InternalThingDescriptionJson.g:1313:107: ( ({...}? => (otherlv_120= '\"securityDefinitions\"' otherlv_121= ':' otherlv_122= '{' ( (lv_securityDefinitions_123_0= ruleJsonSecurityScheme ) ) (otherlv_124= ',' ( (lv_securityDefinitions_125_0= ruleJsonSecurityScheme ) ) )* otherlv_126= '}' (otherlv_127= ',' )? ) ) )
             	    // InternalThingDescriptionJson.g:1314:6: ({...}? => (otherlv_120= '\"securityDefinitions\"' otherlv_121= ':' otherlv_122= '{' ( (lv_securityDefinitions_123_0= ruleJsonSecurityScheme ) ) (otherlv_124= ',' ( (lv_securityDefinitions_125_0= ruleJsonSecurityScheme ) ) )* otherlv_126= '}' (otherlv_127= ',' )? ) )
             	    {
 
-            	    						getUnorderedGroupHelper().select(grammarAccess.getJsonThingDescriptionAccess().getUnorderedGroup_2(), 18);
+            	    						getUnorderedGroupHelper().select(grammarAccess.getJsonThingAccess().getUnorderedGroup_2(), 18);
             	    					
             	    // InternalThingDescriptionJson.g:1317:9: ({...}? => (otherlv_120= '\"securityDefinitions\"' otherlv_121= ':' otherlv_122= '{' ( (lv_securityDefinitions_123_0= ruleJsonSecurityScheme ) ) (otherlv_124= ',' ( (lv_securityDefinitions_125_0= ruleJsonSecurityScheme ) ) )* otherlv_126= '}' (otherlv_127= ',' )? ) )
             	    // InternalThingDescriptionJson.g:1317:10: {...}? => (otherlv_120= '\"securityDefinitions\"' otherlv_121= ':' otherlv_122= '{' ( (lv_securityDefinitions_123_0= ruleJsonSecurityScheme ) ) (otherlv_124= ',' ( (lv_securityDefinitions_125_0= ruleJsonSecurityScheme ) ) )* otherlv_126= '}' (otherlv_127= ',' )? )
             	    {
             	    if ( !((true)) ) {
-            	        throw new FailedPredicateException(input, "ruleJsonThingDescription", "true");
+            	        throw new FailedPredicateException(input, "ruleJsonThing", "true");
             	    }
             	    // InternalThingDescriptionJson.g:1317:19: (otherlv_120= '\"securityDefinitions\"' otherlv_121= ':' otherlv_122= '{' ( (lv_securityDefinitions_123_0= ruleJsonSecurityScheme ) ) (otherlv_124= ',' ( (lv_securityDefinitions_125_0= ruleJsonSecurityScheme ) ) )* otherlv_126= '}' (otherlv_127= ',' )? )
             	    // InternalThingDescriptionJson.g:1317:20: otherlv_120= '\"securityDefinitions\"' otherlv_121= ':' otherlv_122= '{' ( (lv_securityDefinitions_123_0= ruleJsonSecurityScheme ) ) (otherlv_124= ',' ( (lv_securityDefinitions_125_0= ruleJsonSecurityScheme ) ) )* otherlv_126= '}' (otherlv_127= ',' )?
             	    {
             	    otherlv_120=(Token)match(input,31,FOLLOW_4); 
 
-            	    									newLeafNode(otherlv_120, grammarAccess.getJsonThingDescriptionAccess().getSecurityDefinitionsKeyword_2_18_0());
+            	    									newLeafNode(otherlv_120, grammarAccess.getJsonThingAccess().getSecurityDefinitionsKeyword_2_18_0());
             	    								
             	    otherlv_121=(Token)match(input,9,FOLLOW_11); 
 
-            	    									newLeafNode(otherlv_121, grammarAccess.getJsonThingDescriptionAccess().getColonKeyword_2_18_1());
+            	    									newLeafNode(otherlv_121, grammarAccess.getJsonThingAccess().getColonKeyword_2_18_1());
             	    								
             	    otherlv_122=(Token)match(input,7,FOLLOW_10); 
 
-            	    									newLeafNode(otherlv_122, grammarAccess.getJsonThingDescriptionAccess().getLeftCurlyBracketKeyword_2_18_2());
+            	    									newLeafNode(otherlv_122, grammarAccess.getJsonThingAccess().getLeftCurlyBracketKeyword_2_18_2());
             	    								
             	    // InternalThingDescriptionJson.g:1329:9: ( (lv_securityDefinitions_123_0= ruleJsonSecurityScheme ) )
             	    // InternalThingDescriptionJson.g:1330:10: (lv_securityDefinitions_123_0= ruleJsonSecurityScheme )
@@ -3197,7 +3197,7 @@ public class InternalThingDescriptionJsonParser extends AbstractInternalAntlrPar
             	    // InternalThingDescriptionJson.g:1331:11: lv_securityDefinitions_123_0= ruleJsonSecurityScheme
             	    {
 
-            	    											newCompositeNode(grammarAccess.getJsonThingDescriptionAccess().getSecurityDefinitionsJsonSecuritySchemeParserRuleCall_2_18_3_0());
+            	    											newCompositeNode(grammarAccess.getJsonThingAccess().getSecurityDefinitionsJsonSecuritySchemeParserRuleCall_2_18_3_0());
             	    										
             	    pushFollow(FOLLOW_12);
             	    lv_securityDefinitions_123_0=ruleJsonSecurityScheme();
@@ -3206,7 +3206,7 @@ public class InternalThingDescriptionJsonParser extends AbstractInternalAntlrPar
 
 
             	    											if (current==null) {
-            	    												current = createModelElementForParent(grammarAccess.getJsonThingDescriptionRule());
+            	    												current = createModelElementForParent(grammarAccess.getJsonThingRule());
             	    											}
             	    											add(
             	    												current,
@@ -3238,7 +3238,7 @@ public class InternalThingDescriptionJsonParser extends AbstractInternalAntlrPar
             	    	    {
             	    	    otherlv_124=(Token)match(input,11,FOLLOW_10); 
 
-            	    	    										newLeafNode(otherlv_124, grammarAccess.getJsonThingDescriptionAccess().getCommaKeyword_2_18_4_0());
+            	    	    										newLeafNode(otherlv_124, grammarAccess.getJsonThingAccess().getCommaKeyword_2_18_4_0());
             	    	    									
             	    	    // InternalThingDescriptionJson.g:1353:10: ( (lv_securityDefinitions_125_0= ruleJsonSecurityScheme ) )
             	    	    // InternalThingDescriptionJson.g:1354:11: (lv_securityDefinitions_125_0= ruleJsonSecurityScheme )
@@ -3247,7 +3247,7 @@ public class InternalThingDescriptionJsonParser extends AbstractInternalAntlrPar
             	    	    // InternalThingDescriptionJson.g:1355:12: lv_securityDefinitions_125_0= ruleJsonSecurityScheme
             	    	    {
 
-            	    	    												newCompositeNode(grammarAccess.getJsonThingDescriptionAccess().getSecurityDefinitionsJsonSecuritySchemeParserRuleCall_2_18_4_1_0());
+            	    	    												newCompositeNode(grammarAccess.getJsonThingAccess().getSecurityDefinitionsJsonSecuritySchemeParserRuleCall_2_18_4_1_0());
             	    	    											
             	    	    pushFollow(FOLLOW_12);
             	    	    lv_securityDefinitions_125_0=ruleJsonSecurityScheme();
@@ -3256,7 +3256,7 @@ public class InternalThingDescriptionJsonParser extends AbstractInternalAntlrPar
 
 
             	    	    												if (current==null) {
-            	    	    													current = createModelElementForParent(grammarAccess.getJsonThingDescriptionRule());
+            	    	    													current = createModelElementForParent(grammarAccess.getJsonThingRule());
             	    	    												}
             	    	    												add(
             	    	    													current,
@@ -3282,7 +3282,7 @@ public class InternalThingDescriptionJsonParser extends AbstractInternalAntlrPar
 
             	    otherlv_126=(Token)match(input,23,FOLLOW_6); 
 
-            	    									newLeafNode(otherlv_126, grammarAccess.getJsonThingDescriptionAccess().getRightCurlyBracketKeyword_2_18_5());
+            	    									newLeafNode(otherlv_126, grammarAccess.getJsonThingAccess().getRightCurlyBracketKeyword_2_18_5());
             	    								
             	    // InternalThingDescriptionJson.g:1377:9: (otherlv_127= ',' )?
             	    int alt35=2;
@@ -3297,7 +3297,7 @@ public class InternalThingDescriptionJsonParser extends AbstractInternalAntlrPar
             	            {
             	            otherlv_127=(Token)match(input,11,FOLLOW_9); 
 
-            	            										newLeafNode(otherlv_127, grammarAccess.getJsonThingDescriptionAccess().getCommaKeyword_2_18_6());
+            	            										newLeafNode(otherlv_127, grammarAccess.getJsonThingAccess().getCommaKeyword_2_18_6());
             	            									
 
             	            }
@@ -3312,7 +3312,7 @@ public class InternalThingDescriptionJsonParser extends AbstractInternalAntlrPar
             	    }
 
             	     
-            	    						getUnorderedGroupHelper().returnFromSelection(grammarAccess.getJsonThingDescriptionAccess().getUnorderedGroup_2());
+            	    						getUnorderedGroupHelper().returnFromSelection(grammarAccess.getJsonThingAccess().getUnorderedGroup_2());
             	    					
 
             	    }
@@ -3333,8 +3333,8 @@ public class InternalThingDescriptionJsonParser extends AbstractInternalAntlrPar
                 cnt36++;
             } while (true);
 
-            if ( ! getUnorderedGroupHelper().canLeave(grammarAccess.getJsonThingDescriptionAccess().getUnorderedGroup_2()) ) {
-                throw new FailedPredicateException(input, "ruleJsonThingDescription", "getUnorderedGroupHelper().canLeave(grammarAccess.getJsonThingDescriptionAccess().getUnorderedGroup_2())");
+            if ( ! getUnorderedGroupHelper().canLeave(grammarAccess.getJsonThingAccess().getUnorderedGroup_2()) ) {
+                throw new FailedPredicateException(input, "ruleJsonThing", "getUnorderedGroupHelper().canLeave(grammarAccess.getJsonThingAccess().getUnorderedGroup_2())");
             }
 
             }
@@ -3343,14 +3343,14 @@ public class InternalThingDescriptionJsonParser extends AbstractInternalAntlrPar
             }
 
              
-            				  getUnorderedGroupHelper().leave(grammarAccess.getJsonThingDescriptionAccess().getUnorderedGroup_2());
+            				  getUnorderedGroupHelper().leave(grammarAccess.getJsonThingAccess().getUnorderedGroup_2());
             				
 
             }
 
             otherlv_128=(Token)match(input,23,FOLLOW_2); 
 
-            			newLeafNode(otherlv_128, grammarAccess.getJsonThingDescriptionAccess().getRightCurlyBracketKeyword_3());
+            			newLeafNode(otherlv_128, grammarAccess.getJsonThingAccess().getRightCurlyBracketKeyword_3());
             		
 
             }
@@ -3371,7 +3371,7 @@ public class InternalThingDescriptionJsonParser extends AbstractInternalAntlrPar
         }
         return current;
     }
-    // $ANTLR end "ruleJsonThingDescription"
+    // $ANTLR end "ruleJsonThing"
 
 
     // $ANTLR start "entryRuleJsonVersionInfo"
@@ -17569,43 +17569,43 @@ public class InternalThingDescriptionJsonParser extends AbstractInternalAntlrPar
                         s = -1;
                         if ( (LA36_0==23) ) {s = 1;}
 
-                        else if ( LA36_0 == 8 && getUnorderedGroupHelper().canSelect(grammarAccess.getJsonThingDescriptionAccess().getUnorderedGroup_2(), 0) ) {s = 2;}
+                        else if ( LA36_0 == 8 && getUnorderedGroupHelper().canSelect(grammarAccess.getJsonThingAccess().getUnorderedGroup_2(), 0) ) {s = 2;}
 
-                        else if ( LA36_0 == 13 && getUnorderedGroupHelper().canSelect(grammarAccess.getJsonThingDescriptionAccess().getUnorderedGroup_2(), 1) ) {s = 3;}
+                        else if ( LA36_0 == 13 && getUnorderedGroupHelper().canSelect(grammarAccess.getJsonThingAccess().getUnorderedGroup_2(), 1) ) {s = 3;}
 
-                        else if ( LA36_0 == 14 && getUnorderedGroupHelper().canSelect(grammarAccess.getJsonThingDescriptionAccess().getUnorderedGroup_2(), 2) ) {s = 4;}
+                        else if ( LA36_0 == 14 && getUnorderedGroupHelper().canSelect(grammarAccess.getJsonThingAccess().getUnorderedGroup_2(), 2) ) {s = 4;}
 
-                        else if ( LA36_0 == 15 && getUnorderedGroupHelper().canSelect(grammarAccess.getJsonThingDescriptionAccess().getUnorderedGroup_2(), 3) ) {s = 5;}
+                        else if ( LA36_0 == 15 && getUnorderedGroupHelper().canSelect(grammarAccess.getJsonThingAccess().getUnorderedGroup_2(), 3) ) {s = 5;}
 
-                        else if ( LA36_0 == 16 && getUnorderedGroupHelper().canSelect(grammarAccess.getJsonThingDescriptionAccess().getUnorderedGroup_2(), 4) ) {s = 6;}
+                        else if ( LA36_0 == 16 && getUnorderedGroupHelper().canSelect(grammarAccess.getJsonThingAccess().getUnorderedGroup_2(), 4) ) {s = 6;}
 
-                        else if ( LA36_0 == 17 && getUnorderedGroupHelper().canSelect(grammarAccess.getJsonThingDescriptionAccess().getUnorderedGroup_2(), 5) ) {s = 7;}
+                        else if ( LA36_0 == 17 && getUnorderedGroupHelper().canSelect(grammarAccess.getJsonThingAccess().getUnorderedGroup_2(), 5) ) {s = 7;}
 
-                        else if ( LA36_0 == 18 && getUnorderedGroupHelper().canSelect(grammarAccess.getJsonThingDescriptionAccess().getUnorderedGroup_2(), 6) ) {s = 8;}
+                        else if ( LA36_0 == 18 && getUnorderedGroupHelper().canSelect(grammarAccess.getJsonThingAccess().getUnorderedGroup_2(), 6) ) {s = 8;}
 
-                        else if ( LA36_0 == 19 && getUnorderedGroupHelper().canSelect(grammarAccess.getJsonThingDescriptionAccess().getUnorderedGroup_2(), 7) ) {s = 9;}
+                        else if ( LA36_0 == 19 && getUnorderedGroupHelper().canSelect(grammarAccess.getJsonThingAccess().getUnorderedGroup_2(), 7) ) {s = 9;}
 
-                        else if ( LA36_0 == 20 && getUnorderedGroupHelper().canSelect(grammarAccess.getJsonThingDescriptionAccess().getUnorderedGroup_2(), 8) ) {s = 10;}
+                        else if ( LA36_0 == 20 && getUnorderedGroupHelper().canSelect(grammarAccess.getJsonThingAccess().getUnorderedGroup_2(), 8) ) {s = 10;}
 
-                        else if ( LA36_0 == 21 && getUnorderedGroupHelper().canSelect(grammarAccess.getJsonThingDescriptionAccess().getUnorderedGroup_2(), 9) ) {s = 11;}
+                        else if ( LA36_0 == 21 && getUnorderedGroupHelper().canSelect(grammarAccess.getJsonThingAccess().getUnorderedGroup_2(), 9) ) {s = 11;}
 
-                        else if ( LA36_0 == 22 && getUnorderedGroupHelper().canSelect(grammarAccess.getJsonThingDescriptionAccess().getUnorderedGroup_2(), 10) ) {s = 12;}
+                        else if ( LA36_0 == 22 && getUnorderedGroupHelper().canSelect(grammarAccess.getJsonThingAccess().getUnorderedGroup_2(), 10) ) {s = 12;}
 
-                        else if ( LA36_0 == 24 && getUnorderedGroupHelper().canSelect(grammarAccess.getJsonThingDescriptionAccess().getUnorderedGroup_2(), 11) ) {s = 13;}
+                        else if ( LA36_0 == 24 && getUnorderedGroupHelper().canSelect(grammarAccess.getJsonThingAccess().getUnorderedGroup_2(), 11) ) {s = 13;}
 
-                        else if ( LA36_0 == 25 && getUnorderedGroupHelper().canSelect(grammarAccess.getJsonThingDescriptionAccess().getUnorderedGroup_2(), 12) ) {s = 14;}
+                        else if ( LA36_0 == 25 && getUnorderedGroupHelper().canSelect(grammarAccess.getJsonThingAccess().getUnorderedGroup_2(), 12) ) {s = 14;}
 
-                        else if ( LA36_0 == 26 && getUnorderedGroupHelper().canSelect(grammarAccess.getJsonThingDescriptionAccess().getUnorderedGroup_2(), 13) ) {s = 15;}
+                        else if ( LA36_0 == 26 && getUnorderedGroupHelper().canSelect(grammarAccess.getJsonThingAccess().getUnorderedGroup_2(), 13) ) {s = 15;}
 
-                        else if ( LA36_0 == 27 && getUnorderedGroupHelper().canSelect(grammarAccess.getJsonThingDescriptionAccess().getUnorderedGroup_2(), 14) ) {s = 16;}
+                        else if ( LA36_0 == 27 && getUnorderedGroupHelper().canSelect(grammarAccess.getJsonThingAccess().getUnorderedGroup_2(), 14) ) {s = 16;}
 
-                        else if ( LA36_0 == 28 && getUnorderedGroupHelper().canSelect(grammarAccess.getJsonThingDescriptionAccess().getUnorderedGroup_2(), 15) ) {s = 17;}
+                        else if ( LA36_0 == 28 && getUnorderedGroupHelper().canSelect(grammarAccess.getJsonThingAccess().getUnorderedGroup_2(), 15) ) {s = 17;}
 
-                        else if ( LA36_0 == 29 && getUnorderedGroupHelper().canSelect(grammarAccess.getJsonThingDescriptionAccess().getUnorderedGroup_2(), 16) ) {s = 18;}
+                        else if ( LA36_0 == 29 && getUnorderedGroupHelper().canSelect(grammarAccess.getJsonThingAccess().getUnorderedGroup_2(), 16) ) {s = 18;}
 
-                        else if ( LA36_0 == 30 && getUnorderedGroupHelper().canSelect(grammarAccess.getJsonThingDescriptionAccess().getUnorderedGroup_2(), 17) ) {s = 19;}
+                        else if ( LA36_0 == 30 && getUnorderedGroupHelper().canSelect(grammarAccess.getJsonThingAccess().getUnorderedGroup_2(), 17) ) {s = 19;}
 
-                        else if ( LA36_0 == 31 && getUnorderedGroupHelper().canSelect(grammarAccess.getJsonThingDescriptionAccess().getUnorderedGroup_2(), 18) ) {s = 20;}
+                        else if ( LA36_0 == 31 && getUnorderedGroupHelper().canSelect(grammarAccess.getJsonThingAccess().getUnorderedGroup_2(), 18) ) {s = 20;}
 
                          
                         input.seek(index36_0);

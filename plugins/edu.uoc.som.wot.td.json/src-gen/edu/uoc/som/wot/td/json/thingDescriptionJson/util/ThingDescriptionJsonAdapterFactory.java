@@ -76,9 +76,9 @@ public class ThingDescriptionJsonAdapterFactory extends AdapterFactoryImpl
     new ThingDescriptionJsonSwitch<Adapter>()
     {
       @Override
-      public Adapter caseJsonThingDescription(JsonThingDescription object)
+      public Adapter caseJsonThing(JsonThing object)
       {
-        return createJsonThingDescriptionAdapter();
+        return createJsonThingAdapter();
       }
       @Override
       public Adapter caseJsonVersionInfo(JsonVersionInfo object)
@@ -153,16 +153,16 @@ public class ThingDescriptionJsonAdapterFactory extends AdapterFactoryImpl
 
 
   /**
-   * Creates a new adapter for an object of class '{@link edu.uoc.som.wot.td.json.thingDescriptionJson.JsonThingDescription <em>Json Thing Description</em>}'.
+   * Creates a new adapter for an object of class '{@link edu.uoc.som.wot.td.json.thingDescriptionJson.JsonThing <em>Json Thing</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see edu.uoc.som.wot.td.json.thingDescriptionJson.JsonThingDescription
+   * @see edu.uoc.som.wot.td.json.thingDescriptionJson.JsonThing
    * @generated
    */
-  public Adapter createJsonThingDescriptionAdapter()
+  public Adapter createJsonThingAdapter()
   {
     return null;
   }

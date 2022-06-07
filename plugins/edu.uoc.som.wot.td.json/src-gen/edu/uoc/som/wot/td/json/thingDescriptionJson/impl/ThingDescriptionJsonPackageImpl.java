@@ -13,7 +13,7 @@ import edu.uoc.som.wot.td.json.thingDescriptionJson.JsonLink;
 import edu.uoc.som.wot.td.json.thingDescriptionJson.JsonMultiLanguageEntry;
 import edu.uoc.som.wot.td.json.thingDescriptionJson.JsonPropertyAffordance;
 import edu.uoc.som.wot.td.json.thingDescriptionJson.JsonSecurityScheme;
-import edu.uoc.som.wot.td.json.thingDescriptionJson.JsonThingDescription;
+import edu.uoc.som.wot.td.json.thingDescriptionJson.JsonThing;
 import edu.uoc.som.wot.td.json.thingDescriptionJson.JsonType;
 import edu.uoc.som.wot.td.json.thingDescriptionJson.JsonVersionInfo;
 import edu.uoc.som.wot.td.json.thingDescriptionJson.ThingDescriptionJsonFactory;
@@ -40,7 +40,7 @@ public class ThingDescriptionJsonPackageImpl extends EPackageImpl implements Thi
    * <!-- end-user-doc -->
    * @generated
    */
-  private EClass jsonThingDescriptionEClass = null;
+  private EClass jsonThingEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -195,9 +195,9 @@ public class ThingDescriptionJsonPackageImpl extends EPackageImpl implements Thi
    * @generated
    */
   @Override
-  public EClass getJsonThingDescription()
+  public EClass getJsonThing()
   {
-    return jsonThingDescriptionEClass;
+    return jsonThingEClass;
   }
 
   /**
@@ -206,9 +206,9 @@ public class ThingDescriptionJsonPackageImpl extends EPackageImpl implements Thi
    * @generated
    */
   @Override
-  public EAttribute getJsonThingDescription_Ld_context()
+  public EAttribute getJsonThing_Ld_context()
   {
-    return (EAttribute)jsonThingDescriptionEClass.getEStructuralFeatures().get(0);
+    return (EAttribute)jsonThingEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -217,9 +217,9 @@ public class ThingDescriptionJsonPackageImpl extends EPackageImpl implements Thi
    * @generated
    */
   @Override
-  public EAttribute getJsonThingDescription_Ld_type()
+  public EAttribute getJsonThing_Ld_type()
   {
-    return (EAttribute)jsonThingDescriptionEClass.getEStructuralFeatures().get(1);
+    return (EAttribute)jsonThingEClass.getEStructuralFeatures().get(1);
   }
 
   /**
@@ -228,9 +228,9 @@ public class ThingDescriptionJsonPackageImpl extends EPackageImpl implements Thi
    * @generated
    */
   @Override
-  public EAttribute getJsonThingDescription_Id()
+  public EAttribute getJsonThing_Id()
   {
-    return (EAttribute)jsonThingDescriptionEClass.getEStructuralFeatures().get(2);
+    return (EAttribute)jsonThingEClass.getEStructuralFeatures().get(2);
   }
 
   /**
@@ -239,9 +239,9 @@ public class ThingDescriptionJsonPackageImpl extends EPackageImpl implements Thi
    * @generated
    */
   @Override
-  public EAttribute getJsonThingDescription_Title()
+  public EAttribute getJsonThing_Title()
   {
-    return (EAttribute)jsonThingDescriptionEClass.getEStructuralFeatures().get(3);
+    return (EAttribute)jsonThingEClass.getEStructuralFeatures().get(3);
   }
 
   /**
@@ -250,9 +250,9 @@ public class ThingDescriptionJsonPackageImpl extends EPackageImpl implements Thi
    * @generated
    */
   @Override
-  public EAttribute getJsonThingDescription_Description()
+  public EAttribute getJsonThing_Description()
   {
-    return (EAttribute)jsonThingDescriptionEClass.getEStructuralFeatures().get(4);
+    return (EAttribute)jsonThingEClass.getEStructuralFeatures().get(4);
   }
 
   /**
@@ -261,9 +261,9 @@ public class ThingDescriptionJsonPackageImpl extends EPackageImpl implements Thi
    * @generated
    */
   @Override
-  public EAttribute getJsonThingDescription_Created()
+  public EAttribute getJsonThing_Created()
   {
-    return (EAttribute)jsonThingDescriptionEClass.getEStructuralFeatures().get(5);
+    return (EAttribute)jsonThingEClass.getEStructuralFeatures().get(5);
   }
 
   /**
@@ -272,9 +272,9 @@ public class ThingDescriptionJsonPackageImpl extends EPackageImpl implements Thi
    * @generated
    */
   @Override
-  public EAttribute getJsonThingDescription_Modified()
+  public EAttribute getJsonThing_Modified()
   {
-    return (EAttribute)jsonThingDescriptionEClass.getEStructuralFeatures().get(6);
+    return (EAttribute)jsonThingEClass.getEStructuralFeatures().get(6);
   }
 
   /**
@@ -283,9 +283,9 @@ public class ThingDescriptionJsonPackageImpl extends EPackageImpl implements Thi
    * @generated
    */
   @Override
-  public EAttribute getJsonThingDescription_Support()
+  public EAttribute getJsonThing_Support()
   {
-    return (EAttribute)jsonThingDescriptionEClass.getEStructuralFeatures().get(7);
+    return (EAttribute)jsonThingEClass.getEStructuralFeatures().get(7);
   }
 
   /**
@@ -294,9 +294,9 @@ public class ThingDescriptionJsonPackageImpl extends EPackageImpl implements Thi
    * @generated
    */
   @Override
-  public EAttribute getJsonThingDescription_Base()
+  public EAttribute getJsonThing_Base()
   {
-    return (EAttribute)jsonThingDescriptionEClass.getEStructuralFeatures().get(8);
+    return (EAttribute)jsonThingEClass.getEStructuralFeatures().get(8);
   }
 
   /**
@@ -305,9 +305,9 @@ public class ThingDescriptionJsonPackageImpl extends EPackageImpl implements Thi
    * @generated
    */
   @Override
-  public EAttribute getJsonThingDescription_Security()
+  public EAttribute getJsonThing_Security()
   {
-    return (EAttribute)jsonThingDescriptionEClass.getEStructuralFeatures().get(9);
+    return (EAttribute)jsonThingEClass.getEStructuralFeatures().get(9);
   }
 
   /**
@@ -316,9 +316,9 @@ public class ThingDescriptionJsonPackageImpl extends EPackageImpl implements Thi
    * @generated
    */
   @Override
-  public EReference getJsonThingDescription_Forms()
+  public EReference getJsonThing_Forms()
   {
-    return (EReference)jsonThingDescriptionEClass.getEStructuralFeatures().get(10);
+    return (EReference)jsonThingEClass.getEStructuralFeatures().get(10);
   }
 
   /**
@@ -327,9 +327,9 @@ public class ThingDescriptionJsonPackageImpl extends EPackageImpl implements Thi
    * @generated
    */
   @Override
-  public EReference getJsonThingDescription_Links()
+  public EReference getJsonThing_Links()
   {
-    return (EReference)jsonThingDescriptionEClass.getEStructuralFeatures().get(11);
+    return (EReference)jsonThingEClass.getEStructuralFeatures().get(11);
   }
 
   /**
@@ -338,9 +338,9 @@ public class ThingDescriptionJsonPackageImpl extends EPackageImpl implements Thi
    * @generated
    */
   @Override
-  public EReference getJsonThingDescription_Titles()
+  public EReference getJsonThing_Titles()
   {
-    return (EReference)jsonThingDescriptionEClass.getEStructuralFeatures().get(12);
+    return (EReference)jsonThingEClass.getEStructuralFeatures().get(12);
   }
 
   /**
@@ -349,9 +349,9 @@ public class ThingDescriptionJsonPackageImpl extends EPackageImpl implements Thi
    * @generated
    */
   @Override
-  public EReference getJsonThingDescription_Descriptions()
+  public EReference getJsonThing_Descriptions()
   {
-    return (EReference)jsonThingDescriptionEClass.getEStructuralFeatures().get(13);
+    return (EReference)jsonThingEClass.getEStructuralFeatures().get(13);
   }
 
   /**
@@ -360,9 +360,9 @@ public class ThingDescriptionJsonPackageImpl extends EPackageImpl implements Thi
    * @generated
    */
   @Override
-  public EReference getJsonThingDescription_Version()
+  public EReference getJsonThing_Version()
   {
-    return (EReference)jsonThingDescriptionEClass.getEStructuralFeatures().get(14);
+    return (EReference)jsonThingEClass.getEStructuralFeatures().get(14);
   }
 
   /**
@@ -371,9 +371,9 @@ public class ThingDescriptionJsonPackageImpl extends EPackageImpl implements Thi
    * @generated
    */
   @Override
-  public EReference getJsonThingDescription_Properties()
+  public EReference getJsonThing_Properties()
   {
-    return (EReference)jsonThingDescriptionEClass.getEStructuralFeatures().get(15);
+    return (EReference)jsonThingEClass.getEStructuralFeatures().get(15);
   }
 
   /**
@@ -382,9 +382,9 @@ public class ThingDescriptionJsonPackageImpl extends EPackageImpl implements Thi
    * @generated
    */
   @Override
-  public EReference getJsonThingDescription_Actions()
+  public EReference getJsonThing_Actions()
   {
-    return (EReference)jsonThingDescriptionEClass.getEStructuralFeatures().get(16);
+    return (EReference)jsonThingEClass.getEStructuralFeatures().get(16);
   }
 
   /**
@@ -393,9 +393,9 @@ public class ThingDescriptionJsonPackageImpl extends EPackageImpl implements Thi
    * @generated
    */
   @Override
-  public EReference getJsonThingDescription_Events()
+  public EReference getJsonThing_Events()
   {
-    return (EReference)jsonThingDescriptionEClass.getEStructuralFeatures().get(17);
+    return (EReference)jsonThingEClass.getEStructuralFeatures().get(17);
   }
 
   /**
@@ -404,9 +404,9 @@ public class ThingDescriptionJsonPackageImpl extends EPackageImpl implements Thi
    * @generated
    */
   @Override
-  public EReference getJsonThingDescription_SecurityDefinitions()
+  public EReference getJsonThing_SecurityDefinitions()
   {
-    return (EReference)jsonThingDescriptionEClass.getEStructuralFeatures().get(18);
+    return (EReference)jsonThingEClass.getEStructuralFeatures().get(18);
   }
 
   /**
@@ -1430,26 +1430,26 @@ public class ThingDescriptionJsonPackageImpl extends EPackageImpl implements Thi
     isCreated = true;
 
     // Create classes and their features
-    jsonThingDescriptionEClass = createEClass(JSON_THING_DESCRIPTION);
-    createEAttribute(jsonThingDescriptionEClass, JSON_THING_DESCRIPTION__LD_CONTEXT);
-    createEAttribute(jsonThingDescriptionEClass, JSON_THING_DESCRIPTION__LD_TYPE);
-    createEAttribute(jsonThingDescriptionEClass, JSON_THING_DESCRIPTION__ID);
-    createEAttribute(jsonThingDescriptionEClass, JSON_THING_DESCRIPTION__TITLE);
-    createEAttribute(jsonThingDescriptionEClass, JSON_THING_DESCRIPTION__DESCRIPTION);
-    createEAttribute(jsonThingDescriptionEClass, JSON_THING_DESCRIPTION__CREATED);
-    createEAttribute(jsonThingDescriptionEClass, JSON_THING_DESCRIPTION__MODIFIED);
-    createEAttribute(jsonThingDescriptionEClass, JSON_THING_DESCRIPTION__SUPPORT);
-    createEAttribute(jsonThingDescriptionEClass, JSON_THING_DESCRIPTION__BASE);
-    createEAttribute(jsonThingDescriptionEClass, JSON_THING_DESCRIPTION__SECURITY);
-    createEReference(jsonThingDescriptionEClass, JSON_THING_DESCRIPTION__FORMS);
-    createEReference(jsonThingDescriptionEClass, JSON_THING_DESCRIPTION__LINKS);
-    createEReference(jsonThingDescriptionEClass, JSON_THING_DESCRIPTION__TITLES);
-    createEReference(jsonThingDescriptionEClass, JSON_THING_DESCRIPTION__DESCRIPTIONS);
-    createEReference(jsonThingDescriptionEClass, JSON_THING_DESCRIPTION__VERSION);
-    createEReference(jsonThingDescriptionEClass, JSON_THING_DESCRIPTION__PROPERTIES);
-    createEReference(jsonThingDescriptionEClass, JSON_THING_DESCRIPTION__ACTIONS);
-    createEReference(jsonThingDescriptionEClass, JSON_THING_DESCRIPTION__EVENTS);
-    createEReference(jsonThingDescriptionEClass, JSON_THING_DESCRIPTION__SECURITY_DEFINITIONS);
+    jsonThingEClass = createEClass(JSON_THING);
+    createEAttribute(jsonThingEClass, JSON_THING__LD_CONTEXT);
+    createEAttribute(jsonThingEClass, JSON_THING__LD_TYPE);
+    createEAttribute(jsonThingEClass, JSON_THING__ID);
+    createEAttribute(jsonThingEClass, JSON_THING__TITLE);
+    createEAttribute(jsonThingEClass, JSON_THING__DESCRIPTION);
+    createEAttribute(jsonThingEClass, JSON_THING__CREATED);
+    createEAttribute(jsonThingEClass, JSON_THING__MODIFIED);
+    createEAttribute(jsonThingEClass, JSON_THING__SUPPORT);
+    createEAttribute(jsonThingEClass, JSON_THING__BASE);
+    createEAttribute(jsonThingEClass, JSON_THING__SECURITY);
+    createEReference(jsonThingEClass, JSON_THING__FORMS);
+    createEReference(jsonThingEClass, JSON_THING__LINKS);
+    createEReference(jsonThingEClass, JSON_THING__TITLES);
+    createEReference(jsonThingEClass, JSON_THING__DESCRIPTIONS);
+    createEReference(jsonThingEClass, JSON_THING__VERSION);
+    createEReference(jsonThingEClass, JSON_THING__PROPERTIES);
+    createEReference(jsonThingEClass, JSON_THING__ACTIONS);
+    createEReference(jsonThingEClass, JSON_THING__EVENTS);
+    createEReference(jsonThingEClass, JSON_THING__SECURITY_DEFINITIONS);
 
     jsonVersionInfoEClass = createEClass(JSON_VERSION_INFO);
     createEAttribute(jsonVersionInfoEClass, JSON_VERSION_INFO__INSTANCE);
@@ -1585,26 +1585,26 @@ public class ThingDescriptionJsonPackageImpl extends EPackageImpl implements Thi
     // Add supertypes to classes
 
     // Initialize classes and features; add operations and parameters
-    initEClass(jsonThingDescriptionEClass, JsonThingDescription.class, "JsonThingDescription", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getJsonThingDescription_Ld_context(), ecorePackage.getEString(), "ld_context", null, 0, -1, JsonThingDescription.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getJsonThingDescription_Ld_type(), ecorePackage.getEString(), "ld_type", null, 0, -1, JsonThingDescription.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getJsonThingDescription_Id(), ecorePackage.getEString(), "id", null, 0, 1, JsonThingDescription.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getJsonThingDescription_Title(), ecorePackage.getEString(), "title", null, 0, 1, JsonThingDescription.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getJsonThingDescription_Description(), ecorePackage.getEString(), "description", null, 0, 1, JsonThingDescription.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getJsonThingDescription_Created(), ecorePackage.getEString(), "created", null, 0, 1, JsonThingDescription.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getJsonThingDescription_Modified(), ecorePackage.getEString(), "modified", null, 0, 1, JsonThingDescription.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getJsonThingDescription_Support(), ecorePackage.getEString(), "support", null, 0, 1, JsonThingDescription.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getJsonThingDescription_Base(), ecorePackage.getEString(), "base", null, 0, 1, JsonThingDescription.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getJsonThingDescription_Security(), ecorePackage.getEString(), "security", null, 0, -1, JsonThingDescription.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getJsonThingDescription_Forms(), this.getJsonForm(), null, "forms", null, 0, -1, JsonThingDescription.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getJsonThingDescription_Links(), this.getJsonLink(), null, "links", null, 0, -1, JsonThingDescription.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getJsonThingDescription_Titles(), this.getJsonMultiLanguageEntry(), null, "titles", null, 0, -1, JsonThingDescription.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getJsonThingDescription_Descriptions(), this.getJsonMultiLanguageEntry(), null, "descriptions", null, 0, -1, JsonThingDescription.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getJsonThingDescription_Version(), this.getJsonVersionInfo(), null, "version", null, 0, 1, JsonThingDescription.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getJsonThingDescription_Properties(), this.getJsonPropertyAffordance(), null, "properties", null, 0, -1, JsonThingDescription.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getJsonThingDescription_Actions(), this.getJsonActionAffordance(), null, "actions", null, 0, -1, JsonThingDescription.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getJsonThingDescription_Events(), this.getJsonEventAffordance(), null, "events", null, 0, -1, JsonThingDescription.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getJsonThingDescription_SecurityDefinitions(), this.getJsonSecurityScheme(), null, "securityDefinitions", null, 0, -1, JsonThingDescription.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEClass(jsonThingEClass, JsonThing.class, "JsonThing", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getJsonThing_Ld_context(), ecorePackage.getEString(), "ld_context", null, 0, -1, JsonThing.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getJsonThing_Ld_type(), ecorePackage.getEString(), "ld_type", null, 0, -1, JsonThing.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getJsonThing_Id(), ecorePackage.getEString(), "id", null, 0, 1, JsonThing.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getJsonThing_Title(), ecorePackage.getEString(), "title", null, 0, 1, JsonThing.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getJsonThing_Description(), ecorePackage.getEString(), "description", null, 0, 1, JsonThing.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getJsonThing_Created(), ecorePackage.getEString(), "created", null, 0, 1, JsonThing.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getJsonThing_Modified(), ecorePackage.getEString(), "modified", null, 0, 1, JsonThing.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getJsonThing_Support(), ecorePackage.getEString(), "support", null, 0, 1, JsonThing.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getJsonThing_Base(), ecorePackage.getEString(), "base", null, 0, 1, JsonThing.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getJsonThing_Security(), ecorePackage.getEString(), "security", null, 0, -1, JsonThing.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getJsonThing_Forms(), this.getJsonForm(), null, "forms", null, 0, -1, JsonThing.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getJsonThing_Links(), this.getJsonLink(), null, "links", null, 0, -1, JsonThing.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getJsonThing_Titles(), this.getJsonMultiLanguageEntry(), null, "titles", null, 0, -1, JsonThing.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getJsonThing_Descriptions(), this.getJsonMultiLanguageEntry(), null, "descriptions", null, 0, -1, JsonThing.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getJsonThing_Version(), this.getJsonVersionInfo(), null, "version", null, 0, 1, JsonThing.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getJsonThing_Properties(), this.getJsonPropertyAffordance(), null, "properties", null, 0, -1, JsonThing.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getJsonThing_Actions(), this.getJsonActionAffordance(), null, "actions", null, 0, -1, JsonThing.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getJsonThing_Events(), this.getJsonEventAffordance(), null, "events", null, 0, -1, JsonThing.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getJsonThing_SecurityDefinitions(), this.getJsonSecurityScheme(), null, "securityDefinitions", null, 0, -1, JsonThing.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(jsonVersionInfoEClass, JsonVersionInfo.class, "JsonVersionInfo", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getJsonVersionInfo_Instance(), ecorePackage.getEString(), "instance", null, 0, 1, JsonVersionInfo.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

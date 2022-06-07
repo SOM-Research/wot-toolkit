@@ -44,7 +44,7 @@ import edu.uoc.som.wot.td.json.services.ThingDescriptionJsonGrammarAccess;
 
     @Override
     protected String getFirstRuleName() {
-    	return "JsonThingDescription";
+    	return "JsonThing";
    	}
 
    	@Override
@@ -61,15 +61,15 @@ import edu.uoc.som.wot.td.json.services.ThingDescriptionJsonGrammarAccess;
     }
 }
 
-// Entry rule entryRuleJsonThingDescription
-entryRuleJsonThingDescription returns [EObject current=null]:
-	{ newCompositeNode(grammarAccess.getJsonThingDescriptionRule()); }
-	iv_ruleJsonThingDescription=ruleJsonThingDescription
-	{ $current=$iv_ruleJsonThingDescription.current; }
+// Entry rule entryRuleJsonThing
+entryRuleJsonThing returns [EObject current=null]:
+	{ newCompositeNode(grammarAccess.getJsonThingRule()); }
+	iv_ruleJsonThing=ruleJsonThing
+	{ $current=$iv_ruleJsonThing.current; }
 	EOF;
 
-// Rule JsonThingDescription
-ruleJsonThingDescription returns [EObject current=null]
+// Rule JsonThing
+ruleJsonThing returns [EObject current=null]
 @init {
 	enterRule();
 }
@@ -80,44 +80,44 @@ ruleJsonThingDescription returns [EObject current=null]
 		(
 			{
 				$current = forceCreateModelElement(
-					grammarAccess.getJsonThingDescriptionAccess().getJsonThingDescriptionAction_0(),
+					grammarAccess.getJsonThingAccess().getJsonThingAction_0(),
 					$current);
 			}
 		)
 		otherlv_1='{'
 		{
-			newLeafNode(otherlv_1, grammarAccess.getJsonThingDescriptionAccess().getLeftCurlyBracketKeyword_1());
+			newLeafNode(otherlv_1, grammarAccess.getJsonThingAccess().getLeftCurlyBracketKeyword_1());
 		}
 		(
 			(
 				{ 
-				  getUnorderedGroupHelper().enter(grammarAccess.getJsonThingDescriptionAccess().getUnorderedGroup_2());
+				  getUnorderedGroupHelper().enter(grammarAccess.getJsonThingAccess().getUnorderedGroup_2());
 				}
 				(
 					(
 			(
-				{getUnorderedGroupHelper().canSelect(grammarAccess.getJsonThingDescriptionAccess().getUnorderedGroup_2(), 0)}?=>(
+				{getUnorderedGroupHelper().canSelect(grammarAccess.getJsonThingAccess().getUnorderedGroup_2(), 0)}?=>(
 					{
-						getUnorderedGroupHelper().select(grammarAccess.getJsonThingDescriptionAccess().getUnorderedGroup_2(), 0);
+						getUnorderedGroupHelper().select(grammarAccess.getJsonThingAccess().getUnorderedGroup_2(), 0);
 					}
 								({true}?=>(otherlv_3='"@context"'
 								{
-									newLeafNode(otherlv_3, grammarAccess.getJsonThingDescriptionAccess().getContextKeyword_2_0_0());
+									newLeafNode(otherlv_3, grammarAccess.getJsonThingAccess().getContextKeyword_2_0_0());
 								}
 								otherlv_4=':'
 								{
-									newLeafNode(otherlv_4, grammarAccess.getJsonThingDescriptionAccess().getColonKeyword_2_0_1());
+									newLeafNode(otherlv_4, grammarAccess.getJsonThingAccess().getColonKeyword_2_0_1());
 								}
 								(
 									(
 										(
 											{
-												newCompositeNode(grammarAccess.getJsonThingDescriptionAccess().getLd_contextAnyStringParserRuleCall_2_0_2_0_0());
+												newCompositeNode(grammarAccess.getJsonThingAccess().getLd_contextAnyStringParserRuleCall_2_0_2_0_0());
 											}
 											lv_ld_context_5_0=ruleAnyString
 											{
 												if ($current==null) {
-													$current = createModelElementForParent(grammarAccess.getJsonThingDescriptionRule());
+													$current = createModelElementForParent(grammarAccess.getJsonThingRule());
 												}
 												add(
 													$current,
@@ -132,18 +132,18 @@ ruleJsonThingDescription returns [EObject current=null]
 									(
 										otherlv_6='['
 										{
-											newLeafNode(otherlv_6, grammarAccess.getJsonThingDescriptionAccess().getLeftSquareBracketKeyword_2_0_2_1_0());
+											newLeafNode(otherlv_6, grammarAccess.getJsonThingAccess().getLeftSquareBracketKeyword_2_0_2_1_0());
 										}
 										(
 											(
 												(
 													{
-														newCompositeNode(grammarAccess.getJsonThingDescriptionAccess().getLd_contextAnyStringParserRuleCall_2_0_2_1_1_0_0());
+														newCompositeNode(grammarAccess.getJsonThingAccess().getLd_contextAnyStringParserRuleCall_2_0_2_1_1_0_0());
 													}
 													lv_ld_context_7_0=ruleAnyString
 													{
 														if ($current==null) {
-															$current = createModelElementForParent(grammarAccess.getJsonThingDescriptionRule());
+															$current = createModelElementForParent(grammarAccess.getJsonThingRule());
 														}
 														add(
 															$current,
@@ -156,7 +156,7 @@ ruleJsonThingDescription returns [EObject current=null]
 											)
 											    |
 											{
-												newCompositeNode(grammarAccess.getJsonThingDescriptionAccess().getJsonGenericExpressionParserRuleCall_2_0_2_1_1_1());
+												newCompositeNode(grammarAccess.getJsonThingAccess().getJsonGenericExpressionParserRuleCall_2_0_2_1_1_1());
 											}
 											ruleJsonGenericExpression
 											{
@@ -166,18 +166,18 @@ ruleJsonThingDescription returns [EObject current=null]
 										(
 											otherlv_9=','
 											{
-												newLeafNode(otherlv_9, grammarAccess.getJsonThingDescriptionAccess().getCommaKeyword_2_0_2_1_2_0());
+												newLeafNode(otherlv_9, grammarAccess.getJsonThingAccess().getCommaKeyword_2_0_2_1_2_0());
 											}
 											(
 												(
 													(
 														{
-															newCompositeNode(grammarAccess.getJsonThingDescriptionAccess().getLd_contextAnyStringParserRuleCall_2_0_2_1_2_1_0_0());
+															newCompositeNode(grammarAccess.getJsonThingAccess().getLd_contextAnyStringParserRuleCall_2_0_2_1_2_1_0_0());
 														}
 														lv_ld_context_10_0=ruleAnyString
 														{
 															if ($current==null) {
-																$current = createModelElementForParent(grammarAccess.getJsonThingDescriptionRule());
+																$current = createModelElementForParent(grammarAccess.getJsonThingRule());
 															}
 															add(
 																$current,
@@ -190,7 +190,7 @@ ruleJsonThingDescription returns [EObject current=null]
 												)
 												    |
 												{
-													newCompositeNode(grammarAccess.getJsonThingDescriptionAccess().getJsonGenericExpressionParserRuleCall_2_0_2_1_2_1_1());
+													newCompositeNode(grammarAccess.getJsonThingAccess().getJsonGenericExpressionParserRuleCall_2_0_2_1_2_1_1());
 												}
 												ruleJsonGenericExpression
 												{
@@ -200,45 +200,45 @@ ruleJsonThingDescription returns [EObject current=null]
 										)*
 										otherlv_12=']'
 										{
-											newLeafNode(otherlv_12, grammarAccess.getJsonThingDescriptionAccess().getRightSquareBracketKeyword_2_0_2_1_3());
+											newLeafNode(otherlv_12, grammarAccess.getJsonThingAccess().getRightSquareBracketKeyword_2_0_2_1_3());
 										}
 									)
 								)
 								(
 									otherlv_13=','
 									{
-										newLeafNode(otherlv_13, grammarAccess.getJsonThingDescriptionAccess().getCommaKeyword_2_0_3());
+										newLeafNode(otherlv_13, grammarAccess.getJsonThingAccess().getCommaKeyword_2_0_3());
 									}
 								)?
 								))
 					{ 
-						getUnorderedGroupHelper().returnFromSelection(grammarAccess.getJsonThingDescriptionAccess().getUnorderedGroup_2());
+						getUnorderedGroupHelper().returnFromSelection(grammarAccess.getJsonThingAccess().getUnorderedGroup_2());
 					}
 				)
 			)|
 			(
-				{getUnorderedGroupHelper().canSelect(grammarAccess.getJsonThingDescriptionAccess().getUnorderedGroup_2(), 1)}?=>(
+				{getUnorderedGroupHelper().canSelect(grammarAccess.getJsonThingAccess().getUnorderedGroup_2(), 1)}?=>(
 					{
-						getUnorderedGroupHelper().select(grammarAccess.getJsonThingDescriptionAccess().getUnorderedGroup_2(), 1);
+						getUnorderedGroupHelper().select(grammarAccess.getJsonThingAccess().getUnorderedGroup_2(), 1);
 					}
 								({true}?=>(otherlv_14='"@type"'
 								{
-									newLeafNode(otherlv_14, grammarAccess.getJsonThingDescriptionAccess().getTypeKeyword_2_1_0());
+									newLeafNode(otherlv_14, grammarAccess.getJsonThingAccess().getTypeKeyword_2_1_0());
 								}
 								otherlv_15=':'
 								{
-									newLeafNode(otherlv_15, grammarAccess.getJsonThingDescriptionAccess().getColonKeyword_2_1_1());
+									newLeafNode(otherlv_15, grammarAccess.getJsonThingAccess().getColonKeyword_2_1_1());
 								}
 								(
 									(
 										(
 											{
-												newCompositeNode(grammarAccess.getJsonThingDescriptionAccess().getLd_typeAnyStringParserRuleCall_2_1_2_0_0());
+												newCompositeNode(grammarAccess.getJsonThingAccess().getLd_typeAnyStringParserRuleCall_2_1_2_0_0());
 											}
 											lv_ld_type_16_0=ruleAnyString
 											{
 												if ($current==null) {
-													$current = createModelElementForParent(grammarAccess.getJsonThingDescriptionRule());
+													$current = createModelElementForParent(grammarAccess.getJsonThingRule());
 												}
 												add(
 													$current,
@@ -253,17 +253,17 @@ ruleJsonThingDescription returns [EObject current=null]
 									(
 										otherlv_17='['
 										{
-											newLeafNode(otherlv_17, grammarAccess.getJsonThingDescriptionAccess().getLeftSquareBracketKeyword_2_1_2_1_0());
+											newLeafNode(otherlv_17, grammarAccess.getJsonThingAccess().getLeftSquareBracketKeyword_2_1_2_1_0());
 										}
 										(
 											(
 												{
-													newCompositeNode(grammarAccess.getJsonThingDescriptionAccess().getLd_typeAnyStringParserRuleCall_2_1_2_1_1_0());
+													newCompositeNode(grammarAccess.getJsonThingAccess().getLd_typeAnyStringParserRuleCall_2_1_2_1_1_0());
 												}
 												lv_ld_type_18_0=ruleAnyString
 												{
 													if ($current==null) {
-														$current = createModelElementForParent(grammarAccess.getJsonThingDescriptionRule());
+														$current = createModelElementForParent(grammarAccess.getJsonThingRule());
 													}
 													add(
 														$current,
@@ -277,17 +277,17 @@ ruleJsonThingDescription returns [EObject current=null]
 										(
 											otherlv_19=','
 											{
-												newLeafNode(otherlv_19, grammarAccess.getJsonThingDescriptionAccess().getCommaKeyword_2_1_2_1_2_0());
+												newLeafNode(otherlv_19, grammarAccess.getJsonThingAccess().getCommaKeyword_2_1_2_1_2_0());
 											}
 											(
 												(
 													{
-														newCompositeNode(grammarAccess.getJsonThingDescriptionAccess().getLd_typeAnyStringParserRuleCall_2_1_2_1_2_1_0());
+														newCompositeNode(grammarAccess.getJsonThingAccess().getLd_typeAnyStringParserRuleCall_2_1_2_1_2_1_0());
 													}
 													lv_ld_type_20_0=ruleAnyString
 													{
 														if ($current==null) {
-															$current = createModelElementForParent(grammarAccess.getJsonThingDescriptionRule());
+															$current = createModelElementForParent(grammarAccess.getJsonThingRule());
 														}
 														add(
 															$current,
@@ -301,44 +301,44 @@ ruleJsonThingDescription returns [EObject current=null]
 										)*
 										otherlv_21=']'
 										{
-											newLeafNode(otherlv_21, grammarAccess.getJsonThingDescriptionAccess().getRightSquareBracketKeyword_2_1_2_1_3());
+											newLeafNode(otherlv_21, grammarAccess.getJsonThingAccess().getRightSquareBracketKeyword_2_1_2_1_3());
 										}
 									)
 								)
 								(
 									otherlv_22=','
 									{
-										newLeafNode(otherlv_22, grammarAccess.getJsonThingDescriptionAccess().getCommaKeyword_2_1_3());
+										newLeafNode(otherlv_22, grammarAccess.getJsonThingAccess().getCommaKeyword_2_1_3());
 									}
 								)?
 								))
 					{ 
-						getUnorderedGroupHelper().returnFromSelection(grammarAccess.getJsonThingDescriptionAccess().getUnorderedGroup_2());
+						getUnorderedGroupHelper().returnFromSelection(grammarAccess.getJsonThingAccess().getUnorderedGroup_2());
 					}
 				)
 			)|
 			(
-				{getUnorderedGroupHelper().canSelect(grammarAccess.getJsonThingDescriptionAccess().getUnorderedGroup_2(), 2)}?=>(
+				{getUnorderedGroupHelper().canSelect(grammarAccess.getJsonThingAccess().getUnorderedGroup_2(), 2)}?=>(
 					{
-						getUnorderedGroupHelper().select(grammarAccess.getJsonThingDescriptionAccess().getUnorderedGroup_2(), 2);
+						getUnorderedGroupHelper().select(grammarAccess.getJsonThingAccess().getUnorderedGroup_2(), 2);
 					}
 								({true}?=>(otherlv_23='"id"'
 								{
-									newLeafNode(otherlv_23, grammarAccess.getJsonThingDescriptionAccess().getIdKeyword_2_2_0());
+									newLeafNode(otherlv_23, grammarAccess.getJsonThingAccess().getIdKeyword_2_2_0());
 								}
 								otherlv_24=':'
 								{
-									newLeafNode(otherlv_24, grammarAccess.getJsonThingDescriptionAccess().getColonKeyword_2_2_1());
+									newLeafNode(otherlv_24, grammarAccess.getJsonThingAccess().getColonKeyword_2_2_1());
 								}
 								(
 									(
 										{
-											newCompositeNode(grammarAccess.getJsonThingDescriptionAccess().getIdAnyStringParserRuleCall_2_2_2_0());
+											newCompositeNode(grammarAccess.getJsonThingAccess().getIdAnyStringParserRuleCall_2_2_2_0());
 										}
 										lv_id_25_0=ruleAnyString
 										{
 											if ($current==null) {
-												$current = createModelElementForParent(grammarAccess.getJsonThingDescriptionRule());
+												$current = createModelElementForParent(grammarAccess.getJsonThingRule());
 											}
 											set(
 												$current,
@@ -352,37 +352,37 @@ ruleJsonThingDescription returns [EObject current=null]
 								(
 									otherlv_26=','
 									{
-										newLeafNode(otherlv_26, grammarAccess.getJsonThingDescriptionAccess().getCommaKeyword_2_2_3());
+										newLeafNode(otherlv_26, grammarAccess.getJsonThingAccess().getCommaKeyword_2_2_3());
 									}
 								)?
 								))
 					{ 
-						getUnorderedGroupHelper().returnFromSelection(grammarAccess.getJsonThingDescriptionAccess().getUnorderedGroup_2());
+						getUnorderedGroupHelper().returnFromSelection(grammarAccess.getJsonThingAccess().getUnorderedGroup_2());
 					}
 				)
 			)|
 			(
-				{getUnorderedGroupHelper().canSelect(grammarAccess.getJsonThingDescriptionAccess().getUnorderedGroup_2(), 3)}?=>(
+				{getUnorderedGroupHelper().canSelect(grammarAccess.getJsonThingAccess().getUnorderedGroup_2(), 3)}?=>(
 					{
-						getUnorderedGroupHelper().select(grammarAccess.getJsonThingDescriptionAccess().getUnorderedGroup_2(), 3);
+						getUnorderedGroupHelper().select(grammarAccess.getJsonThingAccess().getUnorderedGroup_2(), 3);
 					}
 								({true}?=>(otherlv_27='"title"'
 								{
-									newLeafNode(otherlv_27, grammarAccess.getJsonThingDescriptionAccess().getTitleKeyword_2_3_0());
+									newLeafNode(otherlv_27, grammarAccess.getJsonThingAccess().getTitleKeyword_2_3_0());
 								}
 								otherlv_28=':'
 								{
-									newLeafNode(otherlv_28, grammarAccess.getJsonThingDescriptionAccess().getColonKeyword_2_3_1());
+									newLeafNode(otherlv_28, grammarAccess.getJsonThingAccess().getColonKeyword_2_3_1());
 								}
 								(
 									(
 										{
-											newCompositeNode(grammarAccess.getJsonThingDescriptionAccess().getTitleAnyStringParserRuleCall_2_3_2_0());
+											newCompositeNode(grammarAccess.getJsonThingAccess().getTitleAnyStringParserRuleCall_2_3_2_0());
 										}
 										lv_title_29_0=ruleAnyString
 										{
 											if ($current==null) {
-												$current = createModelElementForParent(grammarAccess.getJsonThingDescriptionRule());
+												$current = createModelElementForParent(grammarAccess.getJsonThingRule());
 											}
 											set(
 												$current,
@@ -396,37 +396,37 @@ ruleJsonThingDescription returns [EObject current=null]
 								(
 									otherlv_30=','
 									{
-										newLeafNode(otherlv_30, grammarAccess.getJsonThingDescriptionAccess().getCommaKeyword_2_3_3());
+										newLeafNode(otherlv_30, grammarAccess.getJsonThingAccess().getCommaKeyword_2_3_3());
 									}
 								)?
 								))
 					{ 
-						getUnorderedGroupHelper().returnFromSelection(grammarAccess.getJsonThingDescriptionAccess().getUnorderedGroup_2());
+						getUnorderedGroupHelper().returnFromSelection(grammarAccess.getJsonThingAccess().getUnorderedGroup_2());
 					}
 				)
 			)|
 			(
-				{getUnorderedGroupHelper().canSelect(grammarAccess.getJsonThingDescriptionAccess().getUnorderedGroup_2(), 4)}?=>(
+				{getUnorderedGroupHelper().canSelect(grammarAccess.getJsonThingAccess().getUnorderedGroup_2(), 4)}?=>(
 					{
-						getUnorderedGroupHelper().select(grammarAccess.getJsonThingDescriptionAccess().getUnorderedGroup_2(), 4);
+						getUnorderedGroupHelper().select(grammarAccess.getJsonThingAccess().getUnorderedGroup_2(), 4);
 					}
 								({true}?=>(otherlv_31='"description"'
 								{
-									newLeafNode(otherlv_31, grammarAccess.getJsonThingDescriptionAccess().getDescriptionKeyword_2_4_0());
+									newLeafNode(otherlv_31, grammarAccess.getJsonThingAccess().getDescriptionKeyword_2_4_0());
 								}
 								otherlv_32=':'
 								{
-									newLeafNode(otherlv_32, grammarAccess.getJsonThingDescriptionAccess().getColonKeyword_2_4_1());
+									newLeafNode(otherlv_32, grammarAccess.getJsonThingAccess().getColonKeyword_2_4_1());
 								}
 								(
 									(
 										{
-											newCompositeNode(grammarAccess.getJsonThingDescriptionAccess().getDescriptionAnyStringParserRuleCall_2_4_2_0());
+											newCompositeNode(grammarAccess.getJsonThingAccess().getDescriptionAnyStringParserRuleCall_2_4_2_0());
 										}
 										lv_description_33_0=ruleAnyString
 										{
 											if ($current==null) {
-												$current = createModelElementForParent(grammarAccess.getJsonThingDescriptionRule());
+												$current = createModelElementForParent(grammarAccess.getJsonThingRule());
 											}
 											set(
 												$current,
@@ -440,37 +440,37 @@ ruleJsonThingDescription returns [EObject current=null]
 								(
 									otherlv_34=','
 									{
-										newLeafNode(otherlv_34, grammarAccess.getJsonThingDescriptionAccess().getCommaKeyword_2_4_3());
+										newLeafNode(otherlv_34, grammarAccess.getJsonThingAccess().getCommaKeyword_2_4_3());
 									}
 								)?
 								))
 					{ 
-						getUnorderedGroupHelper().returnFromSelection(grammarAccess.getJsonThingDescriptionAccess().getUnorderedGroup_2());
+						getUnorderedGroupHelper().returnFromSelection(grammarAccess.getJsonThingAccess().getUnorderedGroup_2());
 					}
 				)
 			)|
 			(
-				{getUnorderedGroupHelper().canSelect(grammarAccess.getJsonThingDescriptionAccess().getUnorderedGroup_2(), 5)}?=>(
+				{getUnorderedGroupHelper().canSelect(grammarAccess.getJsonThingAccess().getUnorderedGroup_2(), 5)}?=>(
 					{
-						getUnorderedGroupHelper().select(grammarAccess.getJsonThingDescriptionAccess().getUnorderedGroup_2(), 5);
+						getUnorderedGroupHelper().select(grammarAccess.getJsonThingAccess().getUnorderedGroup_2(), 5);
 					}
 								({true}?=>(otherlv_35='"created"'
 								{
-									newLeafNode(otherlv_35, grammarAccess.getJsonThingDescriptionAccess().getCreatedKeyword_2_5_0());
+									newLeafNode(otherlv_35, grammarAccess.getJsonThingAccess().getCreatedKeyword_2_5_0());
 								}
 								otherlv_36=':'
 								{
-									newLeafNode(otherlv_36, grammarAccess.getJsonThingDescriptionAccess().getColonKeyword_2_5_1());
+									newLeafNode(otherlv_36, grammarAccess.getJsonThingAccess().getColonKeyword_2_5_1());
 								}
 								(
 									(
 										{
-											newCompositeNode(grammarAccess.getJsonThingDescriptionAccess().getCreatedAnyStringParserRuleCall_2_5_2_0());
+											newCompositeNode(grammarAccess.getJsonThingAccess().getCreatedAnyStringParserRuleCall_2_5_2_0());
 										}
 										lv_created_37_0=ruleAnyString
 										{
 											if ($current==null) {
-												$current = createModelElementForParent(grammarAccess.getJsonThingDescriptionRule());
+												$current = createModelElementForParent(grammarAccess.getJsonThingRule());
 											}
 											set(
 												$current,
@@ -484,37 +484,37 @@ ruleJsonThingDescription returns [EObject current=null]
 								(
 									otherlv_38=','
 									{
-										newLeafNode(otherlv_38, grammarAccess.getJsonThingDescriptionAccess().getCommaKeyword_2_5_3());
+										newLeafNode(otherlv_38, grammarAccess.getJsonThingAccess().getCommaKeyword_2_5_3());
 									}
 								)?
 								))
 					{ 
-						getUnorderedGroupHelper().returnFromSelection(grammarAccess.getJsonThingDescriptionAccess().getUnorderedGroup_2());
+						getUnorderedGroupHelper().returnFromSelection(grammarAccess.getJsonThingAccess().getUnorderedGroup_2());
 					}
 				)
 			)|
 			(
-				{getUnorderedGroupHelper().canSelect(grammarAccess.getJsonThingDescriptionAccess().getUnorderedGroup_2(), 6)}?=>(
+				{getUnorderedGroupHelper().canSelect(grammarAccess.getJsonThingAccess().getUnorderedGroup_2(), 6)}?=>(
 					{
-						getUnorderedGroupHelper().select(grammarAccess.getJsonThingDescriptionAccess().getUnorderedGroup_2(), 6);
+						getUnorderedGroupHelper().select(grammarAccess.getJsonThingAccess().getUnorderedGroup_2(), 6);
 					}
 								({true}?=>(otherlv_39='"modified"'
 								{
-									newLeafNode(otherlv_39, grammarAccess.getJsonThingDescriptionAccess().getModifiedKeyword_2_6_0());
+									newLeafNode(otherlv_39, grammarAccess.getJsonThingAccess().getModifiedKeyword_2_6_0());
 								}
 								otherlv_40=':'
 								{
-									newLeafNode(otherlv_40, grammarAccess.getJsonThingDescriptionAccess().getColonKeyword_2_6_1());
+									newLeafNode(otherlv_40, grammarAccess.getJsonThingAccess().getColonKeyword_2_6_1());
 								}
 								(
 									(
 										{
-											newCompositeNode(grammarAccess.getJsonThingDescriptionAccess().getModifiedAnyStringParserRuleCall_2_6_2_0());
+											newCompositeNode(grammarAccess.getJsonThingAccess().getModifiedAnyStringParserRuleCall_2_6_2_0());
 										}
 										lv_modified_41_0=ruleAnyString
 										{
 											if ($current==null) {
-												$current = createModelElementForParent(grammarAccess.getJsonThingDescriptionRule());
+												$current = createModelElementForParent(grammarAccess.getJsonThingRule());
 											}
 											set(
 												$current,
@@ -528,37 +528,37 @@ ruleJsonThingDescription returns [EObject current=null]
 								(
 									otherlv_42=','
 									{
-										newLeafNode(otherlv_42, grammarAccess.getJsonThingDescriptionAccess().getCommaKeyword_2_6_3());
+										newLeafNode(otherlv_42, grammarAccess.getJsonThingAccess().getCommaKeyword_2_6_3());
 									}
 								)?
 								))
 					{ 
-						getUnorderedGroupHelper().returnFromSelection(grammarAccess.getJsonThingDescriptionAccess().getUnorderedGroup_2());
+						getUnorderedGroupHelper().returnFromSelection(grammarAccess.getJsonThingAccess().getUnorderedGroup_2());
 					}
 				)
 			)|
 			(
-				{getUnorderedGroupHelper().canSelect(grammarAccess.getJsonThingDescriptionAccess().getUnorderedGroup_2(), 7)}?=>(
+				{getUnorderedGroupHelper().canSelect(grammarAccess.getJsonThingAccess().getUnorderedGroup_2(), 7)}?=>(
 					{
-						getUnorderedGroupHelper().select(grammarAccess.getJsonThingDescriptionAccess().getUnorderedGroup_2(), 7);
+						getUnorderedGroupHelper().select(grammarAccess.getJsonThingAccess().getUnorderedGroup_2(), 7);
 					}
 								({true}?=>(otherlv_43='"support"'
 								{
-									newLeafNode(otherlv_43, grammarAccess.getJsonThingDescriptionAccess().getSupportKeyword_2_7_0());
+									newLeafNode(otherlv_43, grammarAccess.getJsonThingAccess().getSupportKeyword_2_7_0());
 								}
 								otherlv_44=':'
 								{
-									newLeafNode(otherlv_44, grammarAccess.getJsonThingDescriptionAccess().getColonKeyword_2_7_1());
+									newLeafNode(otherlv_44, grammarAccess.getJsonThingAccess().getColonKeyword_2_7_1());
 								}
 								(
 									(
 										{
-											newCompositeNode(grammarAccess.getJsonThingDescriptionAccess().getSupportAnyStringParserRuleCall_2_7_2_0());
+											newCompositeNode(grammarAccess.getJsonThingAccess().getSupportAnyStringParserRuleCall_2_7_2_0());
 										}
 										lv_support_45_0=ruleAnyString
 										{
 											if ($current==null) {
-												$current = createModelElementForParent(grammarAccess.getJsonThingDescriptionRule());
+												$current = createModelElementForParent(grammarAccess.getJsonThingRule());
 											}
 											set(
 												$current,
@@ -572,37 +572,37 @@ ruleJsonThingDescription returns [EObject current=null]
 								(
 									otherlv_46=','
 									{
-										newLeafNode(otherlv_46, grammarAccess.getJsonThingDescriptionAccess().getCommaKeyword_2_7_3());
+										newLeafNode(otherlv_46, grammarAccess.getJsonThingAccess().getCommaKeyword_2_7_3());
 									}
 								)?
 								))
 					{ 
-						getUnorderedGroupHelper().returnFromSelection(grammarAccess.getJsonThingDescriptionAccess().getUnorderedGroup_2());
+						getUnorderedGroupHelper().returnFromSelection(grammarAccess.getJsonThingAccess().getUnorderedGroup_2());
 					}
 				)
 			)|
 			(
-				{getUnorderedGroupHelper().canSelect(grammarAccess.getJsonThingDescriptionAccess().getUnorderedGroup_2(), 8)}?=>(
+				{getUnorderedGroupHelper().canSelect(grammarAccess.getJsonThingAccess().getUnorderedGroup_2(), 8)}?=>(
 					{
-						getUnorderedGroupHelper().select(grammarAccess.getJsonThingDescriptionAccess().getUnorderedGroup_2(), 8);
+						getUnorderedGroupHelper().select(grammarAccess.getJsonThingAccess().getUnorderedGroup_2(), 8);
 					}
 								({true}?=>(otherlv_47='"base"'
 								{
-									newLeafNode(otherlv_47, grammarAccess.getJsonThingDescriptionAccess().getBaseKeyword_2_8_0());
+									newLeafNode(otherlv_47, grammarAccess.getJsonThingAccess().getBaseKeyword_2_8_0());
 								}
 								otherlv_48=':'
 								{
-									newLeafNode(otherlv_48, grammarAccess.getJsonThingDescriptionAccess().getColonKeyword_2_8_1());
+									newLeafNode(otherlv_48, grammarAccess.getJsonThingAccess().getColonKeyword_2_8_1());
 								}
 								(
 									(
 										{
-											newCompositeNode(grammarAccess.getJsonThingDescriptionAccess().getBaseAnyStringParserRuleCall_2_8_2_0());
+											newCompositeNode(grammarAccess.getJsonThingAccess().getBaseAnyStringParserRuleCall_2_8_2_0());
 										}
 										lv_base_49_0=ruleAnyString
 										{
 											if ($current==null) {
-												$current = createModelElementForParent(grammarAccess.getJsonThingDescriptionRule());
+												$current = createModelElementForParent(grammarAccess.getJsonThingRule());
 											}
 											set(
 												$current,
@@ -616,38 +616,38 @@ ruleJsonThingDescription returns [EObject current=null]
 								(
 									otherlv_50=','
 									{
-										newLeafNode(otherlv_50, grammarAccess.getJsonThingDescriptionAccess().getCommaKeyword_2_8_3());
+										newLeafNode(otherlv_50, grammarAccess.getJsonThingAccess().getCommaKeyword_2_8_3());
 									}
 								)?
 								))
 					{ 
-						getUnorderedGroupHelper().returnFromSelection(grammarAccess.getJsonThingDescriptionAccess().getUnorderedGroup_2());
+						getUnorderedGroupHelper().returnFromSelection(grammarAccess.getJsonThingAccess().getUnorderedGroup_2());
 					}
 				)
 			)|
 			(
-				{getUnorderedGroupHelper().canSelect(grammarAccess.getJsonThingDescriptionAccess().getUnorderedGroup_2(), 9)}?=>(
+				{getUnorderedGroupHelper().canSelect(grammarAccess.getJsonThingAccess().getUnorderedGroup_2(), 9)}?=>(
 					{
-						getUnorderedGroupHelper().select(grammarAccess.getJsonThingDescriptionAccess().getUnorderedGroup_2(), 9);
+						getUnorderedGroupHelper().select(grammarAccess.getJsonThingAccess().getUnorderedGroup_2(), 9);
 					}
 								({true}?=>(otherlv_51='"security"'
 								{
-									newLeafNode(otherlv_51, grammarAccess.getJsonThingDescriptionAccess().getSecurityKeyword_2_9_0());
+									newLeafNode(otherlv_51, grammarAccess.getJsonThingAccess().getSecurityKeyword_2_9_0());
 								}
 								otherlv_52=':'
 								{
-									newLeafNode(otherlv_52, grammarAccess.getJsonThingDescriptionAccess().getColonKeyword_2_9_1());
+									newLeafNode(otherlv_52, grammarAccess.getJsonThingAccess().getColonKeyword_2_9_1());
 								}
 								(
 									(
 										(
 											{
-												newCompositeNode(grammarAccess.getJsonThingDescriptionAccess().getSecurityAnyStringParserRuleCall_2_9_2_0_0());
+												newCompositeNode(grammarAccess.getJsonThingAccess().getSecurityAnyStringParserRuleCall_2_9_2_0_0());
 											}
 											lv_security_53_0=ruleAnyString
 											{
 												if ($current==null) {
-													$current = createModelElementForParent(grammarAccess.getJsonThingDescriptionRule());
+													$current = createModelElementForParent(grammarAccess.getJsonThingRule());
 												}
 												add(
 													$current,
@@ -662,17 +662,17 @@ ruleJsonThingDescription returns [EObject current=null]
 									(
 										otherlv_54='['
 										{
-											newLeafNode(otherlv_54, grammarAccess.getJsonThingDescriptionAccess().getLeftSquareBracketKeyword_2_9_2_1_0());
+											newLeafNode(otherlv_54, grammarAccess.getJsonThingAccess().getLeftSquareBracketKeyword_2_9_2_1_0());
 										}
 										(
 											(
 												{
-													newCompositeNode(grammarAccess.getJsonThingDescriptionAccess().getSecurityAnyStringParserRuleCall_2_9_2_1_1_0());
+													newCompositeNode(grammarAccess.getJsonThingAccess().getSecurityAnyStringParserRuleCall_2_9_2_1_1_0());
 												}
 												lv_security_55_0=ruleAnyString
 												{
 													if ($current==null) {
-														$current = createModelElementForParent(grammarAccess.getJsonThingDescriptionRule());
+														$current = createModelElementForParent(grammarAccess.getJsonThingRule());
 													}
 													add(
 														$current,
@@ -686,17 +686,17 @@ ruleJsonThingDescription returns [EObject current=null]
 										(
 											otherlv_56=','
 											{
-												newLeafNode(otherlv_56, grammarAccess.getJsonThingDescriptionAccess().getCommaKeyword_2_9_2_1_2_0());
+												newLeafNode(otherlv_56, grammarAccess.getJsonThingAccess().getCommaKeyword_2_9_2_1_2_0());
 											}
 											(
 												(
 													{
-														newCompositeNode(grammarAccess.getJsonThingDescriptionAccess().getSecurityAnyStringParserRuleCall_2_9_2_1_2_1_0());
+														newCompositeNode(grammarAccess.getJsonThingAccess().getSecurityAnyStringParserRuleCall_2_9_2_1_2_1_0());
 													}
 													lv_security_57_0=ruleAnyString
 													{
 														if ($current==null) {
-															$current = createModelElementForParent(grammarAccess.getJsonThingDescriptionRule());
+															$current = createModelElementForParent(grammarAccess.getJsonThingRule());
 														}
 														add(
 															$current,
@@ -710,48 +710,48 @@ ruleJsonThingDescription returns [EObject current=null]
 										)*
 										otherlv_58=']'
 										{
-											newLeafNode(otherlv_58, grammarAccess.getJsonThingDescriptionAccess().getRightSquareBracketKeyword_2_9_2_1_3());
+											newLeafNode(otherlv_58, grammarAccess.getJsonThingAccess().getRightSquareBracketKeyword_2_9_2_1_3());
 										}
 									)
 								)
 								(
 									otherlv_59=','
 									{
-										newLeafNode(otherlv_59, grammarAccess.getJsonThingDescriptionAccess().getCommaKeyword_2_9_3());
+										newLeafNode(otherlv_59, grammarAccess.getJsonThingAccess().getCommaKeyword_2_9_3());
 									}
 								)?
 								))
 					{ 
-						getUnorderedGroupHelper().returnFromSelection(grammarAccess.getJsonThingDescriptionAccess().getUnorderedGroup_2());
+						getUnorderedGroupHelper().returnFromSelection(grammarAccess.getJsonThingAccess().getUnorderedGroup_2());
 					}
 				)
 			)|
 			(
-				{getUnorderedGroupHelper().canSelect(grammarAccess.getJsonThingDescriptionAccess().getUnorderedGroup_2(), 10)}?=>(
+				{getUnorderedGroupHelper().canSelect(grammarAccess.getJsonThingAccess().getUnorderedGroup_2(), 10)}?=>(
 					{
-						getUnorderedGroupHelper().select(grammarAccess.getJsonThingDescriptionAccess().getUnorderedGroup_2(), 10);
+						getUnorderedGroupHelper().select(grammarAccess.getJsonThingAccess().getUnorderedGroup_2(), 10);
 					}
 								({true}?=>(otherlv_60='"forms"'
 								{
-									newLeafNode(otherlv_60, grammarAccess.getJsonThingDescriptionAccess().getFormsKeyword_2_10_0());
+									newLeafNode(otherlv_60, grammarAccess.getJsonThingAccess().getFormsKeyword_2_10_0());
 								}
 								otherlv_61=':'
 								{
-									newLeafNode(otherlv_61, grammarAccess.getJsonThingDescriptionAccess().getColonKeyword_2_10_1());
+									newLeafNode(otherlv_61, grammarAccess.getJsonThingAccess().getColonKeyword_2_10_1());
 								}
 								otherlv_62='{'
 								{
-									newLeafNode(otherlv_62, grammarAccess.getJsonThingDescriptionAccess().getLeftCurlyBracketKeyword_2_10_2());
+									newLeafNode(otherlv_62, grammarAccess.getJsonThingAccess().getLeftCurlyBracketKeyword_2_10_2());
 								}
 								(
 									(
 										{
-											newCompositeNode(grammarAccess.getJsonThingDescriptionAccess().getFormsJsonFormParserRuleCall_2_10_3_0());
+											newCompositeNode(grammarAccess.getJsonThingAccess().getFormsJsonFormParserRuleCall_2_10_3_0());
 										}
 										lv_forms_63_0=ruleJsonForm
 										{
 											if ($current==null) {
-												$current = createModelElementForParent(grammarAccess.getJsonThingDescriptionRule());
+												$current = createModelElementForParent(grammarAccess.getJsonThingRule());
 											}
 											add(
 												$current,
@@ -765,17 +765,17 @@ ruleJsonThingDescription returns [EObject current=null]
 								(
 									otherlv_64=','
 									{
-										newLeafNode(otherlv_64, grammarAccess.getJsonThingDescriptionAccess().getCommaKeyword_2_10_4_0());
+										newLeafNode(otherlv_64, grammarAccess.getJsonThingAccess().getCommaKeyword_2_10_4_0());
 									}
 									(
 										(
 											{
-												newCompositeNode(grammarAccess.getJsonThingDescriptionAccess().getFormsJsonFormParserRuleCall_2_10_4_1_0());
+												newCompositeNode(grammarAccess.getJsonThingAccess().getFormsJsonFormParserRuleCall_2_10_4_1_0());
 											}
 											lv_forms_65_0=ruleJsonForm
 											{
 												if ($current==null) {
-													$current = createModelElementForParent(grammarAccess.getJsonThingDescriptionRule());
+													$current = createModelElementForParent(grammarAccess.getJsonThingRule());
 												}
 												add(
 													$current,
@@ -789,46 +789,46 @@ ruleJsonThingDescription returns [EObject current=null]
 								)*
 								otherlv_66='}'
 								{
-									newLeafNode(otherlv_66, grammarAccess.getJsonThingDescriptionAccess().getRightCurlyBracketKeyword_2_10_5());
+									newLeafNode(otherlv_66, grammarAccess.getJsonThingAccess().getRightCurlyBracketKeyword_2_10_5());
 								}
 								(
 									otherlv_67=','
 									{
-										newLeafNode(otherlv_67, grammarAccess.getJsonThingDescriptionAccess().getCommaKeyword_2_10_6());
+										newLeafNode(otherlv_67, grammarAccess.getJsonThingAccess().getCommaKeyword_2_10_6());
 									}
 								)?
 								))
 					{ 
-						getUnorderedGroupHelper().returnFromSelection(grammarAccess.getJsonThingDescriptionAccess().getUnorderedGroup_2());
+						getUnorderedGroupHelper().returnFromSelection(grammarAccess.getJsonThingAccess().getUnorderedGroup_2());
 					}
 				)
 			)|
 			(
-				{getUnorderedGroupHelper().canSelect(grammarAccess.getJsonThingDescriptionAccess().getUnorderedGroup_2(), 11)}?=>(
+				{getUnorderedGroupHelper().canSelect(grammarAccess.getJsonThingAccess().getUnorderedGroup_2(), 11)}?=>(
 					{
-						getUnorderedGroupHelper().select(grammarAccess.getJsonThingDescriptionAccess().getUnorderedGroup_2(), 11);
+						getUnorderedGroupHelper().select(grammarAccess.getJsonThingAccess().getUnorderedGroup_2(), 11);
 					}
 								({true}?=>(otherlv_68='"links"'
 								{
-									newLeafNode(otherlv_68, grammarAccess.getJsonThingDescriptionAccess().getLinksKeyword_2_11_0());
+									newLeafNode(otherlv_68, grammarAccess.getJsonThingAccess().getLinksKeyword_2_11_0());
 								}
 								otherlv_69=':'
 								{
-									newLeafNode(otherlv_69, grammarAccess.getJsonThingDescriptionAccess().getColonKeyword_2_11_1());
+									newLeafNode(otherlv_69, grammarAccess.getJsonThingAccess().getColonKeyword_2_11_1());
 								}
 								otherlv_70='{'
 								{
-									newLeafNode(otherlv_70, grammarAccess.getJsonThingDescriptionAccess().getLeftCurlyBracketKeyword_2_11_2());
+									newLeafNode(otherlv_70, grammarAccess.getJsonThingAccess().getLeftCurlyBracketKeyword_2_11_2());
 								}
 								(
 									(
 										{
-											newCompositeNode(grammarAccess.getJsonThingDescriptionAccess().getLinksJsonLinkParserRuleCall_2_11_3_0());
+											newCompositeNode(grammarAccess.getJsonThingAccess().getLinksJsonLinkParserRuleCall_2_11_3_0());
 										}
 										lv_links_71_0=ruleJsonLink
 										{
 											if ($current==null) {
-												$current = createModelElementForParent(grammarAccess.getJsonThingDescriptionRule());
+												$current = createModelElementForParent(grammarAccess.getJsonThingRule());
 											}
 											add(
 												$current,
@@ -842,17 +842,17 @@ ruleJsonThingDescription returns [EObject current=null]
 								(
 									otherlv_72=','
 									{
-										newLeafNode(otherlv_72, grammarAccess.getJsonThingDescriptionAccess().getCommaKeyword_2_11_4_0());
+										newLeafNode(otherlv_72, grammarAccess.getJsonThingAccess().getCommaKeyword_2_11_4_0());
 									}
 									(
 										(
 											{
-												newCompositeNode(grammarAccess.getJsonThingDescriptionAccess().getLinksJsonLinkParserRuleCall_2_11_4_1_0());
+												newCompositeNode(grammarAccess.getJsonThingAccess().getLinksJsonLinkParserRuleCall_2_11_4_1_0());
 											}
 											lv_links_73_0=ruleJsonLink
 											{
 												if ($current==null) {
-													$current = createModelElementForParent(grammarAccess.getJsonThingDescriptionRule());
+													$current = createModelElementForParent(grammarAccess.getJsonThingRule());
 												}
 												add(
 													$current,
@@ -866,46 +866,46 @@ ruleJsonThingDescription returns [EObject current=null]
 								)*
 								otherlv_74='}'
 								{
-									newLeafNode(otherlv_74, grammarAccess.getJsonThingDescriptionAccess().getRightCurlyBracketKeyword_2_11_5());
+									newLeafNode(otherlv_74, grammarAccess.getJsonThingAccess().getRightCurlyBracketKeyword_2_11_5());
 								}
 								(
 									otherlv_75=','
 									{
-										newLeafNode(otherlv_75, grammarAccess.getJsonThingDescriptionAccess().getCommaKeyword_2_11_6());
+										newLeafNode(otherlv_75, grammarAccess.getJsonThingAccess().getCommaKeyword_2_11_6());
 									}
 								)?
 								))
 					{ 
-						getUnorderedGroupHelper().returnFromSelection(grammarAccess.getJsonThingDescriptionAccess().getUnorderedGroup_2());
+						getUnorderedGroupHelper().returnFromSelection(grammarAccess.getJsonThingAccess().getUnorderedGroup_2());
 					}
 				)
 			)|
 			(
-				{getUnorderedGroupHelper().canSelect(grammarAccess.getJsonThingDescriptionAccess().getUnorderedGroup_2(), 12)}?=>(
+				{getUnorderedGroupHelper().canSelect(grammarAccess.getJsonThingAccess().getUnorderedGroup_2(), 12)}?=>(
 					{
-						getUnorderedGroupHelper().select(grammarAccess.getJsonThingDescriptionAccess().getUnorderedGroup_2(), 12);
+						getUnorderedGroupHelper().select(grammarAccess.getJsonThingAccess().getUnorderedGroup_2(), 12);
 					}
 								({true}?=>(otherlv_76='"titles"'
 								{
-									newLeafNode(otherlv_76, grammarAccess.getJsonThingDescriptionAccess().getTitlesKeyword_2_12_0());
+									newLeafNode(otherlv_76, grammarAccess.getJsonThingAccess().getTitlesKeyword_2_12_0());
 								}
 								otherlv_77=':'
 								{
-									newLeafNode(otherlv_77, grammarAccess.getJsonThingDescriptionAccess().getColonKeyword_2_12_1());
+									newLeafNode(otherlv_77, grammarAccess.getJsonThingAccess().getColonKeyword_2_12_1());
 								}
 								otherlv_78='{'
 								{
-									newLeafNode(otherlv_78, grammarAccess.getJsonThingDescriptionAccess().getLeftCurlyBracketKeyword_2_12_2());
+									newLeafNode(otherlv_78, grammarAccess.getJsonThingAccess().getLeftCurlyBracketKeyword_2_12_2());
 								}
 								(
 									(
 										{
-											newCompositeNode(grammarAccess.getJsonThingDescriptionAccess().getTitlesJsonMultiLanguageEntryParserRuleCall_2_12_3_0());
+											newCompositeNode(grammarAccess.getJsonThingAccess().getTitlesJsonMultiLanguageEntryParserRuleCall_2_12_3_0());
 										}
 										lv_titles_79_0=ruleJsonMultiLanguageEntry
 										{
 											if ($current==null) {
-												$current = createModelElementForParent(grammarAccess.getJsonThingDescriptionRule());
+												$current = createModelElementForParent(grammarAccess.getJsonThingRule());
 											}
 											add(
 												$current,
@@ -919,17 +919,17 @@ ruleJsonThingDescription returns [EObject current=null]
 								(
 									otherlv_80=','
 									{
-										newLeafNode(otherlv_80, grammarAccess.getJsonThingDescriptionAccess().getCommaKeyword_2_12_4_0());
+										newLeafNode(otherlv_80, grammarAccess.getJsonThingAccess().getCommaKeyword_2_12_4_0());
 									}
 									(
 										(
 											{
-												newCompositeNode(grammarAccess.getJsonThingDescriptionAccess().getTitlesJsonMultiLanguageEntryParserRuleCall_2_12_4_1_0());
+												newCompositeNode(grammarAccess.getJsonThingAccess().getTitlesJsonMultiLanguageEntryParserRuleCall_2_12_4_1_0());
 											}
 											lv_titles_81_0=ruleJsonMultiLanguageEntry
 											{
 												if ($current==null) {
-													$current = createModelElementForParent(grammarAccess.getJsonThingDescriptionRule());
+													$current = createModelElementForParent(grammarAccess.getJsonThingRule());
 												}
 												add(
 													$current,
@@ -943,46 +943,46 @@ ruleJsonThingDescription returns [EObject current=null]
 								)*
 								otherlv_82='}'
 								{
-									newLeafNode(otherlv_82, grammarAccess.getJsonThingDescriptionAccess().getRightCurlyBracketKeyword_2_12_5());
+									newLeafNode(otherlv_82, grammarAccess.getJsonThingAccess().getRightCurlyBracketKeyword_2_12_5());
 								}
 								(
 									otherlv_83=','
 									{
-										newLeafNode(otherlv_83, grammarAccess.getJsonThingDescriptionAccess().getCommaKeyword_2_12_6());
+										newLeafNode(otherlv_83, grammarAccess.getJsonThingAccess().getCommaKeyword_2_12_6());
 									}
 								)?
 								))
 					{ 
-						getUnorderedGroupHelper().returnFromSelection(grammarAccess.getJsonThingDescriptionAccess().getUnorderedGroup_2());
+						getUnorderedGroupHelper().returnFromSelection(grammarAccess.getJsonThingAccess().getUnorderedGroup_2());
 					}
 				)
 			)|
 			(
-				{getUnorderedGroupHelper().canSelect(grammarAccess.getJsonThingDescriptionAccess().getUnorderedGroup_2(), 13)}?=>(
+				{getUnorderedGroupHelper().canSelect(grammarAccess.getJsonThingAccess().getUnorderedGroup_2(), 13)}?=>(
 					{
-						getUnorderedGroupHelper().select(grammarAccess.getJsonThingDescriptionAccess().getUnorderedGroup_2(), 13);
+						getUnorderedGroupHelper().select(grammarAccess.getJsonThingAccess().getUnorderedGroup_2(), 13);
 					}
 								({true}?=>(otherlv_84='"descriptions"'
 								{
-									newLeafNode(otherlv_84, grammarAccess.getJsonThingDescriptionAccess().getDescriptionsKeyword_2_13_0());
+									newLeafNode(otherlv_84, grammarAccess.getJsonThingAccess().getDescriptionsKeyword_2_13_0());
 								}
 								otherlv_85=':'
 								{
-									newLeafNode(otherlv_85, grammarAccess.getJsonThingDescriptionAccess().getColonKeyword_2_13_1());
+									newLeafNode(otherlv_85, grammarAccess.getJsonThingAccess().getColonKeyword_2_13_1());
 								}
 								otherlv_86='{'
 								{
-									newLeafNode(otherlv_86, grammarAccess.getJsonThingDescriptionAccess().getLeftCurlyBracketKeyword_2_13_2());
+									newLeafNode(otherlv_86, grammarAccess.getJsonThingAccess().getLeftCurlyBracketKeyword_2_13_2());
 								}
 								(
 									(
 										{
-											newCompositeNode(grammarAccess.getJsonThingDescriptionAccess().getDescriptionsJsonMultiLanguageEntryParserRuleCall_2_13_3_0());
+											newCompositeNode(grammarAccess.getJsonThingAccess().getDescriptionsJsonMultiLanguageEntryParserRuleCall_2_13_3_0());
 										}
 										lv_descriptions_87_0=ruleJsonMultiLanguageEntry
 										{
 											if ($current==null) {
-												$current = createModelElementForParent(grammarAccess.getJsonThingDescriptionRule());
+												$current = createModelElementForParent(grammarAccess.getJsonThingRule());
 											}
 											add(
 												$current,
@@ -996,17 +996,17 @@ ruleJsonThingDescription returns [EObject current=null]
 								(
 									otherlv_88=','
 									{
-										newLeafNode(otherlv_88, grammarAccess.getJsonThingDescriptionAccess().getCommaKeyword_2_13_4_0());
+										newLeafNode(otherlv_88, grammarAccess.getJsonThingAccess().getCommaKeyword_2_13_4_0());
 									}
 									(
 										(
 											{
-												newCompositeNode(grammarAccess.getJsonThingDescriptionAccess().getDescriptionsJsonMultiLanguageEntryParserRuleCall_2_13_4_1_0());
+												newCompositeNode(grammarAccess.getJsonThingAccess().getDescriptionsJsonMultiLanguageEntryParserRuleCall_2_13_4_1_0());
 											}
 											lv_descriptions_89_0=ruleJsonMultiLanguageEntry
 											{
 												if ($current==null) {
-													$current = createModelElementForParent(grammarAccess.getJsonThingDescriptionRule());
+													$current = createModelElementForParent(grammarAccess.getJsonThingRule());
 												}
 												add(
 													$current,
@@ -1020,42 +1020,42 @@ ruleJsonThingDescription returns [EObject current=null]
 								)*
 								otherlv_90='}'
 								{
-									newLeafNode(otherlv_90, grammarAccess.getJsonThingDescriptionAccess().getRightCurlyBracketKeyword_2_13_5());
+									newLeafNode(otherlv_90, grammarAccess.getJsonThingAccess().getRightCurlyBracketKeyword_2_13_5());
 								}
 								(
 									otherlv_91=','
 									{
-										newLeafNode(otherlv_91, grammarAccess.getJsonThingDescriptionAccess().getCommaKeyword_2_13_6());
+										newLeafNode(otherlv_91, grammarAccess.getJsonThingAccess().getCommaKeyword_2_13_6());
 									}
 								)?
 								))
 					{ 
-						getUnorderedGroupHelper().returnFromSelection(grammarAccess.getJsonThingDescriptionAccess().getUnorderedGroup_2());
+						getUnorderedGroupHelper().returnFromSelection(grammarAccess.getJsonThingAccess().getUnorderedGroup_2());
 					}
 				)
 			)|
 			(
-				{getUnorderedGroupHelper().canSelect(grammarAccess.getJsonThingDescriptionAccess().getUnorderedGroup_2(), 14)}?=>(
+				{getUnorderedGroupHelper().canSelect(grammarAccess.getJsonThingAccess().getUnorderedGroup_2(), 14)}?=>(
 					{
-						getUnorderedGroupHelper().select(grammarAccess.getJsonThingDescriptionAccess().getUnorderedGroup_2(), 14);
+						getUnorderedGroupHelper().select(grammarAccess.getJsonThingAccess().getUnorderedGroup_2(), 14);
 					}
 								({true}?=>(otherlv_92='"version"'
 								{
-									newLeafNode(otherlv_92, grammarAccess.getJsonThingDescriptionAccess().getVersionKeyword_2_14_0());
+									newLeafNode(otherlv_92, grammarAccess.getJsonThingAccess().getVersionKeyword_2_14_0());
 								}
 								otherlv_93=':'
 								{
-									newLeafNode(otherlv_93, grammarAccess.getJsonThingDescriptionAccess().getColonKeyword_2_14_1());
+									newLeafNode(otherlv_93, grammarAccess.getJsonThingAccess().getColonKeyword_2_14_1());
 								}
 								(
 									(
 										{
-											newCompositeNode(grammarAccess.getJsonThingDescriptionAccess().getVersionJsonVersionInfoParserRuleCall_2_14_2_0());
+											newCompositeNode(grammarAccess.getJsonThingAccess().getVersionJsonVersionInfoParserRuleCall_2_14_2_0());
 										}
 										lv_version_94_0=ruleJsonVersionInfo
 										{
 											if ($current==null) {
-												$current = createModelElementForParent(grammarAccess.getJsonThingDescriptionRule());
+												$current = createModelElementForParent(grammarAccess.getJsonThingRule());
 											}
 											set(
 												$current,
@@ -1069,41 +1069,41 @@ ruleJsonThingDescription returns [EObject current=null]
 								(
 									otherlv_95=','
 									{
-										newLeafNode(otherlv_95, grammarAccess.getJsonThingDescriptionAccess().getCommaKeyword_2_14_3());
+										newLeafNode(otherlv_95, grammarAccess.getJsonThingAccess().getCommaKeyword_2_14_3());
 									}
 								)?
 								))
 					{ 
-						getUnorderedGroupHelper().returnFromSelection(grammarAccess.getJsonThingDescriptionAccess().getUnorderedGroup_2());
+						getUnorderedGroupHelper().returnFromSelection(grammarAccess.getJsonThingAccess().getUnorderedGroup_2());
 					}
 				)
 			)|
 			(
-				{getUnorderedGroupHelper().canSelect(grammarAccess.getJsonThingDescriptionAccess().getUnorderedGroup_2(), 15)}?=>(
+				{getUnorderedGroupHelper().canSelect(grammarAccess.getJsonThingAccess().getUnorderedGroup_2(), 15)}?=>(
 					{
-						getUnorderedGroupHelper().select(grammarAccess.getJsonThingDescriptionAccess().getUnorderedGroup_2(), 15);
+						getUnorderedGroupHelper().select(grammarAccess.getJsonThingAccess().getUnorderedGroup_2(), 15);
 					}
 								({true}?=>(otherlv_96='"properties"'
 								{
-									newLeafNode(otherlv_96, grammarAccess.getJsonThingDescriptionAccess().getPropertiesKeyword_2_15_0());
+									newLeafNode(otherlv_96, grammarAccess.getJsonThingAccess().getPropertiesKeyword_2_15_0());
 								}
 								otherlv_97=':'
 								{
-									newLeafNode(otherlv_97, grammarAccess.getJsonThingDescriptionAccess().getColonKeyword_2_15_1());
+									newLeafNode(otherlv_97, grammarAccess.getJsonThingAccess().getColonKeyword_2_15_1());
 								}
 								otherlv_98='{'
 								{
-									newLeafNode(otherlv_98, grammarAccess.getJsonThingDescriptionAccess().getLeftCurlyBracketKeyword_2_15_2());
+									newLeafNode(otherlv_98, grammarAccess.getJsonThingAccess().getLeftCurlyBracketKeyword_2_15_2());
 								}
 								(
 									(
 										{
-											newCompositeNode(grammarAccess.getJsonThingDescriptionAccess().getPropertiesJsonPropertyAffordanceParserRuleCall_2_15_3_0());
+											newCompositeNode(grammarAccess.getJsonThingAccess().getPropertiesJsonPropertyAffordanceParserRuleCall_2_15_3_0());
 										}
 										lv_properties_99_0=ruleJsonPropertyAffordance
 										{
 											if ($current==null) {
-												$current = createModelElementForParent(grammarAccess.getJsonThingDescriptionRule());
+												$current = createModelElementForParent(grammarAccess.getJsonThingRule());
 											}
 											add(
 												$current,
@@ -1117,17 +1117,17 @@ ruleJsonThingDescription returns [EObject current=null]
 								(
 									otherlv_100=','
 									{
-										newLeafNode(otherlv_100, grammarAccess.getJsonThingDescriptionAccess().getCommaKeyword_2_15_4_0());
+										newLeafNode(otherlv_100, grammarAccess.getJsonThingAccess().getCommaKeyword_2_15_4_0());
 									}
 									(
 										(
 											{
-												newCompositeNode(grammarAccess.getJsonThingDescriptionAccess().getPropertiesJsonPropertyAffordanceParserRuleCall_2_15_4_1_0());
+												newCompositeNode(grammarAccess.getJsonThingAccess().getPropertiesJsonPropertyAffordanceParserRuleCall_2_15_4_1_0());
 											}
 											lv_properties_101_0=ruleJsonPropertyAffordance
 											{
 												if ($current==null) {
-													$current = createModelElementForParent(grammarAccess.getJsonThingDescriptionRule());
+													$current = createModelElementForParent(grammarAccess.getJsonThingRule());
 												}
 												add(
 													$current,
@@ -1141,46 +1141,46 @@ ruleJsonThingDescription returns [EObject current=null]
 								)*
 								otherlv_102='}'
 								{
-									newLeafNode(otherlv_102, grammarAccess.getJsonThingDescriptionAccess().getRightCurlyBracketKeyword_2_15_5());
+									newLeafNode(otherlv_102, grammarAccess.getJsonThingAccess().getRightCurlyBracketKeyword_2_15_5());
 								}
 								(
 									otherlv_103=','
 									{
-										newLeafNode(otherlv_103, grammarAccess.getJsonThingDescriptionAccess().getCommaKeyword_2_15_6());
+										newLeafNode(otherlv_103, grammarAccess.getJsonThingAccess().getCommaKeyword_2_15_6());
 									}
 								)?
 								))
 					{ 
-						getUnorderedGroupHelper().returnFromSelection(grammarAccess.getJsonThingDescriptionAccess().getUnorderedGroup_2());
+						getUnorderedGroupHelper().returnFromSelection(grammarAccess.getJsonThingAccess().getUnorderedGroup_2());
 					}
 				)
 			)|
 			(
-				{getUnorderedGroupHelper().canSelect(grammarAccess.getJsonThingDescriptionAccess().getUnorderedGroup_2(), 16)}?=>(
+				{getUnorderedGroupHelper().canSelect(grammarAccess.getJsonThingAccess().getUnorderedGroup_2(), 16)}?=>(
 					{
-						getUnorderedGroupHelper().select(grammarAccess.getJsonThingDescriptionAccess().getUnorderedGroup_2(), 16);
+						getUnorderedGroupHelper().select(grammarAccess.getJsonThingAccess().getUnorderedGroup_2(), 16);
 					}
 								({true}?=>(otherlv_104='"actions"'
 								{
-									newLeafNode(otherlv_104, grammarAccess.getJsonThingDescriptionAccess().getActionsKeyword_2_16_0());
+									newLeafNode(otherlv_104, grammarAccess.getJsonThingAccess().getActionsKeyword_2_16_0());
 								}
 								otherlv_105=':'
 								{
-									newLeafNode(otherlv_105, grammarAccess.getJsonThingDescriptionAccess().getColonKeyword_2_16_1());
+									newLeafNode(otherlv_105, grammarAccess.getJsonThingAccess().getColonKeyword_2_16_1());
 								}
 								otherlv_106='{'
 								{
-									newLeafNode(otherlv_106, grammarAccess.getJsonThingDescriptionAccess().getLeftCurlyBracketKeyword_2_16_2());
+									newLeafNode(otherlv_106, grammarAccess.getJsonThingAccess().getLeftCurlyBracketKeyword_2_16_2());
 								}
 								(
 									(
 										{
-											newCompositeNode(grammarAccess.getJsonThingDescriptionAccess().getActionsJsonActionAffordanceParserRuleCall_2_16_3_0());
+											newCompositeNode(grammarAccess.getJsonThingAccess().getActionsJsonActionAffordanceParserRuleCall_2_16_3_0());
 										}
 										lv_actions_107_0=ruleJsonActionAffordance
 										{
 											if ($current==null) {
-												$current = createModelElementForParent(grammarAccess.getJsonThingDescriptionRule());
+												$current = createModelElementForParent(grammarAccess.getJsonThingRule());
 											}
 											add(
 												$current,
@@ -1194,17 +1194,17 @@ ruleJsonThingDescription returns [EObject current=null]
 								(
 									otherlv_108=','
 									{
-										newLeafNode(otherlv_108, grammarAccess.getJsonThingDescriptionAccess().getCommaKeyword_2_16_4_0());
+										newLeafNode(otherlv_108, grammarAccess.getJsonThingAccess().getCommaKeyword_2_16_4_0());
 									}
 									(
 										(
 											{
-												newCompositeNode(grammarAccess.getJsonThingDescriptionAccess().getActionsJsonActionAffordanceParserRuleCall_2_16_4_1_0());
+												newCompositeNode(grammarAccess.getJsonThingAccess().getActionsJsonActionAffordanceParserRuleCall_2_16_4_1_0());
 											}
 											lv_actions_109_0=ruleJsonActionAffordance
 											{
 												if ($current==null) {
-													$current = createModelElementForParent(grammarAccess.getJsonThingDescriptionRule());
+													$current = createModelElementForParent(grammarAccess.getJsonThingRule());
 												}
 												add(
 													$current,
@@ -1218,46 +1218,46 @@ ruleJsonThingDescription returns [EObject current=null]
 								)*
 								otherlv_110='}'
 								{
-									newLeafNode(otherlv_110, grammarAccess.getJsonThingDescriptionAccess().getRightCurlyBracketKeyword_2_16_5());
+									newLeafNode(otherlv_110, grammarAccess.getJsonThingAccess().getRightCurlyBracketKeyword_2_16_5());
 								}
 								(
 									otherlv_111=','
 									{
-										newLeafNode(otherlv_111, grammarAccess.getJsonThingDescriptionAccess().getCommaKeyword_2_16_6());
+										newLeafNode(otherlv_111, grammarAccess.getJsonThingAccess().getCommaKeyword_2_16_6());
 									}
 								)?
 								))
 					{ 
-						getUnorderedGroupHelper().returnFromSelection(grammarAccess.getJsonThingDescriptionAccess().getUnorderedGroup_2());
+						getUnorderedGroupHelper().returnFromSelection(grammarAccess.getJsonThingAccess().getUnorderedGroup_2());
 					}
 				)
 			)|
 			(
-				{getUnorderedGroupHelper().canSelect(grammarAccess.getJsonThingDescriptionAccess().getUnorderedGroup_2(), 17)}?=>(
+				{getUnorderedGroupHelper().canSelect(grammarAccess.getJsonThingAccess().getUnorderedGroup_2(), 17)}?=>(
 					{
-						getUnorderedGroupHelper().select(grammarAccess.getJsonThingDescriptionAccess().getUnorderedGroup_2(), 17);
+						getUnorderedGroupHelper().select(grammarAccess.getJsonThingAccess().getUnorderedGroup_2(), 17);
 					}
 								({true}?=>(otherlv_112='"events"'
 								{
-									newLeafNode(otherlv_112, grammarAccess.getJsonThingDescriptionAccess().getEventsKeyword_2_17_0());
+									newLeafNode(otherlv_112, grammarAccess.getJsonThingAccess().getEventsKeyword_2_17_0());
 								}
 								otherlv_113=':'
 								{
-									newLeafNode(otherlv_113, grammarAccess.getJsonThingDescriptionAccess().getColonKeyword_2_17_1());
+									newLeafNode(otherlv_113, grammarAccess.getJsonThingAccess().getColonKeyword_2_17_1());
 								}
 								otherlv_114='{'
 								{
-									newLeafNode(otherlv_114, grammarAccess.getJsonThingDescriptionAccess().getLeftCurlyBracketKeyword_2_17_2());
+									newLeafNode(otherlv_114, grammarAccess.getJsonThingAccess().getLeftCurlyBracketKeyword_2_17_2());
 								}
 								(
 									(
 										{
-											newCompositeNode(grammarAccess.getJsonThingDescriptionAccess().getEventsJsonEventAffordanceParserRuleCall_2_17_3_0());
+											newCompositeNode(grammarAccess.getJsonThingAccess().getEventsJsonEventAffordanceParserRuleCall_2_17_3_0());
 										}
 										lv_events_115_0=ruleJsonEventAffordance
 										{
 											if ($current==null) {
-												$current = createModelElementForParent(grammarAccess.getJsonThingDescriptionRule());
+												$current = createModelElementForParent(grammarAccess.getJsonThingRule());
 											}
 											add(
 												$current,
@@ -1271,17 +1271,17 @@ ruleJsonThingDescription returns [EObject current=null]
 								(
 									otherlv_116=','
 									{
-										newLeafNode(otherlv_116, grammarAccess.getJsonThingDescriptionAccess().getCommaKeyword_2_17_4_0());
+										newLeafNode(otherlv_116, grammarAccess.getJsonThingAccess().getCommaKeyword_2_17_4_0());
 									}
 									(
 										(
 											{
-												newCompositeNode(grammarAccess.getJsonThingDescriptionAccess().getEventsJsonEventAffordanceParserRuleCall_2_17_4_1_0());
+												newCompositeNode(grammarAccess.getJsonThingAccess().getEventsJsonEventAffordanceParserRuleCall_2_17_4_1_0());
 											}
 											lv_events_117_0=ruleJsonEventAffordance
 											{
 												if ($current==null) {
-													$current = createModelElementForParent(grammarAccess.getJsonThingDescriptionRule());
+													$current = createModelElementForParent(grammarAccess.getJsonThingRule());
 												}
 												add(
 													$current,
@@ -1295,46 +1295,46 @@ ruleJsonThingDescription returns [EObject current=null]
 								)*
 								otherlv_118='}'
 								{
-									newLeafNode(otherlv_118, grammarAccess.getJsonThingDescriptionAccess().getRightCurlyBracketKeyword_2_17_5());
+									newLeafNode(otherlv_118, grammarAccess.getJsonThingAccess().getRightCurlyBracketKeyword_2_17_5());
 								}
 								(
 									otherlv_119=','
 									{
-										newLeafNode(otherlv_119, grammarAccess.getJsonThingDescriptionAccess().getCommaKeyword_2_17_6());
+										newLeafNode(otherlv_119, grammarAccess.getJsonThingAccess().getCommaKeyword_2_17_6());
 									}
 								)?
 								))
 					{ 
-						getUnorderedGroupHelper().returnFromSelection(grammarAccess.getJsonThingDescriptionAccess().getUnorderedGroup_2());
+						getUnorderedGroupHelper().returnFromSelection(grammarAccess.getJsonThingAccess().getUnorderedGroup_2());
 					}
 				)
 			)|
 			(
-				{getUnorderedGroupHelper().canSelect(grammarAccess.getJsonThingDescriptionAccess().getUnorderedGroup_2(), 18)}?=>(
+				{getUnorderedGroupHelper().canSelect(grammarAccess.getJsonThingAccess().getUnorderedGroup_2(), 18)}?=>(
 					{
-						getUnorderedGroupHelper().select(grammarAccess.getJsonThingDescriptionAccess().getUnorderedGroup_2(), 18);
+						getUnorderedGroupHelper().select(grammarAccess.getJsonThingAccess().getUnorderedGroup_2(), 18);
 					}
 								({true}?=>(otherlv_120='"securityDefinitions"'
 								{
-									newLeafNode(otherlv_120, grammarAccess.getJsonThingDescriptionAccess().getSecurityDefinitionsKeyword_2_18_0());
+									newLeafNode(otherlv_120, grammarAccess.getJsonThingAccess().getSecurityDefinitionsKeyword_2_18_0());
 								}
 								otherlv_121=':'
 								{
-									newLeafNode(otherlv_121, grammarAccess.getJsonThingDescriptionAccess().getColonKeyword_2_18_1());
+									newLeafNode(otherlv_121, grammarAccess.getJsonThingAccess().getColonKeyword_2_18_1());
 								}
 								otherlv_122='{'
 								{
-									newLeafNode(otherlv_122, grammarAccess.getJsonThingDescriptionAccess().getLeftCurlyBracketKeyword_2_18_2());
+									newLeafNode(otherlv_122, grammarAccess.getJsonThingAccess().getLeftCurlyBracketKeyword_2_18_2());
 								}
 								(
 									(
 										{
-											newCompositeNode(grammarAccess.getJsonThingDescriptionAccess().getSecurityDefinitionsJsonSecuritySchemeParserRuleCall_2_18_3_0());
+											newCompositeNode(grammarAccess.getJsonThingAccess().getSecurityDefinitionsJsonSecuritySchemeParserRuleCall_2_18_3_0());
 										}
 										lv_securityDefinitions_123_0=ruleJsonSecurityScheme
 										{
 											if ($current==null) {
-												$current = createModelElementForParent(grammarAccess.getJsonThingDescriptionRule());
+												$current = createModelElementForParent(grammarAccess.getJsonThingRule());
 											}
 											add(
 												$current,
@@ -1348,17 +1348,17 @@ ruleJsonThingDescription returns [EObject current=null]
 								(
 									otherlv_124=','
 									{
-										newLeafNode(otherlv_124, grammarAccess.getJsonThingDescriptionAccess().getCommaKeyword_2_18_4_0());
+										newLeafNode(otherlv_124, grammarAccess.getJsonThingAccess().getCommaKeyword_2_18_4_0());
 									}
 									(
 										(
 											{
-												newCompositeNode(grammarAccess.getJsonThingDescriptionAccess().getSecurityDefinitionsJsonSecuritySchemeParserRuleCall_2_18_4_1_0());
+												newCompositeNode(grammarAccess.getJsonThingAccess().getSecurityDefinitionsJsonSecuritySchemeParserRuleCall_2_18_4_1_0());
 											}
 											lv_securityDefinitions_125_0=ruleJsonSecurityScheme
 											{
 												if ($current==null) {
-													$current = createModelElementForParent(grammarAccess.getJsonThingDescriptionRule());
+													$current = createModelElementForParent(grammarAccess.getJsonThingRule());
 												}
 												add(
 													$current,
@@ -1372,31 +1372,31 @@ ruleJsonThingDescription returns [EObject current=null]
 								)*
 								otherlv_126='}'
 								{
-									newLeafNode(otherlv_126, grammarAccess.getJsonThingDescriptionAccess().getRightCurlyBracketKeyword_2_18_5());
+									newLeafNode(otherlv_126, grammarAccess.getJsonThingAccess().getRightCurlyBracketKeyword_2_18_5());
 								}
 								(
 									otherlv_127=','
 									{
-										newLeafNode(otherlv_127, grammarAccess.getJsonThingDescriptionAccess().getCommaKeyword_2_18_6());
+										newLeafNode(otherlv_127, grammarAccess.getJsonThingAccess().getCommaKeyword_2_18_6());
 									}
 								)?
 								))
 					{ 
-						getUnorderedGroupHelper().returnFromSelection(grammarAccess.getJsonThingDescriptionAccess().getUnorderedGroup_2());
+						getUnorderedGroupHelper().returnFromSelection(grammarAccess.getJsonThingAccess().getUnorderedGroup_2());
 					}
 				)
 			)
 					)+
-					{getUnorderedGroupHelper().canLeave(grammarAccess.getJsonThingDescriptionAccess().getUnorderedGroup_2())}?
+					{getUnorderedGroupHelper().canLeave(grammarAccess.getJsonThingAccess().getUnorderedGroup_2())}?
 				)
 			)
 				{ 
-				  getUnorderedGroupHelper().leave(grammarAccess.getJsonThingDescriptionAccess().getUnorderedGroup_2());
+				  getUnorderedGroupHelper().leave(grammarAccess.getJsonThingAccess().getUnorderedGroup_2());
 				}
 		)
 		otherlv_128='}'
 		{
-			newLeafNode(otherlv_128, grammarAccess.getJsonThingDescriptionAccess().getRightCurlyBracketKeyword_3());
+			newLeafNode(otherlv_128, grammarAccess.getJsonThingAccess().getRightCurlyBracketKeyword_3());
 		}
 	)
 ;
